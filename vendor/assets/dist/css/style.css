@@ -1,0 +1,175 @@
+.content-sidebar .navbar-nav {
+  position: absolute;
+  float: inline-start;
+  width: 80px;
+  height: 100vh;
+  background-color: #fff;
+  border-right: 1px solid #f1f1f1;
+  z-index: 100000;
+  -webkit-box-shadow: 3px 0px 3px -1px rgba(0, 0, 0, 0.43);
+  -moz-box-shadow: 3px 0px 3px -1px rgba(0, 0, 0, 0.43);
+  box-shadow: 3px 0px 3px -1px rgba(0, 0, 0, 0.43);
+  overflow: scroll;
+  transition: all 300ms;
+}
+
+.content-sidebar .navbar-nav::-webkit-scrollbar {
+  width: 1px;
+}
+
+.navbar-nav:hover {
+  width: 240px;
+  transition: all 300ms;
+}
+
+.navbar-nav:hover .descrip-item {
+  font-size: 15px;
+  transition: all 300ms;
+}
+
+.navbar-nav:hover .accordion-body {
+  display: block;
+  transition: all 300ms;
+}
+
+.navbar-nav:hover .logo-lab {
+  display: block;
+  transition: all 300ms;
+}
+
+.navbar-nav:hover .logo-lab-2 {
+  display: none;
+  transition: all 300ms;
+}
+
+.navbar-nav:hover .item-prinp {
+  display: block;
+  transition: all 300ms;
+}
+
+.navbar-nav:hover .name-item {
+  display: block;
+  float: left;
+  transition: all 300ms;
+}
+
+.navbar-nav:hover .text-user-icon {
+  display: block;
+  transition: all 300ms;
+}
+
+.navbar-nav:hover .nav-item-select .nav-item {
+  padding: 5px;
+  transition: all 500ms;
+}
+
+.navbar-nav:hover #iconangle {
+  display: block;
+}
+
+.navbar-nav:hover #iconitempadre {
+  float: left;
+}
+
+.nav-item-select li {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.nav-item-select li a {
+  text-decoration: none;
+}
+
+.nav-item-select li a i {
+  margin-bottom: 5px;
+}
+
+.item-user-connect {
+  width: 100%;
+  text-align: center;
+}
+
+.item-dashboard {
+  width: 100%;
+  text-align: center;
+}
+
+.accordion-button {
+  font-size: 12px;
+}
+
+.descrip-item {
+  width: 100%;
+  font-size: 12px;
+  text-align: center;
+  transition: all 300ms;
+}
+
+.user-avatar {
+  width: 50px;
+  border-radius: 50px;
+  border: 1px solid #fae7e7;
+}
+
+.logo-lab {
+  width: 100px;
+  margin-bottom: 10px;
+  display: none;
+  padding: 10px;
+  transition: all 300ms;
+}
+
+.logo-lab-2 {
+  width: 50px;
+  margin-bottom: 10px;
+  padding: 10px;
+  transition: all 300ms;
+}
+
+.accordion-body {
+  display: none;
+}
+
+.item-prinp {
+  display: none;
+  transition: all 300ms;
+}
+
+.nav-item .name-item {
+  display: none;
+  font-size: 13px;
+  margin-bottom: 0px;
+  transition: all 300ms;
+}
+
+.text-user-icon {
+  display: none;
+  transition: all 300ms;
+}
+
+.content-tab {
+  margin-left: 80px;
+}
+
+.nav-item-select .nav-item {
+  width: 100%;
+  text-align: center;
+  transition: all 500ms;
+}
+
+#iconangle {
+  display: none;
+}
+
+.content-subitems{
+  width: 100%;
+  float: left;
+}
+
+.btn-tool {
+  background-color: transparent;
+  color: #adb5bd;
+  padding: 5px;
+}
+
+/* -------------------- */
