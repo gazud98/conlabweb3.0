@@ -7,11 +7,11 @@
         define('UTF8_ENABLED', TRUE);
 
         //base url : falta automatizar proceso
-        define('base_url','https://cw3.tierramontemariana.org/');// define('base_url',.$_SERVER['SERVER_NAME'].'https://cw3.tierramontemariana.org/index.php');
-        define('base_url_qr','https://cw3.tierramontemariana.org/appsdata/qr/');// define('base_url',.$_SERVER['SERVER_NAME'].'https://cw3.tierramontemariana.org/index.php');
-        define('base_url_images','https://cw3.tierramontemariana.org/appsdata/images/');// define('base_url',.$_SERVER['SERVER_NAME'].'https://cw3.tierramontemariana.org/index.php');
-        define('base_url_video','https://cw3.tierramontemariana.org/appsdata/video/');// define('base_url',.$_SERVER['SERVER_NAME'].'https://cw3.tierramontemariana.org/index.php');
-        define('base_url_pdf','https://cw3.tierramontemariana.org/appsdata/pdf/');// define('base_url',.$_SERVER['SERVER_NAME'].'https://cw3.tierramontemariana.org/index.php');
+        define('base_url','https://conlabweb3.tierramontemariana.org/');// define('base_url',.$_SERVER['SERVER_NAME'].'https://conlabweb3.tierramontemariana.org/index.php');
+        define('base_url_qr','https://conlabweb3.tierramontemariana.org/appsdata/qr/');// define('base_url',.$_SERVER['SERVER_NAME'].'https://conlabweb3.tierramontemariana.org/index.php');
+        define('base_url_images','https://conlabweb3.tierramontemariana.org/appsdata/images/');// define('base_url',.$_SERVER['SERVER_NAME'].'https://conlabweb3.tierramontemariana.org/index.php');
+        define('base_url_video','https://conlabweb3.tierramontemariana.org/appsdata/video/');// define('base_url',.$_SERVER['SERVER_NAME'].'https://conlabweb3.tierramontemariana.org/index.php');
+        define('base_url_pdf','https://conlabweb3.tierramontemariana.org/appsdata/pdf/');// define('base_url',.$_SERVER['SERVER_NAME'].'https://conlabweb3.tierramontemariana.org/index.php');
 
             //dbmaster
         define('cw3ctrlsrv',"u116753122_cw3completa"); //prefijo de bd
