@@ -22,7 +22,7 @@ if ($conetar->connect_errno) {
 }
 ?>
 
-<label for="">Asesor(a) comercial:</label>
+<br><label for="">Asesor(a) comercial:</label>
 <select name="aseco" id="aseco" class="form-control">
     <option value="" disabled selected>SELECCIONA:</option>
     <?php

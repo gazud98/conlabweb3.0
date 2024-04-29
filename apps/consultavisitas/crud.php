@@ -1,5 +1,6 @@
 <?php
 $result = "err";
+//     presntadio n par todos lod produtos tipo ACTVOS FIJOS
 
 if (file_exists("config/accesosystems.php")) {
     include("config/accesosystems.php");
@@ -13,7 +14,11 @@ if (file_exists("config/accesosystems.php")) {
     }
 }
 
+// echo __FILE__.'>dd.....<br>';
 
+//echo $p; //viene con el modulo activo
+
+// //echo base_url.'.......<br>'.'...'.hostname.','.db_login.','.db_pass.','.bbserver1.'----<br>';
 $conetar = new mysqli(hostname, db_login, db_pass, cw3ctrlsrv);
 if ($conetar->connect_errno) {
     $error = "Fallo al conectar a MySQL: (" . $conetar->connect_errno . ") " . $conetar->connect_error;
@@ -75,7 +80,7 @@ if ($conetar->connect_errno) {
 
 
         $sql = "INSERT INTO comments_neg(negociacion, descripcion, usuario, fecha, latitud, longitud)
-    VALUES ('$id2', '$com', '$user','$fechaFinal','$lat','$long')";
+        VALUES ('$id2', '$com', '$user','$fechaFinal','$lat','$long')";
 
         echo $sql;
 
@@ -89,5 +94,33 @@ if ($conetar->connect_errno) {
 
             $rest2 = mysqli_query($conetar, $sql2);
         }
+    } else if ($aux == 3) {
+
+        if (isset($_REQUEST['id'])) {
+            $id = $_REQUEST['id'];
+        }
+
+        $cadena = "SELECT t.id, t.descripcion, t.fecha, t.negociacion, t.latitud, t.longitud, a.username, 
+        CONCAT(p.nombre_1, ' ', p.apellido_1) AS vendedor
+        FROM comments_visitas t, citas tk, users a, persona p
+        WHERE t.usuario = a.id_users AND t.negociacion = tk.id AND tk.vendedor = p.id_persona AND t.id = '$id'";
+
+        $resultadP2 = $conetar->query($cadena);
+
+        while ($filaP2 = mysqli_fetch_array($resultadP2)) {
+
+            $datos[] = array(
+                'id' => $filaP2['id'],
+                'tarea' => $filaP2['negociacion'],
+                'descripcion' => $filaP2['descripcion'],
+                'usuario' => $filaP2['username'],
+                'fecha' => $filaP2['fecha'],
+                'lat' => $filaP2['latitud'],
+                'long' => $filaP2['longitud'],
+                'vendedor' => $filaP2['vendedor'],
+            );
+        }
+
+        echo json_encode($datos);
     }
 }

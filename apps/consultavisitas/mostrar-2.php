@@ -111,6 +111,7 @@ if ($conetar->connect_errno) {
 
         echo json_encode($datos);
     } else if ($aux == 6) {
+
         if (isset($_GET['fecha1'])) {
             $fecha1 = $_GET['fecha1'];
             if ($fecha1 == "-1") {
@@ -166,7 +167,7 @@ if ($conetar->connect_errno) {
         }
 
         echo json_encode($datos);
-    }else if ($aux == 7) {
+    } else if ($aux == 7) {
 
         if (isset($_REQUEST['id'])) {
             $id = $_REQUEST['id'];
@@ -192,6 +193,5 @@ if ($conetar->connect_errno) {
         }
 
         echo json_encode($datos);
-        
     }
 }
