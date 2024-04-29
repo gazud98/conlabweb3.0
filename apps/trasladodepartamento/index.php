@@ -83,7 +83,7 @@ include ('apps/thedata.php'); //scriops de control
 
     function obtener() {
 
-        $("#table").load("https://cw3.tierramontemariana.org/apps/trasladodepartamento/tabla.php");
+        $("#table").load("https://conlabweb3.tierramontemariana.org/apps/trasladodepartamento/tabla.php");
 
     }
 </script>

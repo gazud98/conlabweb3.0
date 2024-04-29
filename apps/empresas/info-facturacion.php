@@ -273,7 +273,7 @@ if ($conetar->connect_errno) {
 
 <script>
     $(document).ready(function() {
-        $('.content-table-ingreso').load('https://cw3.tierramontemariana.org/apps/empresas/tableinfofac.php');
+        $('.content-table-ingreso').load('https://conlabweb3.tierramontemariana.org/apps/empresas/tableinfofac.php');
     })
 
     $(document).ready(function() {
@@ -291,7 +291,7 @@ if ($conetar->connect_errno) {
                 } else {
                     $.ajax({
                         type: 'POST',
-                        url: 'https://cw3.tierramontemariana.org/apps/empresas/crud.php?aux=5',
+                        url: 'https://conlabweb3.tierramontemariana.org/apps/empresas/crud.php?aux=5',
                         data: $('#formInfoFacturacion').serialize(),
                         success: function(respuesta) {
                             Swal.fire({
@@ -301,7 +301,7 @@ if ($conetar->connect_errno) {
                                 showConfirmButton: false,
                                 timer: 1500
                             });
-                            $('.content-modal-info-fact').load('https://cw3.tierramontemariana.org/apps/empresas/info-facturacion.php', {
+                            $('.content-modal-info-fact').load('https://conlabweb3.tierramontemariana.org/apps/empresas/info-facturacion.php', {
                                 id: <?= $id ?>
                             })
                             //alert("¡Registro Exitoso!");

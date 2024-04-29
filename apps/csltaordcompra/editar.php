@@ -352,7 +352,7 @@ if ($conetar->connect_errno) {
     $(document).ready(function () {
         $.ajax({
             type: 'POST',
-            url: 'https://cw3.tierramontemariana.org/apps/csltaordcompra/impuestos.php',
+            url: 'https://conlabweb3.tierramontemariana.org/apps/csltaordcompra/impuestos.php',
             data: {
                 id_ord: <?php echo $id ?>,
             },
@@ -416,7 +416,7 @@ if ($conetar->connect_errno) {
 
                 $.ajax({
                     type: 'POST',
-                    url: 'https://cw3.tierramontemariana.org/apps/csltaordcompra/productobodega.php',
+                    url: 'https://conlabweb3.tierramontemariana.org/apps/csltaordcompra/productobodega.php',
                     data: {
                         id_prod: id_prod,
                         id_ord: id_ord,
@@ -433,10 +433,10 @@ if ($conetar->connect_errno) {
                     success: function (data) {
 
 
-                        $("#data1").load("https://cw3.tierramontemariana.org/apps/csltaordcompra/data.php", {
+                        $("#data1").load("https://conlabweb3.tierramontemariana.org/apps/csltaordcompra/data.php", {
                             id: id_ord
                         });
-                        $("#btnedt").load("https://cw3.tierramontemariana.org/apps/csltaordcompra/editar.php", {
+                        $("#btnedt").load("https://conlabweb3.tierramontemariana.org/apps/csltaordcompra/editar.php", {
                             idpr: id_prod,
                             id: id_ord,
                             vtotal: vtotal
@@ -472,7 +472,7 @@ if ($conetar->connect_errno) {
     function agregar(sel) {
         var id = $('option:selected', sel).attr('value');
 
-        $("#stand1").load("https://cw3.tierramontemariana.org/apps/csltaordcompra/stands.php", {
+        $("#stand1").load("https://conlabweb3.tierramontemariana.org/apps/csltaordcompra/stands.php", {
             id: id
         });
     };
@@ -480,7 +480,7 @@ if ($conetar->connect_errno) {
     function agregar2(sel) {
         var id = $('option:selected', sel).attr('value');
 
-        $("#entrepanio").load("https://cw3.tierramontemariana.org/apps/csltaordcompra/entrepanio.php", {
+        $("#entrepanio").load("https://conlabweb3.tierramontemariana.org/apps/csltaordcompra/entrepanio.php", {
             id: id
         });
 
@@ -505,7 +505,7 @@ if ($conetar->connect_errno) {
         var fv = $('#fvence').val();
         var nlo = $('#nolote').val();
 
-        window.open('https://cw3.tierramontemariana.org/apps/csltaordcompra/print-barcode.php?id=' + idpr + '&cant=' + cant + '&bd=' + bd + '&std=' + std + '&et=' + et + '&fv=' + fv + '&nlo=' + nlo)
+        window.open('https://conlabweb3.tierramontemariana.org/apps/csltaordcompra/print-barcode.php?id=' + idpr + '&cant=' + cant + '&bd=' + bd + '&std=' + std + '&et=' + et + '&fv=' + fv + '&nlo=' + nlo)
     }
 
 

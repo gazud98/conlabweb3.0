@@ -191,13 +191,13 @@ if ($conetar->connect_errno) {
 
         $.ajax({
             type: 'POST',
-            url: 'https://cw3.tierramontemariana.org/apps/cotizacion/actualizarcant.php',
+            url: 'https://conlabweb3.tierramontemariana.org/apps/cotizacion/actualizarcant.php',
             data: {
                 cantm: cantm,
                 id: id_det
             },
             success: function (respuesta) {
-                $("#table").load('https://cw3.tierramontemariana.org/apps/cotizacion/tabla.php', {
+                $("#table").load('https://conlabweb3.tierramontemariana.org/apps/cotizacion/tabla.php', {
                     idr: id
                 });
                 Swal.fire({
@@ -231,7 +231,7 @@ if ($conetar->connect_errno) {
 
                 $.ajax({
                     type: 'POST',
-                    url: 'https://cw3.tierramontemariana.org/apps/cotizacion/eliminar.php',
+                    url: 'https://conlabweb3.tierramontemariana.org/apps/cotizacion/eliminar.php',
                     data: {
                         id: id,
                         status: 'I'
@@ -240,7 +240,7 @@ if ($conetar->connect_errno) {
 
 
 
-                        $("#table").load("https://cw3.tierramontemariana.org/apps/cotizacion/tabla.php", {
+                        $("#table").load("https://conlabweb3.tierramontemariana.org/apps/cotizacion/tabla.php", {
                             idr: <?php echo $idr ?>
                         });
 
@@ -260,7 +260,7 @@ if ($conetar->connect_errno) {
         var nombre_producto = $('input[name="' + theobject + '"]').attr('nom_insumo');
 
 
-        /*   $("#btndtl").load("https://cw3.tierramontemariana.org/apps/cotizacion/eliminar.php", {
+        /*   $("#btndtl").load("https://conlabweb3.tierramontemariana.org/apps/cotizacion/eliminar.php", {
                id_cot1: id_cot1,
                nombre_producto: nombre_producto
            });*/
@@ -314,7 +314,7 @@ if ($conetar->connect_errno) {
 
         console.log(datosJSON);
 
-        $("#modalshow").load("https://cw3.tierramontemariana.org/apps/cotizacion/modal-2.php", {
+        $("#modalshow").load("https://conlabweb3.tierramontemariana.org/apps/cotizacion/modal-2.php", {
             datos: datosJSON,
             id_req: id_req
         });
@@ -351,13 +351,13 @@ if ($conetar->connect_errno) {
 
         $.ajax({
             type: 'POST',
-            url: 'https://cw3.tierramontemariana.org/apps/cotizacion/generadocotizacion.php',
+            url: 'https://conlabweb3.tierramontemariana.org/apps/cotizacion/generadocotizacion.php',
             data: {
                 id_req: id_req
             },
             success: function (data) {
 
-                $("#table").load("https://cw3.tierramontemariana.org/apps/cotizacion/tabla.php", {
+                $("#table").load("https://conlabweb3.tierramontemariana.org/apps/cotizacion/tabla.php", {
                     idr: id_req
                 });
 
@@ -371,7 +371,7 @@ if ($conetar->connect_errno) {
     function sendMail() {
         $.ajax({
             method: 'POST',
-            url: 'https://cw3.tierramontemariana.org/apps/cotizacion/send_mail.php',
+            url: 'https://conlabweb3.tierramontemariana.org/apps/cotizacion/send_mail.php',
             success: function (respuesta) {
                 $('.loader-ajax').removeClass('active');
                 Swal.fire({
@@ -391,7 +391,7 @@ if ($conetar->connect_errno) {
 
         $.ajax({
             type: 'POST',
-            url: 'https://cw3.tierramontemariana.org/apps/cotizacion/crud.php',
+            url: 'https://conlabweb3.tierramontemariana.org/apps/cotizacion/crud.php',
             data: {
                 id_producto: id_producto,
                 cantidad: cantidad,

@@ -70,11 +70,11 @@ where P.id='" . $id . "'";
             submitHandler: function() {
                 $.ajax({
                     type: 'POST',
-                    url: 'https://cw3.tierramontemariana.org/apps/tp_vias/crud.php',
+                    url: 'https://conlabweb3.tierramontemariana.org/apps/tp_vias/crud.php',
                     data: $('#formeditar').serialize(),
                     success: function(respuesta) {
 
-                        $('.content-table-unidad_medida').load('https://cw3.tierramontemariana.org/apps/tp_vias/thedatatable.php');
+                        $('.content-table-unidad_medida').load('https://conlabweb3.tierramontemariana.org/apps/tp_vias/thedatatable.php');
                         //alert("¡Registro Actualizado con exito!");
                         Swal.fire({
                             position: 'top',

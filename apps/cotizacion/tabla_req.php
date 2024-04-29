@@ -34,7 +34,7 @@
             "autoWidth": false,
             "responsive": true,
             "ajax": {
-                url: 'https://cw3.tierramontemariana.org/apps/cotizacion/mostrar.php', // Página PHP que devuelve los datos en formato JSON
+                url: 'https://conlabweb3.tierramontemariana.org/apps/cotizacion/mostrar.php', // Página PHP que devuelve los datos en formato JSON
                 type: 'GET', // Método de la petición (GET o POST según corresponda)
                 dataType: 'json', // Tipo de datos esperado en la respuesta
                 dataSrc: '' // Indicar que los datos provienen directamente del objeto JSON (sin propiedad adicional)
@@ -76,10 +76,10 @@
             $('#col2' + [i]).css("border", "thin solid  transparent");
         }
         $('#col2' + thefile).css("border", "2px solid #dc3545");
-        $("#data").load("https://cw3.tierramontemariana.org/apps/cotizacion/data.php", {
+        $("#data").load("https://conlabweb3.tierramontemariana.org/apps/cotizacion/data.php", {
             idr: id
         });
-        $("#table").load("https://cw3.tierramontemariana.org/apps/cotizacion/tabla.php", {
+        $("#table").load("https://conlabweb3.tierramontemariana.org/apps/cotizacion/tabla.php", {
             idr: id
         });
 
@@ -87,7 +87,7 @@
 
     function cargarDatos() {
         $.ajax({
-            url: 'https://cw3.tierramontemariana.org/apps/cotizacion/mostrar.php', // Página PHP que devuelve los datos en formato JSON
+            url: 'https://conlabweb3.tierramontemariana.org/apps/cotizacion/mostrar.php', // Página PHP que devuelve los datos en formato JSON
             type: 'GET', // Método de la petición (GET o POST según corresponda)
             dataType: 'json', // Tipo de datos esperado en la respuesta
             success: function(data) {
@@ -120,7 +120,7 @@
 
                 $.ajax({
                     type: 'POST',
-                    url: 'https://cw3.tierramontemariana.org/apps/cotizacion/eliminar.php',
+                    url: 'https://conlabweb3.tierramontemariana.org/apps/cotizacion/eliminar.php',
                     data: {
                         id: id
                     },
@@ -128,7 +128,7 @@
 
                         cargarDatos();
 
-                        $("#table").load("https://cw3.tierramontemariana.org/apps/cotizacion/tabla.php");
+                        $("#table").load("https://conlabweb3.tierramontemariana.org/apps/cotizacion/tabla.php");
 
                     }
                 });

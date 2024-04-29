@@ -1,8 +1,8 @@
 $(document).ready(function() {
 
-    $('.content-table-examenes').load('https://cw3.tierramontemariana.org/apps/listaprecios/table-examen.php');
-    $('.content-table-precio-examenes').load('https://cw3.tierramontemariana.org/apps/listaprecios/table-lista-examen.php');
-    $('.content-detalle-lista').load('https://cw3.tierramontemariana.org/apps/listaprecios/table-detalle-lista.php');
+    $('.content-table-examenes').load('https://conlabweb3.tierramontemariana.org/apps/listaprecios/table-examen.php');
+    $('.content-table-precio-examenes').load('https://conlabweb3.tierramontemariana.org/apps/listaprecios/table-lista-examen.php');
+    $('.content-detalle-lista').load('https://conlabweb3.tierramontemariana.org/apps/listaprecios/table-detalle-lista.php');
 
     document.addEventListener('keydown', manejarTecla);
     
@@ -13,7 +13,7 @@ $(document).ready(function() {
 function viewTotalExamenes(){
     $.ajax({
         type: 'POST',
-        url: 'https://cw3.tierramontemariana.org/apps/listaprecios/mostrar.php?aux=4',
+        url: 'https://conlabweb3.tierramontemariana.org/apps/listaprecios/mostrar.php?aux=4',
         success: function (res) {
             $('#totalexas').html(res);
         }
@@ -61,7 +61,7 @@ function moverDatos() {
             const formData = new FormData();
             formData.append('datos', JSON.stringify(datosSeleccionados));
 
-            fetch('https://cw3.tierramontemariana.org/apps/listaprecios/procesar.php', {
+            fetch('https://conlabweb3.tierramontemariana.org/apps/listaprecios/procesar.php', {
                 method: 'POST',
                 body: formData
             })
@@ -78,7 +78,7 @@ function moverDatos() {
                     console.error(error);
                 });
 
-            $('.content-table-precio-examenes').load('https://cw3.tierramontemariana.org/apps/listaprecios/table-lista-examen.php', {
+            $('.content-table-precio-examenes').load('https://conlabweb3.tierramontemariana.org/apps/listaprecios/table-lista-examen.php', {
                 id: ide
             });
             
@@ -101,7 +101,7 @@ function setDetalleLista() {
 
     $.ajax({
         type: 'POST',
-        url: 'https://cw3.tierramontemariana.org/apps/listaprecios/crud.php?aux=8',
+        url: 'https://conlabweb3.tierramontemariana.org/apps/listaprecios/crud.php?aux=8',
         data: $('#formDetalleLista').serialize(),
         success: function (respuesta) {
 
@@ -113,7 +113,7 @@ function setDetalleLista() {
                 timer: 1500
             });
             //alert("¡Registro Exitoso!");
-            $('.content-detalle-lista').load('https://cw3.tierramontemariana.org/apps/listaprecios/table-detalle-lista.php');
+            $('.content-detalle-lista').load('https://conlabweb3.tierramontemariana.org/apps/listaprecios/table-detalle-lista.php');
         }
     });
 
@@ -149,7 +149,7 @@ function updateProcentaje() {
     if (checkboxesSeleccionados === totalCheckboxes) {
         $.ajax({
             type: 'POST',
-            url: 'https://cw3.tierramontemariana.org/apps/listaprecios/crud.php?aux=5',
+            url: 'https://conlabweb3.tierramontemariana.org/apps/listaprecios/crud.php?aux=5',
             data: {
                 frecuencia: frecuencia,
                 procentaje: procentaje,
@@ -165,14 +165,14 @@ function updateProcentaje() {
                     timer: 1500
                 });
                 //alert("¡Registro Exitoso!");
-                $('.content-detalle-lista').load('https://cw3.tierramontemariana.org/apps/listaprecios/table-detalle-lista.php');
+                $('.content-detalle-lista').load('https://conlabweb3.tierramontemariana.org/apps/listaprecios/table-detalle-lista.php');
             }
         });
 
     } else if (checkboxesSeleccionados === 1) {
         $.ajax({
             type: 'POST',
-            url: 'https://cw3.tierramontemariana.org/apps/listaprecios/crud.php?aux=6',
+            url: 'https://conlabweb3.tierramontemariana.org/apps/listaprecios/crud.php?aux=6',
             data: {
                 frecuencia: frecuencia,
                 procentaje: procentaje,
@@ -189,7 +189,7 @@ function updateProcentaje() {
                     timer: 1500
                 });
                 //alert("¡Registro Exitoso!");
-                $('.content-detalle-lista').load('https://cw3.tierramontemariana.org/apps/listaprecios/table-detalle-lista.php');
+                $('.content-detalle-lista').load('https://conlabweb3.tierramontemariana.org/apps/listaprecios/table-detalle-lista.php');
             }
         });
 
@@ -229,7 +229,7 @@ function updateProcentaje() {
         const formData2 = new FormData();
         formData2.append('datos_b', JSON.stringify(datosSeleccionados5));
 
-        fetch('https://cw3.tierramontemariana.org/apps/listaprecios/crud.php?aux=7', {
+        fetch('https://conlabweb3.tierramontemariana.org/apps/listaprecios/crud.php?aux=7', {
             method: 'POST',
             body: formData2
         })
@@ -241,13 +241,13 @@ function updateProcentaje() {
                 console.error(error);
             });
 
-        $('.content-table-precio-examenes').load('https://cw3.tierramontemariana.org/apps/listaprecios/table-lista-examen.php');
+        $('.content-table-precio-examenes').load('https://conlabweb3.tierramontemariana.org/apps/listaprecios/table-lista-examen.php');
     }
 
 }
 
 function viewDetalleLista(ide) {
-    $('.content-table-precio-examenes').load('https://cw3.tierramontemariana.org/apps/listaprecios/table-lista-examen.php', {
+    $('.content-table-precio-examenes').load('https://conlabweb3.tierramontemariana.org/apps/listaprecios/table-lista-examen.php', {
         id: ide
     });
     viewTotalExamenesLista(ide)
@@ -267,7 +267,7 @@ function deleteDetalleLista(ide, ide2) {
 
         $.ajax({
             type: 'POST',
-            url: 'https://cw3.tierramontemariana.org/apps/listaprecios/crud.php?aux=9',
+            url: 'https://conlabweb3.tierramontemariana.org/apps/listaprecios/crud.php?aux=9',
             data: {
                 ide: ide
             },
@@ -281,7 +281,7 @@ function deleteDetalleLista(ide, ide2) {
                     });
                 }
 
-                $('.content-table-precio-examenes').load('https://cw3.tierramontemariana.org/apps/listaprecios/table-lista-examen.php', {
+                $('.content-table-precio-examenes').load('https://conlabweb3.tierramontemariana.org/apps/listaprecios/table-lista-examen.php', {
                     id: ide2
                 });
                 viewTotalExamenesLista(ide2)
@@ -311,7 +311,7 @@ function grabador(id) {
 
     $.ajax({
         type: 'POST',
-        url: 'https://cw3.tierramontemariana.org/apps/listaprecios/crud.php?aux=4',
+        url: 'https://conlabweb3.tierramontemariana.org/apps/listaprecios/crud.php?aux=4',
         data: {
             id: id,
             preci: numeroDesformateado
@@ -330,7 +330,7 @@ function number_format(number, decimals, decimalSeparator, thousandsSeparator) {
 function viewTotalExamenesLista(id){
     $.ajax({
         type: 'POST',
-        url: 'https://cw3.tierramontemariana.org/apps/listaprecios/mostrar.php?aux=5',
+        url: 'https://conlabweb3.tierramontemariana.org/apps/listaprecios/mostrar.php?aux=5',
         data: {
             id: id
         },

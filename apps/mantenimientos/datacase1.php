@@ -148,11 +148,11 @@ if ($conetar->connect_errno) {
             var tm = $('option:selected', sel).attr('value');
             var status = $("#modeeditstatus").val();
             if (tm == 'C') {
-                $("#choose-maintenance").load("https://cw3.tierramontemariana.org/apps/mantenimientos/correctivo.php", {
+                $("#choose-maintenance").load("https://conlabweb3.tierramontemariana.org/apps/mantenimientos/correctivo.php", {
                     status: status
                 });
             } else if (tm == 'P') {
-                $("#choose-maintenance").load("https://cw3.tierramontemariana.org/apps/mantenimientos/preventivo.php", {
+                $("#choose-maintenance").load("https://conlabweb3.tierramontemariana.org/apps/mantenimientos/preventivo.php", {
                     status: status
                 });
             }

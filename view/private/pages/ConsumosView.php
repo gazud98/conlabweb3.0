@@ -24,7 +24,7 @@
 </head>
 <style>
     .content-wrapper {
-        background-image: url('https://cw3.tierramontemariana.org/apps/medicos/assets/backcw3-v1.png');
+        background-image: url('https://conlabweb3.tierramontemariana.org/apps/medicos/assets/backcw3-v1.png');
         background-size: cover;
         background-repeat: no-repeat;
     }

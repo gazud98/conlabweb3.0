@@ -88,7 +88,7 @@ if ($conetar->connect_errno) {
                 "autoWidth": true,
                 "responsive": true,
                 "ajax": {
-                    url: 'https://cw3.tierramontemariana.org/apps/listaprecios/mostrar.php?aux=2&ide=<?php echo $id_detalle; ?>', // Página PHP que devuelve los datos en formato JSON
+                    url: 'https://conlabweb3.tierramontemariana.org/apps/listaprecios/mostrar.php?aux=2&ide=<?php echo $id_detalle; ?>', // Página PHP que devuelve los datos en formato JSON
                     type: 'GET', // Método de la petición (GET o POST según corresponda)
                     dataType: 'json', // Tipo de datos esperado en la respuesta
                     dataSrc: '',
@@ -133,13 +133,13 @@ if ($conetar->connect_errno) {
                 submitHandler: function() {
                     $.ajax({
                         type: 'POST',
-                        url: 'https://cw3.tierramontemariana.org/apps/planes/crud.php?aux=1',
+                        url: 'https://conlabweb3.tierramontemariana.org/apps/planes/crud.php?aux=1',
                         data: $('#formcontrol').serialize(),
                         success: function(respuesta) {
                             if (respuesta == 'ok') {
                                 //                     alert('Termiando');
                             }
-                            $('.content-table-unidad_medida').load('https://cw3.tierramontemariana.org/apps/planes/thedatatable.php');
+                            $('.content-table-unidad_medida').load('https://conlabweb3.tierramontemariana.org/apps/planes/thedatatable.php');
 
                             Swal.fire({
                                 position: 'top',

@@ -252,13 +252,13 @@ if ($conetar->connect_errno) {
 
             $.ajax({
                 type: 'POST',
-                url: 'https://cw3.tierramontemariana.org/apps/csltaordcompra/recibirordenes.php',
+                url: 'https://conlabweb3.tierramontemariana.org/apps/csltaordcompra/recibirordenes.php',
                 data: {
                     idc: <?php echo $id ?>,
                     fun: 'R'
                 },
                 success: function(data) {
-                    $("#thetable").load("https://cw3.tierramontemariana.org/apps/csltaordcompra/thedatatable.php");
+                    $("#thetable").load("https://conlabweb3.tierramontemariana.org/apps/csltaordcompra/thedatatable.php");
                 }
             });
         }
@@ -270,13 +270,13 @@ if ($conetar->connect_errno) {
 
             $.ajax({
                 type: 'POST',
-                url: 'https://cw3.tierramontemariana.org/apps/csltaordcompra/recibirordenes.php',
+                url: 'https://conlabweb3.tierramontemariana.org/apps/csltaordcompra/recibirordenes.php',
                 data: {
                     idc: <?php echo $id ?>,
                     fun: 'PR'
                 },
                 success: function(data) {
-                    $("#thetable").load("https://cw3.tierramontemariana.org/apps/csltaordcompra/thedatatable.php");
+                    $("#thetable").load("https://conlabweb3.tierramontemariana.org/apps/csltaordcompra/thedatatable.php");
                 }
             });
         }
@@ -303,14 +303,14 @@ if ($conetar->connect_errno) {
 
 
 
-            $("#btnedt").load("https://cw3.tierramontemariana.org/apps/csltaordcompra/editar.php", {
+            $("#btnedt").load("https://conlabweb3.tierramontemariana.org/apps/csltaordcompra/editar.php", {
                 idpr: idpr,
                 id: id,
                 vtotal: vtotal
 
             });
 
-            $("#btndele").load("https://cw3.tierramontemariana.org/apps/csltaordcompra/borrar.php", {
+            $("#btndele").load("https://conlabweb3.tierramontemariana.org/apps/csltaordcompra/borrar.php", {
                 idpr: idpr,
                 nom: nom,
                 id: id

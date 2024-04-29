@@ -277,7 +277,7 @@ if ($conetar->connect_errno) {
 <script>
     $(document).ready(function() {
 
-        $('.content-table').load('https://cw3.tierramontemariana.org/apps/ingresopaciente/table-domicilios.php');
+        $('.content-table').load('https://conlabweb3.tierramontemariana.org/apps/ingresopaciente/table-domicilios.php');
 
         miDataTable = $('.tabla-examen').DataTable({
             language: {
@@ -291,7 +291,7 @@ if ($conetar->connect_errno) {
             "autoWidth": false,
             "responsive": false,
             "ajax": {
-                url: 'https://cw3.tierramontemariana.org/apps/ingresopaciente/tabla-examen.php', // Página PHP que devuelve los datos en formato JSON
+                url: 'https://conlabweb3.tierramontemariana.org/apps/ingresopaciente/tabla-examen.php', // Página PHP que devuelve los datos en formato JSON
                 type: 'GET', // Método de la petición (GET o POST según corresponda)
                 dataType: 'json', // Tipo de datos esperado en la respuesta
                 dataSrc: '', // Indicar que los datos provienen directamente del objeto JSON (sin propiedad adicional)
@@ -401,12 +401,12 @@ if ($conetar->connect_errno) {
     function agregarExamen() {
         $.ajax({
             type: 'POST',
-            url: 'https://cw3.tierramontemariana.org/apps/ingresopaciente/agregar-paciente.php',
+            url: 'https://conlabweb3.tierramontemariana.org/apps/ingresopaciente/agregar-paciente.php',
             data: $('#form-examen').serialize(),
             success: function(data) {
                 // Recargar DataTable con nuevos datos
                 miDataTable.ajax.reload();
-                $('#pagos').load('https://cw3.tierramontemariana.org/apps/ingresopaciente/view-pagos.php', {
+                $('#pagos').load('https://conlabweb3.tierramontemariana.org/apps/ingresopaciente/view-pagos.php', {
                     numero_orden: <?php echo $numero_orden; ?>
                 });
 
@@ -457,7 +457,7 @@ if ($conetar->connect_errno) {
             if (result.isConfirmed) {
                 $.ajax({
                     type: 'POST',
-                    url: 'https://cw3.tierramontemariana.org/apps/ingresopaciente/agregar-paciente.php',
+                    url: 'https://conlabweb3.tierramontemariana.org/apps/ingresopaciente/agregar-paciente.php',
                     data: {
                         id: id,
                         aux: 2
@@ -535,7 +535,7 @@ if ($conetar->connect_errno) {
 
     function cargarDatos() {
         $.ajax({
-            url: 'https://cw3.tierramontemariana.org/apps/ingresopaciente/tabla-examen.php', // Página PHP que devuelve los datos en formato JSON
+            url: 'https://conlabweb3.tierramontemariana.org/apps/ingresopaciente/tabla-examen.php', // Página PHP que devuelve los datos en formato JSON
             type: 'GET', // Método de la petición (GET o POST según corresponda)
             dataType: 'json', // Tipo de datos esperado en la respuesta
             success: function(data) {
@@ -551,13 +551,13 @@ if ($conetar->connect_errno) {
 
     function pagosSend(numero_orden, id_paciente) {
 
-        $('#pagos').load('https://cw3.tierramontemariana.org/apps/ingresopaciente/view-pagos.php', {
+        $('#pagos').load('https://conlabweb3.tierramontemariana.org/apps/ingresopaciente/view-pagos.php', {
             numero_orden: numero_orden,
             id_paciente: id_paciente
         });
     }
 
-    $('#contentModalDomicilios').load('https://cw3.tierramontemariana.org/apps/ingresopaciente/modal-domicilios.php', {
+    $('#contentModalDomicilios').load('https://conlabweb3.tierramontemariana.org/apps/ingresopaciente/modal-domicilios.php', {
         idpac: <?php echo $id_paciente; ?>,
         numorden: <?php echo $numero_orden; ?>,
     });

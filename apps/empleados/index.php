@@ -10,7 +10,7 @@ $uppercaseruta = strtoupper($ruta);
 ?>
 <style>
     .content-wrapper {
-        background-image: url('https://cw3.tierramontemariana.org/apps/medicos/assets/backcw3-v1.png');
+        background-image: url('https://conlabweb3.tierramontemariana.org/apps/medicos/assets/backcw3-v1.png');
         background-size: cover;
         background-repeat: no-repeat;
     }
@@ -24,11 +24,11 @@ $uppercaseruta = strtoupper($ruta);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
-    <link rel="stylesheet" href="https://cw3.tierramontemariana.org/apps/empleados/assets/style.css">
+    <link rel="stylesheet" href="https://conlabweb3.tierramontemariana.org/apps/empleados/assets/style.css">
 </head>
 <style>
     .content-wrapper {
-        background-image: url('https://cw3.tierramontemariana.org/apps/medicos/assets/backcw3-v1.png');
+        background-image: url('https://conlabweb3.tierramontemariana.org/apps/medicos/assets/backcw3-v1.png');
         background-size: cover;
         background-repeat: no-repeat;
     }
@@ -107,17 +107,17 @@ $uppercaseruta = strtoupper($ruta);
 
     <script>
         function loadFormEmployee() {
-            $('#contentFormEmployee').load('https://cw3.tierramontemariana.org/apps/empleados/datacase1.php');
+            $('#contentFormEmployee').load('https://conlabweb3.tierramontemariana.org/apps/empleados/datacase1.php');
         }
 
         $(document).ready(function() {
-            $('#contentTableEmploye').load('https://cw3.tierramontemariana.org/apps/empleados/thedatatable.php');
+            $('#contentTableEmploye').load('https://conlabweb3.tierramontemariana.org/apps/empleados/thedatatable.php');
         })
 
         function setEmployee() {
             $.ajax({
                 type: 'POST',
-                url: 'https://cw3.tierramontemariana.org/apps/empleados/crud.php?aux=1',
+                url: 'https://conlabweb3.tierramontemariana.org/apps/empleados/crud.php?aux=1',
                 data: $('#formAddEmployee').serialize(),
                 success: function(respuesta) {
 
@@ -142,7 +142,7 @@ $uppercaseruta = strtoupper($ruta);
         function updateEmployee() {
             $.ajax({
                 type: 'POST',
-                url: 'https://cw3.tierramontemariana.org/apps/empleados/crud.php?aux=2',
+                url: 'https://conlabweb3.tierramontemariana.org/apps/empleados/crud.php?aux=2',
                 data: $('#formEditEmployee').serialize(),
                 success: function(respuesta) {
 

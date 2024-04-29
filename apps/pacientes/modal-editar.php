@@ -188,10 +188,10 @@ where id_pacientes='" . $id . "'";
             submitHandler: function() {
                 $.ajax({
                     type: 'POST',
-                    url: 'https://cw3.tierramontemariana.org/apps/pacientes/crud.php',
+                    url: 'https://conlabweb3.tierramontemariana.org/apps/pacientes/crud.php',
                     data: $('#formeditar').serialize(),
                     success: function(respuesta) {
-                        $(".content-table-sedes").load('https://cw3.tierramontemariana.org/apps/pacientes/thedatatable.php');
+                        $(".content-table-sedes").load('https://conlabweb3.tierramontemariana.org/apps/pacientes/thedatatable.php');
 
                         //alert("¡Registro actualizado con exito!");
                         Swal.fire({

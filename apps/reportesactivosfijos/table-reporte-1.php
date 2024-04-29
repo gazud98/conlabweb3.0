@@ -78,7 +78,7 @@ if ($conetar->connect_errno) {
     <script>
         $(document).ready(function() {
 
-            $('#contentFiters').load('https://cw3.tierramontemariana.org/apps/reportesactivosfijos/filters.php');
+            $('#contentFiters').load('https://conlabweb3.tierramontemariana.org/apps/reportesactivosfijos/filters.php');
 
             miDataTableReporte1 = $('#tableReporte').DataTable({
                 language: {
@@ -135,7 +135,7 @@ if ($conetar->connect_errno) {
                     },
                 ],
                 "ajax": {
-                    url: 'https://cw3.tierramontemariana.org/apps/reportesactivosfijos/mostrar.php', // Página PHP que devuelve los datos en formato JSON
+                    url: 'https://conlabweb3.tierramontemariana.org/apps/reportesactivosfijos/mostrar.php', // Página PHP que devuelve los datos en formato JSON
                     type: 'GET', // Método de la petición (GET o POST según corresponda)
                     dataType: 'json', // Tipo de datos esperado en la respuesta
                     dataSrc: '',
@@ -182,7 +182,7 @@ if ($conetar->connect_errno) {
         })
 
         function loadModalView(id){
-            $('#contentFormsModal').load('https://cw3.tierramontemariana.org/apps/reportesactivosfijos/modal-view.php', {
+            $('#contentFormsModal').load('https://conlabweb3.tierramontemariana.org/apps/reportesactivosfijos/modal-view.php', {
                 id: id
             });
         }

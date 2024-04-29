@@ -316,7 +316,7 @@ if ($conetar->connect_errno) {
             submitHandler: function() {
                 $.ajax({
                     type: 'POST',
-                    url: 'https://cw3.tierramontemariana.org/apps/activofijo/crud-2.php?aux=2',
+                    url: 'https://conlabweb3.tierramontemariana.org/apps/activofijo/crud-2.php?aux=2',
                     data: $('#formEditActivos').serialize(),
                     success: function(respuesta) {
                         Swal.fire({
@@ -326,7 +326,7 @@ if ($conetar->connect_errno) {
                             showConfirmButton: false,
                             timer: 1500
                         });
-                        $('.content-table').load('https://cw3.tierramontemariana.org/apps/activofijo/tabla.php');
+                        $('.content-table').load('https://conlabweb3.tierramontemariana.org/apps/activofijo/tabla.php');
                         $('#modalEditActivoFijo').modal('hide');
                     }
                 });

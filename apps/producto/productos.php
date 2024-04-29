@@ -389,7 +389,7 @@ if ($conetar->connect_errno) {
             </div>
         </div>
         
-        <iframe id="form-up" style="width: 100%;border:none;overflow:hidden;margin-top:20px;" height="120" src="https://cw3.tierramontemariana.org/apps/producto/form-files.php?id=<?php echo $id ?>">
+        <iframe id="form-up" style="width: 100%;border:none;overflow:hidden;margin-top:20px;" height="120" src="https://conlabweb3.tierramontemariana.org/apps/producto/form-files.php?id=<?php echo $id ?>">
         </iframe>
 
         <div class="mt-5 text-right" style="border-radius: 5px">
@@ -417,7 +417,7 @@ if ($conetar->connect_errno) {
             submitHandler: function() {
                 $.ajax({
                     type: 'POST',
-                    url: 'https://cw3.tierramontemariana.org/apps/producto/crud-2.php?aux=1',
+                    url: 'https://conlabweb3.tierramontemariana.org/apps/producto/crud-2.php?aux=1',
                     data: $('#formcontrol2').serialize(),
                     success: function(respuesta) {
 
@@ -429,7 +429,7 @@ if ($conetar->connect_errno) {
                             timer: 1500
                         })
 
-                        $('#contentTableProdcutos').load('https://cw3.tierramontemariana.org/apps/producto/table.php');
+                        $('#contentTableProdcutos').load('https://conlabweb3.tierramontemariana.org/apps/producto/table.php');
 
                         $('#modaEditEquipo').modal('hide');
                         $('#modalAddProducto').modal('hide');

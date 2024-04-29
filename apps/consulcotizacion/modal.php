@@ -26,6 +26,6 @@ $id = $_REQUEST['id'];
 <script>
     function printModal() {
 
-        window.open('https://cw3.tierramontemariana.org/apps/consulcotizacion/modal.php?id=<?php echo $id ?>';
+        window.open('https://conlabweb3.tierramontemariana.org/apps/consulcotizacion/modal.php?id=<?php echo $id ?>';
     }
 </script>

@@ -17,11 +17,11 @@ $uppercaseruta = strtoupper($ruta);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
-    <link rel="stylesheet" href="https://cw3.tierramontemariana.org/apps/dptos/assets/style.css">
+    <link rel="stylesheet" href="https://conlabweb3.tierramontemariana.org/apps/dptos/assets/style.css">
 </head>
 <style>
     .content-wrapper {
-        background-image: url('https://cw3.tierramontemariana.org/apps/medicos/assets/backcw3-v1.png');
+        background-image: url('https://conlabweb3.tierramontemariana.org/apps/medicos/assets/backcw3-v1.png');
         background-size: cover;
         background-repeat: no-repeat;
     }
@@ -82,7 +82,7 @@ $uppercaseruta = strtoupper($ruta);
         $(document).ready(function() {
 
 
-            $('.thetable').load('https://cw3.tierramontemariana.org/apps/analrendimiento/table-1.php');
+            $('.thetable').load('https://conlabweb3.tierramontemariana.org/apps/analrendimiento/table-1.php');
 
 
         })

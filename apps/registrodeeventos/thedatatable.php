@@ -248,7 +248,7 @@ if ($conetar->connect_errno) {
 
 
 
-        $("#mdlevent").load('https://cw3.tierramontemariana.org/apps/registrodeeventos/modal.php', {
+        $("#mdlevent").load('https://conlabweb3.tierramontemariana.org/apps/registrodeeventos/modal.php', {
             id: id
         });
 
@@ -273,7 +273,7 @@ if ($conetar->connect_errno) {
 
 
 
-        $("#mdlevent").load("https://cw3.tierramontemariana.org/apps/registrodeeventos/modal.php", {
+        $("#mdlevent").load("https://conlabweb3.tierramontemariana.org/apps/registrodeeventos/modal.php", {
             id: id
         });
 

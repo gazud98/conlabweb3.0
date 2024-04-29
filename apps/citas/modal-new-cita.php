@@ -218,7 +218,7 @@ if ($conetar->connect_errno) {
     function guardarDatos() {
         $.ajax({
             method: 'POST',
-            url: 'https://cw3.tierramontemariana.org/apps/citas/agregar.php',
+            url: 'https://conlabweb3.tierramontemariana.org/apps/citas/agregar.php',
             data: $('#formNewCita').serialize(),
             success: function(response) {
                 

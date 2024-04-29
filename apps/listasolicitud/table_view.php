@@ -165,7 +165,7 @@ if ($conetar->connect_errno) {
                 "processing": true,
 
                 "ajax": {
-                    url: 'https://cw3.tierramontemariana.org/apps/listasolicitud/search.php', // URL de tu archivo PHP que devuelve los datos
+                    url: 'https://conlabweb3.tierramontemariana.org/apps/listasolicitud/search.php', // URL de tu archivo PHP que devuelve los datos
                     type: 'GET', // Método HTTP utilizado para la solicitud
                     dataType: 'json', // Tipo de datos esperado en la respuesta
                     dataSrc: '', // Indicar que los datos provienen directamente del objeto JSON (sin propiedad adicional)
@@ -239,7 +239,7 @@ if ($conetar->connect_errno) {
 
 
             $.ajax({
-                url: 'https://cw3.tierramontemariana.org/apps/listasolicitud/search.php',
+                url: 'https://conlabweb3.tierramontemariana.org/apps/listasolicitud/search.php',
                 type: 'GET',
                 dataType: 'json',
                 success: function (data) {
@@ -262,7 +262,7 @@ if ($conetar->connect_errno) {
 
 
         function formato(id) {
-            $("#modalshow").load("https://cw3.tierramontemariana.org/apps/listasolicitud/modal.php", {
+            $("#modalshow").load("https://conlabweb3.tierramontemariana.org/apps/listasolicitud/modal.php", {
                 id: id
             });
 

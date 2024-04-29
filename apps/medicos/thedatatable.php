@@ -81,7 +81,7 @@ if ($conetar->connect_errno) {
                 "autoWidth": false,
                 "responsive": true,
                 "ajax": {
-                    url: 'https://cw3.tierramontemariana.org/apps/medicos/mostrar.php?aux=1', // Página PHP que devuelve los datos en formato JSON
+                    url: 'https://conlabweb3.tierramontemariana.org/apps/medicos/mostrar.php?aux=1', // Página PHP que devuelve los datos en formato JSON
                     type: 'GET', // Método de la petición (GET o POST según corresponda)
                     dataType: 'json', // Tipo de datos esperado en la respuesta
                     dataSrc: '',
@@ -134,10 +134,10 @@ if ($conetar->connect_errno) {
                 submitHandler: function() {
                     $.ajax({
                         type: 'POST',
-                        url: 'https://cw3.tierramontemariana.org/apps/medicos/crud.php?aux=1',
+                        url: 'https://conlabweb3.tierramontemariana.org/apps/medicos/crud.php?aux=1',
                         data: $('#formcontrol').serialize(),
                         success: function(respuesta) {
-                            $('.content-table-sedes').load('https://cw3.tierramontemariana.org/apps/medicos/thedatatable.php');
+                            $('.content-table-sedes').load('https://conlabweb3.tierramontemariana.org/apps/medicos/thedatatable.php');
                             Swal.fire({
                                 position: 'top',
                                 icon: 'success',
@@ -189,14 +189,14 @@ if ($conetar->connect_errno) {
                 if (result.isConfirmed) {
                     $.ajax({
                         type: 'POST',
-                        url: 'https://cw3.tierramontemariana.org/apps/medicos/crud.php',
+                        url: 'https://conlabweb3.tierramontemariana.org/apps/medicos/crud.php',
                         data: {
                             id: id,
                             modeeditstatus: 'B'
                         },
                         success: function(respuesta) {
 
-                            $('.content-table-sedes').load('https://cw3.tierramontemariana.org/apps/medicos/thedatatable.php');
+                            $('.content-table-sedes').load('https://conlabweb3.tierramontemariana.org/apps/medicos/thedatatable.php');
                             Swal.fire({
                                 position: 'top',
                                 icon: 'success',
@@ -218,7 +218,7 @@ if ($conetar->connect_errno) {
 
         function editar(id) {
 
-            $('#editMedicos').load('https://cw3.tierramontemariana.org/apps/medicos/modal-editar.php', {
+            $('#editMedicos').load('https://conlabweb3.tierramontemariana.org/apps/medicos/modal-editar.php', {
                 id: id,
                 status: 'E'
             });

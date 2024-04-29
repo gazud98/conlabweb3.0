@@ -33,7 +33,7 @@ if ($conetar->connect_errno) {
 
 ?>
     <link href="https://cdn.datatables.net/1.13.5/css/dataTables.bootstrap4.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cw3.tierramontemariana.org/apps/mantenimientos/assets/style.css">
+    <link rel="stylesheet" href="https://conlabweb3.tierramontemariana.org/apps/mantenimientos/assets/style.css">
 
 
     <style>
@@ -81,7 +81,7 @@ if ($conetar->connect_errno) {
             },
             // ... Otras opciones ...
             "ajax": {
-                url: 'https://cw3.tierramontemariana.org/apps/mantenimientos/mostrar.php', // Página PHP que devuelve los datos en formato JSON
+                url: 'https://conlabweb3.tierramontemariana.org/apps/mantenimientos/mostrar.php', // Página PHP que devuelve los datos en formato JSON
                 type: 'GET', // Método de la petición (GET o POST según corresponda)
                 dataType: 'json', // Tipo de datos esperado en la respuesta
                 dataSrc: '' // Indicar que los datos provienen directamente del objeto JSON (sin propiedad adicional)
@@ -137,7 +137,7 @@ if ($conetar->connect_errno) {
             }).then((result) => {
                 if (result.isConfirmed) {
                     $.ajax({
-                        url: 'https://cw3.tierramontemariana.org/apps/mantenimientos/delete.php?id=' + id,
+                        url: 'https://conlabweb3.tierramontemariana.org/apps/mantenimientos/delete.php?id=' + id,
                         success: function() {
                             Swal.fire(
                                 'Eliminado!',
@@ -160,7 +160,7 @@ if ($conetar->connect_errno) {
             }).then((result) => {
                 if (result.isConfirmed) {
                     $.ajax({
-                        url: 'https://cw3.tierramontemariana.org/apps/mantenimientos/delete-2.php?id=' + id,
+                        url: 'https://conlabweb3.tierramontemariana.org/apps/mantenimientos/delete-2.php?id=' + id,
                         success: function() {
                             Swal.fire(
                                 'Eliminado!',
@@ -177,7 +177,7 @@ if ($conetar->connect_errno) {
 
     function cargarDatos() {
         $.ajax({
-            url: 'https://cw3.tierramontemariana.org/apps/mantenimientos/mostrar.php', // Página PHP que devuelve los datos en formato JSON
+            url: 'https://conlabweb3.tierramontemariana.org/apps/mantenimientos/mostrar.php', // Página PHP que devuelve los datos en formato JSON
             type: 'GET', // Método de la petición (GET o POST según corresponda)
             dataType: 'json', // Tipo de datos esperado en la respuesta
             success: function(data) {
@@ -215,12 +215,12 @@ if ($conetar->connect_errno) {
 
 
         if (tm == 'C') {
-            $("#textFieldsEdit").load("https://cw3.tierramontemariana.org/apps/mantenimientos/edit-correctivo.php", {
+            $("#textFieldsEdit").load("https://conlabweb3.tierramontemariana.org/apps/mantenimientos/edit-correctivo.php", {
                 id: id
             });
             $('#titleEdit').html('Mantenimiento Correctivo');
         } else {
-            $("#textFieldsEdit").load("https://cw3.tierramontemariana.org/apps/mantenimientos/edit-preventivo.php", {
+            $("#textFieldsEdit").load("https://conlabweb3.tierramontemariana.org/apps/mantenimientos/edit-preventivo.php", {
                 id: id
             });
             $('#titleEdit').html('Mantenimiento Preventivo');

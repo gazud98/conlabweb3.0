@@ -87,11 +87,11 @@ where P.id='" . $id . "'";
             submitHandler: function() {
                 $.ajax({
                     type: 'POST',
-                    url: 'https://cw3.tierramontemariana.org/apps/creaactividad/crud.php',
+                    url: 'https://conlabweb3.tierramontemariana.org/apps/creaactividad/crud.php',
                     data: $('#formeditar').serialize(),
                     success: function(respuesta) {
 
-                        $('.content-table-creaactividad').load('https://cw3.tierramontemariana.org/apps/creaactividad/thedatatable.php');
+                        $('.content-table-creaactividad').load('https://conlabweb3.tierramontemariana.org/apps/creaactividad/thedatatable.php');
                         alert("¡Registro Actualizado con exito!");
                     }
 

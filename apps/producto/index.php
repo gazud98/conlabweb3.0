@@ -41,7 +41,7 @@ if ($conetar->connect_errno) {
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title></title>
-        <link rel="stylesheet" href="https://cw3.tierramontemariana.org/apps/producto/assets/style.css">
+        <link rel="stylesheet" href="https://conlabweb3.tierramontemariana.org/apps/producto/assets/style.css">
 
     </head>
 
@@ -170,16 +170,16 @@ if ($conetar->connect_errno) {
         <script>
             $(document).ready(function() {
 
-                $('#contentTableProdcutos').load('https://cw3.tierramontemariana.org/apps/producto/table.php');
+                $('#contentTableProdcutos').load('https://conlabweb3.tierramontemariana.org/apps/producto/table.php');
 
             });
 
             function loadFormProdcut() {
-                $('#contentFormProduct').load('https://cw3.tierramontemariana.org/apps/producto/productos.php');
+                $('#contentFormProduct').load('https://conlabweb3.tierramontemariana.org/apps/producto/productos.php');
             }
 
             function loadFormEquipo() {
-                $('#contentFormEquipo').load('https://cw3.tierramontemariana.org/apps/producto/equipos.php');
+                $('#contentFormEquipo').load('https://conlabweb3.tierramontemariana.org/apps/producto/equipos.php');
             }
 
             function accionesespecificas(caso) {

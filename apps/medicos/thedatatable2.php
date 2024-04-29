@@ -387,7 +387,7 @@ if ($conetar->connect_errno) {
                         url: '/ce3uix/apps/medicos/crud.php',
                         data: $('#formcontrol').serialize(),
                         success: function(respuesta) {
-                            $('.content-table-sedes').load('https://cw3.tierramontemariana.org/apps/medicos/thedatatable.php');
+                            $('.content-table-sedes').load('https://conlabweb3.tierramontemariana.org/apps/medicos/thedatatable.php');
                             Swal.fire({
                                 position: 'top',
                                 icon: 'success',
@@ -446,7 +446,7 @@ if ($conetar->connect_errno) {
                         },
                         success: function(respuesta) {
 
-                            $('.content-table-sedes').load('https://cw3.tierramontemariana.org/apps/medicos/thedatatable.php');
+                            $('.content-table-sedes').load('https://conlabweb3.tierramontemariana.org/apps/medicos/thedatatable.php');
                             Swal.fire({
                                 position: 'top',
                                 icon: 'success',
@@ -468,7 +468,7 @@ if ($conetar->connect_errno) {
 
         function editar(id) {
 
-            $('#editMedicos').load('https://cw3.tierramontemariana.org/apps/medicos/modal-editar.php', {
+            $('#editMedicos').load('https://conlabweb3.tierramontemariana.org/apps/medicos/modal-editar.php', {
                 id: id,
                 status: 'E'
             });
@@ -506,14 +506,14 @@ if ($conetar->connect_errno) {
                     if (result.isConfirmed) {
                         $.ajax({
                             type: 'POST',
-                            url: 'https://cw3.tierramontemariana.org/apps/medicos/crud.php',
+                            url: 'https://conlabweb3.tierramontemariana.org/apps/medicos/crud.php',
                             data: {
                                 id: id,
                                 modeeditstatus: 'D'
                             },
                             success: function(respuesta) {
 
-                                $('.content-table-sedes').load('https://cw3.tierramontemariana.org/apps/medicos/thedatatable.php');
+                                $('.content-table-sedes').load('https://conlabweb3.tierramontemariana.org/apps/medicos/thedatatable.php');
                                 Swal.fire({
                                     position: 'top',
                                     icon: 'success',
@@ -547,7 +547,7 @@ if ($conetar->connect_errno) {
                         },
                         success: function(respuesta) {
 
-                            $('.content-table-sedes').load('https://cw3.tierramontemariana.org/apps/medicos/thedatatable.php');
+                            $('.content-table-sedes').load('https://conlabweb3.tierramontemariana.org/apps/medicos/thedatatable.php');
                             Swal.fire({
                                 position: 'top',
                                 icon: 'success',

@@ -37,7 +37,7 @@ $user = $_SESSION['id_users'];
   }
 
   .content-wrapper {
-    background-image: url('https://cw3.tierramontemariana.org/apps/medicos/assets/backcw3-v1.png');
+    background-image: url('https://conlabweb3.tierramontemariana.org/apps/medicos/assets/backcw3-v1.png');
     background-size: cover;
     background-repeat: no-repeat;
   }
@@ -185,7 +185,7 @@ $user = $_SESSION['id_users'];
 
   .content-wrapper {
 
-    background-image: url('https://cw3.tierramontemariana.org/assets/image/backcw3-v1.png');
+    background-image: url('https://conlabweb3.tierramontemariana.org/assets/image/backcw3-v1.png');
     background-size: cover;
     background-repeat: no-repeat;
   }
@@ -340,7 +340,7 @@ $user = $_SESSION['id_users'];
     function ejecutarTareat() {
       $.ajax({
         type: 'POST',
-        url: 'https://cw3.tierramontemariana.org/apps/gestiontareas/comprobar.php',
+        url: 'https://conlabweb3.tierramontemariana.org/apps/gestiontareas/comprobar.php',
         success: function(rows) {
           // Manejar la respuesta exitosa
           console.log('Consulta exitosa', rows);
@@ -381,7 +381,7 @@ $user = $_SESSION['id_users'];
 
       $.ajax({
         type: 'POST',
-        url: 'https://cw3.tierramontemariana.org/apps/gestiontareas/mostrar-2.php?aux=5&user=<?php echo $user; ?>',
+        url: 'https://conlabweb3.tierramontemariana.org/apps/gestiontareas/mostrar-2.php?aux=5&user=<?php echo $user; ?>',
         success: function(res) {
           $('#rows_user').html(res);
         }
@@ -392,7 +392,7 @@ $user = $_SESSION['id_users'];
     function sendEmailDay() {
 
       $.ajax({
-        url: 'https://cw3.tierramontemariana.org/apps/gestiontareas/send-mail.php?user=' + <?php echo $user; ?>,
+        url: 'https://conlabweb3.tierramontemariana.org/apps/gestiontareas/send-mail.php?user=' + <?php echo $user; ?>,
         type: 'GET',
         dataType: 'json',
         success: function(res) {
@@ -458,7 +458,7 @@ $user = $_SESSION['id_users'];
         "autoWidth": true,
         "responsive": true,
         "ajax": {
-          url: 'https://cw3.tierramontemariana.org/apps/gestiontareas/mostrar-tareas-user.php?user=<?php echo $user; ?>',
+          url: 'https://conlabweb3.tierramontemariana.org/apps/gestiontareas/mostrar-tareas-user.php?user=<?php echo $user; ?>',
           type: 'GET',
           dataType: 'json',
           dataSrc: ''
@@ -603,7 +603,7 @@ $user = $_SESSION['id_users'];
     function ejecutarTareat() {
       $.ajax({
         type: 'POST',
-        url: 'https://cw3.tierramontemariana.org/apps/consultamantenimiento/comprobar.php',
+        url: 'https://conlabweb3.tierramontemariana.org/apps/consultamantenimiento/comprobar.php',
         success: function(rows) {
           // Manejar la respuesta exitosa
           console.log('Consulta exitosa', rows);

@@ -366,7 +366,7 @@
                  "autoWidth": true,
                  "responsive": true,
                  "ajax": {
-                     url: 'https://cw3.tierramontemariana.org/apps/roles/mostrar.php', // Página PHP que devuelve los datos en formato JSON
+                     url: 'https://conlabweb3.tierramontemariana.org/apps/roles/mostrar.php', // Página PHP que devuelve los datos en formato JSON
                      type: 'GET', // Método de la petición (GET o POST según corresponda)
                      dataType: 'json', // Tipo de datos esperado en la respuesta
                      dataSrc: '' // Indicar que los datos provienen directamente del objeto JSON (sin propiedad adicional)
@@ -400,7 +400,7 @@
                  submitHandler: function() {
                      $.ajax({
                          type: 'POST',
-                         url: 'https://cw3.tierramontemariana.org/apps/roles/crud.php',
+                         url: 'https://conlabweb3.tierramontemariana.org/apps/roles/crud.php',
                          data: $('#formcontrol').serialize(),
                          success: function(respuesta) {
                              if (respuesta == 1) {
@@ -465,7 +465,7 @@
                  if (result.isConfirmed) {
                      $.ajax({
                          type: 'POST',
-                         url: 'https://cw3.tierramontemariana.org/apps/roles/crud.php',
+                         url: 'https://conlabweb3.tierramontemariana.org/apps/roles/crud.php',
                          data: {
                              id: id,
                              modeeditstatus: 'B'
@@ -493,7 +493,7 @@
 
 
 
-             $('#modalshow').load('https://cw3.tierramontemariana.org/apps/roles/modal-editar.php', {
+             $('#modalshow').load('https://conlabweb3.tierramontemariana.org/apps/roles/modal-editar.php', {
                  id: id
              });
 
@@ -517,7 +517,7 @@
                      if (result.isConfirmed) {
                          $.ajax({
                              type: 'POST',
-                             url: 'https://cw3.tierramontemariana.org/apps/roles/crud.php',
+                             url: 'https://conlabweb3.tierramontemariana.org/apps/roles/crud.php',
                              data: {
                                  id: id,
                                  modeeditstatus: 'D'
@@ -549,7 +549,7 @@
                  }).then((result) => {
                      $.ajax({
                          type: 'POST',
-                         url: 'https://cw3.tierramontemariana.org/apps/roles/crud.php',
+                         url: 'https://conlabweb3.tierramontemariana.org/apps/roles/crud.php',
                          data: {
                              id: id,
                              modeeditstatus: 'D'
@@ -575,7 +575,7 @@
 
          function cargarDatos() {
              $.ajax({
-                 url: 'https://cw3.tierramontemariana.org/apps/roles/mostrar.php', // Página PHP que devuelve los datos en formato JSON
+                 url: 'https://conlabweb3.tierramontemariana.org/apps/roles/mostrar.php', // Página PHP que devuelve los datos en formato JSON
                  type: 'GET', // Método de la petición (GET o POST según corresponda)
                  dataType: 'json', // Tipo de datos esperado en la respuesta
                  success: function(data) {

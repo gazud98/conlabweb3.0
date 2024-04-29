@@ -203,7 +203,7 @@ if ($numerfiles2 >= 1) {
 
     function agregar(sel) {
         var id = $('option:selected', sel).attr('value');
-        $("#stand").load("https://cw3.tierramontemariana.org/apps/trasladobodega/stand.php", {
+        $("#stand").load("https://conlabweb3.tierramontemariana.org/apps/trasladobodega/stand.php", {
             id: id
         });
 
@@ -211,7 +211,7 @@ if ($numerfiles2 >= 1) {
 
     function agregar2(sel) {
         var idstd = $('option:selected', sel).attr('value');
-        $("#entrepanio").load("https://cw3.tierramontemariana.org/apps/trasladobodega/entrepanio.php", {
+        $("#entrepanio").load("https://conlabweb3.tierramontemariana.org/apps/trasladobodega/entrepanio.php", {
             idstd: idstd
         });
 
@@ -266,7 +266,7 @@ if ($numerfiles2 >= 1) {
 
                         $.ajax({
                             type: 'POST',
-                            url: 'https://cw3.tierramontemariana.org/apps/trasladobodega/crud.php',
+                            url: 'https://conlabweb3.tierramontemariana.org/apps/trasladobodega/crud.php',
                             data: {
 
                                 identre: identre,
@@ -282,7 +282,7 @@ if ($numerfiles2 >= 1) {
                                 entr: entr
                             },
                             success: function(data) {
-                                $("#table").load("https://cw3.tierramontemariana.org/apps/trasladobodega/tabla.php", {
+                                $("#table").load("https://conlabweb3.tierramontemariana.org/apps/trasladobodega/tabla.php", {
                                     id_prodc: id_prod
                                 });
                                 Swal.fire({

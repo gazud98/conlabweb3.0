@@ -71,10 +71,10 @@ if ($conetar->connect_errno) {
             submitHandler: function() {
                 $.ajax({
                     type: 'POST',
-                    url: 'https://cw3.tierramontemariana.org/apps/crearexamenes/crud.php',
+                    url: 'https://conlabweb3.tierramontemariana.org/apps/crearexamenes/crud.php',
                     data: $('#formeditar').serialize(),
                     success: function(respuesta) {
-                        $(".content-table-sedes").load('https://cw3.tierramontemariana.org/apps/crearexamenes/thedatatable.php');
+                        $(".content-table-sedes").load('https://conlabweb3.tierramontemariana.org/apps/crearexamenes/thedatatable.php');
 
                         alert("¡Registro actualizado con exito!");
                     }

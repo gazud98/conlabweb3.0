@@ -373,7 +373,7 @@ if ($conetar->connect_errno) {
             "responsive": true,
             // ... Otras opciones ...
             "ajax": {
-                url: 'https://cw3.tierramontemariana.org/apps/ordrequisicion/mostrar.php', // Página PHP que devuelve los datos en formato JSON
+                url: 'https://conlabweb3.tierramontemariana.org/apps/ordrequisicion/mostrar.php', // Página PHP que devuelve los datos en formato JSON
                 type: 'GET', // Método de la petición (GET o POST según corresponda)
                 dataType: 'json', // Tipo de datos esperado en la respuesta
                 dataSrc: '' // Indicar que los datos provienen directamente del objeto JSON (sin propiedad adicional)
@@ -402,7 +402,7 @@ if ($conetar->connect_errno) {
 
     function cargarDatos() {
         $.ajax({
-            url: 'https://cw3.tierramontemariana.org/apps/ordrequisicion/mostrar.php', // Página PHP que devuelve los datos en formato JSON
+            url: 'https://conlabweb3.tierramontemariana.org/apps/ordrequisicion/mostrar.php', // Página PHP que devuelve los datos en formato JSON
             type: 'GET', // Método de la petición (GET o POST según corresponda)
             dataType: 'json', // Tipo de datos esperado en la respuesta
             success: function(data) {
@@ -420,7 +420,7 @@ if ($conetar->connect_errno) {
 
     var datos = $('input[name="fileselect1"]').attr('datos');
     if (datos == 1) {
-        $("#btnreq").load('https://cw3.tierramontemariana.org/apps/ordrequisicion/orden.php');
+        $("#btnreq").load('https://conlabweb3.tierramontemariana.org/apps/ordrequisicion/orden.php');
     }
 
 
@@ -432,14 +432,14 @@ if ($conetar->connect_errno) {
         var cantm = $(objeto).val();
         $.ajax({
             type: 'POST',
-            url: 'https://cw3.tierramontemariana.org/apps/ordrequisicion/aprobarorden.php',
+            url: 'https://conlabweb3.tierramontemariana.org/apps/ordrequisicion/aprobarorden.php',
             data: {
                 iduser: iduser,
                 cantm: cantm,
                 idsol: id
             },
             success: function(respuesta) {
-                $("#table").load('https://cw3.tierramontemariana.org/apps/ordrequisicion/tabla.php', {
+                $("#table").load('https://conlabweb3.tierramontemariana.org/apps/ordrequisicion/tabla.php', {
                     iduser: iduser
                 });
                 Swal.fire({
@@ -473,14 +473,14 @@ if ($conetar->connect_errno) {
                 )
                 $.ajax({
                     type: 'POST',
-                    url: 'https://cw3.tierramontemariana.org/apps/ordrequisicion/crud.php',
+                    url: 'https://conlabweb3.tierramontemariana.org/apps/ordrequisicion/crud.php',
                     data: {
                         id: id,
                         status: 'D'
                     },
                     success: function(data) {
 
-                        $("#table").load("https://cw3.tierramontemariana.org/apps/ordrequisicion/tabla.php");
+                        $("#table").load("https://conlabweb3.tierramontemariana.org/apps/ordrequisicion/tabla.php");
 
                     }
                 })

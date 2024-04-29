@@ -37,11 +37,11 @@ if ($conetar->connect_errno) {
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title></title>
-        <link rel="stylesheet" href="https://cw3.tierramontemariana.org/apps/bodegaentrepanio/assets/style.css">
+        <link rel="stylesheet" href="https://conlabweb3.tierramontemariana.org/apps/bodegaentrepanio/assets/style.css">
     </head>
     <style>
         .content-wrapper {
-            background-image: url('https://cw3.tierramontemariana.org/apps/medicos/assets/backcw3-v1.png');
+            background-image: url('https://conlabweb3.tierramontemariana.org/apps/medicos/assets/backcw3-v1.png');
             background-size: cover;
             background-repeat: no-repeat;
         }
@@ -166,7 +166,7 @@ if ($conetar->connect_errno) {
             function agregar(sel) {
                 var id = $('option:selected', sel).attr('value');
 
-                $("#stands").load("https://cw3.tierramontemariana.org/apps/bodegaentrepanio/stands.php", {
+                $("#stands").load("https://conlabweb3.tierramontemariana.org/apps/bodegaentrepanio/stands.php", {
                     id: id
                 });
 
@@ -174,7 +174,7 @@ if ($conetar->connect_errno) {
             $(document).ready(function() {
 
 
-                $('.content-table-bodegaentrepanio').load('https://cw3.tierramontemariana.org/apps/bodegaentrepanio/table_view.php');
+                $('.content-table-bodegaentrepanio').load('https://conlabweb3.tierramontemariana.org/apps/bodegaentrepanio/table_view.php');
 
 
 

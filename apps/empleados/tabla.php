@@ -70,7 +70,7 @@ if ($conetar->connect_errno) {
         $(document).ready(function() {
             $.ajax({
                 type: 'POST',
-                url: 'https://cw3.tierramontemariana.org/apps/producto/mostrar.php',
+                url: 'https://conlabweb3.tierramontemariana.org/apps/producto/mostrar.php',
                 data: {
                     sctrl1: <?php echo $sctrl1 ?>
                 },
@@ -92,7 +92,7 @@ if ($conetar->connect_errno) {
                 "responsive": true,
                 // ... Otras opciones ...
                 "ajax": {
-                    url: 'https://cw3.tierramontemariana.org/apps/activofijo/mostrar.php', // Página PHP que devuelve los datos en formato JSON
+                    url: 'https://conlabweb3.tierramontemariana.org/apps/activofijo/mostrar.php', // Página PHP que devuelve los datos en formato JSON
                     type: 'GET', // Método de la petición (GET o POST según corresponda)
                     dataType: 'json', // Tipo de datos esperado en la respuesta
                     dataSrc: '' // Indicar que los datos provienen directamente del objeto JSON (sin propiedad adicional)
@@ -146,7 +146,7 @@ if ($conetar->connect_errno) {
             }).then((result) => {
                 if (result.isConfirmed) {
                     $.ajax({
-                        url: 'https://cw3.tierramontemariana.org/apps/activofijo/crud-2.php?aux=3&id=' + id,
+                        url: 'https://conlabweb3.tierramontemariana.org/apps/activofijo/crud-2.php?aux=3&id=' + id,
                         success: function() {
                             Swal.fire(
                                 'Eliminado!',
@@ -177,7 +177,7 @@ if ($conetar->connect_errno) {
                 }).then((result) => {
                     if (result.isConfirmed) {
                         $.ajax({
-                            url: 'https://cw3.tierramontemariana.org/apps/activofijo/crud-2.php?id=' + id + '&aux=4&estado=' + estado,
+                            url: 'https://conlabweb3.tierramontemariana.org/apps/activofijo/crud-2.php?id=' + id + '&aux=4&estado=' + estado,
                             success: function() {
                                 Swal.fire(
                                     'Deshabilitado!',
@@ -205,7 +205,7 @@ if ($conetar->connect_errno) {
                 }).then((result) => {
                     if (result.isConfirmed) {
                         $.ajax({
-                            url: 'https://cw3.tierramontemariana.org/apps/activofijo/crud-2.php?id=' + id + '&aux=4&estado=' + estado,
+                            url: 'https://conlabweb3.tierramontemariana.org/apps/activofijo/crud-2.php?id=' + id + '&aux=4&estado=' + estado,
                             success: function() {
                                 Swal.fire(
                                     'Habilitado!',

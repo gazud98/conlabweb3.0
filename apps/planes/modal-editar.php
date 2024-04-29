@@ -73,11 +73,11 @@ if ($conetar->connect_errno) {
             submitHandler: function() {
                 $.ajax({
                     type: 'POST',
-                    url: 'https://cw3.tierramontemariana.org/apps/planes/crud.php?aux=2',
+                    url: 'https://conlabweb3.tierramontemariana.org/apps/planes/crud.php?aux=2',
                     data: $('#formeditar').serialize(),
                     success: function(respuesta) {
 
-                        $('.content-table-unidad_medida').load('https://cw3.tierramontemariana.org/apps/planes/thedatatable.php');
+                        $('.content-table-unidad_medida').load('https://conlabweb3.tierramontemariana.org/apps/planes/thedatatable.php');
                         //alert("¡Registro Actualizado con exito!");
                         Swal.fire({
                             position: 'top',

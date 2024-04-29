@@ -66,14 +66,14 @@ if ($conetar->connect_errno) {
 
         $.ajax({
             type: 'POST',
-            url: 'https://cw3.tierramontemariana.org/apps/regprecio/crud.php',
+            url: 'https://conlabweb3.tierramontemariana.org/apps/regprecio/crud.php',
             data: {
                 id: id,
                 preci: preci
             },
             success: function(data) {
                 
-                $("#table").load("https://cw3.tierramontemariana.org/apps/regprecio/tabla.php");
+                $("#table").load("https://conlabweb3.tierramontemariana.org/apps/regprecio/tabla.php");
                 alert('Se Agrego Correctamente');
             }
         });

@@ -9,7 +9,7 @@
 
 
     <!-- Agrega enlaces a tus hojas de estilo aquí -->
-    <link rel="stylesheet" type="text/css" href="https://cw3.tierramontemariana.org/apps/ingresopaciente/assets/style.css">
+    <link rel="stylesheet" type="text/css" href="https://conlabweb3.tierramontemariana.org/apps/ingresopaciente/assets/style.css">
 </head>
 
 <body>
@@ -123,10 +123,10 @@
     <script src="https://kit.fontawesome.com/6dc75479dc.js" crossorigin="anonymous"></script>
     <script>
         $(document).ready(function() {
-            $("#divappshow").load("https://cw3.tierramontemariana.org/apps/ingresopaciente/datacase1.php");
-            $("#patient-admission").load("https://cw3.tierramontemariana.org/apps/ingresopaciente/ingreso.php");
-            $("#patient-examen").load("https://cw3.tierramontemariana.org/apps/ingresopaciente/tabla.php");
-            $("#search-patient").load("https://cw3.tierramontemariana.org/apps/ingresopaciente/search.php", {
+            $("#divappshow").load("https://conlabweb3.tierramontemariana.org/apps/ingresopaciente/datacase1.php");
+            $("#patient-admission").load("https://conlabweb3.tierramontemariana.org/apps/ingresopaciente/ingreso.php");
+            $("#patient-examen").load("https://conlabweb3.tierramontemariana.org/apps/ingresopaciente/tabla.php");
+            $("#search-patient").load("https://conlabweb3.tierramontemariana.org/apps/ingresopaciente/search.php", {
                 user: <?php echo $user ?>
             });
 
@@ -135,10 +135,10 @@
         function setDomicilio() {
             $.ajax({
                 type: 'POST',
-                url: 'https://cw3.tierramontemariana.org/apps/ingresopaciente/set-domicilio.php',
+                url: 'https://conlabweb3.tierramontemariana.org/apps/ingresopaciente/set-domicilio.php',
                 data: $('#formDomicilios').serialize(),
                 success: function(data) {
-                    $('.content-table').load('https://cw3.tierramontemariana.org/apps/ingresopaciente/table-domicilios.php');
+                    $('.content-table').load('https://conlabweb3.tierramontemariana.org/apps/ingresopaciente/table-domicilios.php');
                     Swal.fire({
                         icon: 'success',
                         title: '¡Satisfactorio!',

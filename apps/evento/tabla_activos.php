@@ -148,13 +148,13 @@ if ($conetar->connect_errno) {
 
        
       
-            $("#data2").load("https://cw3.tierramontemariana.org/apps/evento/datasg.php", {
+            $("#data2").load("https://conlabweb3.tierramontemariana.org/apps/evento/datasg.php", {
                 id_producto: id_producto,
                 grupo:'N'
             });
        
        
-        $("#tabla_grupoactsg").load("https://cw3.tierramontemariana.org/apps/evento/tabla_grupoactsg.php", {
+        $("#tabla_grupoactsg").load("https://conlabweb3.tierramontemariana.org/apps/evento/tabla_grupoactsg.php", {
             idd: id_departamento,
             idsd: id_sede,
             idta: id_tipo_activo,

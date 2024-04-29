@@ -1,8 +1,8 @@
-<link rel="stylesheet" href="https://cw3.tierramontemariana.org/view/public/templates/styles.min.css" />
+<link rel="stylesheet" href="https://conlabweb3.tierramontemariana.org/view/public/templates/styles.min.css" />
 
 <style>
   body {
-    background-image: url('https://cw3.tierramontemariana.org/view/public/templates/imgs/pasteur2_8711657_20231013151857.jpeg');
+    background-image: url('https://conlabweb3.tierramontemariana.org/view/public/templates/imgs/pasteur2_8711657_20231013151857.jpeg');
     background-size: cover;
   }
 
@@ -75,7 +75,7 @@
   .back-img {
     width: 100%;
     height: 100%;
-    background-image: url('https://cw3.tierramontemariana.org/view/public/templates/imgs/IMG_20230928_175450.jpg');
+    background-image: url('https://conlabweb3.tierramontemariana.org/view/public/templates/imgs/IMG_20230928_175450.jpg');
     background-size: cover;
     background-repeat: no-repeat;
   }
@@ -139,7 +139,7 @@
     <div class="overflow">
       <span style="font-size:15px">The future is now</span>
       <h5 style="color:#fff;font-size:35px">WELCOME TO CW3</h5>
-      <img src="https://cw3.tierramontemariana.org/view/public/templates/imgs/logo-w.png" alt="" width="220px">
+      <img src="https://conlabweb3.tierramontemariana.org/view/public/templates/imgs/logo-w.png" alt="" width="220px">
     </div>
     <div class="back-img">
 
@@ -147,7 +147,7 @@
   </div>
   <div class="col-md-6 bg-white p-0">
     <form id="login-form" method="post">
-      <div class="content-img"><img src="https://cw3.tierramontemariana.org/view/public/templates/imgs/logopequenio.png" alt=""></div>
+      <div class="content-img"><img src="https://conlabweb3.tierramontemariana.org/view/public/templates/imgs/logopequenio.png" alt=""></div>
       <h4 class="login-title">Login Account</h4>
       <div class="input-group mb-3">
         <input type="text" class="form-control login-form" placeholder="Email" name="login">

@@ -19,7 +19,7 @@ $user = $_SESSION['id_users'];
 <script>
     $(document).ready(function() {
         $.ajax({
-            url: 'https://cw3.tierramontemariana.org/apps/gestiontareas/send-mail.php?user='+<?php echo $user; ?>,
+            url: 'https://conlabweb3.tierramontemariana.org/apps/gestiontareas/send-mail.php?user='+<?php echo $user; ?>,
             type: 'GET',
             dataType: 'json',
             success: function(res) {

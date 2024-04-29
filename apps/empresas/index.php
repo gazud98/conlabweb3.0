@@ -33,13 +33,13 @@ if ($conetar->connect_errno) {
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title></title>
-        <link rel="stylesheet" href="https://cw3.tierramontemariana.org/apps/empresas/assets/style.css">
+        <link rel="stylesheet" href="https://conlabweb3.tierramontemariana.org/apps/empresas/assets/style.css">
 
     </head>
 
     <style>
         .content-wrapper {
-            background-image: url('https://cw3.tierramontemariana.org/apps/medicos/assets/backcw3-v1.png');
+            background-image: url('https://conlabweb3.tierramontemariana.org/apps/medicos/assets/backcw3-v1.png');
             background-size: cover;
             background-repeat: no-repeat;
         }
@@ -271,7 +271,7 @@ if ($conetar->connect_errno) {
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script src="https://kit.fontawesome.com/6dc75479dc.js" crossorigin="anonymous"></script>
-        <script src="https://cw3.tierramontemariana.org/apps/empresas/assets/index.js"></script>
+        <script src="https://conlabweb3.tierramontemariana.org/apps/empresas/assets/index.js"></script>
 
         <script>
             function loadInfoFactAdd() {
@@ -286,7 +286,7 @@ if ($conetar->connect_errno) {
                     }
                 }
 
-                $('.content-modal-info-fact').load('https://cw3.tierramontemariana.org/apps/empresas/info-facturacion.php', {
+                $('.content-modal-info-fact').load('https://conlabweb3.tierramontemariana.org/apps/empresas/info-facturacion.php', {
                     id: valor_seleccionado2
                 })
 
@@ -297,12 +297,12 @@ if ($conetar->connect_errno) {
                 confirmRadioSelected()
                 $('#idEmpresaReq').val($('#idempresa').val());
                 $('#title-empresa').html($('#nombreEmpresa').val());
-                $('.content-add-plan').load('https://cw3.tierramontemariana.org/apps/empresas/modal-planes.php')
+                $('.content-add-plan').load('https://conlabweb3.tierramontemariana.org/apps/empresas/modal-planes.php')
                 console.log($('#nombreEmpresa').val())
             }
 
             function loadAddEmpresa() {
-                $('.content-add-empresa').load('https://cw3.tierramontemariana.org/apps/empresas/modal-add-empresa.php')
+                $('.content-add-empresa').load('https://conlabweb3.tierramontemariana.org/apps/empresas/modal-add-empresa.php')
             }
 
             function loadAddInfoCartera() {
@@ -317,7 +317,7 @@ if ($conetar->connect_errno) {
                     }
                 }
 
-                $('.content-info-cartera').load('https://cw3.tierramontemariana.org/apps/empresas/info-cartera.php', {
+                $('.content-info-cartera').load('https://conlabweb3.tierramontemariana.org/apps/empresas/info-cartera.php', {
                     id: valor_seleccionado2
                 })
 
@@ -336,7 +336,7 @@ if ($conetar->connect_errno) {
                     }
                 }
 
-                $('.content-info-tributaria').load('https://cw3.tierramontemariana.org/apps/empresas/info-tributaria.php', {
+                $('.content-info-tributaria').load('https://conlabweb3.tierramontemariana.org/apps/empresas/info-tributaria.php', {
                     id: valor_seleccionado2
                 })
 

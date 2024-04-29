@@ -266,7 +266,7 @@ if ($conetar->connect_errno) {
             "autoWidth": false,
             "responsive": false,
             "ajax": {
-                url: 'https://cw3.tierramontemariana.org/apps/ingresopaciente/get-pago.php?numorden=<?php echo $num_orden; ?>', // Página PHP que devuelve los datos en formato JSON
+                url: 'https://conlabweb3.tierramontemariana.org/apps/ingresopaciente/get-pago.php?numorden=<?php echo $num_orden; ?>', // Página PHP que devuelve los datos en formato JSON
                 type: 'GET', // Método de la petición (GET o POST según corresponda)
                 dataType: 'json', // Tipo de datos esperado en la respuesta
                 dataSrc: '', // Indicar que los datos provienen directamente del objeto JSON (sin propiedad adicional)
@@ -324,7 +324,7 @@ if ($conetar->connect_errno) {
 
                 $.ajax({
                     type: 'POST',
-                    url: 'https://cw3.tierramontemariana.org/apps/ingresopaciente/send-pago.php',
+                    url: 'https://conlabweb3.tierramontemariana.org/apps/ingresopaciente/send-pago.php',
                     data: $('#form-detalle-pago').serialize(),
                     success: function(data) {
                         // Recargar DataTable con nuevos datos
@@ -378,7 +378,7 @@ if ($conetar->connect_errno) {
     function setDetallePago() {
         $.ajax({
             type: 'POST',
-            url: 'https://cw3.tierramontemariana.org/apps/ingresopaciente/set-detalle-pago.php',
+            url: 'https://conlabweb3.tierramontemariana.org/apps/ingresopaciente/set-detalle-pago.php',
             data: $('#formSavePago').serialize(),
             success: function(data) {
                 Swal.fire({

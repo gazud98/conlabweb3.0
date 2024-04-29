@@ -317,7 +317,7 @@
             "autoWidth": false,
             "responsive": true,
             "ajax": {
-                url: 'https://cw3.tierramontemariana.org/apps/costostotales/mostrar.php', // Página PHP que devuelve los datos en formato JSON
+                url: 'https://conlabweb3.tierramontemariana.org/apps/costostotales/mostrar.php', // Página PHP que devuelve los datos en formato JSON
                 type: 'GET', // Método de la petición (GET o POST según corresponda)
                 dataType: 'json', // Tipo de datos esperado en la respuesta
                 dataSrc: '' // Indicar que los datos provienen directamente del objeto JSON (sin propiedad adicional)
@@ -354,7 +354,7 @@
 
     function openModal(fecha, hora) {
 
-        $("#modalshow").load("https://cw3.tierramontemariana.org/apps/costostotales/content-modal.php",{
+        $("#modalshow").load("https://conlabweb3.tierramontemariana.org/apps/costostotales/content-modal.php",{
             fecha:fecha,hora: hora  
         });
        

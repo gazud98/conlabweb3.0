@@ -116,11 +116,11 @@ where id='" . $id . "'";
             submitHandler: function () {
                 $.ajax({
                     type: 'POST',
-                    url: 'https://cw3.tierramontemariana.org/apps/roles/crud.php',
+                    url: 'https://conlabweb3.tierramontemariana.org/apps/roles/crud.php',
                     data: $('#formeditar').serialize(),
                     success: function (respuesta) {
                         cargarDatos();
-                        //$('.content-table-dptos').load('https://cw3.tierramontemariana.org/apps/dptos/thedatatable.php');
+                        //$('.content-table-dptos').load('https://conlabweb3.tierramontemariana.org/apps/dptos/thedatatable.php');
                         //alert("¡Registro Actualizado con exito!");
                         Swal.fire({
                             position: 'top',

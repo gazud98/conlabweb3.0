@@ -159,7 +159,7 @@ if ($conetar->connect_errno) {
     <div class="container">
         <div class="header">
             <div class=" text-left">
-                <img src="https://cw3.tierramontemariana.org/assets/image/logo.png" alt="Logo" class="logo">
+                <img src="https://conlabweb3.tierramontemariana.org/assets/image/logo.png" alt="Logo" class="logo">
             </div>
             <h1>Solicitud de Cotización</h1>
         </div>
@@ -224,7 +224,7 @@ if ($conetar->connect_errno) {
     </div>
     <div class="btns">
         <button class="btn1" onclick="genPDF()"><i class="fa-solid fa-file-arrow-down"></i>&nbsp;&nbsp;Descargar PDF</button>
-        <a href="https://cw3.tierramontemariana.org/apps/listasolicitud/modal.php?aux=1&id=<?php echo $id; ?>"
+        <a href="https://conlabweb3.tierramontemariana.org/apps/listasolicitud/modal.php?aux=1&id=<?php echo $id; ?>"
             target="_blank" class="btn1"><i class="fa-solid fa-print"></i>&nbsp;&nbsp;Imprimir</a>
     </div>
 

@@ -1,6 +1,6 @@
 <?php
 
-$url = 'https://cw3.tierramontemariana.org/apps/mantenimientos/datacase1.php';
+$url = 'https://conlabweb3.tierramontemariana.org/apps/mantenimientos/datacase1.php';
 
 $namefile = basename($url);
 $folder = basename(dirname($url));

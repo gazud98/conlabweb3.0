@@ -63,7 +63,7 @@ if ($conetar->connect_errno) {
                 $ruta =  $filaP2a['ruta'];
                 $nombre_archivo =  $filaP2a['nombre_archivo'];
 
-                $ip = gethostbyname('https://cw3.tierramontemariana.org/');
+                $ip = gethostbyname('https://conlabweb3.tierramontemariana.org/');
 
                 $filename = "http://$ip"  . $ruta . $nombre_archivo;
               

@@ -1,6 +1,6 @@
 <style>
     .content-wrapper {
-        background-image: url('https://cw3.tierramontemariana.org/apps/medicos/assets/backcw3-v1.png');
+        background-image: url('https://conlabweb3.tierramontemariana.org/apps/medicos/assets/backcw3-v1.png');
         background-size: cover;
         background-repeat: no-repeat;
     }
@@ -37,11 +37,11 @@ if ($conetar->connect_errno) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
-    <link rel="stylesheet" href="https://cw3.tierramontemariana.org/apps/reportesactivosfijos/assets/style.css">
+    <link rel="stylesheet" href="https://conlabweb3.tierramontemariana.org/apps/reportesactivosfijos/assets/style.css">
 </head>
 <style>
     .content-wrapper {
-        background-image: url('https://cw3.tierramontemariana.org/apps/medicos/assets/backcw3-v1.png');
+        background-image: url('https://conlabweb3.tierramontemariana.org/apps/medicos/assets/backcw3-v1.png');
         background-size: cover;
         background-repeat: no-repeat;
     }
@@ -126,12 +126,12 @@ if ($conetar->connect_errno) {
     <!-- jsPDF -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
     <script src="https://kit.fontawesome.com/6dc75479dc.js" crossorigin="anonymous"></script>
-    <script src="https://cw3.tierramontemariana.org/apps/reportesactivosfijos/assets/index.js"></script>
+    <script src="https://conlabweb3.tierramontemariana.org/apps/reportesactivosfijos/assets/index.js"></script>
 
     <script>
         $(document).ready(function() {
-            $('.content-filter').load('https://cw3.tierramontemariana.org/apps/reportesactivosfijos/filter-name.php');
-            $('.content-table').load('https://cw3.tierramontemariana.org/apps/reportesactivosfijos/table-reporte-1.php');
+            $('.content-filter').load('https://conlabweb3.tierramontemariana.org/apps/reportesactivosfijos/filter-name.php');
+            $('.content-table').load('https://conlabweb3.tierramontemariana.org/apps/reportesactivosfijos/table-reporte-1.php');
 
         })
         document.getElementById('exportButton').addEventListener('click', function() {

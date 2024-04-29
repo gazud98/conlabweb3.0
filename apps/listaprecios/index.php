@@ -50,7 +50,7 @@ if ($conetar->connect_errno) {
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title></title>
-        <link rel="stylesheet" href="https://cw3.tierramontemariana.org/apps/listaprecios/assets/style.css">
+        <link rel="stylesheet" href="https://conlabweb3.tierramontemariana.org/apps/listaprecios/assets/style.css">
     </head>
 
     <body>
@@ -299,7 +299,7 @@ if ($conetar->connect_errno) {
         <script src="./assets/plugins/jquery-validation/jquery.validate.min.js"></script>
         <script src="./assets/plugins/jquery-validation/additional-methods.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-        <script src="https://cw3.tierramontemariana.org/apps/listaprecios/assets/index.js"></script>
+        <script src="https://conlabweb3.tierramontemariana.org/apps/listaprecios/assets/index.js"></script>
 
     </body>
 

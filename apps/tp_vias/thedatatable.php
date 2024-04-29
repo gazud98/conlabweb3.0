@@ -400,13 +400,13 @@ if ($conetar->connect_errno) {
                 submitHandler: function() {
                     $.ajax({
                         type: 'POST',
-                        url: 'https://cw3.tierramontemariana.org/apps/tp_vias/crud.php',
+                        url: 'https://conlabweb3.tierramontemariana.org/apps/tp_vias/crud.php',
                         data: $('#formcontrol').serialize(),
                         success: function(respuesta) {
                             if (respuesta == 'ok') {
                                 //                     alert('Termiando');
                             }
-                            $('.content-table-unidad_medida').load('https://cw3.tierramontemariana.org/apps/tp_vias/thedatatable.php');
+                            $('.content-table-unidad_medida').load('https://conlabweb3.tierramontemariana.org/apps/tp_vias/thedatatable.php');
 
                             Swal.fire({
                                 position: 'top',
@@ -473,14 +473,14 @@ if ($conetar->connect_errno) {
                 if (result.isConfirmed) {
                     $.ajax({
                         type: 'POST',
-                        url: 'https://cw3.tierramontemariana.org/apps/tp_vias/crud.php',
+                        url: 'https://conlabweb3.tierramontemariana.org/apps/tp_vias/crud.php',
                         data: {
                             id: id,
                             modeeditstatus: 'B'
                         },
                         success: function(respuesta) {
 
-                            $('.content-table-unidad_medida').load('https://cw3.tierramontemariana.org/apps/tp_vias/thedatatable.php');
+                            $('.content-table-unidad_medida').load('https://conlabweb3.tierramontemariana.org/apps/tp_vias/thedatatable.php');
                             Swal.fire({
                                 position: 'top',
                                 icon: 'success',
@@ -501,7 +501,7 @@ if ($conetar->connect_errno) {
 
 
 
-            $('.cargar-form').load('https://cw3.tierramontemariana.org/apps/tp_vias/modal-editar.php', {
+            $('.cargar-form').load('https://conlabweb3.tierramontemariana.org/apps/tp_vias/modal-editar.php', {
                 id: id
             });
 
@@ -525,14 +525,14 @@ if ($conetar->connect_errno) {
                     if (result.isConfirmed) {
                         $.ajax({
                             type: 'POST',
-                            url: 'https://cw3.tierramontemariana.org/apps/tp_vias/crud.php',
+                            url: 'https://conlabweb3.tierramontemariana.org/apps/tp_vias/crud.php',
                             data: {
                                 id: id,
                                 modeeditstatus: 'D'
                             },
                             success: function(respuesta) {
 
-                                $('.content-table-unidad_medida').load('https://cw3.tierramontemariana.org/apps/tp_vias/thedatatable.php');
+                                $('.content-table-unidad_medida').load('https://conlabweb3.tierramontemariana.org/apps/tp_vias/thedatatable.php');
                                 Swal.fire({
                                     position: 'top',
                                     icon: 'success',
@@ -557,14 +557,14 @@ if ($conetar->connect_errno) {
                 }).then((result) => {
                     $.ajax({
                         type: 'POST',
-                        url: 'https://cw3.tierramontemariana.org/apps/tp_vias/crud.php',
+                        url: 'https://conlabweb3.tierramontemariana.org/apps/tp_vias/crud.php',
                         data: {
                             id: id,
                             modeeditstatus: 'D'
                         },
                         success: function(respuesta) {
 
-                            $('.content-table-unidad_medida').load('https://cw3.tierramontemariana.org/apps/tp_vias/thedatatable.php');
+                            $('.content-table-unidad_medida').load('https://conlabweb3.tierramontemariana.org/apps/tp_vias/thedatatable.php');
 
                             Swal.fire({
                                 position: 'top',

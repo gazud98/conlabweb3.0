@@ -43,7 +43,7 @@ if ($conetar->connect_errno) {
     $cantrgt = $filaP2['cantidad'];
     ?>
 
-    <link rel="stylesheet" href="https://cw3.tierramontemariana.org/apps/proveedor/assets/style.css">
+    <link rel="stylesheet" href="https://conlabweb3.tierramontemariana.org/apps/proveedor/assets/style.css">
 
     <style>
         #modalContent {
@@ -59,7 +59,7 @@ if ($conetar->connect_errno) {
         }
 
         .content-wrapper {
-            background-image: url('https://cw3.tierramontemariana.org/apps/medicos/assets/backcw3-v1.png');
+            background-image: url('https://conlabweb3.tierramontemariana.org/apps/medicos/assets/backcw3-v1.png');
             background-size: cover;
             background-repeat: no-repeat;
         }
@@ -149,7 +149,7 @@ if ($conetar->connect_errno) {
     ?>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
-    <script src="https://cw3.tierramontemariana.org/apps/proveedor/assets/index.js"></script>
+    <script src="https://conlabweb3.tierramontemariana.org/apps/proveedor/assets/index.js"></script>
 
     <?php
 }

@@ -72,7 +72,7 @@ echo "<input type='input' value='" . $caso . "'  idx='" . $idx . "' iduser='" . 
     var id = $('input[name="caso"]').attr('id');
 
     if (caso == "S") {
-        $("#modalcant").load('https://cw3.tierramontemariana.org/apps/ordrequisicion/updatecant.php', {
+        $("#modalcant").load('https://conlabweb3.tierramontemariana.org/apps/ordrequisicion/updatecant.php', {
             idx: idx,
             nom_insumo: nom_insumo,
             iduser: iduser,
@@ -105,11 +105,11 @@ echo "<input type='input' value='" . $caso . "'  idx='" . $idx . "' iduser='" . 
         if (caso == "N") {
             $.ajax({
                 type: 'POST',
-                url: 'https://cw3.tierramontemariana.org/apps/ordrequisicion/crud.php',
+                url: 'https://conlabweb3.tierramontemariana.org/apps/ordrequisicion/crud.php',
                  data: $('#formcontrol').serialize(),
                 success: function(data) {
               
-                    $("#table").load('https://cw3.tierramontemariana.org/apps/ordrequisicion/tabla.php', {
+                    $("#table").load('https://conlabweb3.tierramontemariana.org/apps/ordrequisicion/tabla.php', {
                         iduser: iduser
                     });
 

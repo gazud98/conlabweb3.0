@@ -15,7 +15,7 @@ $uppercaseruta = strtoupper($ruta);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
 
-    <link rel="stylesheet" href="https://cw3.tierramontemariana.org/apps/trasladobodega/assets/style.css">
+    <link rel="stylesheet" href="https://conlabweb3.tierramontemariana.org/apps/trasladobodega/assets/style.css">
 </head>
 
 <body>
@@ -96,7 +96,7 @@ $uppercaseruta = strtoupper($ruta);
 
         function obtener() {
 
-            $("#table").load('https://cw3.tierramontemariana.org/apps/trasladobodega/tabla.php');
+            $("#table").load('https://conlabweb3.tierramontemariana.org/apps/trasladobodega/tabla.php');
 
         }
     </script>

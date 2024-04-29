@@ -180,7 +180,7 @@ if ($conetar->connect_errno) {
                     // Si todos tienen valores, habilita el campo
                     $.ajax({
                         type: 'POST',
-                        url: 'https://cw3.tierramontemariana.org/apps/ingresopaciente/generar-ingreso.php',
+                        url: 'https://conlabweb3.tierramontemariana.org/apps/ingresopaciente/generar-ingreso.php',
                         data: {
                             aux: 1,
                             id_paciente: id_paciente,
@@ -196,7 +196,7 @@ if ($conetar->connect_errno) {
 
                             var idingreso = data;
 
-                            $("#patient-examen").load("https://cw3.tierramontemariana.org/apps/ingresopaciente/tabla.php", {
+                            $("#patient-examen").load("https://conlabweb3.tierramontemariana.org/apps/ingresopaciente/tabla.php", {
                                 id: idingreso
                             }, function() {
                                 $("#id_examen, #prioridad, #observacion").prop("disabled", false);

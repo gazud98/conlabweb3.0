@@ -165,7 +165,7 @@ if ($conetar->connect_errno) {
 
         $(document).ready(function() {
 
-            $('.table-config-iva').load('https://cw3.tierramontemariana.org/apps/configregimenfiscal/tabla-3.php');
+            $('.table-config-iva').load('https://conlabweb3.tierramontemariana.org/apps/configregimenfiscal/tabla-3.php');
 
             $("#form-control").validate({
                 // Specify validation rules
@@ -223,7 +223,7 @@ if ($conetar->connect_errno) {
             //alert(cod)
 
             $.ajax({
-                url: 'https://cw3.tierramontemariana.org/apps/configregimenfiscal/calc.php?cod=' + cod,
+                url: 'https://conlabweb3.tierramontemariana.org/apps/configregimenfiscal/calc.php?cod=' + cod,
                 success: function(rest) {
                     //alert(rest);
                     data = JSON.parse(rest);
@@ -238,7 +238,7 @@ if ($conetar->connect_errno) {
 
         function buscarData2(id) {
             $.ajax({
-                url: 'https://cw3.tierramontemariana.org/apps/configregimenfiscal/search-3.php?id=' + id,
+                url: 'https://conlabweb3.tierramontemariana.org/apps/configregimenfiscal/search-3.php?id=' + id,
                 success: function(res) {
                     data = JSON.parse(res);
                     data.forEach(element => {

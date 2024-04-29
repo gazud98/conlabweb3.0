@@ -88,7 +88,7 @@ where id='" . $id . "'";
             submitHandler: function() {
                 $.ajax({
                     type: 'POST',
-                    url: 'https://cw3.tierramontemariana.org/apps/condiciones_pagos/crud.php',
+                    url: 'https://conlabweb3.tierramontemariana.org/apps/condiciones_pagos/crud.php',
                     data: $('#formeditar').serialize(),
                     success: function(respuesta) {
                         cargarDatos();

@@ -178,7 +178,7 @@ if ($conetar->connect_errno) {
             $(document).ready(function() {
 
 
-                $('.content-table-sedes').load('https://cw3.tierramontemariana.org/apps/centrosmedicos/thedatatable.php');
+                $('.content-table-sedes').load('https://conlabweb3.tierramontemariana.org/apps/centrosmedicos/thedatatable.php');
 
 
 

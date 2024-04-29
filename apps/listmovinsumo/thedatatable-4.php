@@ -436,7 +436,7 @@ if ($conetar->connect_errno) {
                 },
             ],
             "ajax": {
-                url: 'https://cw3.tierramontemariana.org/apps/listmovinsumo/mostrar-4.php', // URL de tu archivo PHP que devuelve los datos
+                url: 'https://conlabweb3.tierramontemariana.org/apps/listmovinsumo/mostrar-4.php', // URL de tu archivo PHP que devuelve los datos
                 type: 'GET', // Método HTTP utilizado para la solicitud
                 dataType: 'json', // Tipo de datos esperado en la respuesta
                 dataSrc: '', // Indicar que los datos provienen directamente del objeto JSON (sin propiedad adicional)

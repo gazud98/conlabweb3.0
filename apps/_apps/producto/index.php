@@ -129,10 +129,10 @@ if ($conetar->connect_errno) {
         function savedata() {
             $.ajax({
                 type: 'POST',
-                url: 'https://cw3.tierramontemariana.org/apps/producto/crud.php',
+                url: 'https://conlabweb3.tierramontemariana.org/apps/producto/crud.php',
                 data: $('#formcontrol').serialize(),
                 success: function(respuesta) {
-                    $("#thetable").load('https://cw3.tierramontemariana.org/apps/producto/thedatatable.php', {
+                    $("#thetable").load('https://conlabweb3.tierramontemariana.org/apps/producto/thedatatable.php', {
                         sctrl1: <?php echo $sctrl1 ?>,
                         iduser: <?php echo $id_users ?>
                     });
@@ -147,7 +147,7 @@ if ($conetar->connect_errno) {
         $(document).ready(function() {
 
 
-            $('#thetable').load('https://cw3.tierramontemariana.org/apps/producto/tfhedatatable.php');
+            $('#thetable').load('https://conlabweb3.tierramontemariana.org/apps/producto/tfhedatatable.php');
 
 
 

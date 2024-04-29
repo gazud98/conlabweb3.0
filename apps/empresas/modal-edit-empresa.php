@@ -216,7 +216,7 @@ if ($conetar->connect_errno) {
                 } else {
                     $.ajax({
                         type: 'POST',
-                        url: 'https://cw3.tierramontemariana.org/apps/empresas/crud.php?aux=2',
+                        url: 'https://conlabweb3.tierramontemariana.org/apps/empresas/crud.php?aux=2',
                         data: $('#formEditEmpresa').serialize(),
                         success: function(respuesta) {
                             if (respuesta == 'ok') {
@@ -282,7 +282,7 @@ if ($conetar->connect_errno) {
         id = $('#dep').val();
 
         $.ajax({
-            url: 'https://cw3.tierramontemariana.org/apps/empresas/ciudades.php',
+            url: 'https://conlabweb3.tierramontemariana.org/apps/empresas/ciudades.php',
             data: {
                 id: id
             },

@@ -118,13 +118,13 @@ if ($conetar->connect_errno) {
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title></title>
-        <link rel="stylesheet" href="https://cw3.tierramontemariana.org/apps/medicos/assets/style.css">
+        <link rel="stylesheet" href="https://conlabweb3.tierramontemariana.org/apps/medicos/assets/style.css">
 
     </head>
 
     <style>
         .content-wrapper {
-            background-image: url('https://cw3.tierramontemariana.org/apps/medicos/assets/backcw3-v1.png');
+            background-image: url('https://conlabweb3.tierramontemariana.org/apps/medicos/assets/backcw3-v1.png');
             background-size: cover;
             background-repeat: no-repeat;
         }
@@ -613,10 +613,10 @@ if ($conetar->connect_errno) {
                         }
                     });
 
-                $('.content-table-sedes').load('https://cw3.tierramontemariana.org/apps/medicos/thedatatable.php');
+                $('.content-table-sedes').load('https://conlabweb3.tierramontemariana.org/apps/medicos/thedatatable.php');
 
                 $('#btnRefresh').click(function() {
-                    $('.content-table-sedes').load('https://cw3.tierramontemariana.org/apps/medicos/thedatatable.php');
+                    $('.content-table-sedes').load('https://conlabweb3.tierramontemariana.org/apps/medicos/thedatatable.php');
                 })
 
                 $('#btnfiltrar').click(function() {
@@ -627,7 +627,7 @@ if ($conetar->connect_errno) {
                     centro_medico = $('#centro_medico').val();
                     estado = $('#estado').val();
 
-                    $('.content-table-sedes').load('https://cw3.tierramontemariana.org/apps/medicos/thedatatable2.php', {
+                    $('.content-table-sedes').load('https://conlabweb3.tierramontemariana.org/apps/medicos/thedatatable2.php', {
                         doc: id,
                         fecha: fecha,
                         categoria: catemedica,
@@ -641,7 +641,7 @@ if ($conetar->connect_errno) {
             })
 
             function loadAficionesSelect() {
-                $('#contentAficiones').load('https://cw3.tierramontemariana.org/apps/medicos/aficiones.php');
+                $('#contentAficiones').load('https://conlabweb3.tierramontemariana.org/apps/medicos/aficiones.php');
             }
         </script>
 

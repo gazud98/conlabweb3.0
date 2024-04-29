@@ -109,7 +109,7 @@ if ($conetar->connect_errno) {
         $(document).ready(function() {
 
 
-            $('#thetable').load('https://cw3.tierramontemariana.org/apps/preventivo/thedatatable.php');
+            $('#thetable').load('https://conlabweb3.tierramontemariana.org/apps/preventivo/thedatatable.php');
 
 
 

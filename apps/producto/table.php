@@ -66,7 +66,7 @@ if ($conetar->connect_errno) {
                 "responsive": true,
                 // ... Otras opciones ...
                 "ajax": {
-                    url: 'https://cw3.tierramontemariana.org/apps/producto/mostrar.php', // Página PHP que devuelve los datos en formato JSON
+                    url: 'https://conlabweb3.tierramontemariana.org/apps/producto/mostrar.php', // Página PHP que devuelve los datos en formato JSON
                     type: 'GET', // Método de la petición (GET o POST según corresponda)
                     dataType: 'json', // Tipo de datos esperado en la respuesta
                     dataSrc: '' // Indicar que los datos provienen directamente del objeto JSON (sin propiedad adicional)
@@ -114,7 +114,7 @@ if ($conetar->connect_errno) {
             }).then((result) => {
                 if (result.isConfirmed) {
                     $.ajax({
-                        url: 'https://cw3.tierramontemariana.org/apps/producto/delete.php?id=' + id,
+                        url: 'https://conlabweb3.tierramontemariana.org/apps/producto/delete.php?id=' + id,
                         success: function() {
                             Swal.fire(
                                 '¡Eliminado!',
@@ -141,7 +141,7 @@ if ($conetar->connect_errno) {
                 }).then((result) => {
                     if (result.isConfirmed) {
                         $.ajax({
-                            url: 'https://cw3.tierramontemariana.org/apps/producto/crud-2.php',
+                            url: 'https://conlabweb3.tierramontemariana.org/apps/producto/crud-2.php',
                             data: {
                                 id: id,
                                 aux: 2
@@ -169,7 +169,7 @@ if ($conetar->connect_errno) {
                 }).then((result) => {
                     if (result.isConfirmed) {
                         $.ajax({
-                            url: 'https://cw3.tierramontemariana.org/apps/producto/crud-2.php',
+                            url: 'https://conlabweb3.tierramontemariana.org/apps/producto/crud-2.php',
                             data: {
                                 id: id,
                                 aux: 2
@@ -190,12 +190,12 @@ if ($conetar->connect_errno) {
 
         function cargarForm(thefile, id, tp) {
             if (tp == 'I') {
-                $("#contentFormEditEquipo").load("https://cw3.tierramontemariana.org/apps/producto/productos.php", {
+                $("#contentFormEditEquipo").load("https://conlabweb3.tierramontemariana.org/apps/producto/productos.php", {
                     id: id
                 });
 
             } else {
-                $("#contentFormEditEquipo").load("https://cw3.tierramontemariana.org/apps/producto/equipos.php", {
+                $("#contentFormEditEquipo").load("https://conlabweb3.tierramontemariana.org/apps/producto/equipos.php", {
                     id: id
                 });
             }

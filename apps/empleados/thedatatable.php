@@ -73,7 +73,7 @@
             "responsive": true,
             // ... Otras opciones ...
             "ajax": {
-                url: 'https://cw3.tierramontemariana.org/apps/empleados/mostrar.php', // Página PHP que devuelve los datos en formato JSON
+                url: 'https://conlabweb3.tierramontemariana.org/apps/empleados/mostrar.php', // Página PHP que devuelve los datos en formato JSON
                 type: 'GET', // Método de la petición (GET o POST según corresponda)
                 dataType: 'json', // Tipo de datos esperado en la respuesta
                 dataSrc: '' // Indicar que los datos provienen directamente del objeto JSON (sin propiedad adicional)
@@ -123,7 +123,7 @@
         }).then((result) => {
             if (result.isConfirmed) {
                 $.ajax({
-                    url: 'https://cw3.tierramontemariana.org/apps/empleados/crud.php',
+                    url: 'https://conlabweb3.tierramontemariana.org/apps/empleados/crud.php',
                     data: {
                         id: id,
                         aux: 4
@@ -153,7 +153,7 @@
             }).then((result) => {
                 if (result.isConfirmed) {
                     $.ajax({
-                        url: 'https://cw3.tierramontemariana.org/apps/empleados/crud.php',
+                        url: 'https://conlabweb3.tierramontemariana.org/apps/empleados/crud.php',
                         data: {
                             id: id,
                             aux: 3
@@ -180,7 +180,7 @@
             }).then((result) => {
                 if (result.isConfirmed) {
                     $.ajax({
-                        url: 'https://cw3.tierramontemariana.org/apps/empleados/crud.php',
+                        url: 'https://conlabweb3.tierramontemariana.org/apps/empleados/crud.php',
                         data: {
                             id: id,
                             aux: 3
@@ -201,7 +201,7 @@
 
     function cargarDatos() {
         $.ajax({
-            url: 'https://cw3.tierramontemariana.org/apps/empleados/mostrar.php', // Página PHP que devuelve los datos en formato JSON
+            url: 'https://conlabweb3.tierramontemariana.org/apps/empleados/mostrar.php', // Página PHP que devuelve los datos en formato JSON
             type: 'GET', // Método de la petición (GET o POST según corresponda)
             dataType: 'json', // Tipo de datos esperado en la respuesta
             success: function(data) {
@@ -216,7 +216,7 @@
     }
 
     function loadModalView(id) {
-        $('#contentFormEmployeeView').load('https://cw3.tierramontemariana.org/apps/empleados/modal-view.php', {
+        $('#contentFormEmployeeView').load('https://conlabweb3.tierramontemariana.org/apps/empleados/modal-view.php', {
             id: id
         });
     }

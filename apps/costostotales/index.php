@@ -32,7 +32,7 @@
     
     <script>
         $(document).ready(function() {
-            $("#content-table-reportes-costos").load("https://cw3.tierramontemariana.org/apps/costostotales/tabla.php");
+            $("#content-table-reportes-costos").load("https://conlabweb3.tierramontemariana.org/apps/costostotales/tabla.php");
 
             
 

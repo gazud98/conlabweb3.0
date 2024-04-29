@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    $('#contentTableNegociaciones').load('https://cw3.tierramontemariana.org/apps/negociaciones/tabla.php');
+    $('#contentTableNegociaciones').load('https://conlabweb3.tierramontemariana.org/apps/negociaciones/tabla.php');
 
 });
 
@@ -8,7 +8,7 @@ function guardarDatos2() {
     data = $('#formcontrolNeg').serialize();
     $.ajax({
         method: 'POST',
-        url: 'https://cw3.tierramontemariana.org/apps/negociaciones/agregar-neg.php',
+        url: 'https://conlabweb3.tierramontemariana.org/apps/negociaciones/agregar-neg.php',
         data: data,
         success: function(response) {
             Swal.fire({

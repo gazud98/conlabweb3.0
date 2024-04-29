@@ -163,10 +163,10 @@ if ($conetar->connect_errno) {
         function savedata() {
             $.ajax({
                 type: 'POST',
-                url: 'https://cw3.tierramontemariana.org/apps/listproducto/crud.php',
+                url: 'https://conlabweb3.tierramontemariana.org/apps/listproducto/crud.php',
                 data: $('#formcontrol').serialize(),
                 success: function(respuesta) {
-                    $("#thetable").load('https://cw3.tierramontemariana.org/apps/listproducto/thedatatable.php', {
+                    $("#thetable").load('https://conlabweb3.tierramontemariana.org/apps/listproducto/thedatatable.php', {
                         sctrl1: <?php echo $sctrl1 ?>
                     });
                     Swal.fire({

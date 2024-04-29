@@ -185,7 +185,7 @@ if ($conetar->connect_errno) {
             var caso = $('option:selected', sel).attr('value');
 
 
-            $("#period1").load('https://cw3.tierramontemariana.org/apps/evento/periodicidad1.php', {
+            $("#period1").load('https://conlabweb3.tierramontemariana.org/apps/evento/periodicidad1.php', {
                 caso: caso
             })
 
@@ -251,7 +251,7 @@ if ($conetar->connect_errno) {
 
             $.ajax({
                 type: 'POST',
-                url: 'https://cw3.tierramontemariana.org/apps/evento/crud.php',
+                url: 'https://conlabweb3.tierramontemariana.org/apps/evento/crud.php',
                 data: {
                     rep: rep1,
                     periodicidad: periodicidad1,
@@ -271,7 +271,7 @@ if ($conetar->connect_errno) {
                     if (grupo == 'N') {
                         alert("¡Evento Creado Exitosamente!")
                     }
-                    $("#tableevento").load('https://cw3.tierramontemariana.org/apps/evento/table_eventos.php');
+                    $("#tableevento").load('https://conlabweb3.tierramontemariana.org/apps/evento/table_eventos.php');
                 }
             })
 

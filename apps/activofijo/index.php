@@ -13,7 +13,7 @@ $moduraiz = $_SESSION['moduraiz'];
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
-    <link rel="stylesheet" href="https://cw3.tierramontemariana.org/apps/activofijo/assets/style.css">
+    <link rel="stylesheet" href="https://conlabweb3.tierramontemariana.org/apps/activofijo/assets/style.css">
 
 </head>
 <style>
@@ -33,7 +33,7 @@ $moduraiz = $_SESSION['moduraiz'];
     }
 
     .content-wrapper {
-        background-image: url('https://cw3.tierramontemariana.org/apps/medicos/assets/backcw3-v1.png');
+        background-image: url('https://conlabweb3.tierramontemariana.org/apps/medicos/assets/backcw3-v1.png');
         background-size: cover;
         background-repeat: no-repeat;
     }
@@ -180,23 +180,23 @@ $moduraiz = $_SESSION['moduraiz'];
     <script>
         $(document).ready(function() {
 
-            $('.content-table').load('https://cw3.tierramontemariana.org/apps/activofijo/tabla.php');
+            $('.content-table').load('https://conlabweb3.tierramontemariana.org/apps/activofijo/tabla.php');
 
 
         })
 
         function loadTextFields() {
-            $('#campos').load('https://cw3.tierramontemariana.org/apps/activofijo/campos-add.php');
+            $('#campos').load('https://conlabweb3.tierramontemariana.org/apps/activofijo/campos-add.php');
         }
 
         function loadTextFieldsEdit(id) {
-            $('#camposEdit').load('https://cw3.tierramontemariana.org/apps/activofijo/campos-edit.php', {
+            $('#camposEdit').load('https://conlabweb3.tierramontemariana.org/apps/activofijo/campos-edit.php', {
                 id: id
             });
         }
 
         function loadHistorial(id) {
-            $('#tableHistorial').load('https://cw3.tierramontemariana.org/apps/activofijo/historial.php', {
+            $('#tableHistorial').load('https://conlabweb3.tierramontemariana.org/apps/activofijo/historial.php', {
                 id: id
             });
         }

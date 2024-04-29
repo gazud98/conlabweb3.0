@@ -184,7 +184,7 @@ if ($conetar->connect_errno) {
             $(document).ready(function() {
 
 
-                $('.content-table-unidad_medida').load('https://cw3.tierramontemariana.org/apps/tp_vias/thedatatable.php');
+                $('.content-table-unidad_medida').load('https://conlabweb3.tierramontemariana.org/apps/tp_vias/thedatatable.php');
 
 
 

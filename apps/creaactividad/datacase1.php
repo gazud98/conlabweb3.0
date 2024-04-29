@@ -192,14 +192,14 @@ if ($conetar->connect_errno) {
     function savedata() {
         $.ajax({
             type: 'POST',
-            url: 'https://cw3.tierramontemariana.org/apps/creaactividad/crud.php',
+            url: 'https://conlabweb3.tierramontemariana.org/apps/creaactividad/crud.php',
             data: $('#formcontrol').serialize(),
             success: function(respuesta) {
                 if (respuesta == 'ok') {
                     //                     alert('Termiando');
                 }
-                $("#codigo").load('https://cw3.tierramontemariana.org/apps/creaactividad/codigo.php', {});
-                $("#thetable").load('https://cw3.tierramontemariana.org/apps/creaactividad/thedatatable.php', {
+                $("#codigo").load('https://conlabweb3.tierramontemariana.org/apps/creaactividad/codigo.php', {});
+                $("#thetable").load('https://conlabweb3.tierramontemariana.org/apps/creaactividad/thedatatable.php', {
                     iduser: <?php echo $iduser ?>
                 });
 
