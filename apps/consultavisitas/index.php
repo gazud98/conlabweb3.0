@@ -74,6 +74,8 @@ if ($conetar->connect_errno) {
         }
     </style>
 
+    <h1>Prueba</h1>
+
     <div class="card" style="width:100%;">
 
         <div class="card-header bg-light">
