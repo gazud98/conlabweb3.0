@@ -100,7 +100,7 @@ if ($conetar->connect_errno) {
         $(document).ready(function() {
 
 
-            $('#thetable').load('https://conlabweb3.tierramontemariana.org/apps/creargrupoasactivos/thedatatable.php');
+            $('#thetable').load('/cw3/conlabweb3.0/apps/creargrupoasactivos/thedatatable.php');
 
 
 
@@ -115,7 +115,7 @@ if ($conetar->connect_errno) {
                     if (respuesta == 'ok') {
                         //                     alert('Termiando');
                     }
-                    $("#thetable").load('https://conlabweb3.tierramontemariana.org/apps/creargrupoasactivos/thedatatable.php');
+                    $("#thetable").load('/cw3/conlabweb3.0/apps/creargrupoasactivos/thedatatable.php');
                     alert("Registro Exitoso");
                 }
             });

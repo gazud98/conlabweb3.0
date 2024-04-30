@@ -439,7 +439,7 @@ if ($conetar->connect_errno) {
         function seleccionar1(sel) {
             var caso = $('option:selected', sel).attr('value');
 
-            $("#period1").load('https://conlabweb3.tierramontemariana.org/apps/mantenimientos/periodicidad.php', {
+            $("#period1").load('/cw3/conlabweb3.0/apps/mantenimientos/periodicidad.php', {
                 caso: caso
             })
 
@@ -450,13 +450,13 @@ if ($conetar->connect_errno) {
             var period_semanal = $("#period_semanal").val();
             var mesoption = $("#mesoption").val();
             if (periodicidad === "S") {
-                $("#period1").load('https://conlabweb3.tierramontemariana.org/apps/mantenimientos/periodicidad.php', {
+                $("#period1").load('/cw3/conlabweb3.0/apps/mantenimientos/periodicidad.php', {
                     caso: 'S',
                     period_semanal: period_semanal,
                     mesoption: mesoption
                 });
             } else if (periodicidad === "M") {
-                $("#period1").load('https://conlabweb3.tierramontemariana.org/apps/mantenimientos/periodicidad.php', {
+                $("#period1").load('/cw3/conlabweb3.0/apps/mantenimientos/periodicidad.php', {
                     caso: 'M'
                 });
             }
@@ -465,7 +465,7 @@ if ($conetar->connect_errno) {
                 id = $('#localizacion').val();
                 $.ajax({
                     method: 'POST',
-                    url: 'https://conlabweb3.tierramontemariana.org/apps/mantenimientos/search-equipo.php?id=' + id,
+                    url: '/cw3/conlabweb3.0/apps/mantenimientos/search-equipo.php?id=' + id,
                     success: function(rest) {
 
                         if (rest == '0') {
@@ -579,7 +579,7 @@ if ($conetar->connect_errno) {
             diassemana = sunday + "," + monday + "," + tuesday + "," + wednesday + "," + thursday + "," + friday + "," + saturday;
             $.ajax({
                 type: 'POST',
-                url: 'https://conlabweb3.tierramontemariana.org/apps/mantenimientos/crud.php?aux=2',
+                url: '/cw3/conlabweb3.0/apps/mantenimientos/crud.php?aux=2',
                 data: {
                     id: id,
                     diassemana: diassemana,
@@ -607,7 +607,7 @@ if ($conetar->connect_errno) {
 
                     //alert('Hola');
 
-                    $("#contentTableMant").load("https://conlabweb3.tierramontemariana.org/apps/mantenimientos/table.php");
+                    $("#contentTableMant").load("/cw3/conlabweb3.0/apps/mantenimientos/table.php");
 
                     Swal.fire({
                         position: 'top',

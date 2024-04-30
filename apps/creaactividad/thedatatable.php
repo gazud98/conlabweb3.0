@@ -400,13 +400,13 @@ if ($conetar->connect_errno) {
                 submitHandler: function() {
                     $.ajax({
                         type: 'POST',
-                        url: 'https://conlabweb3.tierramontemariana.org/apps/creaactividad/crud.php',
+                        url: '/cw3/conlabweb3.0/apps/creaactividad/crud.php',
                         data: $('#formcontrol').serialize(),
                         success: function(respuesta) {
                             if (respuesta == 'ok') {
                                 //                     alert('Termiando');
                             }
-                            $('.content-table-creaactividad').load('https://conlabweb3.tierramontemariana.org/apps/creaactividad/thedatatable.php');
+                            $('.content-table-creaactividad').load('/cw3/conlabweb3.0/apps/creaactividad/thedatatable.php');
 
                             alert("¡Registro añadido con exito!");
                         }
@@ -445,14 +445,14 @@ if ($conetar->connect_errno) {
             if (opcion == true) {
                 $.ajax({
                     type: 'POST',
-                    url: 'https://conlabweb3.tierramontemariana.org/apps/creaactividad/crud.php',
+                    url: '/cw3/conlabweb3.0/apps/creaactividad/crud.php',
                     data: {
                         id: id,
                         modeeditstatus: 'B'
                     },
                     success: function(respuesta) {
 
-                        $('.content-table-creaactividad').load('https://conlabweb3.tierramontemariana.org/apps/creaactividad/thedatatable.php');
+                        $('.content-table-creaactividad').load('/cw3/conlabweb3.0/apps/creaactividad/thedatatable.php');
                         Swal.fire({
                             position: 'top',
                             icon: 'success',
@@ -472,7 +472,7 @@ if ($conetar->connect_errno) {
 
 
 
-            $('#editModal').load('https://conlabweb3.tierramontemariana.org/apps/creaactividad/modal-editar.php', {
+            $('#editModal').load('/cw3/conlabweb3.0/apps/creaactividad/modal-editar.php', {
                 id: id
             });
 
@@ -488,14 +488,14 @@ if ($conetar->connect_errno) {
                 if (opcion == true) {
                     $.ajax({
                         type: 'POST',
-                        url: 'https://conlabweb3.tierramontemariana.org/apps/creaactividad/crud.php',
+                        url: '/cw3/conlabweb3.0/apps/creaactividad/crud.php',
                         data: {
                             id: id,
                             modeeditstatus: 'D'
                         },
                         success: function(respuesta) {
 
-                            $('.content-table-creaactividad').load('https://conlabweb3.tierramontemariana.org/apps/creaactividad/thedatatable.php');
+                            $('.content-table-creaactividad').load('/cw3/conlabweb3.0/apps/creaactividad/thedatatable.php');
                             Swal.fire({
                                 position: 'top',
                                 icon: 'success',
@@ -512,14 +512,14 @@ if ($conetar->connect_errno) {
                 if (opcion == true) {
                     $.ajax({
                         type: 'POST',
-                        url: 'https://conlabweb3.tierramontemariana.org/apps/creaactividad/crud.php',
+                        url: '/cw3/conlabweb3.0/apps/creaactividad/crud.php',
                         data: {
                             id: id,
                             modeeditstatus: 'D'
                         },
                         success: function(respuesta) {
 
-                            $('.content-table-creaactividad').load('https://conlabweb3.tierramontemariana.org/apps/creaactividad/thedatatable.php');
+                            $('.content-table-creaactividad').load('/cw3/conlabweb3.0/apps/creaactividad/thedatatable.php');
                             Swal.fire({
                                 position: 'top',
                                 icon: 'success',

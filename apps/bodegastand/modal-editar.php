@@ -96,7 +96,7 @@ where id='" . $id . "'";
             submitHandler: function() {
                 $.ajax({
                     type: 'POST',
-                    url: 'https://conlabweb3.tierramontemariana.org/apps/bodegastand/crud.php',
+                    url: '/cw3/conlabweb3.0/apps/bodegastand/crud.php',
                     data: $('#formeditar').serialize(),
                     success: function(respuesta) {
 

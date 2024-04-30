@@ -102,18 +102,18 @@ if ($conetar->connect_errno) {
 
 
     function cargarEntregas() {
-        $("#v-pills-home").load("https://conlabweb3.tierramontemariana.org/apps/listmovinsumo/thedatatable.php");
+        $("#v-pills-home").load("/cw3/conlabweb3.0/apps/listmovinsumo/thedatatable.php");
     }
 
     function cargarCompras() {
-        $("#v-pills-profile").load("https://conlabweb3.tierramontemariana.org/apps/listmovinsumo/thedatatable-2.php");
+        $("#v-pills-profile").load("/cw3/conlabweb3.0/apps/listmovinsumo/thedatatable-2.php");
     }
 
     function cargarInventario() {
-        $("#v-pills-messages").load("https://conlabweb3.tierramontemariana.org/apps/listmovinsumo/thedatatable-3.php");
+        $("#v-pills-messages").load("/cw3/conlabweb3.0/apps/listmovinsumo/thedatatable-3.php");
     }
     function cargarTraslados() {
-        $("#v-pills-traslados").load("https://conlabweb3.tierramontemariana.org/apps/listmovinsumo/thedatatable-4.php");
+        $("#v-pills-traslados").load("/cw3/conlabweb3.0/apps/listmovinsumo/thedatatable-4.php");
     }
 </script>
 

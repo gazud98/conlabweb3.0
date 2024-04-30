@@ -114,24 +114,24 @@ if ($conetar->connect_errno) {
 <script>
 
     $(document).ready(function(){
-        $('#loadMotivo').load('https://conlabweb3.tierramontemariana.org/apps/consultamantenimiento/load-motivo.php');
+        $('#loadMotivo').load('/cw3/conlabweb3.0/apps/consultamantenimiento/load-motivo.php');
     })
 
     function updateRepPrev() {
         $.ajax({
             type: 'POST',
-            url: 'https://conlabweb3.tierramontemariana.org/apps/consultamantenimiento/reprogramar.php',
+            url: '/cw3/conlabweb3.0/apps/consultamantenimiento/reprogramar.php',
             data: $('#formEditDatosBasicos').serialize(),
             success: function(respuesta) {
 
                 tp = "<?php echo $aux; ?>"
 
                 if(tp == 'C'){
-                    $("#thetable").load("https://conlabweb3.tierramontemariana.org/apps/consultamantenimiento/thedatatable-c.php");
+                    $("#thetable").load("/cw3/conlabweb3.0/apps/consultamantenimiento/thedatatable-c.php");
                 }else if(tp == 'P'){
-                    $("#thetable").load("https://conlabweb3.tierramontemariana.org/apps/consultamantenimiento/thedatatable-p.php");
+                    $("#thetable").load("/cw3/conlabweb3.0/apps/consultamantenimiento/thedatatable-p.php");
                 }else if(tp == 'A'){
-                    $("#thetable").load("https://conlabweb3.tierramontemariana.org/apps/consultamantenimiento/all-1.php");
+                    $("#thetable").load("/cw3/conlabweb3.0/apps/consultamantenimiento/all-1.php");
                 }
                 //alert("¡Registro actualizado con exito!");
                 Swal.fire({

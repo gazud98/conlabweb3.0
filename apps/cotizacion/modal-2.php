@@ -89,7 +89,7 @@ where 1=1";
             </div>
             <div class="col-md-6">
                 <span for="" style="color: #9B0023; font-size: 18px;float:right;">
-                    <img src="https://conlabweb3.tierramontemariana.org/assets/image/logo.png" alt="" style="width: 250px;">
+                    <img src="/cw3/conlabweb3.0/assets/image/logo.png" alt="" style="width: 250px;">
                 </span>
             </div>
 
@@ -157,6 +157,6 @@ where 1=1";
 
     function printModal() {
 
-        window.open('https://conlabweb3.tierramontemariana.org/apps/cotizacion/modal-2.php?aux=1&datos=<?php echo $datosJSON?>');
+        window.open('/cw3/conlabweb3.0/apps/cotizacion/modal-2.php?aux=1&datos=<?php echo $datosJSON?>');
     }
 </script>

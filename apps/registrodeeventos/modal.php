@@ -65,14 +65,14 @@ if ($conetar->connect_errno) {
         
             $.ajax({
                 type: 'POST',
-                url: 'https://conlabweb3.tierramontemariana.org/apps/registrodeeventos/terminar_evento.php',
+                url: '/cw3/conlabweb3.0/apps/registrodeeventos/terminar_evento.php',
                 data: {
                     observacion: observacion,
                     id: id
                 },
                 success: function(respuesta) {
 
-                    $("#thetable").load('https://conlabweb3.tierramontemariana.org/apps/registrodeeventos/thedatatable.php');
+                    $("#thetable").load('/cw3/conlabweb3.0/apps/registrodeeventos/thedatatable.php');
                     alert("¡Evento Cerrado exitosamente!");
                 }
             });

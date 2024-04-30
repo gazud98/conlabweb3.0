@@ -92,7 +92,7 @@ include('apps/thedata.php');//scriops de control
                 url: '<?php echo base_url.'apps/'.$p.'/crud.php'; ?>',
                 data: $('#formcontrol').serialize(),
                 success: function(respuesta) {
-                   $("#thetable").load("https://conlabweb3.tierramontemariana.org/apps/producto/thedatatable.php");
+                   $("#thetable").load("/cw3/conlabweb3.0/apps/producto/thedatatable.php");
                 }
             });
 

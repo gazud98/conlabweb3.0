@@ -129,7 +129,7 @@ if ($conetar->connect_errno) {
         $('#col1' + thefile).css("border", "4px groove #dc3545");
 
 
-        $("#btndlt").load("https://conlabweb3.tierramontemariana.org/apps/ordcompra/modaldelet.php", {
+        $("#btndlt").load("/cw3/conlabweb3.0/apps/ordcompra/modaldelet.php", {
             id_prov: id_prov,
             id_prod: id_prod,
             nom_prov: nom_prov,

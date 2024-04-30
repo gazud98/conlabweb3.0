@@ -71,11 +71,11 @@ where P.id='" . $id . "'";
             submitHandler: function() {
                 $.ajax({
                     type: 'POST',
-                    url: 'https://conlabweb3.tierramontemariana.org/apps/especialidades/crud.php',
+                    url: '/cw3/conlabweb3.0/apps/especialidades/crud.php',
                     data: $('#formeditar').serialize(),
                     success: function(respuesta) {
 
-                        $('.content-table-unidad_medida').load('https://conlabweb3.tierramontemariana.org/apps/especialidades/thedatatable.php');
+                        $('.content-table-unidad_medida').load('/cw3/conlabweb3.0/apps/especialidades/thedatatable.php');
                         //alert("¡Registro Actualizado con exito!");
                         Swal.fire({
                             position: 'top',

@@ -396,10 +396,10 @@ if ($conetar->connect_errno) {
             submitHandler: function() {
                 $.ajax({
                     type: 'POST',
-                    url: 'https://conlabweb3.tierramontemariana.org/apps/medicos/crud.php?aux=2',
+                    url: '/cw3/conlabweb3.0/apps/medicos/crud.php?aux=2',
                     data: $('#formeditar').serialize(),
                     success: function(respuesta) {
-                        $(".content-table-sedes").load('https://conlabweb3.tierramontemariana.org/apps/medicos/thedatatable.php');
+                        $(".content-table-sedes").load('/cw3/conlabweb3.0/apps/medicos/thedatatable.php');
 
                         //alert("¡Registro actualizado con exito!");
                         Swal.fire({
@@ -442,6 +442,6 @@ if ($conetar->connect_errno) {
     });
 
     function loadAficionesSelectEdit() {
-        $('#contentAficionesEdit').load('https://conlabweb3.tierramontemariana.org/apps/medicos/aficiones.php');
+        $('#contentAficionesEdit').load('/cw3/conlabweb3.0/apps/medicos/aficiones.php');
     }
 </script>

@@ -47,7 +47,7 @@ if ($conetar->connect_errno) {
 <script>
     $(document).ready(function() {
 
-        $("#search-tarea").load("https://conlabweb3.tierramontemariana.org/apps/gestiontareas/search.php");
+        $("#search-tarea").load("/cw3/conlabweb3.0/apps/gestiontareas/search.php");
 
         $('#responsable').select2({
             language: "es"
@@ -65,7 +65,7 @@ if ($conetar->connect_errno) {
             "autoWidth": false,
             "responsive": true,
             "ajax": {
-                url: 'https://conlabweb3.tierramontemariana.org/apps/gestiontareas/mostrar.php', // Página PHP que devuelve los datos en formato JSON
+                url: '/cw3/conlabweb3.0/apps/gestiontareas/mostrar.php', // Página PHP que devuelve los datos en formato JSON
                 type: 'GET', // Método de la petición (GET o POST según corresponda)
                 dataType: 'json', // Tipo de datos esperado en la respuesta
                 dataSrc: '',
@@ -132,7 +132,7 @@ if ($conetar->connect_errno) {
     function updateEstado() {
         $.ajax({
             type: 'POST',
-            url: 'https://conlabweb3.tierramontemariana.org/apps/gestiontareas/crud.php?aux=2',
+            url: '/cw3/conlabweb3.0/apps/gestiontareas/crud.php?aux=2',
             data: $('#formcontrol2').serialize(),
             success: function() {
                 Swal.fire({
@@ -155,7 +155,7 @@ if ($conetar->connect_errno) {
     function setComments() {
         $.ajax({
             type: 'POST',
-            url: 'https://conlabweb3.tierramontemariana.org/apps/gestiontareas/crud.php?aux=3',
+            url: '/cw3/conlabweb3.0/apps/gestiontareas/crud.php?aux=3',
             data: $('#formcontrol3').serialize(),
             success: function() {
                 Swal.fire({
@@ -178,7 +178,7 @@ if ($conetar->connect_errno) {
     function getEstado(id) {
         $.ajax({
             type: 'POST',
-            url: 'https://conlabweb3.tierramontemariana.org/apps/gestiontareas/mostrar-2.php?aux=2&id=' + id,
+            url: '/cw3/conlabweb3.0/apps/gestiontareas/mostrar-2.php?aux=2&id=' + id,
             success: function(res) {
 
                 data = JSON.parse(res);
@@ -197,7 +197,7 @@ if ($conetar->connect_errno) {
 
         $.ajax({
             type: 'POST',
-            url: 'https://conlabweb3.tierramontemariana.org/apps/gestiontareas/mostrar-2.php?aux=3&id=' + id,
+            url: '/cw3/conlabweb3.0/apps/gestiontareas/mostrar-2.php?aux=3&id=' + id,
             success: function(res) {
                 data = JSON.parse(res);
 
@@ -207,7 +207,7 @@ if ($conetar->connect_errno) {
                 data.forEach((element, index) => {
                     // Crear elementos de comentario con formato similar a Facebook
                     var commentItem = $('<div class="comment-item">');
-                    var commentAvatar = $('<img class="comment-avatar" src="https://conlabweb3.tierramontemariana.org/assets/image/user2-160x160.jpg" alt="User Avatar" style="width: 40px; height: 40px; display: inline-block; border-radius: 65%;">');
+                    var commentAvatar = $('<img class="comment-avatar" src="/cw3/conlabweb3.0/assets/image/user2-160x160.jpg" alt="User Avatar" style="width: 40px; height: 40px; display: inline-block; border-radius: 65%;">');
                     var commentContent = $('<div class="comment-content" style="display: inline-block; vertical-align: top; max-width: 400px;">');
                     var commentHeader = $('<div class="comment-header" style="display: inline-block; margin-left: 10px; vertical-align: top;">');
                     var commentUserName = $('<strong>').text(element.usuario);
@@ -260,7 +260,7 @@ if ($conetar->connect_errno) {
 
     function cargarDatosh() {
         $.ajax({
-            url: 'https://conlabweb3.tierramontemariana.org/apps/gestiontareas/mostrar.php', // Página PHP que devuelve los datos en formato JSON
+            url: '/cw3/conlabweb3.0/apps/gestiontareas/mostrar.php', // Página PHP que devuelve los datos en formato JSON
             type: 'GET', // Método de la petición (GET o POST según corresponda)
             dataType: 'json', // Tipo de datos esperado en la respuesta
             success: function(data) {
@@ -280,7 +280,7 @@ if ($conetar->connect_errno) {
 
         $.ajax({
             type: 'POST',
-            url: 'https://conlabweb3.tierramontemariana.org/apps/gestiontareas/mostrar-2.php?aux=4&id=' + id,
+            url: '/cw3/conlabweb3.0/apps/gestiontareas/mostrar-2.php?aux=4&id=' + id,
             success: function(res) {
                 $('#rows').html(res);
             }

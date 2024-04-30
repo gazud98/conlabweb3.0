@@ -98,13 +98,13 @@ if ($conetar->connect_errno) {
                 submitHandler: function() {
                     $.ajax({
                         type: 'POST',
-                        url: 'https://conlabweb3.tierramontemariana.org/apps/planes/crud.php?aux=1',
+                        url: '/cw3/conlabweb3.0/apps/planes/crud.php?aux=1',
                         data: $('#formcontrol').serialize(),
                         success: function(respuesta) {
                             if (respuesta == 'ok') {
                                 //                     alert('Termiando');
                             }
-                            $('.content-table-unidad_medida').load('https://conlabweb3.tierramontemariana.org/apps/planes/thedatatable.php');
+                            $('.content-table-unidad_medida').load('/cw3/conlabweb3.0/apps/planes/thedatatable.php');
 
                             Swal.fire({
                                 position: 'top',
