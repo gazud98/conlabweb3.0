@@ -1,33 +1,4 @@
-<?php
 
-if (file_exists("config/accesosystems.php")) {
-    include("config/accesosystems.php");
-} else {
-    if (file_exists("../config/accesosystems.php")) {
-        include("../config/accesosystems.php");
-    } else {
-        if (file_exists("../../config/accesosystems.php")) {
-            include("../../config/accesosystems.php");
-        }
-    }
-}
-
-$conetar = new mysqli(hostname, db_login, db_pass, cw3ctrlsrv);
-if ($conetar->connect_errno) {
-    $error = "Fallo al conectar a MySQL: (" . $conetar->connect_errno . ") " . $conetar->connect_error;
-    echo $error;
-} else {
-
-    if (isset($_REQUEST['iduser'])) {
-        $iduser = $_REQUEST['iduser'];
-        if ($iduser == "-1") {
-            $iduser = "";
-        }
-    } else {
-        $iduser = "";
-    }
-
-?>
     <link href="https://cdn.datatables.net/1.13.5/css/dataTables.bootstrap4.min.css" rel="stylesheet" />
 
     <table class="table table-striped table-hover table-head-fixed text-nowrap table responsive  table-sm table-producto" style="width:100%">
@@ -91,7 +62,7 @@ if ($conetar->connect_errno) {
                         "data": null,
                         "render": function(data, type, full, meta) {
 
-                            return '<a href="#" style="color:#213FD6;" onclick="cargarForm(' + full.thefile + ',' + full.id_producto + ',\'' + full.tipo_prod + '\')" data-toggle="modal" data-target="#modaEditEquipo"><i class="fa-solid fa-eye" style="font-size:13px;"></i></a>' +
+                            return '<a href="#" style="color:#E8A200;" onclick="cargarForm(' + full.thefile + ',' + full.id_producto + ',\'' + full.tipo_prod + '\')" data-toggle="modal" data-target="#modaEditEquipo"><i class="fa-solid fa-eye" style="font-size:13px;"></i></a>' +
                                 '<a href="#" style="color:#D62121;" onclick="deleteProduct(' + full.id_producto + ')"><i class="fa-solid fa-trash-can" style="font-size:13px;"></i></a>' +
                                 '<a href="#" style="color:#323D66;" onclick="disableProduct(' + full.id_producto + ',' + full.estado + ')"><i class="fa-solid fa-power-off" style="font-size:13px;"></i></a>';
 
@@ -201,6 +172,3 @@ if ($conetar->connect_errno) {
             }
         }
     </script>
-<?php
-}
-?>
