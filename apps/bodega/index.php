@@ -36,11 +36,11 @@ if ($conetar->connect_errno) {
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title></title>
-        <link rel="stylesheet" href="https://conlabweb3.tierramontemariana.org/apps/bodega/assets/style.css">
+        <link rel="stylesheet" href="/cw3/conlabweb3.0/apps/bodega/assets/style.css">
     </head>
     <style>
         .content-wrapper {
-            background-image: url('https://conlabweb3.tierramontemariana.org/apps/medicos/assets/backcw3-v1.png');
+            background-image: url('/cw3/conlabweb3.0/apps/medicos/assets/backcw3-v1.png');
             background-size: cover;
             background-repeat: no-repeat;
         }
@@ -181,7 +181,7 @@ if ($conetar->connect_errno) {
             $(document).ready(function() {
 
 
-                $('.content-table-bodega').load('https://conlabweb3.tierramontemariana.org/apps/bodega/table_view.php');
+                $('.content-table-bodega').load('/cw3/conlabweb3.0/apps/bodega/table_view.php');
 
 
 

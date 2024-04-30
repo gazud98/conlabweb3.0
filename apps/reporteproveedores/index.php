@@ -34,7 +34,7 @@ if ($conetar->connect_errno) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
-    <link rel="stylesheet" href="https://conlabweb3.tierramontemariana.org/apps/reporteproveedores/assets/style.css">
+    <link rel="stylesheet" href="/cw3/conlabweb3.0/apps/reporteproveedores/assets/style.css">
 </head>
 
 <body>
@@ -84,13 +84,13 @@ if ($conetar->connect_errno) {
 <script src="https://cdn.datatables.net/buttons/2.0.1/js/buttons.print.min.js"></script>
 <!-- jsPDF -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
-    <script src="https://conlabweb3.tierramontemariana.org/apps/reporteproveedores/assets/index.js"></script>
+    <script src="/cw3/conlabweb3.0/apps/reporteproveedores/assets/index.js"></script>
 
     <script>
 
         $(document).ready(function(){
-            $('#contetnTableListaProveedores').load('https://conlabweb3.tierramontemariana.org/apps/reporteproveedores/table.php');
-            $('#contentFilter').load('https://conlabweb3.tierramontemariana.org/apps/reporteproveedores/filters.php');
+            $('#contetnTableListaProveedores').load('/cw3/conlabweb3.0/apps/reporteproveedores/table.php');
+            $('#contentFilter').load('/cw3/conlabweb3.0/apps/reporteproveedores/filters.php');
         })
     </script>
 

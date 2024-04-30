@@ -58,7 +58,7 @@ if ($conetar->connect_errno) {
             "autoWidth": false,
             "responsive": true,
             "ajax": {
-                url: 'https://conlabweb3.tierramontemariana.org/apps/gestiontareas/mostrar-4.php', // Página PHP que devuelve los datos en formato JSON
+                url: '/cw3/conlabweb3.0/apps/gestiontareas/mostrar-4.php', // Página PHP que devuelve los datos en formato JSON
                 type: 'GET', // Método de la petición (GET o POST según corresponda)
                 dataType: 'json', // Tipo de datos esperado en la respuesta
                 dataSrc: '', // Indicar que los datos provienen directamente del objeto JSON (sin propiedad adicional)
@@ -117,7 +117,7 @@ if ($conetar->connect_errno) {
 
     function cargarDatosp() {
         $.ajax({
-            url: 'https://conlabweb3.tierramontemariana.org/apps/gestiontareas/mostrar-4.php', // Página PHP que devuelve los datos en formato JSON
+            url: '/cw3/conlabweb3.0/apps/gestiontareas/mostrar-4.php', // Página PHP que devuelve los datos en formato JSON
             type: 'GET', // Método de la petición (GET o POST según corresponda)
             dataType: 'json', // Tipo de datos esperado en la respuesta
             success: function(data) {

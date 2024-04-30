@@ -325,12 +325,12 @@ if ($conetar->connect_errno) {
             submitHandler: function() {
                 $.ajax({
                 type: 'POST',
-                url: 'https://conlabweb3.tierramontemariana.org/apps/activofijo/crud.php',
+                url: '/cw3/conlabweb3.0/apps/activofijo/crud.php',
                 data: $('#formcontrol').serialize(),
                 success: function(respuesta) {
                     if (respuesta == 'ok') {}
                     
-                        $('#thetable').load('https://conlabweb3.tierramontemariana.org/apps/activofijo/thedatatable.php');
+                        $('#thetable').load('/cw3/conlabweb3.0/apps/activofijo/thedatatable.php');
                         $("#iddatas").css("pointer-events", "none");
                         $("#iddatas").css("background-color", "#ededed");
                         $("#accionejec").css("display", "none");
@@ -390,12 +390,12 @@ if ($conetar->connect_errno) {
     /*function savedata() {
         $.ajax({
             type: 'POST',
-            url: 'https://conlabweb3.tierramontemariana.org/apps/activofijo/crud.php',
+            url: '/cw3/conlabweb3.0/apps/activofijo/crud.php',
             data: $('#formcontrol').serialize(),
             success: function(respuesta) {
                 if (respuesta == 'ok') {}
                 
-                $('#thetable').load('https://conlabweb3.tierramontemariana.org/apps/activofijo/thedatatable.php');
+                $('#thetable').load('/cw3/conlabweb3.0/apps/activofijo/thedatatable.php');
                 $("#iddatas").css("pointer-events", "none");
                 $("#iddatas").css("background-color", "#ededed");
                 $("#accionejec").css("display", "none");

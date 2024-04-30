@@ -132,7 +132,7 @@ if ($conetar->connect_errno) {
         var nom_per = $('option:selected', el).attr('nom_per');
         var noreq = $("#norequisicion").val();
         $("#resp").val(nom_per);
-        $("#table_req").load("https://conlabweb3.tierramontemariana.org/apps/cotizacion/tabla_req.php", {
+        $("#table_req").load("/cw3/conlabweb3.0/apps/cotizacion/tabla_req.php", {
             noreq: noreq
         });
     }

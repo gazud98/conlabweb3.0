@@ -438,7 +438,7 @@ if ($conetar->connect_errno) {
                     },
                     ],
                     "ajax": {
-                        url: 'https://conlabweb3.tierramontemariana.org/apps/listmovinsumo/mostrar.php',
+                        url: '/cw3/conlabweb3.0/apps/listmovinsumo/mostrar.php',
                         type: 'GET',
                         dataType: 'json',
                         dataSrc: '',
@@ -496,14 +496,14 @@ if ($conetar->connect_errno) {
             });
 
             function loadProm(id) {
-                $("#contentProm").load("https://conlabweb3.tierramontemariana.org/apps/listmovinsumo/table-promedio.php", {
+                $("#contentProm").load("/cw3/conlabweb3.0/apps/listmovinsumo/table-promedio.php", {
                     id: id
                 });
             }
 
             function cargarDatos() {
                 $.ajax({
-                    url: 'https://conlabweb3.tierramontemariana.org/apps/listmovinsumo/mostrar.php', // Página PHP que devuelve los datos en formato JSON
+                    url: '/cw3/conlabweb3.0/apps/listmovinsumo/mostrar.php', // Página PHP que devuelve los datos en formato JSON
                     type: 'GET', // Método de la petición (GET o POST según corresponda)
                     dataType: 'json', // Tipo de datos esperado en la respuesta
                     success: function (data) {
