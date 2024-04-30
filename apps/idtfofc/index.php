@@ -26,7 +26,7 @@
 
     ?>
 
-    <h1>Pruebaaaaa</h1>
+    <h1>conlabweb3</h1>
 
     <div class="card border-light" style="width:85%;margin:auto;">
 
