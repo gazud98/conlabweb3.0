@@ -269,7 +269,7 @@ if ($conetar->connect_errno) {
             }
         </script>
     </body>
-s
+
     </html>
 <?php
 }
