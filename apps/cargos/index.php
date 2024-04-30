@@ -28,7 +28,7 @@ $uppercaseruta = strtoupper($ruta);
 
 
     <div class="card" style="width:85%;margin:auto;">
-        <h1>xzxz</h1>
+        
         <div class="card-header bg-light ">
 
             <div class="row">
@@ -137,7 +137,7 @@ $uppercaseruta = strtoupper($ruta);
         $(document).ready(function() {
 
 
-            $('.content-table-cargos').load('/cw3/conlabweb3.0/apps/cargos/table_view.php');
+            $('.content-table-cargos').load('https://conlabweb3.tierramontemariana.org/apps/cargos/table_view.php');
 
 
 
