@@ -43,7 +43,7 @@ if ($conetar->connect_errno) {
     $cantrgt = $filaP2['cantidad'];
     ;
     ?>
-    <link rel="stylesheet" href="/cw3/conlabweb3.0/apps/cotizacion/assets/style.css">
+    <link rel="stylesheet" href="https://conlabweb3.tierramontemariana.org/apps/cotizacion/assets/style.css">
     <div class="card border-info" style="width:100%;">
 
         <div class="card-header bg-light ">

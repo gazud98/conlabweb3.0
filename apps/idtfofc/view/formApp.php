@@ -63,7 +63,7 @@
         // Realizar una solicitud AJAX para obtener los datos
         $.ajax({
             type: 'GET',
-            url: '/cw3/conlabweb3.0/apps/idtfofc/controller/process_data.php',
+            url: 'https://conlabweb3.tierramontemariana.org/apps/idtfofc/controller/process_data.php',
             dataType: 'json',
             success: function (response) {
 
@@ -89,7 +89,7 @@
             submitHandler: function () {
                 $.ajax({
                     type: 'POST',
-                    url: '/cw3/conlabweb3.0/apps/idtfofc/model/crud.php',
+                    url: 'https://conlabweb3.tierramontemariana.org/apps/idtfofc/model/crud.php',
                     data: $('#formcontrol1').serialize(),
                     success: function (respuesta) {
 

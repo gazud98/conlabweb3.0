@@ -359,9 +359,9 @@ if ($conetar->connect_errno) {
 
     <script>
         $(document).ready(function() {
-            //$('.content-table-glosas').load('/cw3/conlabweb3.0/apps/empresas/table-glosas.php');
+            //$('.content-table-glosas').load('https://conlabweb3.tierramontemariana.org/apps/empresas/table-glosas.php');
             $('.content-motivo-glosa').load('/cw3/apps/empresas/table-motivo-glosas.php');
-            //$('.content-notas').load('/cw3/conlabweb3.0/apps/empresas/table-notas-contables.php');
+            //$('.content-notas').load('https://conlabweb3.tierramontemariana.org/apps/empresas/table-notas-contables.php');
             $('#modalEntidadesBanc').load('/cw3/apps/empresas/modal-end-banc.php');
             $('.content-table-end-banc').load('/cw3/apps/empresas/table-end-banc.php');
 

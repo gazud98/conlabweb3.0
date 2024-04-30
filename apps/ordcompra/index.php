@@ -156,19 +156,19 @@ if ($conetar->connect_errno) {
         });
 
         function cargar() {
-            $("#dt").load("/cw3/conlabweb3.0/apps/ordcompra/data.php")
-            $("#table1").load("/cw3/conlabweb3.0/apps/ordcompra/tabla_detalle.php")
+            $("#dt").load("https://conlabweb3.tierramontemariana.org/apps/ordcompra/data.php")
+            $("#table1").load("https://conlabweb3.tierramontemariana.org/apps/ordcompra/tabla_detalle.php")
         }
 
         function ejecutar() {
             // result = 'success';
             $.ajax({
                 type: 'POST',
-                url: '/cw3/conlabweb3.0/apps/ordcompra/creaorden.php',
+                url: 'https://conlabweb3.tierramontemariana.org/apps/ordcompra/creaorden.php',
                 data: {},
                 success: function(data) {
 
-                    $("#table1").load("/cw3/conlabweb3.0/apps/ordcompra/tabla_detalle.php");
+                    $("#table1").load("https://conlabweb3.tierramontemariana.org/apps/ordcompra/tabla_detalle.php");
 
                 }
             })

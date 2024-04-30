@@ -146,7 +146,7 @@ if ($conetar->connect_errno) {
         $('#col' + thefile).css("border", "4px groove #dc3545");
         
     
-        $("#tabla_grupoactsg").load("/cw3/conlabweb3.0/apps/evento/tabla_grupoactsg.php", {
+        $("#tabla_grupoactsg").load("https://conlabweb3.tierramontemariana.org/apps/evento/tabla_grupoactsg.php", {
             idd: id_departamento,
             idsd: id_sede,
             idta: id_tipo_activo,

@@ -41,7 +41,7 @@ if ($conetar->connect_errno) {
     $cantrgt = $filaP2['cantidad'];;
 ?>
 
-    <link rel="stylesheet" href="/cw3/conlabweb3.0/apps/inventario/assets/style.css">
+    <link rel="stylesheet" href="https://conlabweb3.tierramontemariana.org/apps/inventario/assets/style.css">
 
     <div class="card border-light" style="width: 90%;margin:auto;">
 
@@ -84,7 +84,7 @@ if ($conetar->connect_errno) {
         $(document).ready(function() {
 
 
-            $('#thetable').load('/cw3/conlabweb3.0/apps/inventario/tabla.php');
+            $('#thetable').load('https://conlabweb3.tierramontemariana.org/apps/inventario/tabla.php');
 
 
 

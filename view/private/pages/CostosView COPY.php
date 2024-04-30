@@ -411,7 +411,7 @@
                     "autoWidth": false,
                     "responsive": false,
                     "ajax": {
-                        url: '/cw3/conlabweb3.0/apps/costos/mostrar.php', // Página PHP que devuelve los datos en formato JSON
+                        url: 'https://conlabweb3.tierramontemariana.org/apps/costos/mostrar.php', // Página PHP que devuelve los datos en formato JSON
                         type: 'GET', // Método de la petición (GET o POST según corresponda)
                         dataType: 'json', // Tipo de datos esperado en la respuesta
                         dataSrc: '', // Indicar que los datos provienen directamente del objeto JSON (sin propiedad adicional)
@@ -465,7 +465,7 @@
                     "autoWidth": false,
                     "responsive": false,
                     "ajax": {
-                        url: '/cw3/conlabweb3.0/apps/costos/mostrarcostos.php', // Página PHP que devuelve los datos en formato JSON
+                        url: 'https://conlabweb3.tierramontemariana.org/apps/costos/mostrarcostos.php', // Página PHP que devuelve los datos en formato JSON
                         type: 'GET', // Método de la petición (GET o POST según corresponda)
                         dataType: 'json', // Tipo de datos esperado en la respuesta
                         dataSrc: '', // Indicar que los datos provienen directamente del objeto JSON (sin propiedad adicional)
@@ -583,7 +583,7 @@
                     "autoWidth": false,
                     "responsive": false,
                     "ajax": {
-                        url: '/cw3/conlabweb3.0/apps/costos/mostrarmanobra.php', // Página PHP que devuelve los datos en formato JSON
+                        url: 'https://conlabweb3.tierramontemariana.org/apps/costos/mostrarmanobra.php', // Página PHP que devuelve los datos en formato JSON
                         type: 'GET', // Método de la petición (GET o POST según corresponda)
                         dataType: 'json', // Tipo de datos esperado en la respuesta
                         dataSrc: '', // Indicar que los datos provienen directamente del objeto JSON (sin propiedad adicional)
@@ -627,7 +627,7 @@
 
             function cargarDatos() {
                 $.ajax({
-                    url: '/cw3/conlabweb3.0/apps/costos/mostrar.php', // Página PHP que devuelve los datos en formato JSON
+                    url: 'https://conlabweb3.tierramontemariana.org/apps/costos/mostrar.php', // Página PHP que devuelve los datos en formato JSON
                     type: 'GET', // Método de la petición (GET o POST según corresponda)
                     dataType: 'json', // Tipo de datos esperado en la respuesta
                     success: function(data) {
@@ -643,7 +643,7 @@
 
             function cargarDatosCostos() {
                 $.ajax({
-                    url: '/cw3/conlabweb3.0/apps/costos/mostrarcostos.php', // Página PHP que devuelve los datos en formato JSON
+                    url: 'https://conlabweb3.tierramontemariana.org/apps/costos/mostrarcostos.php', // Página PHP que devuelve los datos en formato JSON
                     type: 'GET', // Método de la petición (GET o POST según corresponda)
                     dataType: 'json', // Tipo de datos esperado en la respuesta
                     success: function(data) {
@@ -660,7 +660,7 @@
 
             function cargarManobra() {
                 $.ajax({
-                    url: '/cw3/conlabweb3.0/apps/costos/mostrarmanobra.php', // Página PHP que devuelve los datos en formato JSON
+                    url: 'https://conlabweb3.tierramontemariana.org/apps/costos/mostrarmanobra.php', // Página PHP que devuelve los datos en formato JSON
                     type: 'GET', // Método de la petición (GET o POST según corresponda)
                     dataType: 'json', // Tipo de datos esperado en la respuesta
                     success: function(data) {
@@ -686,7 +686,7 @@
                 var rendimiento = (n_examenes_promedio / n_examenes) * 100;
                 var totalvalor = n_examenes_promedio * valor_pruebas;
                 $.ajax({
-                    url: '/cw3/conlabweb3.0/apps/costos/agregar.php', // Página PHP que devuelve los datos en formato JSON
+                    url: 'https://conlabweb3.tierramontemariana.org/apps/costos/agregar.php', // Página PHP que devuelve los datos en formato JSON
                     type: 'POST', // Método de la petición (GET o POST según corresponda)
                     data: {
                         valore: valore,
@@ -718,7 +718,7 @@
                 var totalcostos = n_examenes_promedio * valor;
                 $.ajax({
                     type: 'POST',
-                    url: '/cw3/conlabweb3.0/apps/costos/acciones.php',
+                    url: 'https://conlabweb3.tierramontemariana.org/apps/costos/acciones.php',
                     data: {
                         id: ide,
                         motivo: motivo_costo,
@@ -748,7 +748,7 @@
 
                 $.ajax({
                     type: 'POST',
-                    url: '/cw3/conlabweb3.0/apps/costos/acciones.php',
+                    url: 'https://conlabweb3.tierramontemariana.org/apps/costos/acciones.php',
                     data: {
                         idmat: idmat,
                         descripcion: descripcion,
@@ -777,7 +777,7 @@
                 var salario = $('#salario').val();
                 $.ajax({
                     type: 'POST',
-                    url: '/cw3/conlabweb3.0/apps/costos/acciones.php',
+                    url: 'https://conlabweb3.tierramontemariana.org/apps/costos/acciones.php',
                     data: {
                         idmano: idmano,
                         cargo: cargo,
@@ -815,7 +815,7 @@
                         if (result.isConfirmed) {
                             $.ajax({
                                 type: 'POST',
-                                url: '/cw3/conlabweb3.0/apps/costos/acciones.php',
+                                url: 'https://conlabweb3.tierramontemariana.org/apps/costos/acciones.php',
                                 data: {
                                     id: id,
                                     caso: 'B',
@@ -836,7 +836,7 @@
                         }
                     })
                 } else if (caso == "E") {
-                    $('#modalshow').load('/cw3/conlabweb3.0/apps/costos/modal.php', {
+                    $('#modalshow').load('https://conlabweb3.tierramontemariana.org/apps/costos/modal.php', {
                         id: id
                     });
 
@@ -861,7 +861,7 @@
                         if (result.isConfirmed) {
                             $.ajax({
                                 type: 'POST',
-                                url: '/cw3/conlabweb3.0/apps/costos/acciones.php',
+                                url: 'https://conlabweb3.tierramontemariana.org/apps/costos/acciones.php',
                                 data: {
                                     idmat: id,
                                     caso: 'B',
@@ -882,7 +882,7 @@
                         }
                     })
                 } else if (caso == "E") {
-                    $('#modalshowmateria').load('/cw3/conlabweb3.0/apps/costos/modalmateria.php', {
+                    $('#modalshowmateria').load('https://conlabweb3.tierramontemariana.org/apps/costos/modalmateria.php', {
                         id: id
                     });
 
@@ -904,7 +904,7 @@
                         if (result.isConfirmed) {
                             $.ajax({
                                 type: 'POST',
-                                url: '/cw3/conlabweb3.0/apps/costos/acciones.php',
+                                url: 'https://conlabweb3.tierramontemariana.org/apps/costos/acciones.php',
                                 data: {
                                     idmano: id,
                                     caso: 'B',
@@ -925,7 +925,7 @@
                         }
                     })
                 } else if (caso == "E") {
-                    $('#modalshowmanobra').load('/cw3/conlabweb3.0/apps/costos/modalmanobra.php', {
+                    $('#modalshowmanobra').load('https://conlabweb3.tierramontemariana.org/apps/costos/modalmanobra.php', {
                         id: id
                     });
 
@@ -941,7 +941,7 @@
                 var date = $("input[name='search_data_date']").val();
                 var totalcostos = n_examenes_promedio * valorcosto;
                 $.ajax({
-                    url: '/cw3/conlabweb3.0/apps/costos/agregar.php', // Página PHP que devuelve los datos en formato JSON
+                    url: 'https://conlabweb3.tierramontemariana.org/apps/costos/agregar.php', // Página PHP que devuelve los datos en formato JSON
                     type: 'POST', // Método de la petición (GET o POST según corresponda)
                     data: {
                         valorcosto: valorcosto,
@@ -973,7 +973,7 @@
                 var date = $("input[name='search_data_date']").val();
                 var totalmanobra = n_examenes_promedio * salario;
                 $.ajax({
-                    url: '/cw3/conlabweb3.0/apps/costos/agregar.php', // Página PHP que devuelve los datos en formato JSON
+                    url: 'https://conlabweb3.tierramontemariana.org/apps/costos/agregar.php', // Página PHP que devuelve los datos en formato JSON
                     type: 'POST', // Método de la petición (GET o POST según corresponda)
                     data: {
                         cargo: cargo,
@@ -1264,7 +1264,7 @@
 
                         $.ajax({
                             method: 'POST',
-                            url: '/cw3/conlabweb3.0/apps/costos/calculo.php',
+                            url: 'https://conlabweb3.tierramontemariana.org/apps/costos/calculo.php',
                             data:{id_examen:id_examen,codigo:codigo,costo_administrativo:costo_administrativo,tipo:'MT'},
                             type:'JSON',
                             success: function(respuesta) {
@@ -1287,7 +1287,7 @@
 
                         $.ajax({
                             method: 'POST',
-                            url: '/cw3/conlabweb3.0/apps/costos/calculo.php',
+                            url: 'https://conlabweb3.tierramontemariana.org/apps/costos/calculo.php',
                             data:{id_examen:id_examen,codigo:codigo,costo_administrativo:costo_administrativo,tipo:'CI'},
                             type:'JSON',
                             success: function(respuesta) {
@@ -1310,7 +1310,7 @@
 
                         $.ajax({
                             method: 'POST',
-                            url: '/cw3/conlabweb3.0/apps/costos/calculo.php',
+                            url: 'https://conlabweb3.tierramontemariana.org/apps/costos/calculo.php',
                             data:{id_examen:id_examen,codigo:codigo,costo_administrativo:costo_administrativo,tipo:'MO'},
                             type:'JSON',
                             success: function(respuesta) {

@@ -251,13 +251,13 @@ if ($conetar->connect_errno) {
 
         if (typeof idx !== 'undefined' && idx !== null && idx !== '') {
             // Ejecutar el código aquí si idx no es undefined, null o una cadena vacía
-            $("#val").load('/cw3/conlabweb3.0/apps/ordrequisicion/validator.php', {
+            $("#val").load('https://conlabweb3.tierramontemariana.org/apps/ordrequisicion/validator.php', {
                 idx: idx,
                 nom_insumo: nom_insumo,
                 iduser: iduser
             });
 
-            $("#cantbodega").load('/cw3/conlabweb3.0/apps/ordrequisicion/infbodega.php', {
+            $("#cantbodega").load('https://conlabweb3.tierramontemariana.org/apps/ordrequisicion/infbodega.php', {
                 idx: idx
             });
         } else {
@@ -269,7 +269,7 @@ if ($conetar->connect_errno) {
         var idd = $('option:selected', sel).attr('value');
 
 
-        $("#idprod").load('/cw3/conlabweb3.0/apps/ordrequisicion/producto.php', {
+        $("#idprod").load('https://conlabweb3.tierramontemariana.org/apps/ordrequisicion/producto.php', {
             idd: idd
         })
 

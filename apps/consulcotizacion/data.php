@@ -162,7 +162,7 @@ if ($conetar->connect_errno) {
 
             $.ajax({
                 type: 'POST',
-                url: '/cw3/conlabweb3.0/apps/consulcotizacion/crud.php',
+                url: 'https://conlabweb3.tierramontemariana.org/apps/consulcotizacion/crud.php',
                 data: {
                     id: id,
                     preci: preci // Enviar el valor sin formato
@@ -187,7 +187,7 @@ if ($conetar->connect_errno) {
 
             $.ajax({
                 type: 'POST',
-                url: '/cw3/conlabweb3.0/apps/consulcotizacion/creaorden.php',
+                url: 'https://conlabweb3.tierramontemariana.org/apps/consulcotizacion/creaorden.php',
                 data: {
                     id: <?php echo $ide ?>
                 },
@@ -205,7 +205,7 @@ if ($conetar->connect_errno) {
                     } else {
                         $.ajax({
                             type: 'POST',
-                            url: '/cw3/conlabweb3.0/apps/consulcotizacion/mostrarorden.php',
+                            url: 'https://conlabweb3.tierramontemariana.org/apps/consulcotizacion/mostrarorden.php',
                             data: {},
                             success: function (respuesta) {
                                 if (respuesta === null || respuesta.trim() === '') {
@@ -218,8 +218,8 @@ if ($conetar->connect_errno) {
                                     $("#ordcompra").modal("hide");
                                 } else {
                                     cargarDatos();
-                                    $("#data1").load("/cw3/conlabweb3.0/apps/consulcotizacion/data.php");
-                                    $("#modalshow").load("/cw3/conlabweb3.0/apps/consulcotizacion/modal.php", {
+                                    $("#data1").load("https://conlabweb3.tierramontemariana.org/apps/consulcotizacion/data.php");
+                                    $("#modalshow").load("https://conlabweb3.tierramontemariana.org/apps/consulcotizacion/modal.php", {
                                         id: respuesta
                                     });
 

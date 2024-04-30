@@ -36,7 +36,7 @@ if ($conetar->connect_errno) {
     $cantrgt = $filaP2['cantidad'];;
 ?>
 
-    <link rel="stylesheet" href="/cw3/conlabweb3.0/apps/mantenimientos/assets/style.css">
+    <link rel="stylesheet" href="https://conlabweb3.tierramontemariana.org/apps/mantenimientos/assets/style.css">
 
     <style>
         #thetable::-webkit-scrollbar {
@@ -150,15 +150,15 @@ if ($conetar->connect_errno) {
 
     <script>
         function loadFormPrev() {
-            $('#textFieldsPrev').load('/cw3/conlabweb3.0/apps/mantenimientos/preventivo.php');
+            $('#textFieldsPrev').load('https://conlabweb3.tierramontemariana.org/apps/mantenimientos/preventivo.php');
         }
 
         function loadFormCor() {
-            $('#textFieldsCor').load('/cw3/conlabweb3.0/apps/mantenimientos/correctivo.php');
+            $('#textFieldsCor').load('https://conlabweb3.tierramontemariana.org/apps/mantenimientos/correctivo.php');
         }
 
         $(document).ready(function() {
-            $('#contentTableMant').load('/cw3/conlabweb3.0/apps/mantenimientos/table.php');
+            $('#contentTableMant').load('https://conlabweb3.tierramontemariana.org/apps/mantenimientos/table.php');
         })
 
         function habilitacmpos() {
@@ -201,7 +201,7 @@ if ($conetar->connect_errno) {
             $("#delbtn").css("display", "none");
             $("#successbtn").css("display", "none");
             $("#cancelbtn").css("display", "none");
-            $("#casoesperado").load('/cw3/conlabweb3.0/apps/mantenimientos/datacase1.php')
+            $("#casoesperado").load('https://conlabweb3.tierramontemariana.org/apps/mantenimientos/datacase1.php')
         }
     </script>
 <?php

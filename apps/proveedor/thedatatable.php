@@ -74,7 +74,7 @@
             "responsive": true,
             // ... Otras opciones ...
             "ajax": {
-                url: '/cw3/conlabweb3.0/apps/proveedor/mostrar.php', // Página PHP que devuelve los datos en formato JSON
+                url: 'https://conlabweb3.tierramontemariana.org/apps/proveedor/mostrar.php', // Página PHP que devuelve los datos en formato JSON
                 type: 'GET', // Método de la petición (GET o POST según corresponda)
                 dataType: 'json', // Tipo de datos esperado en la respuesta
                 dataSrc: '' // Indicar que los datos provienen directamente del objeto JSON (sin propiedad adicional)

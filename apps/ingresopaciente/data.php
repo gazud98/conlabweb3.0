@@ -72,11 +72,11 @@ if ($conetar->connect_errno) {
             id_prodc = $('#numfactura').val();
 
             if (id_prodc == '') {
-                $("#table").load("/cw3/conlabweb3.0/apps/trasladodepartamento/tabla.php", {
+                $("#table").load("https://conlabweb3.tierramontemariana.org/apps/trasladodepartamento/tabla.php", {
                     id_prodc: ''
                 });
             } else {
-                $("#table").load("/cw3/conlabweb3.0/apps/trasladodepartamento/tabla.php", {
+                $("#table").load("https://conlabweb3.tierramontemariana.org/apps/trasladodepartamento/tabla.php", {
                     id_prodc: id_prodc
                 });
             }

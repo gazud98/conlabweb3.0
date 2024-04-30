@@ -117,7 +117,7 @@ try {
     </head>
     <body>
         <div class="container">
-            <p><div id="contentLogoMail"><img src="/cw3/conlabweb3.0/apps/gestiontareas/files/logopasteur.png" width="200"></div></p>
+            <p><div id="contentLogoMail"><img src="https://conlabweb3.tierramontemariana.org/apps/gestiontareas/files/logopasteur.png" width="200"></div></p>
             <h4>Tareas pendientes por realizar</h4>
             <div class="row" style="width: 100%;">
                 <table class="table" style="width: 100%;">

@@ -84,7 +84,7 @@ if ($conetar->connect_errno) {
 </div>
 
 <script>
-    $("#modalshow").load("/cw3/conlabweb3.0/apps/formatos/ordencompra.php", {
+    $("#modalshow").load("https://conlabweb3.tierramontemariana.org/apps/formatos/ordencompra.php", {
         id: id
     });
 </script>

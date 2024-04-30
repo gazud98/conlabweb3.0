@@ -97,7 +97,7 @@
                 },
             ],
             "ajax": {
-                url: '/cw3/conlabweb3.0/apps/reporteproveedores/mostrar.php', // Página PHP que devuelve los datos en formato JSON
+                url: 'https://conlabweb3.tierramontemariana.org/apps/reporteproveedores/mostrar.php', // Página PHP que devuelve los datos en formato JSON
                 type: 'GET', // Método de la petición (GET o POST según corresponda)
                 dataType: 'json', // Tipo de datos esperado en la respuesta
                 dataSrc: '',

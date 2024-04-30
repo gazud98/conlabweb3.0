@@ -20,7 +20,7 @@ if( file_exists("config/accesosystems.php")) {
  //echo $p; //viene con el modulo activo
 
 // //echo base_url.'.......<br>'.'...'.hostname.','.db_login.','.db_pass.','.bbserver1.'----<br>';
- $conetar =  new mysqli('localhost','root', '', 'u116753122_cw3completa');
+ $conetar =  new mysqli('localhost','u116753122_erbin', '3012046491@Erbin', 'u116753122_cw3completa');
  if ($conetar->connect_errno) {
      $error= "Fallo al conectar a MySQL: (" . $conetar->connect_errno . ") " . $conetar->connect_error;
      echo $error;

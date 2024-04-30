@@ -326,7 +326,7 @@ if ($conetar->connect_errno) {
             "searching": false,
             // ... Otras opciones ...
             "ajax": {
-                url: '/cw3/conlabweb3.0/apps/trasladodepartamento/mostrar.php', // Página PHP que devuelve los datos en formato JSON
+                url: 'https://conlabweb3.tierramontemariana.org/apps/trasladodepartamento/mostrar.php', // Página PHP que devuelve los datos en formato JSON
                 type: 'GET', // Método de la petición (GET o POST según corresponda)
                 dataType: 'json', // Tipo de datos esperado en la respuesta
                 dataSrc: '', // Indicar que los datos provienen directamente del objeto JSON (sin propiedad adicional)
@@ -391,7 +391,7 @@ if ($conetar->connect_errno) {
         }
         $('#' + theobject).prop('checked', true);
 
-        $("#btndep").load("/cw3/conlabweb3.0/apps/trasladodepartamento/trasladodep.php", {
+        $("#btndep").load("https://conlabweb3.tierramontemariana.org/apps/trasladodepartamento/trasladodep.php", {
             id_produ: id_produ,
             nom_insumo: nom_insumo,
             cant: cant,

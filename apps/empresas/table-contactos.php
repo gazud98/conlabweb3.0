@@ -92,7 +92,7 @@ if ($conetar->connect_errno) {
                         url: '/desarrolloV3/apps/pacientes/crud.php',
                         data: $('#formcontrol').serialize(),
                         success: function(respuesta) {
-                            $('.content-table-sedes').load('/cw3/conlabweb3.0/apps/pacientes/thedatatable.php');
+                            $('.content-table-sedes').load('https://conlabweb3.tierramontemariana.org/apps/pacientes/thedatatable.php');
                             Swal.fire({
                                 position: 'top',
                                 icon: 'success',

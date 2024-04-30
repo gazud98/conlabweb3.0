@@ -49,12 +49,12 @@ FROM u116753122_cw3completa.ordrequisicion_temp";
 
         $.ajax({
             type: 'POST',
-            url: '/cw3/conlabweb3.0/apps/ordrequisicion/confirmarordenes.php',
+            url: 'https://conlabweb3.tierramontemariana.org/apps/ordrequisicion/confirmarordenes.php',
             data: {},
             success: function(respuesta) {
                 $.ajax({
                     type: 'POST',
-                    url: '/cw3/conlabweb3.0/apps/ordrequisicion/mostrarequisicion.php',
+                    url: 'https://conlabweb3.tierramontemariana.org/apps/ordrequisicion/mostrarequisicion.php',
                     data: {},
                     success: function(respuesta) {
                         Swal.fire({
@@ -68,7 +68,7 @@ FROM u116753122_cw3completa.ordrequisicion_temp";
                 })
 
 
-                $("#table").load('/cw3/conlabweb3.0/apps/ordrequisicion/tabla.php');
+                $("#table").load('https://conlabweb3.tierramontemariana.org/apps/ordrequisicion/tabla.php');
 
             }
         })
