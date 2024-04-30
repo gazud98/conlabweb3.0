@@ -150,7 +150,7 @@ if ($conetar->connect_errno) {
                         },
                     ],
                     "ajax": {
-                        url: '/cw3/conlabweb3.0/apps/listmovinsumo/mostrar-2.php',
+                        url: 'https://conlabweb3.tierramontemariana.org/apps/listmovinsumo/mostrar-2.php',
                         type: 'GET',
                         dataType: 'json',
                         dataSrc: '',

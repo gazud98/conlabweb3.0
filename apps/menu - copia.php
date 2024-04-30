@@ -142,7 +142,7 @@ if ($conetar->connect_errno) {
 
         $.ajax({
             type: 'POST',
-            url: '/cw3/conlabweb3.0/apps/validate',
+            url: 'https://conlabweb3.tierramontemariana.org/apps/validate',
             data: {
                 mod: mod
             },

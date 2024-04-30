@@ -83,7 +83,7 @@ if ($conetar->connect_errno) {
 
         $.ajax({
             type: 'POST',
-            url: '/cw3/conlabweb3.0/apps/cotizacion/crud.php',
+            url: 'https://conlabweb3.tierramontemariana.org/apps/cotizacion/crud.php',
             data: {
 
                 id_prod: id_prod,
@@ -93,7 +93,7 @@ if ($conetar->connect_errno) {
             },
             success: function(data) {
 
-                $("#table").load('/cw3/conlabweb3.0/apps/cotizacion/tabla.php');
+                $("#table").load('https://conlabweb3.tierramontemariana.org/apps/cotizacion/tabla.php');
 
             }
         })

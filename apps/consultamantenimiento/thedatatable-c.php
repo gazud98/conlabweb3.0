@@ -123,7 +123,7 @@ if ($conetar->connect_errno) {
                 "responsive": true,
                 // ... Otras opciones ...
                 "ajax": {
-                    url: '/cw3/conlabweb3.0/apps/consultamantenimiento/mostrar-c.php', // Página PHP que devuelve los datos en formato JSON
+                    url: 'https://conlabweb3.tierramontemariana.org/apps/consultamantenimiento/mostrar-c.php', // Página PHP que devuelve los datos en formato JSON
                     type: 'GET', // Método de la petición (GET o POST según corresponda)
                     dataType: 'json', // Tipo de datos esperado en la respuesta
                     dataSrc: '',
@@ -192,7 +192,7 @@ if ($conetar->connect_errno) {
         }
         
         function loadModalRepC(id) {
-            $('#contentModalRep').load('/cw3/conlabweb3.0/apps/consultamantenimiento/modal-rep.php', {
+            $('#contentModalRep').load('https://conlabweb3.tierramontemariana.org/apps/consultamantenimiento/modal-rep.php', {
                 id: id,
                 aux: 'C'
             });

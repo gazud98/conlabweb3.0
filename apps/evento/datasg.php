@@ -138,7 +138,7 @@ if ($conetar->connect_errno) {
         var caso = $('option:selected', sel).attr('value');
 
 
-        $("#period1").load('/cw3/conlabweb3.0/apps/evento/periodicidad1.php', {
+        $("#period1").load('https://conlabweb3.tierramontemariana.org/apps/evento/periodicidad1.php', {
             caso: caso
         })
 
@@ -202,7 +202,7 @@ if ($conetar->connect_errno) {
 
         $.ajax({
             type: 'POST',
-            url: '/cw3/conlabweb3.0/apps/evento/crud.php',
+            url: 'https://conlabweb3.tierramontemariana.org/apps/evento/crud.php',
             data: {
                 rep: rep1,
                 periodicidad: periodicidad1,

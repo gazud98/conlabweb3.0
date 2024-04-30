@@ -307,7 +307,7 @@ if ($conetar->connect_errno) {
             submitHandler: function() {
                 $.ajax({
                     type: 'POST',
-                    url: '/cw3/conlabweb3.0/apps/usuarios/crud.php?aux=2',
+                    url: 'https://conlabweb3.tierramontemariana.org/apps/usuarios/crud.php?aux=2',
                     data: $('#formUpdate').serialize(),
                     success: function(respuesta) {
                         if (respuesta == 1) {
@@ -328,7 +328,7 @@ if ($conetar->connect_errno) {
                             $('#modalEditUsers').modal('hide');
                             cargarDatos();
                             $('#nombre').val('');
-                            $("#codigo").load('/cw3/conlabweb3.0/apps/usuarios/codigo.php');
+                            $("#codigo").load('https://conlabweb3.tierramontemariana.org/apps/usuarios/codigo.php');
                             $("#iddatas").css("pointer-events", "none");
                             $("#iddatas").css("background-color", "#ededed");
                             $("#accionejec").css("display", "none");
@@ -384,7 +384,7 @@ if ($conetar->connect_errno) {
 
     function selectModulos(sel) {
         var id = $('option:selected', sel).attr('value');
-        $("#modulos").load('/cw3/conlabweb3.0/apps/usuarios/opciones.php', {
+        $("#modulos").load('https://conlabweb3.tierramontemariana.org/apps/usuarios/opciones.php', {
             id: id
         })
 
@@ -450,7 +450,7 @@ if ($conetar->connect_errno) {
     function savedata() {
         $.ajax({
             type: 'POST',
-            url: '/cw3/conlabweb3.0/apps/usuarios/crud.php',
+            url: 'https://conlabweb3.tierramontemariana.org/apps/usuarios/crud.php',
             data: $('#form-control').serialize(),
             success: function(respuesta) {
                 if (respuesta == 1) {
@@ -470,7 +470,7 @@ if ($conetar->connect_errno) {
                     });
                     cargarDatos();
                     $('#nombre').val('');
-                    $("#codigo").load('/cw3/conlabweb3.0/apps/usuarios/codigo.php');
+                    $("#codigo").load('https://conlabweb3.tierramontemariana.org/apps/usuarios/codigo.php');
                 }
 
 
@@ -484,7 +484,7 @@ if ($conetar->connect_errno) {
         var documento = $("#documento").val();
         var t_iden = $("#id_tipo_identificacion").val();
 
-        $("#infempleado").load("/cw3/conlabweb3.0/apps/usuarios/inf_empleados.php", {
+        $("#infempleado").load("https://conlabweb3.tierramontemariana.org/apps/usuarios/inf_empleados.php", {
             documento: documento,
             t_iden: t_iden
         });

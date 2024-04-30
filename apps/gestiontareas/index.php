@@ -31,7 +31,7 @@ if ($conetar->connect_errno) {
 
 
     <!-- Agrega enlaces a tus hojas de estilo aquí -->
-    <link rel="stylesheet" type="text/css" href="/cw3/conlabweb3.0/apps/gestiontareas/assets/style.css">
+    <link rel="stylesheet" type="text/css" href="https://conlabweb3.tierramontemariana.org/apps/gestiontareas/assets/style.css">
 </head>
 
 <body>
@@ -341,11 +341,11 @@ if ($conetar->connect_errno) {
     <script>
         $(document).ready(function() {
    
-            $(".content-table-h").load("/cw3/conlabweb3.0/apps/gestiontareas/table-tareas-hoy.php");
-            $("#v-pills-profile").load("/cw3/conlabweb3.0/apps/gestiontareas/table-tareas-v.php");
-            $("#v-pills-messages").load("/cw3/conlabweb3.0/apps/gestiontareas/table-tareas-p.php");
-            $("#v-pills-settings").load("/cw3/conlabweb3.0/apps/gestiontareas/table-tareas-f.php");
-            $("#v-pills-closed").load("/cw3/conlabweb3.0/apps/gestiontareas/table-tareas-c.php");
+            $(".content-table-h").load("https://conlabweb3.tierramontemariana.org/apps/gestiontareas/table-tareas-hoy.php");
+            $("#v-pills-profile").load("https://conlabweb3.tierramontemariana.org/apps/gestiontareas/table-tareas-v.php");
+            $("#v-pills-messages").load("https://conlabweb3.tierramontemariana.org/apps/gestiontareas/table-tareas-p.php");
+            $("#v-pills-settings").load("https://conlabweb3.tierramontemariana.org/apps/gestiontareas/table-tareas-f.php");
+            $("#v-pills-closed").load("https://conlabweb3.tierramontemariana.org/apps/gestiontareas/table-tareas-c.php");
         });
 
       
@@ -354,7 +354,7 @@ if ($conetar->connect_errno) {
 
             $.ajax({
                 type: 'POST',
-                url: '/cw3/conlabweb3.0/apps/gestiontareas/num-rows-today.php',
+                url: 'https://conlabweb3.tierramontemariana.org/apps/gestiontareas/num-rows-today.php',
                 dataType: 'json', // Tipo de datos esperado en la respuesta
                 data: {
                     user: user
@@ -371,7 +371,7 @@ if ($conetar->connect_errno) {
             });
             $.ajax({
                 type: 'POST',
-                url: '/cw3/conlabweb3.0/apps/gestiontareas/num-rows-expire.php',
+                url: 'https://conlabweb3.tierramontemariana.org/apps/gestiontareas/num-rows-expire.php',
                 dataType: 'json', // Tipo de datos esperado en la respuesta
                 data: {
                     user: user
@@ -388,7 +388,7 @@ if ($conetar->connect_errno) {
             });
             $.ajax({
                 type: 'POST',
-                url: '/cw3/conlabweb3.0/apps/gestiontareas/num-rows-process.php',
+                url: 'https://conlabweb3.tierramontemariana.org/apps/gestiontareas/num-rows-process.php',
                 dataType: 'json', // Tipo de datos esperado en la respuesta
                 data: {
                     user: user
@@ -405,7 +405,7 @@ if ($conetar->connect_errno) {
             });
             $.ajax({
                 type: 'POST',
-                url: '/cw3/conlabweb3.0/apps/gestiontareas/num-rows-futures.php',
+                url: 'https://conlabweb3.tierramontemariana.org/apps/gestiontareas/num-rows-futures.php',
                 dataType: 'json', // Tipo de datos esperado en la respuesta
                 data: {
                     user: user
@@ -422,7 +422,7 @@ if ($conetar->connect_errno) {
             });
             $.ajax({
                 type: 'POST',
-                url: '/cw3/conlabweb3.0/apps/gestiontareas/num-rows-close.php',
+                url: 'https://conlabweb3.tierramontemariana.org/apps/gestiontareas/num-rows-close.php',
                 dataType: 'json', // Tipo de datos esperado en la respuesta
                 data: {
                     user: user
@@ -445,7 +445,7 @@ if ($conetar->connect_errno) {
 
             $.ajax({
                 type: 'POST',
-                url: '/cw3/conlabweb3.0/apps/gestiontareas/crud.php?aux=1',
+                url: 'https://conlabweb3.tierramontemariana.org/apps/gestiontareas/crud.php?aux=1',
                 data: $('#formcontrol').serialize(),
                 success: function() {
                     Swal.fire({

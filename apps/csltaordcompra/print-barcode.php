@@ -134,5 +134,5 @@ $pdf->Output($ruta, 'F');
     font-size:25px;
     top:50% !important;
     left:50%;
-    " href="/cw3/conlabweb3.0/apps/csltaordcompra/files/factura.pdf">Imprimir Etiquetas</a>
+    " href="https://conlabweb3.tierramontemariana.org/apps/csltaordcompra/files/factura.pdf">Imprimir Etiquetas</a>
 </div>
