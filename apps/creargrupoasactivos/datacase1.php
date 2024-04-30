@@ -198,14 +198,14 @@ if ($id != "") {
     function savedata() {
         $.ajax({
             type: 'POST',
-            url: 'https://conlabweb3.tierramontemariana.org/apps/creargrupoasactivos/crud.php',
+            url: '/cw3/conlabweb3.0/apps/creargrupoasactivos/crud.php',
             data: $('#formcontrol').serialize(),
             success: function(respuesta) {
                 if (respuesta == 'ok') {
                     //                     alert('Termiando');
                 }
-                $("#codigo").load('https://conlabweb3.tierramontemariana.org/apps/creargrupoasactivos/codigo.php', {});
-                $("#thetable").load('https://conlabweb3.tierramontemariana.org/apps/creargrupoasactivos/thedatatable.php');
+                $("#codigo").load('/cw3/conlabweb3.0/apps/creargrupoasactivos/codigo.php', {});
+                $("#thetable").load('/cw3/conlabweb3.0/apps/creargrupoasactivos/thedatatable.php');
                 alert("Registro Exitoso");
             }
         });

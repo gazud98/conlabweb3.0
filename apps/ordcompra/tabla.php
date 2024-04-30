@@ -166,7 +166,7 @@ if ($conetar->connect_errno) {
             $("#id_prodc").text(id_prod);
             $("#prec").text(precio);
 
-            $("#tbmodal").load("https://conlabweb3.tierramontemariana.org/apps/ordcompra/talbemodal.php", {
+            $("#tbmodal").load("/cw3/conlabweb3.0/apps/ordcompra/talbemodal.php", {
                 id: id
             });
         }
@@ -183,7 +183,7 @@ if ($conetar->connect_errno) {
 
             $.ajax({
                 type: 'POST',
-                url: 'https://conlabweb3.tierramontemariana.org/apps/ordcompra/crud.php',
+                url: '/cw3/conlabweb3.0/apps/ordcompra/crud.php',
                 data: {
                     id: id,
                     id_prov: id_prov,
@@ -192,14 +192,14 @@ if ($conetar->connect_errno) {
                     precio: precio
                 },
                 success: function(data) {
-                    $("#table1").load("https://conlabweb3.tierramontemariana.org/apps/ordcompra/tabla_detalle.php", {
+                    $("#table1").load("/cw3/conlabweb3.0/apps/ordcompra/tabla_detalle.php", {
                         id_prov: id_prov,
                         id_prod: id_prod
                     })
-                    $("#table").load("https://conlabweb3.tierramontemariana.org/apps/ordcompra/tabla.php", {
+                    $("#table").load("/cw3/conlabweb3.0/apps/ordcompra/tabla.php", {
                         ide: id_prod
                     });
-                    $("#dt").load("https://conlabweb3.tierramontemariana.org/apps/ordcompra/data.php");
+                    $("#dt").load("/cw3/conlabweb3.0/apps/ordcompra/data.php");
                     alert('Se agrego correctamente');
                 }
             })
@@ -209,7 +209,7 @@ if ($conetar->connect_errno) {
 
         function mostrarOrden(idorden) {
 
-            $("#ord").load("https://conlabweb3.tierramontemariana.org/apps/ordcompra/verorden.php", {
+            $("#ord").load("/cw3/conlabweb3.0/apps/ordcompra/verorden.php", {
                 idorden: idorden
             });
 

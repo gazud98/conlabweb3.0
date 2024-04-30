@@ -596,10 +596,10 @@ if ($conetar->connect_errno) {
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
-    <script src="https://conlabweb3.tierramontemariana.org/apps/proveedor/assets/datacase2.js"></script>
+    <script src="/cw3/conlabweb3.0/apps/proveedor/assets/datacase2.js"></script>
     <script src="./assets/plugins/jquery-validation/jquery.validate.min.js"></script>
     <script src="./assets/plugins/jquery-validation/additional-methods.min.js"></script>
-    <script src="https://conlabweb3.tierramontemariana.org/apps/dig_verificacion/dig_verificacion.js"></script>
+    <script src="/cw3/conlabweb3.0/apps/dig_verificacion/dig_verificacion.js"></script>
    
 <?php
 }

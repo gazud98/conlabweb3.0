@@ -402,7 +402,7 @@ if ($conetar->connect_errno) {
                         },
                     ],
                     "ajax": {
-                        url: 'https://conlabweb3.tierramontemariana.org/apps/listmovinsumo/mostrar-promedio.php?id=<?php echo $id; ?>',
+                        url: '/cw3/conlabweb3.0/apps/listmovinsumo/mostrar-promedio.php?id=<?php echo $id; ?>',
                         type: 'GET',
                         dataType: 'json',
                         dataSrc: '',

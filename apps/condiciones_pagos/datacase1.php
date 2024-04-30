@@ -222,14 +222,14 @@ if ($conetar->connect_errno) {
     function savedata() {
         $.ajax({
             type: 'POST',
-            url: 'https://conlabweb3.tierramontemariana.org/apps/condiciones_pagos/crud.php',
+            url: '/cw3/conlabweb3.0/apps/condiciones_pagos/crud.php',
             data: $('#formcontrol').serialize(),
             success: function(respuesta) {
                 if (respuesta == 'ok') {
                     //                     alert('Termiando');
                 }
-                $("#codigo").load('https://conlabweb3.tierramontemariana.org/apps/condiciones_pagos/codigo.php');
-                $("#thetable").load('https://conlabweb3.tierramontemariana.org/apps/condiciones_pagos/thedatatable.php',{});
+                $("#codigo").load('/cw3/conlabweb3.0/apps/condiciones_pagos/codigo.php');
+                $("#thetable").load('/cw3/conlabweb3.0/apps/condiciones_pagos/thedatatable.php',{});
             }
         });
 

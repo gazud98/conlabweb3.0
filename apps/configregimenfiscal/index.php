@@ -380,7 +380,7 @@ if ($conetar->connect_errno) {
             e.preventDefault();
             $.ajax({
                 type: 'POST',
-                url: 'https://conlabweb3.tierramontemariana.org/apps/configregimenfiscal/crud-4.php',
+                url: '/cw3/conlabweb3.0/apps/configregimenfiscal/crud-4.php',
                 data: $('#form-control4').serialize(),
                 success: function(respuesta) {
                     /*Swal.fire({
@@ -390,7 +390,7 @@ if ($conetar->connect_errno) {
                         showConfirmButton: false,
                         timer: 1500
                     })*/
-                    $('.table-config-cuenta').load('https://conlabweb3.tierramontemariana.org/apps/configregimenfiscal/tabla-4.php');
+                    $('.table-config-cuenta').load('/cw3/conlabweb3.0/apps/configregimenfiscal/tabla-4.php');
                     $('#codcuenta').val('');
                     $('#nombrecuenta').val('');
                     $('#porcentacuenta').val('');
@@ -404,7 +404,7 @@ if ($conetar->connect_errno) {
             e.preventDefault();
             $.ajax({
                 type: 'POST',
-                url: 'https://conlabweb3.tierramontemariana.org/apps/configregimenfiscal/crud-3.php',
+                url: '/cw3/conlabweb3.0/apps/configregimenfiscal/crud-3.php',
                 data: $('#form-control3').serialize(),
                 success: function(respuesta) {
                     /*Swal.fire({
@@ -414,7 +414,7 @@ if ($conetar->connect_errno) {
                         showConfirmButton: false,
                         timer: 1500
                     })*/
-                    $('.table-config-iva').load('https://conlabweb3.tierramontemariana.org/apps/configregimenfiscal/tabla-3.php');
+                    $('.table-config-iva').load('/cw3/conlabweb3.0/apps/configregimenfiscal/tabla-3.php');
                     $('#codiva').val('');
                     $('#nombreiva').val('');
                     $('#porcentajeiva').val('');
@@ -429,7 +429,7 @@ if ($conetar->connect_errno) {
             e.preventDefault();
             $.ajax({
                 type: 'POST',
-                url: 'https://conlabweb3.tierramontemariana.org/apps/configregimenfiscal/crud-2.php',
+                url: '/cw3/conlabweb3.0/apps/configregimenfiscal/crud-2.php',
                 data: $('#form-control2').serialize(),
                 success: function(respuesta) {
                     /*Swal.fire({
@@ -439,7 +439,7 @@ if ($conetar->connect_errno) {
                         showConfirmButton: false,
                         timer: 1500
                     })*/
-                    $('.table-config-reg').load('https://conlabweb3.tierramontemariana.org/apps/configregimenfiscal/tabla-2.php');
+                    $('.table-config-reg').load('/cw3/conlabweb3.0/apps/configregimenfiscal/tabla-2.php');
                     $('#regfiscal').val('');
                     $('#idreg').val('');
                 }
@@ -452,7 +452,7 @@ if ($conetar->connect_errno) {
             e.preventDefault();
             $.ajax({
                 type: 'POST',
-                url: 'https://conlabweb3.tierramontemariana.org/apps/configregimenfiscal/crud.php',
+                url: '/cw3/conlabweb3.0/apps/configregimenfiscal/crud.php',
                 data: $('#form-control').serialize(),
                 success: function(respuesta) {
                     /*Swal.fire({
@@ -462,7 +462,7 @@ if ($conetar->connect_errno) {
                         showConfirmButton: false,
                         timer: 1500
                     })*/
-                    $('.content-table-config').load('https://conlabweb3.tierramontemariana.org/apps/configregimenfiscal/tabla.php');
+                    $('.content-table-config').load('/cw3/conlabweb3.0/apps/configregimenfiscal/tabla.php');
                     $('#cuentacontable').val("");
                     $('#nombrecu').val("");
                     $('#valoruvt').val("");
@@ -487,17 +487,17 @@ if ($conetar->connect_errno) {
             }).then((result) => {
                 if (result.isConfirmed) {
                     $.ajax({
-                        url: 'https://conlabweb3.tierramontemariana.org/apps/configregimenfiscal/delete.php?aux=' + aux + '&id=' + id,
+                        url: '/cw3/conlabweb3.0/apps/configregimenfiscal/delete.php?aux=' + aux + '&id=' + id,
                         success: function(respuesta) {
 
                             if (aux == '1') {
-                                $('.content-table-config').load('https://conlabweb3.tierramontemariana.org/apps/configregimenfiscal/tabla.php');
+                                $('.content-table-config').load('/cw3/conlabweb3.0/apps/configregimenfiscal/tabla.php');
                             } else if (aux == '2') {
-                                $('.table-config-reg').load('https://conlabweb3.tierramontemariana.org/apps/configregimenfiscal/tabla-2.php');
+                                $('.table-config-reg').load('/cw3/conlabweb3.0/apps/configregimenfiscal/tabla-2.php');
                             } else if (aux == '3') {
-                                $('.table-config-iva').load('https://conlabweb3.tierramontemariana.org/apps/configregimenfiscal/tabla-3.php');
+                                $('.table-config-iva').load('/cw3/conlabweb3.0/apps/configregimenfiscal/tabla-3.php');
                             } else if (aux == '4') {
-                                $('.table-config-cuenta').load('https://conlabweb3.tierramontemariana.org/apps/configregimenfiscal/tabla-4.php');
+                                $('.table-config-cuenta').load('/cw3/conlabweb3.0/apps/configregimenfiscal/tabla-4.php');
                             }
 
                         }
