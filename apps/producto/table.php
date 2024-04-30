@@ -100,7 +100,7 @@ if ($conetar->connect_errno) {
                 ]
             });
         });
-
+s
         function deleteProduct(id) {
             Swal.fire({
                 title: 'Desea eliminar este producto?',
