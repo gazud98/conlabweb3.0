@@ -28,8 +28,6 @@
 
     <div class="card border-light" style="width:85%;margin:auto;">
 
-    <h1>Prueba</h1>
-
         <div class="card-header bg-light ">
             <div class="row">
                 <div class="col-md-4 col-lg-4">
