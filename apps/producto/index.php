@@ -33,6 +33,12 @@ if ($conetar->connect_errno) {
         #thetable::-webkit-scrollbar {
             width: 1px;
         }
+        
+        .content-wrapper {
+            background-image: url('https://conlabweb3.tierramontemariana.org/apps/medicos/assets/backcw3-v1.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
     </style>
     <!DOCTYPE html>
     <html lang="es">
