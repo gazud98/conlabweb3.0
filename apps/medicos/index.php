@@ -118,13 +118,13 @@ if ($conetar->connect_errno) {
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title></title>
-        <link rel="stylesheet" href="/cw3/conlabweb3.0/apps/medicos/assets/style.css">
+        <link rel="stylesheet" href="https://conlabweb3.tierramontemariana.org/apps/medicos/assets/style.css">
 
     </head>
 
     <style>
         .content-wrapper {
-            background-image: url('/cw3/conlabweb3.0/apps/medicos/assets/backcw3-v1.png');
+            background-image: url('https://conlabweb3.tierramontemariana.org/apps/medicos/assets/backcw3-v1.png');
             background-size: cover;
             background-repeat: no-repeat;
         }
@@ -314,7 +314,7 @@ if ($conetar->connect_errno) {
 
                             <div class="row mt-2 mb-4">
                                 <div class="col-md-2">
-                                    <label style="font-size: 12px;">Fecha de nacimiento:</label>
+                                    <label style="font-size: 12px;">Fecha de cumpleaños:</label>
                                     <input type="date" class="form-control" name="fecha_nacimiento" id="fecha_nacimiento" value="<?php echo $fecha_nacimiento; ?>" min="1900-01-01" max="2024-12-31"></input>
                                     <div id="fecha_nacimientox"></div>
                                 </div>
@@ -613,10 +613,10 @@ if ($conetar->connect_errno) {
                         }
                     });
 
-                $('.content-table-sedes').load('/cw3/conlabweb3.0/apps/medicos/thedatatable.php');
+                $('.content-table-sedes').load('https://conlabweb3.tierramontemariana.org/apps/medicos/thedatatable.php');
 
                 $('#btnRefresh').click(function() {
-                    $('.content-table-sedes').load('/cw3/conlabweb3.0/apps/medicos/thedatatable.php');
+                    $('.content-table-sedes').load('https://conlabweb3.tierramontemariana.org/apps/medicos/thedatatable.php');
                 })
 
                 $('#btnfiltrar').click(function() {
@@ -627,7 +627,7 @@ if ($conetar->connect_errno) {
                     centro_medico = $('#centro_medico').val();
                     estado = $('#estado').val();
 
-                    $('.content-table-sedes').load('/cw3/conlabweb3.0/apps/medicos/thedatatable2.php', {
+                    $('.content-table-sedes').load('https://conlabweb3.tierramontemariana.org/apps/medicos/thedatatable2.php', {
                         doc: id,
                         fecha: fecha,
                         categoria: catemedica,
@@ -641,7 +641,7 @@ if ($conetar->connect_errno) {
             })
 
             function loadAficionesSelect() {
-                $('#contentAficiones').load('/cw3/conlabweb3.0/apps/medicos/aficiones.php');
+                $('#contentAficiones').load('https://conlabweb3.tierramontemariana.org/apps/medicos/aficiones.php');
             }
         </script>
 
