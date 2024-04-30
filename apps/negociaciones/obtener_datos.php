@@ -24,7 +24,7 @@ if ($conetar->connect_errno) {
     while ($el = mysqli_fetch_array($exc)) {
         if ($el['empresa'] == 0) {
             $query = "SELECT n.id, n.fechainicio, n.fechafinal, n.comentario, n.estado, CONCAT(m.nombres,' ',m.apellidos) 
-            AS medico FROM negociaciones n INNER JOIN medicos m ON n.medico = m.id_medicos";
+            AS medico, m.id_medicos FROM negociaciones n INNER JOIN medicos m ON n.medico = m.id_medicos";
 
             $rest = mysqli_query($conetar, $query);
 
