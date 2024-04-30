@@ -29,7 +29,7 @@ $uppercaseruta = strtoupper($ruta);
 
 <body>
     <div class="card" style="width:85%;margin:auto;">
-        <h1>shdahwh</h1>
+        <h1>asdsa</h1>
         <div class="card-header bg-light ">
 
             <div class="row">
