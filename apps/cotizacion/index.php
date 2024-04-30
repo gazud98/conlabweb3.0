@@ -45,7 +45,7 @@ if ($conetar->connect_errno) {
     ?>
     <link rel="stylesheet" href="/cw3/conlabweb3.0/apps/cotizacion/assets/style.css">
     <div class="card border-info" style="width:100%;">
-aasAS
+
         <div class="card-header bg-light ">
             <div class="row">
                 <div class="col-md-4">
