@@ -72,7 +72,7 @@ if ($conetar->connect_errno) {
 <script>
     $(document).ready(function() {
 
-        $('#filterAsesorx').load('/cw3/conlabweb3.0/apps/consultavisitas/filter-asesorx.php');
+        $('#filterAsesorx').load('https://conlabweb3.tierramontemariana.org/apps/consultavisitas/filter-asesorx.php');
 
         miDataTableVisitas = $('#tableVisitas').DataTable({
             language: {
@@ -86,7 +86,7 @@ if ($conetar->connect_errno) {
             "autoWidth": false,
             "responsive": true,
             "ajax": {
-                url: '/cw3/conlabweb3.0/apps/consultavisitas/mostrar-1.php', // Página PHP que devuelve los datos en formato JSON
+                url: 'https://conlabweb3.tierramontemariana.org/apps/consultavisitas/mostrar-1.php', // Página PHP que devuelve los datos en formato JSON
                 type: 'GET', // Método de la petición (GET o POST según corresponda)
                 dataType: 'json', // Tipo de datos esperado en la respuesta
                 dataSrc: '',

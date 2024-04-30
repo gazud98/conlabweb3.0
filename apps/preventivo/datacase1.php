@@ -383,7 +383,7 @@ if ($conetar->connect_errno) {
             var caso = $('option:selected', sel).attr('value');
 
 
-            $("#period1").load('/cw3/conlabweb3.0/apps/preventivo/periodicidad.php', {
+            $("#period1").load('https://conlabweb3.tierramontemariana.org/apps/preventivo/periodicidad.php', {
                 caso: caso
             })
 
@@ -394,13 +394,13 @@ if ($conetar->connect_errno) {
             var period_semanal = $("#period_semanal").val();
             var mesoption = $("#mesoption").val();
             if (periodicidad === "S") {
-                $("#period1").load('/cw3/conlabweb3.0/apps/preventivo/periodicidad.php', {
+                $("#period1").load('https://conlabweb3.tierramontemariana.org/apps/preventivo/periodicidad.php', {
                     caso: 'S',
                     period_semanal: period_semanal,
                     mesoption: mesoption
                 });
             } else if (periodicidad === "M") {
-                $("#period1").load('/cw3/conlabweb3.0/apps/preventivo/periodicidad.php', {
+                $("#period1").load('https://conlabweb3.tierramontemariana.org/apps/preventivo/periodicidad.php', {
                     caso: 'M'
                 });
             }
@@ -669,7 +669,7 @@ if ($conetar->connect_errno) {
             diassemana = sunday + "," + monday + "," + tuesday + "," + wednesday + "," + thursday + "," + friday + "," + saturday;
             $.ajax({
                 type: 'POST',
-                url: '/cw3/conlabweb3.0/apps/preventivo/crud.php',
+                url: 'https://conlabweb3.tierramontemariana.org/apps/preventivo/crud.php',
                 data: {
                     id: id,
                     diassemana: diassemana,
@@ -693,7 +693,7 @@ if ($conetar->connect_errno) {
                 },
                 success: function() {
 
-                    $("#thetable").load("/cw3/conlabweb3.0/apps/preventivo/thedatatable.php");
+                    $("#thetable").load("https://conlabweb3.tierramontemariana.org/apps/preventivo/thedatatable.php");
 
                     Swal.fire({
                         position: 'top',

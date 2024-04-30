@@ -115,7 +115,7 @@ if ($conetar->connect_errno) {
                 "searching": true,
                 // ... Otras opciones ...
                 "ajax": {
-                    url: '/cw3/conlabweb3.0/apps/listainventario/mostrar.php', // Página PHP que devuelve los datos en formato JSON
+                    url: 'https://conlabweb3.tierramontemariana.org/apps/listainventario/mostrar.php', // Página PHP que devuelve los datos en formato JSON
                     type: 'GET', // Método de la petición (GET o POST según corresponda)
                     dataType: 'json', // Tipo de datos esperado en la respuesta
                     dataSrc: '',
@@ -212,7 +212,7 @@ if ($conetar->connect_errno) {
 
                 $.ajax({
                     method: 'POST',
-                    url: '/cw3/conlabweb3.0/apps/listainventario/crud.php?aux=1',
+                    url: 'https://conlabweb3.tierramontemariana.org/apps/listainventario/crud.php?aux=1',
                     data: {
                         comentario: $('#comentario-'+id).val(),
                         id: $('#idp-'+id).val()
@@ -235,7 +235,7 @@ if ($conetar->connect_errno) {
         function setOk(id){
             $.ajax({
                     method: 'POST',
-                    url: '/cw3/conlabweb3.0/apps/listainventario/crud.php?aux=2',
+                    url: 'https://conlabweb3.tierramontemariana.org/apps/listainventario/crud.php?aux=2',
                     data: {
                         id: $('#idp-'+id).val()
                     },
@@ -253,7 +253,7 @@ if ($conetar->connect_errno) {
         function getOk(id){
             $.ajax({
                     method: 'GET',
-                    url: '/cw3/conlabweb3.0/apps/listainventario/crud.php?aux=3',
+                    url: 'https://conlabweb3.tierramontemariana.org/apps/listainventario/crud.php?aux=3',
                     data: {
                         id: $('#idp-'+id).val()
                     },

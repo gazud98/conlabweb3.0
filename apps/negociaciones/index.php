@@ -27,7 +27,7 @@ if ($conetar->connect_errno) {
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title></title>
-        <link rel="stylesheet" href="/cw3/conlabweb3.0/apps/negociaciones/assets/style.css">
+        <link rel="stylesheet" href="https://conlabweb3.tierramontemariana.org/apps/negociaciones/assets/style.css">
     </head>
 
     <body>
@@ -161,7 +161,7 @@ if ($conetar->connect_errno) {
 
         <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-        <script src="/cw3/conlabweb3.0/apps/negociaciones/assets/index.js"></script>
+        <script src="https://conlabweb3.tierramontemariana.org/apps/negociaciones/assets/index.js"></script>
         <script src="https://kit.fontawesome.com/6dc75479dc.js" crossorigin="anonymous"></script>
 
         <script>

@@ -17,11 +17,11 @@ $uppercaseruta = strtoupper($ruta);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
-    <link rel="stylesheet" href="/cw3/conlabweb3.0/apps/dptos/assets/style.css">
+    <link rel="stylesheet" href="https://conlabweb3.tierramontemariana.org/apps/dptos/assets/style.css">
 </head>
 <style>
     .content-wrapper {
-        background-image: url('/cw3/conlabweb3.0/apps/medicos/assets/backcw3-v1.png');
+        background-image: url('https://conlabweb3.tierramontemariana.org/apps/medicos/assets/backcw3-v1.png');
         background-size: cover;
         background-repeat: no-repeat;
     }
@@ -29,8 +29,6 @@ $uppercaseruta = strtoupper($ruta);
 
 <body>
     <div class="card" style="width:85%;margin:auto;">
-
-    <h2>hcvdsvcsvc</h2>
      
         <div class="card-header bg-light ">
 
@@ -136,7 +134,7 @@ $uppercaseruta = strtoupper($ruta);
         $(document).ready(function() {
 
 
-            $('.content-table-dptos').load('/cw3/conlabweb3.0/apps/dptos/table_view.php');
+            $('.content-table-dptos').load('https://conlabweb3.tierramontemariana.org/apps/dptos/table_view.php');
 
 
 

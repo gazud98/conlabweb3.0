@@ -80,7 +80,7 @@ if ($conetar->connect_errno) {
         $(document).ready(function() {
 
             function cargar() {
-                $('#upload').load('/cw3/conlabweb3.0/apps/producto/form-files.php?id=<?php echo $id ?>');
+                $('#upload').load('https://conlabweb3.tierramontemariana.org/apps/producto/form-files.php?id=<?php echo $id ?>');
             }
           
 

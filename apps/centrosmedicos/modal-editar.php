@@ -74,10 +74,10 @@ if ($conetar->connect_errno) {
             submitHandler: function() {
                 $.ajax({
                     type: 'POST',
-                    url: '/cw3/conlabweb3.0/apps/centrosmedicos/crud.php',
+                    url: 'https://conlabweb3.tierramontemariana.org/apps/centrosmedicos/crud.php',
                     data: $('#formeditar').serialize(),
                     success: function(respuesta) {
-                        $(".content-table-sedes").load('/cw3/conlabweb3.0/apps/centrosmedicos/thedatatable.php');
+                        $(".content-table-sedes").load('https://conlabweb3.tierramontemariana.org/apps/centrosmedicos/thedatatable.php');
 
                         //alert("¡Registro actualizado con exito!");
                         Swal.fire({

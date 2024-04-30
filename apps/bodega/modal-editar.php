@@ -117,7 +117,7 @@ if ($conetar->connect_errno) {
             submitHandler: function() {
                 $.ajax({
                     type: 'POST',
-                    url: '/cw3/conlabweb3.0/apps/bodega/crud.php',
+                    url: 'https://conlabweb3.tierramontemariana.org/apps/bodega/crud.php',
                     data: $('#formeditar').serialize(),
                     success: function(respuesta) {
 
