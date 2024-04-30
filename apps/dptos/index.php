@@ -29,7 +29,7 @@ $uppercaseruta = strtoupper($ruta);
 
 <body>
     <div class="card" style="width:85%;margin:auto;">
-
+        <h1>shdahwh</h1>
         <div class="card-header bg-light ">
 
             <div class="row">
@@ -49,9 +49,7 @@ $uppercaseruta = strtoupper($ruta);
                     <h5 style="text-align: center; color: #0045A5;"><strong>Listado de Departamentos</strong></h5>
                 </div>
                 <div class="col-md-4 text-right">
-                    <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#addModal"
-                        style="font-size:11px;background-color: rgb(0,69,165);border:none;"><i
-                            class="fas fa-plus"></i>&nbsp;&nbsp;Nuevo Departamento</button>
+                    <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#addModal" style="font-size:11px;background-color: rgb(0,69,165);border:none;"><i class="fas fa-plus"></i>&nbsp;&nbsp;Nuevo Departamento</button>
                 </div>
             </div>
         </div>
@@ -84,8 +82,7 @@ $uppercaseruta = strtoupper($ruta);
                     <div class="modal-body">
                         <div class="form-group" style="display: none;">
                             <label>Código</label>
-                            <input type="input" class="form-control" style="border:thin solid transparent; " readonly=""
-                                name="id" id="id" value="">
+                            <input type="input" class="form-control" style="border:thin solid transparent; " readonly="" name="id" id="id" value="">
                         </div>
                         <div class="form-group">
                             <label>Nombre:</label>
@@ -102,7 +99,7 @@ $uppercaseruta = strtoupper($ruta);
             </div>
         </div>
     </div>
-    <?php include ("apps/thedata.php") ?>
+    <?php include("apps/thedata.php") ?>
     <!-- Edit Modal HTML -->
     <div id="editModal" class="modal fade">
         <div class="modal-dialog">
@@ -115,13 +112,11 @@ $uppercaseruta = strtoupper($ruta);
                     <div class="modal-body" id="modalshow">
                         <div class="form-group">
                             <label>Codigo</label>
-                            <input type="text" class="form-control" name="id" id="idedit" required readonly
-                                style="border:none;" value="<?php echo $id ?>">
+                            <input type="text" class="form-control" name="id" id="idedit" required readonly style="border:none;" value="<?php echo $id ?>">
                         </div>
                         <div class="form-group">
                             <label>Nombre</label>
-                            <input type="text" class="form-control" name="nombre" id="nombredit" required
-                                value="<?php echo $nombre ?>">
+                            <input type="text" class="form-control" name="nombre" id="nombredit" required value="<?php echo $nombre ?>">
                         </div>
 
                     </div>
@@ -136,7 +131,7 @@ $uppercaseruta = strtoupper($ruta);
     </div>
 
     <script>
-        $(document).ready(function () {
+        $(document).ready(function() {
 
 
             $('.content-table-dptos').load('https://conlabweb3.tierramontemariana.org/apps/dptos/table_view.php');
