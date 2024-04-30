@@ -28,7 +28,7 @@
 
     <div class="card border-light" style="width:85%;margin:auto;">
 
-    <h1>Pruebaaaaaaa</h1>
+    <h1>Prueba</h1>
 
         <div class="card-header bg-light ">
             <div class="row">
