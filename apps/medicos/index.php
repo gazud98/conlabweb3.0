@@ -314,7 +314,7 @@ if ($conetar->connect_errno) {
 
                             <div class="row mt-2 mb-4">
                                 <div class="col-md-2">
-                                    <label style="font-size: 12px;">Fecha de nacimientooo:</label>
+                                    <label style="font-size: 12px;">Fecha de nacimiento:</label>
                                     <input type="date" class="form-control" name="fecha_nacimiento" id="fecha_nacimiento" value="<?php echo $fecha_nacimiento; ?>" min="1900-01-01" max="2024-12-31"></input>
                                     <div id="fecha_nacimientox"></div>
                                 </div>
