@@ -26,6 +26,8 @@
 
     ?>
 
+    <h1>Prueba</h1>
+
     <div class="card border-light" style="width:85%;margin:auto;">
 
         <div class="card-header bg-light ">
