@@ -102,7 +102,7 @@ if ($conetar->connect_errno) {
                 "searching": false,
                 // ... Otras opciones ...
                 "ajax": {
-                    url: 'https://conlabweb3.tierramontemariana.org/apps/trasladobodega/mostrar.php', // Página PHP que devuelve los datos en formato JSON
+                    url: '/cw3/conlabweb3.0/apps/trasladobodega/mostrar.php', // Página PHP que devuelve los datos en formato JSON
                     type: 'GET', // Método de la petición (GET o POST según corresponda)
                     dataType: 'json', // Tipo de datos esperado en la respuesta
                     dataSrc: '', // Indicar que los datos provienen directamente del objeto JSON (sin propiedad adicional)
@@ -167,7 +167,7 @@ if ($conetar->connect_errno) {
             $('#' + theobject).prop('checked', true);
 
 
-            $("#btntrl").load("https://conlabweb3.tierramontemariana.org/apps/trasladobodega/trasladobodega.php", {
+            $("#btntrl").load("/cw3/conlabweb3.0/apps/trasladobodega/trasladobodega.php", {
                 id_produ: id_produ,
                 nom_insumo: nom_insumo,
                 cant: cant,

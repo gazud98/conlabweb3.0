@@ -170,7 +170,7 @@ if ($conetar->connect_errno) {
                             showConfirmButton: false,
                             timer: 1500
                         });
-                        $('.content-info-cartera').load('https://conlabweb3.tierramontemariana.org/apps/empresas/info-cartera.php', {
+                        $('.content-info-cartera').load('/cw3/conlabweb3.0/apps/empresas/info-cartera.php', {
                             id: <?= $empresa ?>
                         })
                         //alert("¡Registro Exitoso!");

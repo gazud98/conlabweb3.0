@@ -51,7 +51,7 @@ $(document).ready(function () {
         submitHandler: function () {
             $.ajax({
                 type: 'POST',
-                url: 'https://conlabweb3.tierramontemariana.org/apps/proveedor/crud.php?aux=2',
+                url: '/cw3/conlabweb3.0/apps/proveedor/crud.php?aux=2',
                 data: $('#formEditProvider').serialize(),
                 success: function (respuesta) {
 

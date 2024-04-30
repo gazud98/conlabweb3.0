@@ -1,22 +1,22 @@
 function loadFormAddProvider(){
-    $('#contenFormAddProvider').load('https://conlabweb3.tierramontemariana.org/apps/proveedor/datacase1.php');
+    $('#contenFormAddProvider').load('/cw3/conlabweb3.0/apps/proveedor/datacase1.php');
 }
 
 $(document).ready(function() {
 
-    $('#thetable').load('https://conlabweb3.tierramontemariana.org/apps/proveedor/thedatatable.php');
+    $('#thetable').load('/cw3/conlabweb3.0/apps/proveedor/thedatatable.php');
 
 });
 
 function loadFormUpdateProvider(id) {
-    $('#contenFormEditProvider').load('https://conlabweb3.tierramontemariana.org/apps/proveedor/modal-edit.php', {
+    $('#contenFormEditProvider').load('/cw3/conlabweb3.0/apps/proveedor/modal-edit.php', {
         id: id
     });
 }
 
 function cargarDatos() {
     $.ajax({
-        url: 'https://conlabweb3.tierramontemariana.org/apps/proveedor/mostrar.php', // Página PHP que devuelve los datos en formato JSON
+        url: '/cw3/conlabweb3.0/apps/proveedor/mostrar.php', // Página PHP que devuelve los datos en formato JSON
         type: 'GET', // Método de la petición (GET o POST según corresponda)
         dataType: 'json', // Tipo de datos esperado en la respuesta
         success: function(data) {
@@ -43,7 +43,7 @@ function deleteProvider(id, nombre) {
     }).then((result) => {
         if (result.isConfirmed) {
             $.ajax({
-                url: 'https://conlabweb3.tierramontemariana.org/apps/proveedor/crud.php',
+                url: '/cw3/conlabweb3.0/apps/proveedor/crud.php',
                 data: {
                     id: id,
                     aux: 4
@@ -80,7 +80,7 @@ function disableProvider(id, estado) {
         }).then((result) => {
             if (result.isConfirmed) {
                 $.ajax({
-                    url: 'https://conlabweb3.tierramontemariana.org/apps/proveedor/crud.php',
+                    url: '/cw3/conlabweb3.0/apps/proveedor/crud.php',
                     data: {
                         id: id,
                         aux: 3
@@ -112,7 +112,7 @@ function disableProvider(id, estado) {
         }).then((result) => {
             if (result.isConfirmed) {
                 $.ajax({
-                    url: 'https://conlabweb3.tierramontemariana.org/apps/proveedor/crud.php',
+                    url: '/cw3/conlabweb3.0/apps/proveedor/crud.php',
                     data: {
                         id: id,
                         aux: 3
@@ -140,7 +140,7 @@ function cargarForm(thefile, id) {
     collapseanshow('E');
 
     // Usar la función de carga con un callback
-    $("#casoesperado").load("https://conlabweb3.tierramontemariana.org/apps/proveedor/datacase1.php", {
+    $("#casoesperado").load("/cw3/conlabweb3.0/apps/proveedor/datacase1.php", {
         id: id,
         p: "proveedor",
         status: 'E'

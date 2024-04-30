@@ -345,7 +345,7 @@ if ($conetar->connect_errno) {
                 "autoWidth": true,
                 "responsive": true,
                 "ajax": {
-                    url: 'https://conlabweb3.tierramontemariana.org/apps/planes/mostrar.php?aux=1', // Página PHP que devuelve los datos en formato JSON
+                    url: '/cw3/conlabweb3.0/apps/planes/mostrar.php?aux=1', // Página PHP que devuelve los datos en formato JSON
                     type: 'GET', // Método de la petición (GET o POST según corresponda)
                     dataType: 'json', // Tipo de datos esperado en la respuesta
                     dataSrc: '',
@@ -378,13 +378,13 @@ if ($conetar->connect_errno) {
                 submitHandler: function() {
                     $.ajax({
                         type: 'POST',
-                        url: 'https://conlabweb3.tierramontemariana.org/apps/planes/crud.php?aux=1',
+                        url: '/cw3/conlabweb3.0/apps/planes/crud.php?aux=1',
                         data: $('#formcontrol').serialize(),
                         success: function(respuesta) {
                             if (respuesta == 'ok') {
                                 //                     alert('Termiando');
                             }
-                            $('.content-table-unidad_medida').load('https://conlabweb3.tierramontemariana.org/apps/planes/thedatatable.php');
+                            $('.content-table-unidad_medida').load('/cw3/conlabweb3.0/apps/planes/thedatatable.php');
 
                             Swal.fire({
                                 position: 'top',
@@ -451,13 +451,13 @@ if ($conetar->connect_errno) {
                 if (result.isConfirmed) {
                     $.ajax({
                         type: 'POST',
-                        url: 'https://conlabweb3.tierramontemariana.org/apps/planes/crud.php?aux=3',
+                        url: '/cw3/conlabweb3.0/apps/planes/crud.php?aux=3',
                         data: {
                             id: id
                         },
                         success: function(respuesta) {
 
-                            $('.content-table-unidad_medida').load('https://conlabweb3.tierramontemariana.org/apps/planes/thedatatable.php');
+                            $('.content-table-unidad_medida').load('/cw3/conlabweb3.0/apps/planes/thedatatable.php');
                             Swal.fire({
                                 position: 'top',
                                 icon: 'success',
@@ -478,7 +478,7 @@ if ($conetar->connect_errno) {
 
 
 
-            $('#modalEditPlan').load('https://conlabweb3.tierramontemariana.org/apps/planes/modal-editar.php', {
+            $('#modalEditPlan').load('/cw3/conlabweb3.0/apps/planes/modal-editar.php', {
                 id: id
             });
 
@@ -509,7 +509,7 @@ if ($conetar->connect_errno) {
                             },
                             success: function(respuesta) {
 
-                                $('.content-table-unidad_medida').load('https://conlabweb3.tierramontemariana.org/apps/especialidades/thedatatable.php');
+                                $('.content-table-unidad_medida').load('/cw3/conlabweb3.0/apps/especialidades/thedatatable.php');
                                 Swal.fire({
                                     position: 'top',
                                     icon: 'success',
@@ -534,14 +534,14 @@ if ($conetar->connect_errno) {
                 }).then((result) => {
                     $.ajax({
                         type: 'POST',
-                        url: 'https://conlabweb3.tierramontemariana.org/apps/especialidades/crud.php',
+                        url: '/cw3/conlabweb3.0/apps/especialidades/crud.php',
                         data: {
                             id: id,
                             modeeditstatus: 'D'
                         },
                         success: function(respuesta) {
 
-                            $('.content-table-unidad_medida').load('https://conlabweb3.tierramontemariana.org/apps/especialidades/thedatatable.php');
+                            $('.content-table-unidad_medida').load('/cw3/conlabweb3.0/apps/especialidades/thedatatable.php');
 
                             Swal.fire({
                                 position: 'top',

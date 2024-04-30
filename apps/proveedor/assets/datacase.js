@@ -53,7 +53,7 @@ $(document).ready(function () {
         submitHandler: function () {
             $.ajax({
                 type: 'POST',
-                url: 'https://conlabweb3.tierramontemariana.org/apps/proveedor/crud.php?aux=1',
+                url: '/cw3/conlabweb3.0/apps/proveedor/crud.php?aux=1',
                 data: $('#formAddProvider').serialize(),
                 success: function (respuesta) {
 
@@ -279,7 +279,7 @@ function loadCities() {
     id = $('#dep').val();
 
     $.ajax({
-        url: 'https://conlabweb3.tierramontemariana.org/apps/empleados/ciudades.php',
+        url: '/cw3/conlabweb3.0/apps/empleados/ciudades.php',
         data: {
             id: id
         },

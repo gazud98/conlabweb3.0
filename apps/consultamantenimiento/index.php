@@ -38,7 +38,7 @@ if ($conetar->connect_errno) {
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/assets/bootstrap-multiselect.css">
-    <link rel="stylesheet" href="https://conlabweb3.tierramontemariana.org/apps/consultamantenimiento/assets/style.css">
+    <link rel="stylesheet" href="/cw3/conlabweb3.0/apps/consultamantenimiento/assets/style.css">
     
     <style>
         .breadcrumbs {
@@ -433,7 +433,7 @@ if ($conetar->connect_errno) {
 
             $.ajax({
                 type: 'POST',
-                url: 'https://conlabweb3.tierramontemariana.org/apps/consultamantenimiento/send-result.php',
+                url: '/cw3/conlabweb3.0/apps/consultamantenimiento/send-result.php',
                 data: $('#formresultado').serialize(),
                 success: function(rest) {
                     Swal.fire({
@@ -454,7 +454,7 @@ if ($conetar->connect_errno) {
                             desactivar2(element.id)
                         }
 
-                        window.open('https://conlabweb3.tierramontemariana.org/apps/consultamantenimiento/generar-reporte.php?id=' +
+                        window.open('/cw3/conlabweb3.0/apps/consultamantenimiento/generar-reporte.php?id=' +
                             element.id + '&tip=' + element.tip);
 
                     });
@@ -512,7 +512,7 @@ if ($conetar->connect_errno) {
         function setMotivo() {
             $.ajax({
                 type: 'POST',
-                url: 'https://conlabweb3.tierramontemariana.org/apps/consultamantenimiento/crud.php?aux=1',
+                url: '/cw3/conlabweb3.0/apps/consultamantenimiento/crud.php?aux=1',
                 data: $('#formAddMotivo').serialize(),
                 success: function(respuesta) {
                     Swal.fire({
@@ -522,7 +522,7 @@ if ($conetar->connect_errno) {
                         showConfirmButton: false,
                         timer: 1500
                     })
-                    $('#loadMotivo').load('https://conlabweb3.tierramontemariana.org/apps/consultamantenimiento/load-motivo.php');
+                    $('#loadMotivo').load('/cw3/conlabweb3.0/apps/consultamantenimiento/load-motivo.php');
                 }
             });
         }

@@ -465,7 +465,7 @@ if ($conetar->connect_errno) {
         $(document).ready(function() {
 
 
-            $('#thetable').load('https://conlabweb3.tierramontemariana.org/apps/csltaordcompra/thedatatable.php');
+            $('#thetable').load('/cw3/conlabweb3.0/apps/csltaordcompra/thedatatable.php');
 
 
 

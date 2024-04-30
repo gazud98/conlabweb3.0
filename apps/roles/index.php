@@ -222,7 +222,7 @@ if ($conetar->connect_errno) {
             $(document).ready(function () {
 
 
-                $('.content-table-roles').load('https://conlabweb3.tierramontemariana.org/apps/roles/thedatatable.php');
+                $('.content-table-roles').load('/cw3/conlabweb3.0/apps/roles/thedatatable.php');
 
 
 

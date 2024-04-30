@@ -164,7 +164,7 @@ if ($conetar->connect_errno) {
             $(document).ready(function() {
 
 
-                $('#thetable').load('https://conlabweb3.tierramontemariana.org/apps/activofijo/thedatatable.php');
+                $('#thetable').load('/cw3/conlabweb3.0/apps/activofijo/thedatatable.php');
 
                 miDataTable3 = $('.table-h-m').DataTable({
                     language: {

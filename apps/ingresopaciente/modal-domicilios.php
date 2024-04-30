@@ -254,7 +254,7 @@ if ($conetar->connect_errno) {
 
 <script>
     $(document).ready(function() {
-        $('.content-table').load('https://conlabweb3.tierramontemariana.org/apps/ingresopaciente/table-domicilios.php', {
+        $('.content-table').load('/cw3/conlabweb3.0/apps/ingresopaciente/table-domicilios.php', {
             numorden: <?php echo $numorden; ?>
         });
         $.validator.setDefaults({
@@ -262,10 +262,10 @@ if ($conetar->connect_errno) {
 
                 $.ajax({
                     type: 'POST',
-                    url: 'https://conlabweb3.tierramontemariana.org/apps/ingresopaciente/set-domicilio.php',
+                    url: '/cw3/conlabweb3.0/apps/ingresopaciente/set-domicilio.php',
                     data: $('#formDomicilios').serialize(),
                     success: function(data) {
-                        $('.content-table').load('https://conlabweb3.tierramontemariana.org/apps/ingresopaciente/table-domicilios.php', {
+                        $('.content-table').load('/cw3/conlabweb3.0/apps/ingresopaciente/table-domicilios.php', {
                             numorden: <?php echo $numorden; ?>
                         });
                         Swal.fire({

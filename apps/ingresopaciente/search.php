@@ -31,7 +31,7 @@ $user = $_REQUEST['user'];
 
         $.ajax({
             type: 'POST',
-            url: 'https://conlabweb3.tierramontemariana.org/apps/ingresopaciente/consult-patient.php',
+            url: '/cw3/conlabweb3.0/apps/ingresopaciente/consult-patient.php',
             data: {
                 id_num: id_num
 
@@ -44,12 +44,12 @@ $user = $_REQUEST['user'];
                     if (response.length > 0) {
                         
                         var id_pacientes = response[0].id_pacientes;
-                        $("#divappshow").load("https://conlabweb3.tierramontemariana.org/apps/ingresopaciente/datacase1.php", {
+                        $("#divappshow").load("/cw3/conlabweb3.0/apps/ingresopaciente/datacase1.php", {
                             id: id_pacientes,
                             user: <?php echo $user ?>
                         });
-                        $("#patient-examen").load("https://conlabweb3.tierramontemariana.org/apps/ingresopaciente/tabla.php");
-                        /*$("#patient-admission").load("https://conlabweb3.tierramontemariana.org/apps/ingresopaciente/ingreso.php", {
+                        $("#patient-examen").load("/cw3/conlabweb3.0/apps/ingresopaciente/tabla.php");
+                        /*$("#patient-admission").load("/cw3/conlabweb3.0/apps/ingresopaciente/ingreso.php", {
                             id_pacientes: <?php echo $id_pacientes; ?>
                         });*/
                         //document.getElementById('btnpago').disabled = false;
@@ -86,7 +86,7 @@ $user = $_REQUEST['user'];
                                         documento.focus();
                                     }, 100);
                                 });
-                                $("#patient-examen").load("https://conlabweb3.tierramontemariana.org/apps/ingresopaciente/tabla.php");
+                                $("#patient-examen").load("/cw3/conlabweb3.0/apps/ingresopaciente/tabla.php");
 
                             }
                         });

@@ -36,7 +36,7 @@ if ($conetar->connect_errno) {
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
     <!-- MDB -->
 
-    <link rel="stylesheet" type="text/css" href="https://conlabweb3.tierramontemariana.org/apps/consultavisitas/assets/style.css">
+    <link rel="stylesheet" type="text/css" href="/cw3/conlabweb3.0/apps/consultavisitas/assets/style.css">
 
     <style>
         /* Estilos personalizados del scrollbar */
@@ -181,16 +181,16 @@ if ($conetar->connect_errno) {
     <script>
         $(document).ready(function() {
 
-            $('#contentTableVistas').load('https://conlabweb3.tierramontemariana.org/apps/consultavisitas/tabla.php', {
+            $('#contentTableVistas').load('/cw3/conlabweb3.0/apps/consultavisitas/tabla.php', {
                 user: <?php echo $user; ?>
             });
-            $('#contentTableNeg').load('https://conlabweb3.tierramontemariana.org/apps/consultavisitas/tabla-2.php');
+            $('#contentTableNeg').load('/cw3/conlabweb3.0/apps/consultavisitas/tabla-2.php');
 
 
         });
 
         function getTable(id) {
-            $('.contentTableComments').load('https://conlabweb3.tierramontemariana.org/apps/consultavisitas/tabla-3.php', {
+            $('.contentTableComments').load('/cw3/conlabweb3.0/apps/consultavisitas/tabla-3.php', {
                 id: id
             });
         }
@@ -199,7 +199,7 @@ if ($conetar->connect_errno) {
 
             $.ajax({
                 type: 'POST',
-                url: 'https://conlabweb3.tierramontemariana.org/apps/consultavisitas/crud.php?aux=3&id=' + id,
+                url: '/cw3/conlabweb3.0/apps/consultavisitas/crud.php?aux=3&id=' + id,
                 success: function(res) {
 
                     data = JSON.parse(res);
@@ -252,7 +252,7 @@ if ($conetar->connect_errno) {
 
             $.ajax({
                 type: 'POST',
-                url: 'https://conlabweb3.tierramontemariana.org/apps/consultavisitas/crud.php?aux=3&id=' + id,
+                url: '/cw3/conlabweb3.0/apps/consultavisitas/crud.php?aux=3&id=' + id,
                 success: function(res) {
 
                     data = JSON.parse(res);
@@ -301,7 +301,7 @@ if ($conetar->connect_errno) {
 
                     $.ajax({
                         type: 'POST',
-                        url: 'https://conlabweb3.tierramontemariana.org/apps/consultavisitas/crud.php?aux=1&lat=' + latitud + '&long=' + longitud,
+                        url: '/cw3/conlabweb3.0/apps/consultavisitas/crud.php?aux=1&lat=' + latitud + '&long=' + longitud,
                         data: $('#formcontrol3').serialize(),
                         success: function() {
                             Swal.fire({
@@ -334,7 +334,7 @@ if ($conetar->connect_errno) {
 
                     $.ajax({
                         type: 'POST',
-                        url: 'https://conlabweb3.tierramontemariana.org/apps/consultavisitas/crud.php?aux=2&lat=' + latitud + '&long=' + longitud,
+                        url: '/cw3/conlabweb3.0/apps/consultavisitas/crud.php?aux=2&lat=' + latitud + '&long=' + longitud,
                         data: $('#formcontrol4').serialize(),
                         success: function() {
                             Swal.fire({

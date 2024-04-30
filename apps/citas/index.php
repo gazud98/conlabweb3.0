@@ -39,13 +39,13 @@ if ($conetar->connect_errno) {
         <!-- Fullcalendar responsive-->
         <link rel="stylesheet" href="assets/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
 
-        <link rel="stylesheet" href="https://conlabweb3.tierramontemariana.org/apps/citas/assets/style.css">
+        <link rel="stylesheet" href="/cw3/conlabweb3.0/apps/citas/assets/style.css">
 
     </head>
 
     <style>
         .content-wrapper {
-            background-image: url('https://conlabweb3.tierramontemariana.org/assets/image/backcw3-v1.png');
+            background-image: url('/cw3/conlabweb3.0/assets/image/backcw3-v1.png');
             background-size: cover;
             background-repeat: no-repeat;
         }
@@ -245,7 +245,7 @@ if ($conetar->connect_errno) {
             $(document).ready(function() {
                 // Inicializa la tabla
 
-                $('#modalContent').load('https://conlabweb3.tierramontemariana.org/apps/citas/modal-new-cita.php')
+                $('#modalContent').load('/cw3/conlabweb3.0/apps/citas/modal-new-cita.php')
 
 
                 miDataTable = $('#miTabla').DataTable({
@@ -284,7 +284,7 @@ if ($conetar->connect_errno) {
                         month: 'long',
                         year: 'numeric'
                     },
-                    events: 'https://conlabweb3.tierramontemariana.org/apps/citas/obtener_datos.php',
+                    events: '/cw3/conlabweb3.0/apps/citas/obtener_datos.php',
                     eventClick: function(info) {
                         // Abre tu modal aquí
                         mostrarModal(info);
@@ -314,15 +314,15 @@ if ($conetar->connect_errno) {
             }
 
             function loadFormsNewCita() {
-                $('#modalContent').load('https://conlabweb3.tierramontemariana.org/apps/citas/modal-new-cita.php')
+                $('#modalContent').load('/cw3/conlabweb3.0/apps/citas/modal-new-cita.php')
             }
 
             function loadFormsAddContact() {
-                $('.content-add-contact').load('https://conlabweb3.tierramontemariana.org/apps/citas/modal-contact.php')
+                $('.content-add-contact').load('/cw3/conlabweb3.0/apps/citas/modal-contact.php')
             }
 
             function loadFormsEditCita(id) {
-                $('.content-edit-cita').load('https://conlabweb3.tierramontemariana.org/apps/citas/edit-cita.php', {
+                $('.content-edit-cita').load('/cw3/conlabweb3.0/apps/citas/edit-cita.php', {
                     id: id
                 })
             }
@@ -334,7 +334,7 @@ if ($conetar->connect_errno) {
 
                 if (nombre != "" || fecha != "") {
                     $('#modalSearch').modal();
-                    $('.content-table-search').load('https://conlabweb3.tierramontemariana.org/apps/citas/modal-search.php', {
+                    $('.content-table-search').load('/cw3/conlabweb3.0/apps/citas/modal-search.php', {
                         nombre: nombre,
                         fecha: fecha
                     })

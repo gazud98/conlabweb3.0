@@ -169,7 +169,7 @@ if ($conetar->connect_errno) {
             $(document).ready(function() {
 
 
-                $('.content-table-creaactividad').load('https://conlabweb3.tierramontemariana.org/apps/creaactividad/thedatatable.php');
+                $('.content-table-creaactividad').load('/cw3/conlabweb3.0/apps/creaactividad/thedatatable.php');
 
 
 
