@@ -163,9 +163,6 @@ if ($conetar->connect_errno) {
     </style>
 
     <body>
-
-    <h1>Didier</h1>
-
         <div class="card">
             <div class="card-header">
                 <div class="row">
