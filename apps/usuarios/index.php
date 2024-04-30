@@ -51,7 +51,7 @@ if ($conetar->connect_errno) {
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title></title>
-        <link rel="stylesheet" href="/cw3/conlabweb3.0/apps/usuarios/assets/style.css">
+        <link rel="stylesheet" href="https://conlabweb3.tierramontemariana.org/apps/usuarios/assets/style.css">
     </head>
 
     <body>
@@ -139,15 +139,15 @@ if ($conetar->connect_errno) {
             }
 
             function loadFormUsers() {
-                $('#conetentFormUsers').load('/cw3/conlabweb3.0/apps/usuarios/datacase1.php');
+                $('#conetentFormUsers').load('https://conlabweb3.tierramontemariana.org/apps/usuarios/datacase1.php');
             }
 
             function loadFormEditUsers(id, id_rol) {
 
-                $('#conetentFormEditUsers').load('/cw3/conlabweb3.0/apps/usuarios/modal-editar.php', {
+                $('#conetentFormEditUsers').load('https://conlabweb3.tierramontemariana.org/apps/usuarios/modal-editar.php', {
                     id: id,
                 }, function(){
-                    $("#modulos").load('/cw3/conlabweb3.0/apps/usuarios/opciones.php', {
+                    $("#modulos").load('https://conlabweb3.tierramontemariana.org/apps/usuarios/opciones.php', {
                         id: id_rol
                     })
                 });
@@ -157,7 +157,7 @@ if ($conetar->connect_errno) {
             $(document).ready(function() {
 
 
-                $('#thetable').load('/cw3/conlabweb3.0/apps/usuarios/thedatatable.php');
+                $('#thetable').load('https://conlabweb3.tierramontemariana.org/apps/usuarios/thedatatable.php');
 
 
 

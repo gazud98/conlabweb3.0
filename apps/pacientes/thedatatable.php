@@ -440,10 +440,10 @@ if ($conetar->connect_errno) {
                 submitHandler: function() {
                     $.ajax({
                         type: 'POST',
-                        url: '/cw3/conlabweb3.0/apps/pacientes/crud.php',
+                        url: 'https://conlabweb3.tierramontemariana.org/apps/pacientes/crud.php',
                         data: $('#formcontrol').serialize(),
                         success: function(respuesta) {
-                            $('.content-table-sedes').load('/cw3/conlabweb3.0/apps/pacientes/thedatatable.php');
+                            $('.content-table-sedes').load('https://conlabweb3.tierramontemariana.org/apps/pacientes/thedatatable.php');
                             Swal.fire({
                                 position: 'top',
                                 icon: 'success',
@@ -495,14 +495,14 @@ if ($conetar->connect_errno) {
                 if (result.isConfirmed) {
                     $.ajax({
                         type: 'POST',
-                        url: '/cw3/conlabweb3.0/apps/pacientes/crud.php',
+                        url: 'https://conlabweb3.tierramontemariana.org/apps/pacientes/crud.php',
                         data: {
                             id: id,
                             modeeditstatus: 'B'
                         },
                         success: function(respuesta) {
 
-                            $('.content-table-sedes').load('/cw3/conlabweb3.0/apps/pacientes/thedatatable.php');
+                            $('.content-table-sedes').load('https://conlabweb3.tierramontemariana.org/apps/pacientes/thedatatable.php');
                             Swal.fire({
                                 position: 'top',
                                 icon: 'success',
@@ -527,7 +527,7 @@ if ($conetar->connect_errno) {
 
 
 
-            $('.cargar-campos').load('/cw3/conlabweb3.0/apps/pacientes/modal-editar.php', {
+            $('.cargar-campos').load('https://conlabweb3.tierramontemariana.org/apps/pacientes/modal-editar.php', {
                 id: id
             });
 
@@ -551,14 +551,14 @@ if ($conetar->connect_errno) {
                     if (result.isConfirmed) {
                         $.ajax({
                             type: 'POST',
-                            url: '/cw3/conlabweb3.0/apps/pacientes/crud.php',
+                            url: 'https://conlabweb3.tierramontemariana.org/apps/pacientes/crud.php',
                             data: {
                                 id: id,
                                 modeeditstatus: 'D'
                             },
                             success: function(respuesta) {
 
-                                $('.content-table-sedes').load('/cw3/conlabweb3.0/apps/pacientes/thedatatable.php');
+                                $('.content-table-sedes').load('https://conlabweb3.tierramontemariana.org/apps/pacientes/thedatatable.php');
                                 Swal.fire({
                                     position: 'top',
                                     icon: 'success',
@@ -585,14 +585,14 @@ if ($conetar->connect_errno) {
                 }).then((result) => {
                     $.ajax({
                         type: 'POST',
-                        url: '/cw3/conlabweb3.0/apps/pacientes/crud.php',
+                        url: 'https://conlabweb3.tierramontemariana.org/apps/pacientes/crud.php',
                         data: {
                             id: id,
                             modeeditstatus: 'D'
                         },
                         success: function(respuesta) {
 
-                            $('.content-table-sedes').load('/cw3/conlabweb3.0/apps/pacientes/thedatatable.php');
+                            $('.content-table-sedes').load('https://conlabweb3.tierramontemariana.org/apps/pacientes/thedatatable.php');
                             Swal.fire({
                                 position: 'top',
                                 icon: 'success',

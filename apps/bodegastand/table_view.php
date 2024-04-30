@@ -77,7 +77,7 @@
             "autoWidth": true,
             "responsive": true,
             "ajax": {
-                url: '/cw3/conlabweb3.0/apps/bodegastand/show_data.php', // Página PHP que devuelve los datos en formato JSON
+                url: 'https://conlabweb3.tierramontemariana.org/apps/bodegastand/show_data.php', // Página PHP que devuelve los datos en formato JSON
                 type: 'GET', // Método de la petición (GET o POST según corresponda)
                 dataType: 'json', // Tipo de datos esperado en la respuesta
                 dataSrc: '' // Indicar que los datos provienen directamente del objeto JSON (sin propiedad adicional)
@@ -109,7 +109,7 @@
             submitHandler: function() {
                 $.ajax({
                     type: 'POST',
-                    url: '/cw3/conlabweb3.0/apps/bodegastand/crud.php',
+                    url: 'https://conlabweb3.tierramontemariana.org/apps/bodegastand/crud.php',
                     data: $('#formcontrol').serialize(),
                     success: function(respuesta) {
                         if (respuesta == 1) {
@@ -180,7 +180,7 @@
             if (result.isConfirmed) {
                 $.ajax({
                     type: 'POST',
-                    url: '/cw3/conlabweb3.0/apps/bodegastand/crud.php',
+                    url: 'https://conlabweb3.tierramontemariana.org/apps/bodegastand/crud.php',
                     data: {
                         id: id,
                         modeeditstatus: 'B'
@@ -208,7 +208,7 @@
 
 
 
-        $('#modalshow').load('/cw3/conlabweb3.0/apps/bodegastand/modal-editar.php', {
+        $('#modalshow').load('https://conlabweb3.tierramontemariana.org/apps/bodegastand/modal-editar.php', {
             id: id
         });
 
@@ -232,7 +232,7 @@
                 if (result.isConfirmed) {
                     $.ajax({
                         type: 'POST',
-                        url: '/cw3/conlabweb3.0/apps/bodegastand/crud.php',
+                        url: 'https://conlabweb3.tierramontemariana.org/apps/bodegastand/crud.php',
                         data: {
                             id: id,
                             modeeditstatus: 'D'
@@ -265,7 +265,7 @@
             }).then((result) => {
                 $.ajax({
                     type: 'POST',
-                    url: '/cw3/conlabweb3.0/apps/bodegastand/crud.php',
+                    url: 'https://conlabweb3.tierramontemariana.org/apps/bodegastand/crud.php',
                     data: {
                         id: id,
                         modeeditstatus: 'D'
@@ -290,7 +290,7 @@
 
     function cargarDatos() {
         $.ajax({
-            url: '/cw3/conlabweb3.0/apps/bodegastand/show_data.php', // Página PHP que devuelve los datos en formato JSON
+            url: 'https://conlabweb3.tierramontemariana.org/apps/bodegastand/show_data.php', // Página PHP que devuelve los datos en formato JSON
             type: 'GET', // Método de la petición (GET o POST según corresponda)
             dataType: 'json', // Tipo de datos esperado en la respuesta
             success: function(data) {

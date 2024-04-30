@@ -134,7 +134,7 @@ where P.id='" . $id . "' and S.id = P.idstand and S.idbodega=B.id";
             submitHandler: function() {
                 $.ajax({
                     type: 'POST',
-                    url: '/cw3/conlabweb3.0/apps/bodegaentrepanio/crud.php',
+                    url: 'https://conlabweb3.tierramontemariana.org/apps/bodegaentrepanio/crud.php',
                     data: $('#formeditar').serialize(),
                     success: function(respuesta) {
 
@@ -195,7 +195,7 @@ where P.id='" . $id . "' and S.id = P.idstand and S.idbodega=B.id";
     function agregar(sel) {
         var id = $('option:selected', sel).attr('value');
 
-        $(".estante").load("/cw3/conlabweb3.0/apps/bodegaentrepanio/stands.php", {
+        $(".estante").load("https://conlabweb3.tierramontemariana.org/apps/bodegaentrepanio/stands.php", {
             id: id
         });
 
