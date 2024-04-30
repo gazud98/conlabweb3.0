@@ -28,7 +28,7 @@ $uppercaseruta = strtoupper($ruta);
 
 
     <div class="card" style="width:85%;margin:auto;">
-
+        <h1>xzxz</h1>
         <div class="card-header bg-light ">
 
             <div class="row">
@@ -52,9 +52,7 @@ $uppercaseruta = strtoupper($ruta);
                 <div class="col-md-4 text-right">
 
 
-                    <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#addmodal"
-                        style="font-size:11px;background-color: rgb(0,69,165);border:none;"><i
-                            class="fas fa-plus"></i>&nbsp;&nbsp;Nuevo Cargo</button>
+                    <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#addmodal" style="font-size:11px;background-color: rgb(0,69,165);border:none;"><i class="fas fa-plus"></i>&nbsp;&nbsp;Nuevo Cargo</button>
                 </div>
             </div>
         </div>
@@ -86,8 +84,7 @@ $uppercaseruta = strtoupper($ruta);
                     <div class="modal-body">
                         <div class="form-group" style="display: none;">
                             <label>Código</label>
-                            <input type="input" class="form-control" style="border:thin solid transparent; " readonly=""
-                                name="id" id="id" value="">
+                            <input type="input" class="form-control" style="border:thin solid transparent; " readonly="" name="id" id="id" value="">
                         </div>
                         <div class="form-group">
                             <label>Nombre:</label>
@@ -104,7 +101,7 @@ $uppercaseruta = strtoupper($ruta);
             </div>
         </div>
     </div>
-    <?php include ("apps/thedata.php") ?>
+    <?php include("apps/thedata.php") ?>
     <!-- Edit Modal HTML -->
     <div id="editModal" class="modal fade">
         <div class="modal-dialog">
@@ -117,20 +114,17 @@ $uppercaseruta = strtoupper($ruta);
                     <div class="modal-body" id="modalshow">
                         <div class="form-group">
                             <label>Codigo</label>
-                            <input type="text" class="form-control" name="id" id="idedit" required readonly
-                                style="border:none;" value="<?php echo $id ?>">
+                            <input type="text" class="form-control" name="id" id="idedit" required readonly style="border:none;" value="<?php echo $id ?>">
                         </div>
                         <div class="form-group">
                             <label>Nombre</label>
-                            <input type="text" class="form-control" name="nombre" id="nombredit" required
-                                value="<?php echo $nombre ?>">
+                            <input type="text" class="form-control" name="nombre" id="nombredit" required value="<?php echo $nombre ?>">
                         </div>
                     </div>
 
                     <input type="hidden" name="modeeditstatus" id="modeeditstatus" value="E">
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-danger" data-dismiss="modal"
-                            value="Cancelar">Cancelar</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal" value="Cancelar">Cancelar</button>
                         <button type="submit" class="btn btn-success" value="Guardar Cambios">Aceptar</button>
                     </div>
                 </form>
@@ -140,7 +134,7 @@ $uppercaseruta = strtoupper($ruta);
 
 
     <script>
-        $(document).ready(function () {
+        $(document).ready(function() {
 
 
             $('.content-table-cargos').load('/cw3/conlabweb3.0/apps/cargos/table_view.php');
