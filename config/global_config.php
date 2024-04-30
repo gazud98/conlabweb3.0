@@ -7,18 +7,18 @@
         define('UTF8_ENABLED', TRUE);
 
         //base url : falta automatizar proceso
-        define('base_url','/cw3/conlabweb3.0/');// define('base_url',.$_SERVER['SERVER_NAME'].'/cw3/conlabweb3.0/index.php');
-        define('base_url_qr','/cw3/conlabweb3.0/appsdata/qr/');// define('base_url',.$_SERVER['SERVER_NAME'].'/cw3/conlabweb3.0/index.php');
-        define('base_url_images','/cw3/conlabweb3.0/appsdata/images/');// define('base_url',.$_SERVER['SERVER_NAME'].'/cw3/conlabweb3.0/index.php');
-        define('base_url_video','/cw3/conlabweb3.0/appsdata/video/');// define('base_url',.$_SERVER['SERVER_NAME'].'/cw3/conlabweb3.0/index.php');
-        define('base_url_pdf','/cw3/conlabweb3.0/appsdata/pdf/');// define('base_url',.$_SERVER['SERVER_NAME'].'/cw3/conlabweb3.0/index.php');
+        define('base_url','https://conlabweb3.tierramontemariana.org/');// define('base_url',.$_SERVER['SERVER_NAME'].'https://conlabweb3.tierramontemariana.org/index.php');
+        define('base_url_qr','https://conlabweb3.tierramontemariana.org/appsdata/qr/');// define('base_url',.$_SERVER['SERVER_NAME'].'https://conlabweb3.tierramontemariana.org/index.php');
+        define('base_url_images','https://conlabweb3.tierramontemariana.org/appsdata/images/');// define('base_url',.$_SERVER['SERVER_NAME'].'https://conlabweb3.tierramontemariana.org/index.php');
+        define('base_url_video','https://conlabweb3.tierramontemariana.org/appsdata/video/');// define('base_url',.$_SERVER['SERVER_NAME'].'https://conlabweb3.tierramontemariana.org/index.php');
+        define('base_url_pdf','https://conlabweb3.tierramontemariana.org/appsdata/pdf/');// define('base_url',.$_SERVER['SERVER_NAME'].'https://conlabweb3.tierramontemariana.org/index.php');
 
             //dbmaster
         define('cw3ctrlsrv',"u116753122_cw3completa"); //prefijo de bd
         define('hostname','localhost');//"localhost";//;			//myserver
         define('bbserver1',"u116753122_cw3completa");		//Change to your current database name
-        define('db_login',"root");//"root"; //		//MySQL user name
-        define('db_pass',"");//"Q2w3e4r5t6y7u8"; // ;				//MySQL user password
+        define('db_login',"u116753122_erbin");//"root"; //		//MySQL user name
+        define('db_pass',"3012046491@Erbin");//"Q2w3e4r5t6y7u8"; // ;				//MySQL user password
 
         define('cw3ctrlclt',"u116753122_cw3completa"); //prefijo de bd
 
@@ -38,8 +38,8 @@
    
         define('CONEXIONDBCW', array( "driver"    =>"mysql",
                                       "host"      =>"localhost",
-                                      "user"      =>"root",
-                                      "pass"      =>"",
+                                      "user"      =>"u116753122_erbin",
+                                      "pass"      =>"3012046491@Erbin",
                                       "database"  =>"u116753122_cw3completa",
                                       "charset"   =>"utf8" ));
         /*

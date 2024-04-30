@@ -77,7 +77,7 @@
             "autoWidth": true,
             "responsive": true,
             "ajax": {
-                url: '/cw3/conlabweb3.0/apps/sedes/show_data.php', // Página PHP que devuelve los datos en formato JSON
+                url: 'https://conlabweb3.tierramontemariana.org/apps/sedes/show_data.php', // Página PHP que devuelve los datos en formato JSON
                 type: 'GET', // Método de la petición (GET o POST según corresponda)
                 dataType: 'json', // Tipo de datos esperado en la respuesta
                 dataSrc: '' // Indicar que los datos provienen directamente del objeto JSON (sin propiedad adicional)
@@ -109,7 +109,7 @@
             submitHandler: function () {
                 $.ajax({
                     type: 'POST',
-                    url: '/cw3/conlabweb3.0/apps/sedes/crud.php',
+                    url: 'https://conlabweb3.tierramontemariana.org/apps/sedes/crud.php',
                     data: $('#formcontrol').serialize(),
                     success: function (respuesta) {
 
@@ -164,7 +164,7 @@
             submitHandler: function () {
                 $.ajax({
                     type: 'POST',
-                    url: '/cw3/conlabweb3.0/apps/sedes/crud.php',
+                    url: 'https://conlabweb3.tierramontemariana.org/apps/sedes/crud.php',
                     data: $('#formeditar').serialize(),
                     success: function (respuesta) {
                         cargarDatos();
@@ -221,7 +221,7 @@
             if (result.isConfirmed) {
                 $.ajax({
                     type: 'POST',
-                    url: '/cw3/conlabweb3.0/apps/sedes/crud.php',
+                    url: 'https://conlabweb3.tierramontemariana.org/apps/sedes/crud.php',
                     data: {
                         id: id,
                         modeeditstatus: 'B'
@@ -248,7 +248,7 @@
 
         $.ajax({
             type: 'GET',
-            url: '/cw3/conlabweb3.0/apps/sedes/process_data.php',
+            url: 'https://conlabweb3.tierramontemariana.org/apps/sedes/process_data.php',
             dataType: 'json',
             data: { id: id },
             success: function (response) {
@@ -280,7 +280,7 @@
                 if (result.isConfirmed) {
                     $.ajax({
                         type: 'POST',
-                        url: '/cw3/conlabweb3.0/apps/sedes/crud.php',
+                        url: 'https://conlabweb3.tierramontemariana.org/apps/sedes/crud.php',
                         data: {
                             id: id,
                             modeeditstatus: 'D'
@@ -314,7 +314,7 @@
             }).then((result) => {
                 $.ajax({
                     type: 'POST',
-                    url: '/cw3/conlabweb3.0/apps/sedes/crud.php',
+                    url: 'https://conlabweb3.tierramontemariana.org/apps/sedes/crud.php',
                     data: {
                         id: id,
                         modeeditstatus: 'D'
@@ -339,7 +339,7 @@
 
     function cargarDatos() {
         $.ajax({
-            url: '/cw3/conlabweb3.0/apps/sedes/show_data.php', // Página PHP que devuelve los datos en formato JSON
+            url: 'https://conlabweb3.tierramontemariana.org/apps/sedes/show_data.php', // Página PHP que devuelve los datos en formato JSON
             type: 'GET', // Método de la petición (GET o POST según corresponda)
             dataType: 'json', // Tipo de datos esperado en la respuesta
             success: function (data) {

@@ -76,18 +76,18 @@ if ($conetar->connect_errno) {
         var idsd = $("#id_sede").val();
 
 
-        $("#table").load('/cw3/conlabweb3.0/apps/evento/tabla.php', {
+        $("#table").load('https://conlabweb3.tierramontemariana.org/apps/evento/tabla.php', {
             idd: idd,
             idsd: idsd
         });
-        $("#tabs").load('/cw3/conlabweb3.0/apps/evento/tab.php');
+        $("#tabs").load('https://conlabweb3.tierramontemariana.org/apps/evento/tab.php');
       
     }
 
     function grupoActivos() {
         var idd = $("#id_departamento").val();
         var idsd = $("#id_sede").val();
-        $("#table").load('/cw3/conlabweb3.0/apps/evento/tabla.php', {
+        $("#table").load('https://conlabweb3.tierramontemariana.org/apps/evento/tabla.php', {
             idd: idd,
             idsd: idsd
         });
@@ -98,7 +98,7 @@ if ($conetar->connect_errno) {
     function activosFijos() {
         var idd = $("#id_departamento").val();
         var idsd = $("#id_sede").val();
-        $("#table").load('/cw3/conlabweb3.0/apps/evento/tabla_activos.php', {
+        $("#table").load('https://conlabweb3.tierramontemariana.org/apps/evento/tabla_activos.php', {
             idd: idd,
             idsd: idsd
         });

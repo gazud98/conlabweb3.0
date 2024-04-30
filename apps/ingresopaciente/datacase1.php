@@ -408,7 +408,7 @@ if ($conetar->connect_errno) {
 
                     $.ajax({
                         type: 'POST',
-                        url: '/cw3/conlabweb3.0/apps/ingresopaciente/crud.php',
+                        url: 'https://conlabweb3.tierramontemariana.org/apps/ingresopaciente/crud.php',
                         data: $('#form-paciente').serialize(),
                         success: function(respuesta) {
 
@@ -574,7 +574,7 @@ if ($conetar->connect_errno) {
             id = $('#dep').val();
 
             $.ajax({
-                url: '/cw3/conlabweb3.0/apps/ingresopaciente/ciudades.php',
+                url: 'https://conlabweb3.tierramontemariana.org/apps/ingresopaciente/ciudades.php',
                 data: {
                     id: id
                 },

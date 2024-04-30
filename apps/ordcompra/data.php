@@ -121,10 +121,10 @@ if ($conetar->connect_errno) {
 
         var ide = seleccionar();
 
-        $("#table").load("/cw3/conlabweb3.0/apps/ordcompra/tabla.php", {
+        $("#table").load("https://conlabweb3.tierramontemariana.org/apps/ordcompra/tabla.php", {
             ide: ide
         });
 
-        $("#dt").load("/cw3/conlabweb3.0/apps/ordcompra/data.php");
+        $("#dt").load("https://conlabweb3.tierramontemariana.org/apps/ordcompra/data.php");
     }
 </script>

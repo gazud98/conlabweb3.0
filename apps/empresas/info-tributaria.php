@@ -307,7 +307,7 @@ if ($conetar->connect_errno) {
 
                 $.ajax({
                     type: 'POST',
-                    url: '/cw3/conlabweb3.0/apps/empresas/crud.php?aux=13',
+                    url: 'https://conlabweb3.tierramontemariana.org/apps/empresas/crud.php?aux=13',
                     data: $('#formInfoTributaria').serialize(),
                     success: function(respuesta) {
                         Swal.fire({
@@ -317,7 +317,7 @@ if ($conetar->connect_errno) {
                             showConfirmButton: false,
                             timer: 1500
                         });
-                        $('.content-info-tributaria').load('/cw3/conlabweb3.0/apps/empresas/info-tributaria.php', {
+                        $('.content-info-tributaria').load('https://conlabweb3.tierramontemariana.org/apps/empresas/info-tributaria.php', {
                             id: <?= $empresa ?>
                         })
                         //alert("¡Registro Exitoso!");

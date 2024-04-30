@@ -54,13 +54,13 @@ $id = $_REQUEST['id'];
 
         $.ajax({
             type: 'POST',
-            url: '/cw3/conlabweb3.0/apps/csltaordcompra/crud.php',
+            url: 'https://conlabweb3.tierramontemariana.org/apps/csltaordcompra/crud.php',
             data: {
                 id_prod: id_prod,
                 status: 'D'
             },
             success: function(data) {
-                $("#data1").load("/cw3/conlabweb3.0/apps/csltaordcompra/data.php", {
+                $("#data1").load("https://conlabweb3.tierramontemariana.org/apps/csltaordcompra/data.php", {
                     id: id
                 });
 

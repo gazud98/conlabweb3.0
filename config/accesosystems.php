@@ -13,10 +13,10 @@
         define('bbserver1',"u116753122_cw3completa");		//Change to your current database name
      }
      if(!defined('db_login')){
-        define('db_login',"root");//"root"; //		//MySQL user name
+        define('db_login',"u116753122_erbin");//"root"; //		//MySQL user name
      }
      if(!defined('db_pass')){
-        define('db_pass',"");//"Q2w3e4r5t6y7u8"; // ;				//MySQL user password
+        define('db_pass',"3012046491@Erbin");//"Q2w3e4r5t6y7u8"; // ;				//MySQL user password
      }
 
      if(!defined('cw3ctrlsrv')){

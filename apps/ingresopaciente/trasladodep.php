@@ -171,7 +171,7 @@ if ($numerfiles2 >= 1) {
             function agregarxy(sel) {
                 var idd = $('option:selected', sel).attr('value');
 
-                $("#resp").load("/cw3/conlabweb3.0/apps/trasladodepartamento/solicitante.php", {
+                $("#resp").load("https://conlabweb3.tierramontemariana.org/apps/trasladodepartamento/solicitante.php", {
                     idd: idd
                 });
 
@@ -261,7 +261,7 @@ if ($numerfiles2 >= 1) {
                             var dep = $("#dep").val();
                             $.ajax({
                                 type: 'POST',
-                                url: '/cw3/conlabweb3.0/apps/trasladodepartamento/crud.php',
+                                url: 'https://conlabweb3.tierramontemariana.org/apps/trasladodepartamento/crud.php',
                                 data: {
 
 
@@ -278,7 +278,7 @@ if ($numerfiles2 >= 1) {
                                     entr: entr
                                 },
                                 success: function(data) {
-                                    $("#table").load("/cw3/conlabweb3.0/apps/trasladodepartamento/tabla.php", {
+                                    $("#table").load("https://conlabweb3.tierramontemariana.org/apps/trasladodepartamento/tabla.php", {
                                         id_prod: id_prod
                                     });
                                     Swal.fire({

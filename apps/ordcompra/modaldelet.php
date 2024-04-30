@@ -69,7 +69,7 @@ if (isset($_REQUEST['numcotiza'])) {
             var numcotiza = $('input[name="val1"]').attr('numcotiza');
             $.ajax({
                 type: 'POST',
-                url: '/cw3/conlabweb3.0/apps/ordcompra/borrarorden.php',
+                url: 'https://conlabweb3.tierramontemariana.org/apps/ordcompra/borrarorden.php',
                 data: {
                     id_prov: id_prov,
                     id_prod: id_prod,
@@ -77,8 +77,8 @@ if (isset($_REQUEST['numcotiza'])) {
                 },
                 success: function(data) {
 
-                    $("#table1").load("/cw3/conlabweb3.0/apps/ordcompra/tabla_detalle.php");
-                    $("#dt").load("/cw3/conlabweb3.0/apps/ordcompra/data.php");
+                    $("#table1").load("https://conlabweb3.tierramontemariana.org/apps/ordcompra/tabla_detalle.php");
+                    $("#dt").load("https://conlabweb3.tierramontemariana.org/apps/ordcompra/data.php");
                     alert('Se elimino correctamente');
                 }
             })

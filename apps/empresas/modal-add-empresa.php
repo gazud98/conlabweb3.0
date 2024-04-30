@@ -242,7 +242,7 @@ if ($conetar->connect_errno) {
         id = $('#dep').val();
 
         $.ajax({
-            url: '/cw3/conlabweb3.0/apps/empresas/ciudades.php',
+            url: 'https://conlabweb3.tierramontemariana.org/apps/empresas/ciudades.php',
             data: {
                 id: id
             },

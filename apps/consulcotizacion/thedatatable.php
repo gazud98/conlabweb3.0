@@ -59,7 +59,7 @@ if ($conetar->connect_errno) {
                 "autoWidth": false,
                 "responsive": true,
                 "ajax": {
-                    url: '/cw3/conlabweb3.0/apps/consulcotizacion/mostrar.php', // Página PHP que devuelve los datos en formato JSON
+                    url: 'https://conlabweb3.tierramontemariana.org/apps/consulcotizacion/mostrar.php', // Página PHP que devuelve los datos en formato JSON
                     type: 'GET', // Método de la petición (GET o POST según corresponda)
                     dataType: 'json', // Tipo de datos esperado en la respuesta
                     dataSrc: '' // Indicar que los datos provienen directamente del objeto JSON (sin propiedad adicional)
@@ -91,7 +91,7 @@ if ($conetar->connect_errno) {
 
         function cargarDatos() {
             $.ajax({
-                url: '/cw3/conlabweb3.0/apps/consulcotizacion/mostrar.php', // Página PHP que devuelve los datos en formato JSON
+                url: 'https://conlabweb3.tierramontemariana.org/apps/consulcotizacion/mostrar.php', // Página PHP que devuelve los datos en formato JSON
                 type: 'GET', // Método de la petición (GET o POST según corresponda)
                 dataType: 'json', // Tipo de datos esperado en la respuesta
                 success: function(data) {
@@ -121,7 +121,7 @@ if ($conetar->connect_errno) {
             }
             $('#' + theobject).prop('checked', true);
 
-            $("#data1").load("/cw3/conlabweb3.0/apps/consulcotizacion/data.php", {
+            $("#data1").load("https://conlabweb3.tierramontemariana.org/apps/consulcotizacion/data.php", {
                 id: id
             });
             $('#ordeccomp').attr('disabled', false);

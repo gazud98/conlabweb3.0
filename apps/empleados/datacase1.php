@@ -517,7 +517,7 @@ if ($conetar->connect_errno) {
         id = $('#dep').val();
 
         $.ajax({
-            url: '/cw3/conlabweb3.0/apps/empleados/ciudades.php',
+            url: 'https://conlabweb3.tierramontemariana.org/apps/empleados/ciudades.php',
             data: {
                 id: id
             },

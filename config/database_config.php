@@ -2,8 +2,8 @@
 
         define('CONEXIONDBACCESS', array( "driver"    => "mysql",
                                           "host"      => "localhost",
-                                          "user"      => "root",
-                                          "pass"      => "",
+                                          "user"      => "u116753122_erbin",
+                                          "pass"      => "3012046491@Erbin",
                                           "database"  => prefixdb,
                                           "charset"   => "utf8" ));
         

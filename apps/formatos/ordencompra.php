@@ -280,7 +280,7 @@ where 1=1";
     <?php } ?>
     </div>
 
-    <script src="/cw3/conlabweb3.0/apps/dig_verificacion/dig_verificacion.js"></script>
+    <script src="https://conlabweb3.tierramontemariana.org/apps/dig_verificacion/dig_verificacion.js"></script>
     <script src="https://kit.fontawesome.com/6dc75479dc.js" crossorigin="anonymous"></script>
     <script>
         $(document).ready(function() {

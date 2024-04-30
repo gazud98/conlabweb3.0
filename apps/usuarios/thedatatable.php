@@ -62,7 +62,7 @@ if ($conetar->connect_errno) {
                 "responsive": true,
                 // ... Otras opciones ...
                 "ajax": {
-                    url: '/cw3/conlabweb3.0/apps/usuarios/mostrar.php', // Página PHP que devuelve los datos en formato JSON
+                    url: 'https://conlabweb3.tierramontemariana.org/apps/usuarios/mostrar.php', // Página PHP que devuelve los datos en formato JSON
                     type: 'GET', // Método de la petición (GET o POST según corresponda)
                     dataType: 'json', // Tipo de datos esperado en la respuesta
                     dataSrc: '' // Indicar que los datos provienen directamente del objeto JSON (sin propiedad adicional)
@@ -107,7 +107,7 @@ if ($conetar->connect_errno) {
             }).then((result) => {
                 if (result.isConfirmed) {
                     $.ajax({
-                        url: '/cw3/conlabweb3.0/apps/usuarios/delete.php',
+                        url: 'https://conlabweb3.tierramontemariana.org/apps/usuarios/delete.php',
                         data: {
                             id: id
                         },
@@ -117,7 +117,7 @@ if ($conetar->connect_errno) {
                                 'El Usuario ha sido eliminado.',
                                 'success'
                             )
-                            $("#divappshow").load("/cw3/conlabweb3.0/apps/usuarios/thedatashow.php");
+                            $("#divappshow").load("https://conlabweb3.tierramontemariana.org/apps/usuarios/thedatashow.php");
 
                             miDataTable.ajax.reload();
                         }
@@ -138,7 +138,7 @@ if ($conetar->connect_errno) {
                 }).then((result) => {
                     if (result.isConfirmed) {
                         $.ajax({
-                            url: '/cw3/conlabweb3.0/apps/empleados/crud.php',
+                            url: 'https://conlabweb3.tierramontemariana.org/apps/empleados/crud.php',
                             data: {
                                 id: id,
                                 aux: 3
@@ -165,7 +165,7 @@ if ($conetar->connect_errno) {
                 }).then((result) => {
                     if (result.isConfirmed) {
                         $.ajax({
-                            url: '/cw3/conlabweb3.0/apps/empleados/crud.php',
+                            url: 'https://conlabweb3.tierramontemariana.org/apps/empleados/crud.php',
                             data: {
                                 id: id,
                                 aux: 3
@@ -191,7 +191,7 @@ if ($conetar->connect_errno) {
 
 
 
-            $("#casoesperado").load("/cw3/conlabweb3.0/apps/usuarios/datacase1.php", {
+            $("#casoesperado").load("https://conlabweb3.tierramontemariana.org/apps/usuarios/datacase1.php", {
                 id: id,
                 p: "usuarios",
                 status: 'E'
@@ -201,7 +201,7 @@ if ($conetar->connect_errno) {
                     // Código adicional que deseas ejecutar después de cargar
                     $("#btones").css("display", "block");
 
-                    $("#modulos").load('/cw3/conlabweb3.0/apps/usuarios/opciones.php', {
+                    $("#modulos").load('https://conlabweb3.tierramontemariana.org/apps/usuarios/opciones.php', {
                         id: idrol
                     })
 
@@ -216,7 +216,7 @@ if ($conetar->connect_errno) {
 
         function cargarDatos() {
             $.ajax({
-                url: '/cw3/conlabweb3.0/apps/usuarios/mostrar.php', // Página PHP que devuelve los datos en formato JSON
+                url: 'https://conlabweb3.tierramontemariana.org/apps/usuarios/mostrar.php', // Página PHP que devuelve los datos en formato JSON
                 type: 'GET', // Método de la petición (GET o POST según corresponda)
                 dataType: 'json', // Tipo de datos esperado en la respuesta
                 success: function(data) {
