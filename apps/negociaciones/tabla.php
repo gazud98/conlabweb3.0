@@ -53,7 +53,7 @@ if ($conetar->connect_errno) {
             "autoWidth": false,
             "responsive": true,
             "ajax": {
-                url: 'https://conlabweb3.tierramontemariana.org/apps/consultavisitas/mostrar-2.php?aux=6', // Página PHP que devuelve los datos en formato JSON
+                url: 'https://conlabweb3.tierramontemariana.org/apps/negociaciones/crud.php?aux=3', // Página PHP que devuelve los datos en formato JSON
                 type: 'GET', // Método de la petición (GET o POST según corresponda)
                 dataType: 'json', // Tipo de datos esperado en la respuesta
                 dataSrc: '',
@@ -96,7 +96,7 @@ if ($conetar->connect_errno) {
     });
 
     function loadDetailsNeg(id) {
-        $('#contentViewProcessNeg').load('/cw3/conlabweb3.0/apps/negociaciones/show-neg.php', {
+        $('#contentViewProcessNeg').load('https://conlabweb3.tierramontemariana.org/apps/negociaciones/show-neg.php', {
             id: id
         });
     }
@@ -113,8 +113,7 @@ if ($conetar->connect_errno) {
         }).then((result) => {
             if (result.isConfirmed) {
                 $.ajax({
-                    url: 'https://conlabweb3.tierramontemariana.org/apps/consultavisitas/crud.php?aux=1&lat=' + latitud + '&long=' + longitud,
-                    url: '/cw3/conlabweb3.0/apps/negociaciones/crud.php?aux=4',
+                    url: 'https://conlabweb3.tierramontemariana.org/apps/negociaciones/crud.php?aux=4',
                     data: {
                         id: id
                     },
@@ -124,9 +123,8 @@ if ($conetar->connect_errno) {
                             text: "La negociación ha sido finalizada.",
                             icon: "success"
                         });
-                    url: 'https://conlabweb3.tierramontemariana.org/apps/consultavisitas/crud.php?aux=2&lat=' + latitud + '&long=' + longitud,
                         miDataTableVisitasNeg.ajax.reload();
-                        $('#contentViewProcessNeg').load('/cw3/conlabweb3.0/apps/negociaciones/show-neg.php', {
+                        $('#contentViewProcessNeg').load('https://conlabweb3.tierramontemariana.org/apps/negociaciones/show-neg.php', {
                             id: id
                         });
                     }
