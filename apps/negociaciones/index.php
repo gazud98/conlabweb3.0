@@ -29,7 +29,7 @@ if ($conetar->connect_errno) {
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title></title>
-        <link rel="stylesheet" href="https://conlabweb3.tierramontemariana.org/apps/negociaciones/assets/style.css">
+        <link rel="stylesheet" href="https://cw3.tierramontemariana.org/apps/negociaciones/assets/style.css">
     </head>
 
     <style>
@@ -165,11 +165,12 @@ if ($conetar->connect_errno) {
 
         <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-        <script src="https://conlabweb3.tierramontemariana.org/apps/negociaciones/assets/index.js"></script>
+        <script src="https://cw3.tierramontemariana.org/apps/negociaciones/assets/index.js"></script>
         <script src="https://kit.fontawesome.com/6dc75479dc.js" crossorigin="anonymous"></script>
 
         <script>
-                $('#contentViewProcessNeg').load('/cw3/conlabweb3.0/apps/negociaciones/show-neg.php');
+            $(document).ready(function() {
+                $('#contentViewProcessNeg').load('https://conlabweb3.tierramontemariana.org/apps/negociaciones/show-neg.php');
             })
 
             function getComments(id) {
@@ -177,7 +178,7 @@ if ($conetar->connect_errno) {
 
                 $.ajax({
                     type: 'POST',
-                    url: '/cw3/conlabweb3.0/apps/negociaciones/crud.php?aux=2&id=' + id,
+                    url: 'https://conlabweb3.tierramontemariana.org/apps/negociaciones/crud.php?aux=2&id=' + id,
                     success: function(res) {
                         data = JSON.parse(res);
 
@@ -187,7 +188,7 @@ if ($conetar->connect_errno) {
                         data.forEach((element, index) => {
                             // Crear elementos de comentario con formato similar a Facebook
                             var commentItem = $('<div class="comment-item">');
-                            var commentAvatar = $('<img class="comment-avatar" src="/cw3/conlabweb3.0/assets/image/user2-160x160.jpg" alt="User Avatar" style="width: 40px; height: 40px; display: inline-block; border-radius: 65%;">');
+                            var commentAvatar = $('<img class="comment-avatar" src="https://conlabweb3.tierramontemariana.org/assets/image/user2-160x160.jpg" alt="User Avatar" style="width: 40px; height: 40px; display: inline-block; border-radius: 65%;">');
                             var commentContent = $('<div class="comment-content" style="display: inline-block; vertical-align: top; max-width: 400px;">');
                             var commentHeader = $('<div class="comment-header" style="display: inline-block; margin-left: 10px; vertical-align: top;">');
                             var commentUserName = $('<strong>').text(element.usuario);
@@ -248,7 +249,7 @@ if ($conetar->connect_errno) {
 
                         $.ajax({
                             type: 'POST',
-                            url: '/cw3/conlabweb3.0/apps/negociaciones/crud.php?aux=1&lat=' + latitud + '&long=' + longitud,
+                            url: 'https://conlabweb3.tierramontemariana.org/apps/negociaciones/crud.php?aux=1&lat=' + latitud + '&long=' + longitud,
                             data: $('#formcontrol3').serialize(),
                             success: function() {
                                 Swal.fire({
