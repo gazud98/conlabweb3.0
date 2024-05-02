@@ -171,6 +171,7 @@ if ($conetar->connect_errno) {
         <script>
             $(document).ready(function() {
                 $('#contentViewProcessNeg').load('https://conlabweb3.tierramontemariana.org/apps/negociaciones/show-neg.php');
+                $('#contentTableNegociaciones').load('https://conlabweb3.tierramontemariana.org/apps/negociaciones/tabla.php');
             })
 
             function getComments(id) {
