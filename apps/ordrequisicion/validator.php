@@ -95,10 +95,8 @@ echo "<input type='input' value='" . $caso . "'  idx='" . $idx . "' iduser='" . 
                 url: 'https://conlabweb3.tierramontemariana.org/apps/ordrequisicion/crud.php',
                  data: $('#formcontrol').serialize(),
                 success: function(data) {
-              
-                    $("#table").load('https://conlabweb3.tierramontemariana.org/apps/ordrequisicion/tabla.php', {
-                        iduser: iduser
-                    });
+
+                    cargarDatos();
 
                     Swal.fire({
                         icon: 'success',

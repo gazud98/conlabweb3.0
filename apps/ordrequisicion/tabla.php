@@ -195,7 +195,7 @@ if ($conetar->connect_errno) {
                     },
                     success: function(data) {
 
-                        $("#table").load("https://conlabweb3.tierramontemariana.org/apps/ordrequisicion/tabla.php");
+                        cargarDatos();
 
                     }
                 })
