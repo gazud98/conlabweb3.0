@@ -1,266 +1,348 @@
- /* Estilos personalizados para el contenedor del Select2 */
- .select2-container {
-     width: 100% !important;
-     border-radius: 5px;
-     border-color: gray;
-     /* Ancho completo */
- }
+*{
+    font-size: 15px;
+}
+.content-table {
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+}
 
- /* Estilos para la lista desplegable */
- .select2-dropdown {
-     border-radius: 5px;
-     border-color: gray;
+.table-bordes-d {
+    border: 1px solid #d2d2d2;
+    border-radius: 10px;
+    font-size: 14px;
+    text-align: center;
+}
 
- }
+.table-wrapper {
+    background: #fff;
+    padding: 10px;
+    margin: 0;
+    border-radius: 5px;
+    height: 580px;
+    border: 1px solid #E3E3E3;
+    height: auto;
+}
 
- /* Estilos para las opciones de la lista desplegable */
- .select2-results__option {
-     padding: 0;
-     margin: 0;
-     font-size: 12px;
-     /* Tamaño de fuente personalizado */
-     text-align: left;
-     border-radius: 5px;
-     border-color: gray;
-     /* Alineación a la derecha */
- }
+.table-title .table-sedes {
+    width: 800px;
+}
 
- /* Estilos para el cuadro de búsqueda en la lista desplegable */
- .select2-search__field {
-     width: 100% !important;
-     padding: 0;
-     margin: 0;
-     font-size: 12px;
-     /* Tamaño de fuente personalizado */
-     text-align: left;
-     /* Alineación a la derecha */
-     width: 100%;
-     padding-right: 30px;
-     border-radius: 5px;
-     border-color: gray;
- }
+.table-title {
+    padding-bottom: 15px;
+    color: #0045A5;
+    padding: 16px 30px;
+    margin: -20px -25px 10px;
+    border-radius: 3px 3px 0 0;
+}
 
- /* Estilos para el cuadro seleccionado */
- .select2-selection__rendered {
-     padding: 0;
-     margin: 0;
-     font-size: 12px;
-     /* Tamaño de fuente personalizado */
-     text-align: left;
-     border-radius: 5px;
-     border-color: gray;
- }
+.table-title h2 {
+    margin: 5px 0 0;
+    font-size: 24px;
+}
 
- /* Estilos para evitar el desplazamiento horizontal */
- .select2-results {
-     overflow-x: hidden;
- }
+.table-title .btn-group {
+    float: right;
+}
 
- .form-control {
+.table-title .btn {
+    color: #fff;
+    float: right;
+    font-size: 13px;
+    border: none;
+    min-width: 50px;
+    border-radius: 2px;
+    border: none;
+    outline: none !important;
+    margin-left: 10px;
+}
+
+.table-title .btn i {
+    float: left;
+    font-size: 21px;
+    margin-right: 5px;
+}
+
+.table-title .btn span {
+    float: left;
+    margin-top: 2px;
+}
+
+table.table tr th,
+table.table tr td {
+    vertical-align: middle;
+    word-wrap: break-word;
+    padding: 2px;
+    text-align: center;
+    width: 100px;
+}
+
+table.table tr th:first-child {
+    width: 60px;
+}
+
+table.table tr th:last-child {
+    width: 100px;
+}
+
+table.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #fcfcfc;
+}
+
+table.table-striped.table-hover tbody tr:hover {
+    background: #f5f5f5;
+}
+
+table.table th i {
+    font-size: 13px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+table.table td:last-child i {
+    opacity: 0.9;
+    font-size: 22px;
+    margin: 0 5px;
+}
+
+table.table td a {
+    font-weight: bold;
+    color: #566787;
+    display: inline-block;
+    text-decoration: none;
+    outline: none !important;
+}
+
+table.table td a:hover {
+    color: #2196F3;
+}
+
+table.table td a.edit {
+    color: #FFC107;
+}
+
+table.table td a.delete {
+    color: #F44336;
+}
+
+table.table td i {
+    font-size: 19px;
+}
+
+table.table .avatar {
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.hint-text {
+    float: left;
+    margin-top: 10px;
+    font-size: 13px;
+}
+
+
+/* Modal styles */
+.modal .modal-dialog {
+    max-width: 400px;
+}
+
+.modal .modal-header,
+.modal .modal-body,
+.modal .modal-footer {
+    padding: 20px 30px;
+}
+
+.modal .modal-content {
+    border-radius: 3px;
+}
+
+.modal .modal-footer {
+    background: #ecf0f1;
+    border-radius: 0 0 3px 3px;
+}
+
+.modal .modal-title {
+    display: inline-block;
+}
+
+.modal .form-control {
+    border-radius: 2px;
+    box-shadow: none;
+    border-color: #dddddd;
+}
+
+.modal textarea.form-control {
+    resize: vertical;
+}
+
+.modal .btn {
+    border-radius: 2px;
+    min-width: 100px;
+}
+
+.modal form label {
+    font-weight: normal;
+}
+
+.breadcrumbs {
+    border: 1px solid #cbd2d9;
+    border-radius: 0.3rem;
+    display: inline-flex;
+    overflow: hidden;
+}
+
+.breadcrumbs__item {
+    background: #fff;
+    color: #333;
+    outline: none;
+    padding: 0.55em 0.55em 0.55em 1.15em;
+    position: relative;
+    text-decoration: none;
+    transition: background 0.2s linear;
+    font-size: 13px;
+}
+
+.breadcrumbs__item:hover:after,
+.breadcrumbs__item:hover {
+    background: #edf1f5;
+}
+
+.breadcrumbs__item:focus:after,
+.breadcrumbs__item:focus,
+.breadcrumbs__item.is-active:focus {
+    background: #0045A5;
+    color: #fff;
+}
+
+.breadcrumbs__item:after,
+.breadcrumbs__item:before {
+    background: white;
+    bottom: 0;
+    clip-path: polygon(50% 50%, -50% -50%, 0 100%);
+    content: "";
+    left: 100%;
+    position: absolute;
+    top: 0;
+    transition: background 0.2s linear;
+    width: 1em;
+    z-index: 1;
+}
+
+.breadcrumbs__item:before {
+    background: #cbd2d9;
+    margin-left: 1px;
+}
+
+.breadcrumbs__item:last-child {
+    border-right: none;
+}
+
+.breadcrumbs__item.is-active {
+    background: #edf1f5;
+}
+
+.page-item .page-link {
+    position: relative;
+    display: block;
+    padding: 0.2rem 0.2rem;
+    margin-left: 0;
+    line-height: 1.25;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    font-size: 14px;
+}
+
+.page-item.active .page-link {
+    z-index: 3;
+    color: #fff;
+    background-color: #0045A5;
+    border-color: #0045A5;
+}
+
+#icon:hover {
+    background-color: rgb(242, 242, 242);
+    color: black;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button a {
+    padding: 0.8em;
+}
+
+.dataTables_info {
+    font-size: 14px;
+}
+
+#nav-datos-paciente {
+    padding: 30px;
+}
+
+.btn-link {
+    color: #edf1f5 !important;
+    font-weight: 700 !important;
+}
+
+.card-header {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.form-control {
     border-radius: 5px;
     border-color: rgb(155, 152, 152);
-    padding: 1px;
+    padding: 0;
     margin: 0;
-    font-size: 15px;
+    font-size: 14px !important;
     height: 28px !important;
     /* Tamaño de fuente personalizado */
     text-align: left;
     /* Alineación a la izquierda */
 }
 
-
- .form-control-ta {
-     border-radius: 5px;
-     border-color: rgb(155, 152, 152);
-     padding: 0;
-     margin: 0;
-     font-size: 12px;
-     height: 50px !important;
-     /* Tamaño de fuente personalizado */
-     text-align: left;
-     /* Alineación a la izquierda */
- }
-
- #nempresa {
-     background-color: rgb(0, 188, 212);
-     color: white;
-     border-radius: 12px;
-     font-size: 12px;
-     height: 30px;
-     padding: 2px;
- }
-
- #btnagregar {
-     background-color: rgb(121, 134, 203);
-     color: white;
-     border-radius: 12px;
-     font-size: 12px;
-     height: 25px;
-     width: 28%;
-     margin: 0;
-     padding: 2px;
-     border-color: rgb(121, 134, 203);
-     cursor: pointer;
- }
-
- #btnagregar:hover {
-     background-color: #692879;
-     /* Cambiar el color de fondo cuando el mouse está sobre el botón */
-     border-color: #692879;
- }
-
- .dotted {
-     border: none;
-     border-top: 1px dotted #999;
-     /* Ancho y color de la línea punteada */
-     color: #fff;
-     /* Color del fondo para ocultar la línea sólida predeterminada en algunos navegadores */
-     background-color: #fff;
-     /* Color del fondo para ocultar la línea sólida predeterminada en algunos navegadores */
-     height: 1px;
-     /* Altura de la línea punteada */
-     margin: 20px 0;
-     /* Margen superior e inferior */
- }
-
- #lblttl {
-     font-size: 16px;
-     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
- }
-
- #ttlspan {
-     background-color: rgb(214, 72, 126);
-     color: white;
-     width: 22px;
- }
-
- #ttlvlr {
-     color: rgb(109, 146, 211)
- }
-
- table td {
-     font-size: 12px;
- }
-
- table th {
-     font-size: 11px;
-     background-color: rgb(2, 136, 209) !important;
-     color: white;
-     padding: 10px;
-     text-align: left;
-     height: 15px;
-     width: 100px;
- }
-
- table {
-     border-collapse: collapse;
-     width: 100%;
-     overflow: scroll;
- }
-
- th,
- td {
-     border: 1px solid #dddddd;
-     text-align: left;
-     padding: 25px;
-     /* Ajusta el valor de padding según tus preferencias */
- }
-
- #btndocumentos {
-     font-size: 12px;
-     background-color: rgb(57, 73, 171);
-     border-radius: 15px;
-     border-color: rgb(57, 73, 171);
- }
-
- #btndocumentos:hover {
-     background-color: rgb(57, 73, 275);
-     border-color: rgb(57, 73, 275);
- }
-
- #btnpiegpag {
-     background-color: rgb(0, 188, 212) !important;
-     border-color: rgb(0, 188, 212) !important;
-     font-size: 12px;
-     padding: 3px;
- }
-
- .divcontainer {
-     width: 90%;
-     margin: auto;
-
- }
-
- body {
-     background-color: rgb(244, 244, 249) !important;
-     /* Cambia el color a tu preferencia */
-     margin: 0;
-     /* Elimina el margen predeterminado del cuerpo */
-     padding: 0;
-     /* Elimina el relleno predeterminado del cuerpo */
-
- }
-
- .modal_lg {
-     width: 1300px !important;
-     margin-left: -450px;
- }
-
- .table-req-fact tr th {
-     background-color: #0045A5;
-     color: white;
- }
-
- @media only screen and(max-width: 500px) {
-     .modal_lg {
-         width: 100% !important;
-     }
- }
-
- @media only screen and(max-width: 720px) {
-     .modal_lg {
-         width: 1000px !important;
-     }
- }
-
- /*------*/
-
- .btn-pink {
-     background-color: rgb(214, 72, 126);
-     color: white;
- }
-
- .btn-pink:hover {
-     background-color: rgb(201, 41, 103);
-     color: white;
- }
-
- .btn-pink:focus,
- .btn-pink.focus {
-     background-color: rgb(201, 41, 103);
-     color: white;
- }
-
- .btn-oliva {
-    background-color: #0097FF;
-    color: white;
+.modal-content-lg {
+    width: 930px;
+    margin-left: -270px;
 }
 
-.btn-oliva:hover {
-    background-color: #0771b9;
-    color: white;
+.modal-content-md {
+    width: 1200px;
+    margin-left: -380px;
 }
 
-.btn-oliva:focus,
-.btn-oliva.focus {
-    background-color: #0771b9;
-    color: white;
+.modal-content-xl {
+    width: 1700px;
+    margin-left: -650px;
 }
 
-#theadtaraeas{
-    display: none;
+@media only screen and (max-width:700px) {
+
+    .modal-content-lg {
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    .modal-content-xl {
+        width: 100%;
+        margin-left: 0px;
+    }
+
 }
 
-.table-tareas{
-    width: 100%;
+@media only screen and (max-width:950px) {
+
+    .modal-content-lg {
+        width: 945px;
+        margin-left: -270px;
+    }
+
+    .modal-content-xl {
+        width: 945px;
+        margin-left: -270px;
+    }
+
+    .form-control{
+        width: 100%;
+    }
+
 }
+
