@@ -1473,7 +1473,7 @@ $uppercaseruta = strtoupper($ruta);
                             },
                             dataType: 'json',
                             success: function(data) {
-
+                                miDataTablere.ajax.reload()
                                 $('#btn-excel').removeAttr('disabled');
                                 Swal.fire({
                                     position: 'top',
@@ -1506,7 +1506,7 @@ $uppercaseruta = strtoupper($ruta);
                             },
                             type: 'JSON',
                             success: function(respuesta) {
-
+                                miDataTablere.ajax.reload()
                                 Swal.fire({
                                     position: 'top',
                                     icon: 'success',
@@ -1534,7 +1534,7 @@ $uppercaseruta = strtoupper($ruta);
                             },
                             type: 'JSON',
                             success: function(respuesta) {
-
+                                miDataTablere.ajax.reload()
                                 Swal.fire({
                                     position: 'top',
                                     icon: 'success',
