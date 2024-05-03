@@ -71,19 +71,6 @@ echo "<input type='input' value='" . $caso . "'  idx='" . $idx . "' iduser='" . 
     var iduser = $('input[name="caso"]').attr('iduser');
     var id = $('input[name="caso"]').attr('id');
 
-    if (caso == "S") {
-        $("#modalcant").load('https://conlabweb3.tierramontemariana.org/apps/ordrequisicion/updatecant.php', {
-            idx: idx,
-            nom_insumo: nom_insumo,
-            iduser: iduser,
-            id: id
-        })
-
-    } else if (caso == "N") {
-
-        $("#modalcant").empty();
-
-    }
 
 
     function enviar() {

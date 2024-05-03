@@ -70,6 +70,8 @@ if ($conetar->connect_errno) {
             "','" . $cantidad .
             "','" . $id_departamento .
             "')";
+
+            echo $cadena;
         $resultado = mysqli_query($conetar, $cadena);
 
         

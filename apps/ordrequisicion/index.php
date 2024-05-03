@@ -1,46 +1,25 @@
 <?php
-if (file_exists("config/accesosystems.php")) {
-    include ("config/accesosystems.php");
-} else {
-    if (file_exists("../config/accesosystems.php")) {
-        include ("../config/accesosystems.php");
-    } else {
-        if (file_exists("../../config/accesosystems.php")) {
-            include ("../../config/accesosystems.php");
-        }
-    }
-}
 
-$id_users = $_SESSION['id_users'];
+$nmbapp = "Solicitud de Productos e Insumos";
+$moduraiz = $_SESSION['moduraiz'];
+$ruta = "<a href='#'>Home</a> / " . $moduraiz;
+$uppercaseruta = strtoupper($ruta);
 
-$conetar = new mysqli(hostname, db_login, db_pass, cw3ctrlsrv);
-if ($conetar->connect_errno) {
-    $error = "Fallo al conectar a MySQL: (" . $conetar->connect_errno . ") " . $conetar->connect_error;
-    echo $error;
-} else {
+include('apps/thedata.php'); //scriops de control
 
+$id_users =  $_SESSION['id_users'];
+?>
+<!DOCTYPE html>
+<html lang="es">
 
-    // echo $sctrl1;
-    $nmbapp = "Solicitud de Productos e Insumos";
-    $moduraiz = $_SESSION['moduraiz'];
-    $ruta = "<a href='#'>Home</a> / " . $moduraiz;
-    $uppercaseruta = strtoupper($ruta);
-    //echo ".................".$sctrl4."-----------";
-    $cadena = "SELECT count(*) as cantidad
-                    FROM  u116753122_cw3completa.ordrequisicion where 1=1";
-
-    //              echo $cadena;
-    $resultadP2 = $conetar->query($cadena);
-    $filaP2 = mysqli_fetch_array($resultadP2);
-    $cantrgt = $filaP2['cantidad'];
-    ;
-    ?>
-    <?php
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/cw3/conlabweb3.0/apps/ordrequisicion/assets/style.css">
+</head>
 
 
-    include ('apps/thedata.php'); //scriops de control
-    ?>
-
+<body>
     <div class="card border-info" style="width:85%;margin:auto;">
 
         <div class="card-header bg-light ">
@@ -65,8 +44,8 @@ if ($conetar->connect_errno) {
                 <div class="col-md-12 col-lg-12" id="data" style="overflow:hidden;  margin-bottom:5px; border-bottom:thin dotted #d3d3d3;
                                            height:auto;width:100%;">
 
-                    <?php include ('data.php');  //campos de la app 
-                        ?>
+                    <?php include('data.php');  //campos de la app 
+                    ?>
 
                 </div>
             </div>
@@ -93,7 +72,7 @@ if ($conetar->connect_errno) {
                     <tr>
                         <td>
                             <div id="btnreq">
-                                <?php include ("orden.php") ?>
+                                <?php include("orden.php") ?>
                             </div>
                         </td>
                     </tr>
@@ -104,7 +83,7 @@ if ($conetar->connect_errno) {
     <script src="https://kit.fontawesome.com/6dc75479dc.js" crossorigin="anonymous"></script>
 
     <script>
-        $(document).ready(function () {
+        $(document).ready(function() {
             obtener();
 
         });
@@ -139,6 +118,6 @@ if ($conetar->connect_errno) {
             return iduser;
         }
     </script>
-    <?php
-}
-?>
+</body>
+
+</html>
