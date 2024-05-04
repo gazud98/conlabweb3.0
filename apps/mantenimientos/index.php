@@ -36,12 +36,21 @@ if ($conetar->connect_errno) {
     $cantrgt = $filaP2['cantidad'];;
 ?>
 
-    <link rel="stylesheet" href="https://conlabweb3.tierramontemariana.org/apps/mantenimientos/assets/style.css">
+    <link rel="stylesheet" href="/cw3/conlabweb3.0/apps/mantenimientos/assets/style.css">
 
     <style>
         #thetable::-webkit-scrollbar {
             width: 1px;
         }
+
+        .card-title-rezise {
+            width: 100%;
+            color: #164085;
+            text-align: center;
+            position: relative;
+            margin-top: 9px;
+        }
+
     </style>
     <div class="card" style="width:80%;margin:auto;">
 
@@ -54,7 +63,7 @@ if ($conetar->connect_errno) {
                     </nav>
                 </div>
                 <div class="col-md-4 col-lg-4 text-center">
-                    <h5 style="text-align: center; color: #0045A5;"><strong>Creación de Mantenimientos</strong></h5>
+                    <h5 class="card-title card-title-rezise"><strong>Creación de Mantenimientos</strong></h5>
                 </div>
                 <div class="col-md-4 col-lg-4">
                 </div>

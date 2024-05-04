@@ -266,12 +266,11 @@ if ($conetar->connect_errno) {
 
         </div>-->
 
-        <hr>
+        <div class="mt-4 text-center" style="background-color: #EDF4F5; padding:5px; border-radius:5px; margin-bottom:10px; font-size:13px;">
+            <strong>Mantenimiento:</strong>
+        </div>
 
         <div class="row">
-
-
-            <div class="container" style="text-align:center"> <label style="font-size: 12px;">Mantenimiento:</label></div>
 
             <div class="col-md-2">
                 <label style="font-size: 12px;">Responsable:</label>
@@ -378,9 +377,9 @@ if ($conetar->connect_errno) {
             </table>
         </div>
 
-        <hr>
-
-        <div class="container" style="text-align:center"> <label style="font-size: 12px;">Datos de contacto:</label></div>
+        <div class="mt-4 text-center" style="background-color: #EDF4F5; padding:5px; border-radius:5px; margin-bottom:10px; font-size:13px;">
+            <strong>Datos de contacto:</strong>
+        </div>
 
         <div class="row">
 

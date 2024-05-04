@@ -97,10 +97,10 @@ if ($conetar->connect_errno) {
             $tef_resp = trim($filaP2['tef_resp']);
             $periodicidad = trim($filaP2['periodicidad']);
             $mesoption = trim($filaP2['mesoption']);
-            $comienzo = trim($filaP2['comienzo']);
+            $comienzo = date('d-m-Y', strtotime(trim($filaP2['comienzo'])));
             $responsable = trim($filaP2['responsable']);
             $estado = trim($filaP2['estado']);
-            $fecha_final = trim($filaP2['fecha_final']);
+            $fecha_final = date('d-m-Y', strtotime(trim($filaP2['fecha_final'])));
         }
     }
 
@@ -269,13 +269,12 @@ if ($conetar->connect_errno) {
 
         </div>-->
 
-    <hr>
+    <div class="mt-4 text-center" style="background-color: #EDF4F5; padding:5px; border-radius:5px; margin-bottom:10px; font-size:13px;">
+        <strong>Mantenimiento:</strong>
+    </div>
 
     <div class="row">
-
-
-        <div class="container" style="text-align:center"> <label style="font-size: 12px;">Mantenimiento:</label></div>
-
+        
         <div class="col-md-2">
             <label style="font-size: 12px;">Responsable:</label>
             <select class="form-control" name="responsable" id="responsable" required>
@@ -363,7 +362,7 @@ if ($conetar->connect_errno) {
                 </td>
                 <td>
                     <label style="font-size: 12px;">Fecha inicio:</label>
-                    <input type="date" class="form-control" name="comenzar" id="comenzar" value="<?php echo $fecha_comienzo; ?>" required></input>
+                    <input type="date" class="form-control" name="comenzar" id="comenzar" value="<?php echo $comienzo; ?>" required></input>
                     <div id="comenzarx"></div>
                 </td>
                 <td>
@@ -381,9 +380,9 @@ if ($conetar->connect_errno) {
         </table>
     </div>
 
-    <hr>
-
-    <div class="container" style="text-align:center"> <label style="font-size: 12px;">Datos de contacto:</label></div>
+    <div class="mt-4 text-center" style="background-color: #EDF4F5; padding:5px; border-radius:5px; margin-bottom:10px; font-size:13px;">
+        <strong>Datos de contacto:</strong>
+    </div>
 
     <div class="row">
 
@@ -626,7 +625,6 @@ if ($conetar->connect_errno) {
                 }
             });
         }
-
     </script>
 <?php
 }
