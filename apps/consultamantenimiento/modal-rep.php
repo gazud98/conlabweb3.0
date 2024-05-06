@@ -100,7 +100,7 @@ if ($conetar->connect_errno) {
         
     </div>
     <div class="col-md-1">
-        <button type="button" data-toggle="modal" data-target="#modalAddMotivo" class="btn btn-primary btn-xs" style="margin-left: -20px;margin-top:25px"><i class="fa-solid fa-plus"></i></button>
+        <button type="button" data-toggle="modal" data-target="#modalAddMotivo" class="btn btn-primary btn-sm" style="margin-left: -10px;margin-top:30px"><i class="fa-solid fa-plus"></i></button>
     </div>
 </div>
 
