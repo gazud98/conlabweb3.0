@@ -41,8 +41,8 @@ if ($conetar->connect_errno) {
         <option value="2">Inactivo</option>
     </select>
 </div>
-<div class="col-md-2" style="margin-top: 28px;">
-    <button type="button" class="btn btn-info btn-sm" onclick="loadFilters()">Buscar</button>
+<div class="col-md-2" style="margin-top: 25px;">
+    <button type="button" class="btn btn-info btn-sm" onclick="loadFilters()"><i class="fa-solid fa-magnifying-glass"></i> &nbsp; Buscar</button>
 </div>
 
 <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />

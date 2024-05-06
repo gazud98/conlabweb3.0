@@ -105,7 +105,6 @@
 table.table tr th,
 table.table tr td {
     vertical-align: middle;
-    border: 1px solid #DCDCDC;
     word-wrap: break-word;
     padding: 2px;
     text-align: center;
