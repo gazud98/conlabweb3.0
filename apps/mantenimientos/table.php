@@ -84,7 +84,7 @@ if ($conetar->connect_errno) {
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Cerrar</button>
-                    <button type="button" class="btn btn-success btn-sm">Confirmar</button>
+                    <button type="button" class="btn btn-success btn-sm" onclick="confirmMant()">Confirmar</button>
                 </div>
             </div>
         </div>
