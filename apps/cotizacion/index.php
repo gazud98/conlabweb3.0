@@ -45,9 +45,9 @@ if ($conetar->connect_errno) {
                 <div class="col-md-4">
                     <nav class="breadcrumbs">
                         <a href="#" class="breadcrumbs__item" style="text-decoration: none;">Compras e Inventario</a>
-                        <a href="#" class="breadcrumbs__item is-active" style="text-decoration: none;"><strong>
-                                <?php echo $nmbapp; ?>
-                            </strong></a>
+                        <a href="#" class="breadcrumbs__item is-active" style="text-decoration: none;">
+                            <?php echo $nmbapp; ?>
+                        </a>
                     </nav>
                 </div>
                 <div class="col-md-4">
@@ -71,7 +71,7 @@ if ($conetar->connect_errno) {
                     </div>
                 </div>
 
-                <div class="col-md-12 col-lg-7">
+                <div class="col-md-12 col-lg-7 border">
                     <div class="row">
                         <div class="col-md-12 col-lg-12" style="background-color: rgb(1,103,183); color: white;">
                             <label style="margin-top: 4px;">Información Solicitud</label>
@@ -89,8 +89,8 @@ if ($conetar->connect_errno) {
                             style="background-color: rgb(1,103,183); color: white; text-align: center;">
                             <label style="margin-top: 4px;">DETALLE DE SOLICITUD</label>
                         </div>
-                        <div class="col-md-12 col-lg-12"
-                            style="overflow: scroll; overflow-x: auto; height:350px; width:100%;" name="table" id="table">
+                        <div class="col-md-12 col-lg-12 " style="overflow: scroll; overflow-x: auto; height:350px; width:100%;" name="table" id="table">
+                            <!-- Contenido de la tabla -->
                         </div>
                         <div class="container" style="text-align: center; padding: 5px 0px 5px 0px;">
                             <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target=".modal"
@@ -99,11 +99,7 @@ if ($conetar->connect_errno) {
                             </button>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="card-footer bg-light" style="width:100%;">
-                <div class="row">
-                    <div class="col-md-12 col-lg-12"></div>
+
                 </div>
             </div>
 
@@ -130,14 +126,10 @@ if ($conetar->connect_errno) {
                                 <!--<button type="button" class="btn btn-secondary btn-xs" id="btnprint" data-dismiss="modal">
                             <i class="fas fa-print"></i>&nbsp;&nbsp;Imprimir
                         </button>-->
-                                <a href="#" title="Descargar" onclick="genPDF2()"><i class="fa-solid fa-download"
-                                        style="font-size: 25px;"></i></a>
-                                <a href="#" title="Crear Cotizacion" onclick="recorrer()"><i class="fa-brands fa-telegram"
-                                        style="font-size: 25px;"></i></a>
-                                <a href="#" title="Imprimir" onclick="printModal()"><i class="fa-solid fa-print"
-                                        style="font-size: 25px;"></i></a>
-                                <a href="#" title="Enviar Por Correo"><i class="fa-solid fa-envelope"
-                                        style="font-size: 25px;"></i></a>
+                                <a href="#" title="Descargar" onclick="genPDF2()"><i class="fa-solid fa-download" style="font-size: 25px;"></i></a>
+                                <a href="#" title="Crear Cotizacion" onclick="recorrer()"><i class="fa-brands fa-telegram" style="font-size: 25px;"></i></a>
+                                <a href="#" title="Imprimir" onclick="printModal()"><i class="fa-solid fa-print" style="font-size: 25px;"></i></a>
+                                <a href="#" title="Enviar Por Correo"><i class="fa-solid fa-envelope" style="font-size: 25px;"></i></a>
                             </div>
 
                         </div>
@@ -147,9 +139,9 @@ if ($conetar->connect_errno) {
         </div>
         <input type="hidden" id="idusersend" value="<?php echo $user; ?>">
         <?php
-        include ('thefinder.php'); //modal de busqueda personalizado
-    
-        include ('apps/thedata.php'); //scriops de control
+
+
+        include('apps/thedata.php'); //scriops de control
         ?>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
             integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
