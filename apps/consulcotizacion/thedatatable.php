@@ -82,8 +82,8 @@
         });
     }
 
-    function selectthefile1( id) {
-        $("#data1").load("/cw3/conlabweb3.0/apps/consulcotizacion/data.php", {
+    function selectthefile1(id) {
+        $("#data1").load("https://conlabweb3.tierramontemariana.org/apps/consulcotizacion/data.php", {
             id: id
         });
         $('#ordeccomp').attr('disabled', false);
