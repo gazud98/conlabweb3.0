@@ -275,4 +275,51 @@ if ($conetar->connect_errno) {
         $("#delbtn").css("display", "none");
 
     }
+
+    function cargarTipoMant(thefile, id) {
+
+        var theobject = "fileselect" + thefile;
+        var tpm = $('input[name="' + theobject + '"]').val();
+
+        $('#tipomant').val(tpm);
+        $('#idmant').val(id);
+
+    }
+
+    function confirmMant() {
+
+        tipomant = $('#tipomant').val();
+        idmant = $('#idmant').val();
+        fechamant = $('#fechamant').val();
+
+        Swal.fire({
+            title: 'Desea confirmar este mantenimiento?',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Si, confirmar!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                $.ajax({
+                    url: 'https://conlabweb3.tierramontemariana.org/apps/mantenimientos/confirm.php',
+                    data: {
+                        id: idmant,
+                        tipomant: tipomant,
+                        fechamant: fechamant
+                    },
+                    success: function() {
+                        Swal.fire(
+                            'Confirmado!',
+                            'El mantenimiento ha sido confirmado.',
+                            'success'
+                        )
+                        miDataTable.ajax.reload();
+                        $('#confirmMant').modal('hide');
+                    }
+                })
+            }
+        })
+
+    }
 </script>
