@@ -68,6 +68,7 @@
 
     function cargarDatos() {
         $.ajax({
+            url: '/cw3/conlabweb3.0/apps/consulcotizacion/mostrar.php', // Página PHP que devuelve los datos en formato JSON
             type: 'GET', // Método de la petición (GET o POST según corresponda)
             dataType: 'json', // Tipo de datos esperado en la respuesta
             success: function(data) {
@@ -78,13 +79,13 @@
                 // Manejar errores si es necesario
                 console.error('Error al obtener datos:', status, error);
             }
-            $("#data1").load("https://conlabweb3.tierramontemariana.org/apps/consulcotizacion/data.php", {
-                id: id
-            });
         });
     }
 
     function selectthefile1( id) {
+        $("#data1").load("/cw3/conlabweb3.0/apps/consulcotizacion/data.php", {
+            id: id
+        });
         $('#ordeccomp').attr('disabled', false);
     }
 </script>
