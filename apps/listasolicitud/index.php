@@ -15,6 +15,13 @@ $uppercaseruta = strtoupper($ruta);
 
     <link rel="stylesheet" href="https://conlabweb3.tierramontemariana.org/apps/sedes/assets/style.css">
 </head>
+<style>
+    .content-wrapper {
+        background-image: url('/cw3/conlabweb3.0/apps/medicos/assets/backcw3-v1.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+</style>
 
 <body>
     <link rel="stylesheet" href="https://conlabweb3.tierramontemariana.org/apps/listasolicitud/assets/style.css">

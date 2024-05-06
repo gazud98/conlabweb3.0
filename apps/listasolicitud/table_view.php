@@ -20,66 +20,39 @@ if ($conetar->connect_errno) {
     ?>
     <link href="https://cdn.datatables.net/1.13.5/css/dataTables.bootstrap4.min.css" rel="stylesheet" />
     <div class="row" id="dt">
-        <div class="col-md-1 col-lg-1">
+        <div class="col-md-3 col-lg-2">
             <label for="filtro">No. Solicitud:</label>
-            <input type="text" class="form-control" name="nosolicitud" id="nosolicitud" style="height: 29px; widht:100%;"
-                data-toggle="tooltip" data-placement="top" title="Escribe el numero de solicitud">
+            <input type="text" class="form-control" name="nosolicitud" id="nosolicitud" style="height: 29px; width:100%;" data-toggle="tooltip" data-placement="top" title="Escribe el número de solicitud">
+        </div>
+        <div class="col-md-3 col-lg-2">
+            <label for="filtro">Producto:</label>
+            <input type="text" class="form-control product" name="id_producto2" id="id_producto2" autocomplete="off" autofocus style="height: 29px; width:100%;" data-toggle="tooltip" data-placement="top" title="Escribe el nombre del producto para una búsqueda inteligente.">
         </div>
         <div class="col-md-2 col-lg-2">
-            <label for="filtro">Producto:</label>
-            <input type="text" class="form-control product" name="id_producto2" id="id_producto2" autocomplete="off"
-                autofocus style="height: 29px; widht:100%;" data-toggle="tooltip" data-placement="top"
-                title="Escribe el nombre del producto para una búsqueda inteligente.">
-        </div>
-        <div class="col-md-1 col-lg-1">
             <label for="filtro">Fecha Inicio:</label>
-            <input type="date" class="form-control" id="fecha1" name="fecha1" style="height: 29px;">
+            <input type="date" class="form-control" id="fecha1" name="fecha1" style="height: 29px; width:100%;">
         </div>
-        <div class="col-md-1 col-lg-1">
+        <div class="col-md-2 col-lg-2">
             <label for="filtro">Fecha Fin:</label>
-            <input type="date" class="form-control" id="fecha2" name="fecha2" style="height: 29px;">
+            <input type="date" class="form-control" id="fecha2" name="fecha2" style="height: 29px; width:100%;">
         </div>
         <div class="col-md-2 col-lg-2">
             <label for="filtro">Departamento:</label>
-            <select class="form-control" name="id_departamento" id="id_departamento" style="widht:100%;">
+            <select class="form-control" name="id_departamento" id="id_departamento" style="width:100%;">
                 <option value=""></option>
-                <?php
-                $cadena = "SELECT id, nombre
-                                FROM u116753122_cw3completa.departamentos
-                                where estado='1'";
-                $resultadP2a = $conetar->query($cadena);
-                $numerfiles2a = mysqli_num_rows($resultadP2a);
-                if ($numerfiles2a >= 1) {
-                    while ($filaP2a = mysqli_fetch_array($resultadP2a)) {
-                        echo "<option value='" . trim($filaP2a['id']) . "'";
-                        echo '>' . $filaP2a['nombre'] . "</option>";
-                    }
-                }
-                ?>
+                <!-- Aquí tu código PHP para generar las opciones -->
             </select>
         </div>
         <div class="col-md-2 col-lg-2">
             <label for="filtro">Sede:</label>
-            <select class="form-control" name="id_sede" id="id_sede" style="widht:100%;">
+            <select class="form-control" name="id_sede" id="id_sede" style="width:100%;">
                 <option value=""></option>
-                <?php
-                $cadena = "SELECT id_sedes, nombre
-                                FROM u116753122_cw3completa.sedes
-                                where estado='1'";
-                $resultadP2a = $conetar->query($cadena);
-                $numerfiles2a = mysqli_num_rows($resultadP2a);
-                if ($numerfiles2a >= 1) {
-                    while ($filaP2a = mysqli_fetch_array($resultadP2a)) {
-                        echo "<option value='" . trim($filaP2a['id_sedes']) . "'";
-                        echo '>' . $filaP2a['nombre'] . "</option>";
-                    }
-                }
-                ?>
+                <!-- Aquí tu código PHP para generar las opciones -->
             </select>
         </div>
         <div class="col-md-2 col-lg-2">
             <label for="filtro">Estado Solicitud:</label>
-            <select class="form-control" name="estado" id="estado" style="widht:100%;">
+            <select class="form-control" name="estado" id="estado" style="width:100%;">
                 <option selected="true" disabled="disabled"></option>
                 <option value="P">Pendiente</option>
                 <option value="F">Finalizado</option>
