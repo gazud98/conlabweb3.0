@@ -36,7 +36,7 @@ if ($conetar->connect_errno) {
 ?>
 
     <link rel="stylesheet" href="/assets/bootstrap-multiselect.css">
-    <link rel="stylesheet" href="/cw3/conlabweb3.0/apps/consultamantenimiento/assets/style.css">
+    <link rel="stylesheet" href="https://conlabweb3.tierramontemariana.org/apps/consultamantenimiento/assets/style.css">
 
     <style>
         * {
@@ -327,11 +327,11 @@ if ($conetar->connect_errno) {
         $('#tipman').change(function() {
             $aux = $('#tipman').val();
             if ($aux == '1') {
-                $("#thetable").load("/cw3/conlabweb3.0/apps/consultamantenimiento/thedatatable-c.php");
+                $("#thetable").load("https://conlabweb3.tierramontemariana.org/apps/consultamantenimiento/thedatatable-c.php");
             } else if ($aux == '2') {
-                $("#thetable").load("/cw3/conlabweb3.0/apps/consultamantenimiento/thedatatable-p.php");
+                $("#thetable").load("https://conlabweb3.tierramontemariana.org/apps/consultamantenimiento/thedatatable-p.php");
             } else if ($aux == '3') {
-                $("#thetable").load("/cw3/conlabweb3.0/apps/consultamantenimiento/all-1.php");
+                $("#thetable").load("https://conlabweb3.tierramontemariana.org/apps/consultamantenimiento/all-1.php");
             }
         })
 
