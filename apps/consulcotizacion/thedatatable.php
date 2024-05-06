@@ -25,7 +25,6 @@
 <script>
     $(document).ready(function() {
 
-                    url: 'https://conlabweb3.tierramontemariana.org/apps/consulcotizacion/mostrar.php', // Página PHP que devuelve los datos en formato JSON
         miDataTable = $('#tb').DataTable({
             language: {
                 url: 'https://cdn.datatables.net/plug-ins/1.11.5/i18n/es-ES.json',
@@ -38,6 +37,7 @@
             "autoWidth": false,
             "responsive": true,
             "ajax": {
+                url: 'https://conlabweb3.tierramontemariana.org/apps/consulcotizacion/mostrar.php', // Página PHP que devuelve los datos en formato JSON
                 type: 'GET', // Método de la petición (GET o POST según corresponda)
                 dataType: 'json', // Tipo de datos esperado en la respuesta
                 dataSrc: '' // Indicar que los datos provienen directamente del objeto JSON (sin propiedad adicional)
