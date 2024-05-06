@@ -158,6 +158,7 @@ if ($conetar->connect_errno) {
                     "data": null,
                     "render": function(data, type, full, meta) {
                         return '<button class="btn btn-success btn-sm" data-toggle="modal" data-target="#confirmMant"><i class="fa-solid fa-check" style="font-size:13px;"></i> &nbsp; Confirmar</button>'
+                        return '<button class="btn btn-success btn-sm"  onclick="cargarTipoMant(' + full.thefile + ',' + full.id + ')" data-toggle="modal" data-target="#confirmMant"><i class="fa-solid fa-check" style="font-size:13px;"></i> &nbsp; Confirmar</button>'
                     }
                 }
             ]
