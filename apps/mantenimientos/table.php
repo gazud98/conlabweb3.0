@@ -33,14 +33,24 @@ if ($conetar->connect_errno) {
 
 ?>
     <link href="https://cdn.datatables.net/1.13.5/css/dataTables.bootstrap4.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://conlabweb3.tierramontemariana.org/apps/mantenimientos/assets/style.css">
+    <link rel="stylesheet" href="/cw3/conlabweb3.0/apps/mantenimientos/assets/style.css">
 
 
     <style>
-        
+        .table-bordes-d {
+            border: 1px solid #d2d2d2;
+            border-radius: 10px;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        table.table tr td {
+            border-top: 1px solid #d2d2d2;
+            padding: 2px !important;
+        }
     </style>
 
-    <table class="table table-striped table-head-fixed text-nowrap table-sm" id="table-mantenimiento" style="width: 100%;font-size:15px;">
+    <table class="table table-borderless table-bordes-d table-hover" id="table-mantenimiento" style="width: 100%;font-size:15px;">
         <thead>
             <tr>
                 <th>Codigo</th>
@@ -48,12 +58,37 @@ if ($conetar->connect_errno) {
                 <th>Fecha</th>
                 <th>Estado</th>
                 <th>Acciones</th>
+                <th>Confirmar Mant.</th>
             </tr>
         </thead>
         <tbody>
-
         </tbody>
     </table>
+
+    <div class="modal fade" id="confirmMant" tabindex="-1" aria-labelledby="confirmMantLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="confirmMantLabel">Confirmar Mantenimiento</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label for="">Fecha de realización:</label>
+                            <input type="date" name="fechamant" id="fechamant" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-success btn-sm">Confirmar</button>
+                </div>
+            </div>
+        </div>
+    </div>
 <?php
 } /**/
 ?>
@@ -112,9 +147,15 @@ if ($conetar->connect_errno) {
                     "data": null,
                     "render": function(data, type, full, meta) {
                         return '<a href="#" style="color:#213FD6;" onclick="cargarForm(' + full.thefile + ',' + full.id + ')" title="Editar" data-toggle="modal" data-target="#modalEditar"><i class="fa-solid fa-pen-to-square" style="font-size:13px;"></i></a>' +
-                            '<a href="#" style="color:#D62121;" onclick="deleteProduct(' + full.thefile + ',' + full.id + ')" title="Eliminar"><i class="fa-solid fa-trash-can" style="font-size:13px;"></i></a>' +
+                            '&nbsp;&nbsp;&nbsp;<a href="#" style="color:#D62121;" onclick="deleteProduct(' + full.thefile + ',' + full.id + ')" title="Eliminar"><i class="fa-solid fa-trash-can" style="font-size:13px;"></i></a>' +
                             '<input type="hidden" name="fileselect' + full.thefile + '" id="fileselect' + full.thefile + '"" value="' + full.tip_m + '" max="' + full.max + '">';
 
+                    }
+                },
+                {
+                    "data": null,
+                    "render": function(data, type, full, meta) {
+                        return '<button class="btn btn-success btn-sm" data-toggle="modal" data-target="#confirmMant"><i class="fa-solid fa-check" style="font-size:13px;"></i> &nbsp; Confirmar</button>'
                     }
                 }
             ]
@@ -126,14 +167,14 @@ if ($conetar->connect_errno) {
         var theobject = "fileselect" + thefile;
         var tpm = $('input[name="' + theobject + '"]').val();
 
-        if(tpm == 'C'){
+        if (tpm == 'C') {
             Swal.fire({
-            title: 'Desea eliminar este registro?',
-            icon: 'warning',
-            showCancelButton: true,
-            confirmButtonColor: '#3085d6',
-            cancelButtonColor: '#d33',
-            confirmButtonText: 'Si, Eliminar!'
+                title: 'Desea eliminar este registro?',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Si, Eliminar!'
             }).then((result) => {
                 if (result.isConfirmed) {
                     $.ajax({
@@ -149,14 +190,14 @@ if ($conetar->connect_errno) {
                     })
                 }
             })
-        }else if(tpm == 'P'){
+        } else if (tpm == 'P') {
             Swal.fire({
-            title: 'Desea eliminar este registro?',
-            icon: 'warning',
-            showCancelButton: true,
-            confirmButtonColor: '#3085d6',
-            cancelButtonColor: '#d33',
-            confirmButtonText: 'Si, Eliminar!'
+                title: 'Desea eliminar este registro?',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Si, Eliminar!'
             }).then((result) => {
                 if (result.isConfirmed) {
                     $.ajax({
@@ -171,7 +212,7 @@ if ($conetar->connect_errno) {
                         }
                     })
                 }
-            })   
+            })
         }
     }
 
@@ -225,13 +266,60 @@ if ($conetar->connect_errno) {
             });
             $('#titleEdit').html('Mantenimiento Preventivo');
         }
-        
+
         $('#iddatas').css('pointer-events', 'auto');
         $('#iddatas').css('background-color', 'white');
         $("#successbtn").css("display", "block");
         $("#cancelbtn").css("display", "block");
         $("#modbtn").css("display", "none");
         $("#delbtn").css("display", "none");
+
+    }
+
+    function cargarTipoMant(thefile, id) {
+
+        var theobject = "fileselect" + thefile;
+        var tpm = $('input[name="' + theobject + '"]').val();
+
+        $('#tipomant').val(tpm);
+        $('#idmant').val(id);
+
+    }
+
+    function confirmMant() {
+
+        tipomant = $('#tipomant').val();
+        idmant = $('#idmant').val();
+        fechamant = $('#fechamant').val();
+
+        Swal.fire({
+            title: 'Desea confirmar este mantenimiento?',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Si, confirmar!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                $.ajax({
+                    url: 'https://conlabweb3.tierramontemariana.org/apps/mantenimientos/confirm.php',
+                    data: {
+                        id: idmant,
+                        tipomant: tipomant,
+                        fechamant: fechamant
+                    },
+                    success: function() {
+                        Swal.fire(
+                            'Confirmado!',
+                            'El mantenimiento ha sido confirmado.',
+                            'success'
+                        )
+                        miDataTable.ajax.reload();
+                        $('#confirmMant').modal('hide');
+                    }
+                })
+            }
+        })
 
     }
 </script>

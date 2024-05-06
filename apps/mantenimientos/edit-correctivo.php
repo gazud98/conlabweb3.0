@@ -191,12 +191,12 @@ if ($conetar->connect_errno) {
             </div>
         </div>
 
-        <hr>
+        <div class="mt-4 text-center" style="background-color: #EDF4F5; padding:5px; border-radius:5px; margin-bottom:10px; font-size:13px;">
+            <strong>Realizado Por:</strong>
+        </div>
 
         <div class="row">
-
-            <div class="container" style="text-align:center;margin-right:3px;"> <label style="font-size: 12px;">Realizado Por:</label></div>
-
+            
             <div class="col-md-2">
                 <label style="font-size: 12px;">Fecha:</label>
                 <input type="date" name="fechacorrectivo" id="fechacorrectivo" class="form-control" required>
