@@ -79,12 +79,14 @@ if ($conetar->connect_errno) {
                         <div class="col-md-12">
                             <label for="">Fecha de realización:</label>
                             <input type="date" name="fechamant" id="fechamant" class="form-control">
+                            <input type="hidden" name="tipomant" id="tipomant" value="">
+                            <input type="hidden" name="idmant" id="idmant" value="">
                         </div>
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Cerrar</button>
-                    <button type="button" class="btn btn-success btn-sm">Confirmar</button>
+                    <button type="button" class="btn btn-success btn-sm" onclick="confirmMant()">Confirmar</button>
                 </div>
             </div>
         </div>
@@ -156,6 +158,7 @@ if ($conetar->connect_errno) {
                     "data": null,
                     "render": function(data, type, full, meta) {
                         return '<button class="btn btn-success btn-sm" data-toggle="modal" data-target="#confirmMant"><i class="fa-solid fa-check" style="font-size:13px;"></i> &nbsp; Confirmar</button>'
+                        return '<button class="btn btn-success btn-sm"  onclick="cargarTipoMant(' + full.thefile + ',' + full.id + ')" data-toggle="modal" data-target="#confirmMant"><i class="fa-solid fa-check" style="font-size:13px;"></i> &nbsp; Confirmar</button>'
                     }
                 }
             ]
