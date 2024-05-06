@@ -7,10 +7,10 @@ $uppercaseruta = strtoupper($ruta);
 
 ?>
 
-<link rel="stylesheet" href="/cw3/conlabweb3.0/apps/consulcotizacion/assets/style.css">
+<link rel="stylesheet" href="https://conlabweb3.tierramontemariana.org/apps/consulcotizacion/assets/style.css">
 <style>
     .content-wrapper {
-        background-image: url('/cw3/conlabweb3.0/apps/medicos/assets/backcw3-v1.png');
+        background-image: url('https://conlabweb3.tierramontemariana.org/apps/medicos/assets/backcw3-v1.png');
         background-size: cover;
         background-repeat: no-repeat;
     }
@@ -118,7 +118,7 @@ $uppercaseruta = strtoupper($ruta);
                 </div>
                 <!-- Modal body -->
                 <div class="modal-body" id="modalshow" name="modalshow">
-                    <?php include("/cw3/conlabweb3.0/apps/consulcotizacion/modal.php") ?>
+                    <?php include("https://conlabweb3.tierramontemariana.org/apps/consulcotizacion/modal.php") ?>
                 </div>
                 <div class="row p-3" name="thebuttoms" id="thebuttoms">
 
@@ -142,7 +142,7 @@ $uppercaseruta = strtoupper($ruta);
 include('apps/thedata.php'); //scriops de control
 ?>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="/cw3/conlabweb3.0/apps/consulcotizacion/jsPDF/dist/jspdf.min.js"></script>
+<script src="https://conlabweb3.tierramontemariana.org/apps/consulcotizacion/jsPDF/dist/jspdf.min.js"></script>
 <script>
     var elemento = document.getElementById("modalshow");
 
@@ -153,8 +153,8 @@ include('apps/thedata.php'); //scriops de control
     }
     $(document).ready(function() {
 
-            $('#thetable').load('https://conlabweb3.tierramontemariana.org/apps/consulcotizacion/thedatatable.php');
 
+        $('#thetable').load('https://conlabweb3.tierramontemariana.org/apps/consulcotizacion/thedatatable.php');
 
 
 
