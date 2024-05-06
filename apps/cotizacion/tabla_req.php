@@ -1,8 +1,9 @@
 <link href="https://cdn.datatables.net/1.13.5/css/dataTables.bootstrap4.min.css" rel="stylesheet" />
+<p style="font-size: 14px;">Dale clic al botón 'Ver' para visualizar el detalle de la cotización.</p>
 <table class="table table-striped table-hover table-head-fixed text-nowrap table-sm table responsive table-cotizacion" style="margin-top: 2%;width:100%;">
     <thead>
         <tr>
-            <th></th>
+            <th style="text-align:center;">Ver</th>
             <th style="text-align:center;">No. Solicitud</th>
             <th style="width:auto;text-align:center;">Solicitante</th>
             <th style="text-align:center;">Fecha</th>
