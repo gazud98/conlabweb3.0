@@ -34,6 +34,12 @@ $uppercaseruta = strtoupper($ruta);
         background-size: cover;
         background-repeat: no-repeat;
     }
+
+
+    .table-responsive {
+        max-width: 100%;
+        overflow-x: auto;
+    }
 </style>
 
 <body class="hold-transition sidebar-mini">
@@ -117,33 +123,33 @@ $uppercaseruta = strtoupper($ruta);
                                                 <button class="btn btn-primary btn-block" style="width:auto;font-size:14px;" id="agregarColumnaBtn">Agregar
                                                     Materia Prima&nbsp;&nbsp;<i class="fa-solid fa-square-plus"></i></button>
 
-                                                <table id="tab_materia_prima" class="table table-striped table-bordered table-sm" style="width:100%;">
-                                                    <thead>
-                                                        <tr>
-                                                            <th class="text-center"><i class="fa-solid fa-user-check"></i>&nbsp;&nbsp;Seleccionar
-                                                            </th>
-                                                            <th style="width:55%;">Descripción</th>
-                                                            <th class="text-center">Valor</th>
-                                                            <th class="text-center">Acciones</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
 
-                                                        </tr>
-                                                    </tbody>
-                                                    <tfoot>
-                                                        <tr>
-                                                            <td>&nbsp;</td>
+                                                <div class="table-responsive">
+                                                    <table id="tab_materia_prima" class="table table-striped table-bordered table-sm">
+                                                        <thead>
+                                                            <tr>
+                                                                <th class="text-center"><i class="fa-solid fa-user-check"></i>&nbsp;&nbsp;Seleccionar</th>
+                                                                <th style="width:55%;">Descripción</th>
+                                                                <th class="text-center">Valor</th>
+                                                                <th class="text-center">Acciones</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <!-- Aquí irían tus filas de datos -->
+                                                        </tbody>
+                                                        <tfoot>
+                                                            <tr>
+                                                                <td>&nbsp;</td>
+                                                                <td>&nbsp;</td>
+                                                                <td style="font-size:16px; font-weight: bold;text-align: right;">
+                                                                    <input type="input" id="totalmateria" style="border:none;text-align:right;text-decoration:bold;" value="0" disabled title="Total de la materia prima seleccionada">
+                                                                </td>
+                                                                <td>&nbsp;</td>
+                                                            </tr>
+                                                        </tfoot>
+                                                    </table>
+                                                </div>
 
-                                                            <td>&nbsp;</td>
-                                                            <td style="font-size:16px; font-weight: bold;text-align: right;">
-                                                                <input type="input" id="totalmateria" style="border:none;text-align:right;text-decoration:bold;" value="0" disabled title="Total de la materia prima seleccionada">
-                                                            </td>
-                                                            <td>&nbsp;</td>
-                                                        </tr>
-                                                    </tfoot>
-                                                </table>
                                             </div>
                                         </div>
                                     </div>
@@ -167,53 +173,57 @@ $uppercaseruta = strtoupper($ruta);
                                                 <div id="collapseIndirectos" class="collapse show" aria-labelledby="headingIndirectos" data-parent="#accordionIndirectos">
                                                     <div class="card-body">
                                                         <button class="btn btn-primary btn-block" style="width:100px;font-size:14px;" id="agregarColumnaCostosBtn">Agregar&nbsp;&nbsp;<i class="fa-solid fa-square-plus"></i></button>
-                                                        <table id="tab_costos_indirectos" class="table table-striped table-bordered table-sm" style="width:100%;">
-                                                            <thead>
-                                                                <tr>
-                                                                    <th class="text-center"><i class="fa-solid fa-user-check"></i></th>
-                                                                    <th style="width:55%;">Motivo Costos</th>
-                                                                    <th class="text-center">Valor</th>
+                                                        <div class="table-responsive">
+                                                            <table id="tab_costos_indirectos" class="table table-striped table-bordered table-sm" style="width:100%;">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th class="text-center"><i class="fa-solid fa-user-check"></i></th>
+                                                                        <th style="width:55%;">Motivo Costos</th>
+                                                                        <th class="text-center">Valor</th>
 
-                                                                    <th class="text-center">Acciones</th>
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                                <tr>
+                                                                        <th class="text-center">Acciones</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
 
-                                                                </tr>
-                                                            </tbody>
-                                                            <tfoot>
-                                                                <tr>
+                                                                    </tr>
+                                                                </tbody>
+                                                                <tfoot>
+                                                                    <tr>
 
-                                                                    <td>&nbsp;</td>
-                                                                    <td>&nbsp;</td>
-                                                                    <td style="font-size:16px; font-weight: bold;text-align: right;">
-                                                                        <input type="input" id="total_costos_indirecto" style="border:none;text-align:right;text-decoration:bold;" value="0" disabled title="Total de los costos indirectos selecionados">
-                                                                    </td>
-                                                                    <td>&nbsp;</td>
-                                                                </tr>
-                                                            </tfoot>
-                                                        </table>
+                                                                        <td>&nbsp;</td>
+                                                                        <td>&nbsp;</td>
+                                                                        <td style="font-size:16px; font-weight: bold;text-align: right;">
+                                                                            <input type="input" id="total_costos_indirecto" style="border:none;text-align:right;text-decoration:bold;" value="0" disabled title="Total de los costos indirectos selecionados">
+                                                                        </td>
+                                                                        <td>&nbsp;</td>
+                                                                    </tr>
+                                                                </tfoot>
+                                                            </table>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-6">
-                                        <div class="accordion" id="accordionManoObra" style="display:none;">
-                                            <div class="card">
-                                                <div class="card-header d-flex" id="headingManoObra">
-                                                    <span class="float-left btn btn-link btn-block text-left">
-                                                        <i class="fa fa-sign-language"></i> &nbsp; Costos Mano De Obra
-                                                        Directa
-                                                    </span>
-                                                    <a class="float-right" href="#" data-toggle="collapse" data-target="#collapseManoObra" aria-expanded="false" aria-controls="collapseManoObra">
-                                                        <i class="fa fa-chevron-down"></i>
-                                                    </a>
-                                                </div>
-                                                <div id="collapseManoObra" class="collapse show" aria-labelledby="headingManoObra" data-parent="#accordionManoObra">
-                                                    <div class="card-body">
-                                                        <button class="btn btn-primary btn-block" style="width:100px;font-size:14px;" id="agregarColumnaManobraBtn">Agregar&nbsp;&nbsp;<i class="fa-solid fa-square-plus"></i></button>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="accordion" id="accordionManoObra" style="display:none;">
+                                        <div class="card">
+                                            <div class="card-header d-flex" id="headingManoObra">
+                                                <span class="float-left btn btn-link btn-block text-left">
+                                                    <i class="fa fa-sign-language"></i> &nbsp; Costos Mano De Obra
+                                                    Directa
+                                                </span>
+                                                <a class="float-right" href="#" data-toggle="collapse" data-target="#collapseManoObra" aria-expanded="false" aria-controls="collapseManoObra">
+                                                    <i class="fa fa-chevron-down"></i>
+                                                </a>
+                                            </div>
+                                            <div id="collapseManoObra" class="collapse show" aria-labelledby="headingManoObra" data-parent="#accordionManoObra">
+                                                <div class="card-body">
+                                                    <button class="btn btn-primary btn-block" style="width:100px;font-size:14px;" id="agregarColumnaManobraBtn">Agregar&nbsp;&nbsp;<i class="fa-solid fa-square-plus"></i></button>
+                                                    <div class="table-responsive">
                                                         <table id="tab_mano_obra" class="table table-striped table-bordered table-sm" style="width:100%;">
                                                             <thead>
                                                                 <tr>
@@ -253,114 +263,114 @@ $uppercaseruta = strtoupper($ruta);
                             </div>
                         </div>
                     </div>
+                </div>
 
 
-                    <!-- /.content -->
-                    <div class="modal fade show" id="modal-default" aria-modal="true" role="dialog">
-                        <div class="modal-dialog"></div>
-                    </div>
+                <!-- /.content -->
+                <div class="modal fade show" id="modal-default" aria-modal="true" role="dialog">
+                    <div class="modal-dialog"></div>
                 </div>
             </div>
+        </div>
 
+        <div class="col-lg-12 text-center">
+            <div class="btn-group" role="group" aria-label="Botones">
+                <button class="btn btn-primary btn-sm btn-ant" style="font-size:12px;background-color:green;border:none;display:none;width:auto;margin:auto;" onclick="anterior();">Anterior&nbsp;&nbsp;
+                    <i class="fa-solid fa-backward"></i>
+                </button>
+                <button class="btn btn-primary btn-sm btn-sig" style="font-size:12px;background-color:green;border:none;display:none;width:auto;margin:auto;" onclick="verificarSeleccion();">Siguiente&nbsp;&nbsp;
+                    <i class="fa-solid fa-forward"></i>
+                </button>
+                <button class="btn btn-primary btn-sm btn-confirmacion" style="font-size:12px;border:none;display:none;width:auto;margin:auto;" data-target="#modalcostos" data-toggle="modal">Confirmar Costeo&nbsp;&nbsp;
+                    <i class="fa-solid fa-circle-check"></i>
+                </button>
+
+            </div>
+        </div>
+        <div class="row mt-5">
             <div class="col-lg-12 text-center">
-                <div class="btn-group" role="group" aria-label="Botones">
-                    <button class="btn btn-primary btn-sm btn-ant" style="font-size:12px;background-color:green;border:none;display:none;width:auto;margin:auto;" onclick="anterior();">Anterior&nbsp;&nbsp;
-                        <i class="fa-solid fa-backward"></i>
-                    </button>
-                    <button class="btn btn-primary btn-sm btn-sig" style="font-size:12px;background-color:green;border:none;display:none;width:auto;margin:auto;" onclick="verificarSeleccion();">Siguiente&nbsp;&nbsp;
-                        <i class="fa-solid fa-forward"></i>
-                    </button>
-                    <button class="btn btn-primary btn-sm btn-confirmacion" style="font-size:12px;border:none;display:none;width:auto;margin:auto;" data-target="#modalcostos" data-toggle="modal">Confirmar Costeo&nbsp;&nbsp;
-                        <i class="fa-solid fa-circle-check"></i>
-                    </button>
-
+                <label style="font-size:14px;display:none;" id="costos-resultado">Ultimos costos generados.</label>
+                <div id="tabla-resultados" style="overflow-x: hidden; overflow-y: scroll; max-height: 250px; display: none;">
+                    <div class="row">
+                        <div class="col-md-3 col-lg-3">
+                            <label for="filtro">Fecha Inicio:</label>
+                            <input type="date" class="form-control" id="fecha1" name="fecha1" style="height: 29px;">
+                        </div>
+                        <div class="col-md-3 col-lg-3">
+                            <label for="filtro">Fecha Fin:</label>
+                            <input type="date" class="form-control" id="fecha2" name="fecha2" style="height: 29px;">
+                        </div>
+                        <div class="col-md-3 col-lg-3" style="margin-top:15px;">
+                            <button type="button" class="btn btn-primary btn-sm" value="Filtrar" id="button-fil">
+                                <i class="fa-solid fa-filter"></i> Filtrar Resultados
+                            </button>
+                        </div>
+                    </div>
+                    <div class="table-responsive">
+                        <table id="resultados_costos" class="table table-striped table-bordered table-sm" style="width: 100%;">
+                            <thead>
+                                <tr>
+                                    <th class="text-center">Examen</th>
+                                    <th class="text-center">Valor</th>
+                                    <th class="text-center">Valor Administrativo</th>
+                                    <th class="text-center">Fecha</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td colspan="4" class="text-center">No hay datos disponibles.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
-            </div>
-            <div class="row mt-5">
+
                 <div class="col-lg-12 text-center">
-                    <label style="font-size:14px;display:none;" id="costos-resultado">Ultimos costos generados.</label>
-                    <div id="tabla-resultados" style="overflow-x: hidden; overflow-y: scroll; max-height: 250px; display: none;">
-                        <div class="row">
-                            <div class="col-md-3 col-lg-3">
-                                <label for="filtro">Fecha Inicio:</label>
-                                <input type="date" class="form-control" id="fecha1" name="fecha1" style="height: 29px;">
-                            </div>
-                            <div class="col-md-3 col-lg-3">
-                                <label for="filtro">Fecha Fin:</label>
-                                <input type="date" class="form-control" id="fecha2" name="fecha2" style="height: 29px;">
-                            </div>
-                            <div class="col-md-3 col-lg-3" style="margin-top:15px;">
-                                <button type="button" class="btn btn-primary btn-sm" value="Filtrar" id="button-fil">
-                                    <i class="fa-solid fa-filter"></i> Filtrar Resultados
-                                </button>
-                            </div>
-                        </div>
-                        <div class="table-responsive">
-                            <table id="resultados_costos" class="table table-striped table-bordered table-sm" style="width: 100%;">
-                                <thead>
-                                    <tr>
-                                        <th class="text-center">Examen</th>
-                                        <th class="text-center">Valor</th>
-                                        <th class="text-center">Valor Administrativo</th>
-                                        <th class="text-center">Fecha</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td colspan="4" class="text-center">No hay datos disponibles.</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-12 text-center">
-                        <div class="btn-group" role="group" aria-label="Botones">
-                            <button class="btn btn-primary btn-sm" id="btn-excel" onclick="exportarExcel()" style="font-size:12px;border:none;display:none;width:auto;margin:auto;">Generar Excel&nbsp;&nbsp;<i class="fa-solid fa-file-excel" style="color:white"></i></button>
-                        </div>
+                    <div class="btn-group" role="group" aria-label="Botones">
+                        <button class="btn btn-primary btn-sm" id="btn-excel" onclick="exportarExcel()" style="font-size:12px;border:none;display:none;width:auto;margin:auto;">Generar Excel&nbsp;&nbsp;<i class="fa-solid fa-file-excel" style="color:white"></i></button>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <!-- /.content-wrapper -->
-            <div id="editmodal" class="modal fade show" aria-modal="true" role="dialog">
+        <!-- /.content-wrapper -->
+        <div id="editmodal" class="modal fade show" aria-modal="true" role="dialog">
 
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <form id="formeditar" action="#" method="POST">
-                            <div class="modal-header">
-                                <h4 class="modal-title">Editar Costo</h4>
-                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                            </div>
-                            <div class="modal-body" id="modalshow">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <form id="formeditar" action="#" method="POST">
+                        <div class="modal-header">
+                            <h4 class="modal-title">Editar Costo</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        </div>
+                        <div class="modal-body" id="modalshow">
 
-                            </div>
-                            <input type="hidden" name="modeeditstatus" id="modeeditstatus" value="E">
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-danger" data-dismiss="modal" value="Cancelar">Cancelar</button>
-                                <button type="submit" class="btn btn-success" data-dismiss="modal" onclick="editar()" value="Aceptar">Aceptar</button>
-                            </div>
-                    </div>
+                        </div>
+                        <input type="hidden" name="modeeditstatus" id="modeeditstatus" value="E">
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal" value="Cancelar">Cancelar</button>
+                            <button type="submit" class="btn btn-success" data-dismiss="modal" onclick="editar()" value="Aceptar">Aceptar</button>
+                        </div>
                 </div>
             </div>
-            <div id="editmodalmateria" class="modal fade show" aria-modal="true" role="dialog">
+        </div>
+        <div id="editmodalmateria" class="modal fade show" aria-modal="true" role="dialog">
 
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <form id="formeditar" action="#" method="POST">
-                            <div class="modal-header">
-                                <h4 class="modal-title">Editar Materia Prima</h4>
-                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                            </div>
-                            <div class="modal-body" id="modalshowmateria">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <form id="formeditar" action="#" method="POST">
+                        <div class="modal-header">
+                            <h4 class="modal-title">Editar Materia Prima</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        </div>
+                        <div class="modal-body" id="modalshowmateria">
 
-                            </div>
-                            <input type="hidden" name="modeeditstatus" id="modeeditstatus" value="E">
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-danger" data-dismiss="modal" value="Cancelar">Cancelar</button>
-                                <button type="submit" class="btn btn-success" data-dismiss="modal" onclick="editarmateria()" value="Aceptar">Aceptar</button>
-                            </div>
-                    </div>
+                        </div>
+                        <input type="hidden" name="modeeditstatus" id="modeeditstatus" value="E">
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal" value="Cancelar">Cancelar</button>
+                            <button type="submit" class="btn btn-success" data-dismiss="modal" onclick="editarmateria()" value="Aceptar">Aceptar</button>
+                        </div>
                 </div>
             </div>
 
