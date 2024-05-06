@@ -36,7 +36,7 @@ if ($conetar->connect_errno) {
     $cantrgt = $filaP2['cantidad'];;
 ?>
 
-    <link rel="stylesheet" href="/cw3/conlabweb3.0/apps/mantenimientos/assets/style.css">
+    <link rel="stylesheet" href="https://conlabweb3.tierramontemariana.org/apps/mantenimientos/assets/style.css">
 
     <style>
         #thetable::-webkit-scrollbar {
