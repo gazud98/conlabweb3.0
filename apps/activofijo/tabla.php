@@ -10,6 +10,7 @@
         border-radius: 10px;
         font-size: 14px;
         text-align: center;
+        padding: 2px;
     }
 
     table.table tr td {
