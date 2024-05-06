@@ -81,7 +81,7 @@ if ($conetar->connect_errno) {
         </div>
     </div>
     </div>
-    <div style="overflow-y: auto; max-height: 300px;">
+    <div style="overflow-y: auto;  height:400px; width:100%;">
         <table class="table-sm table-bordered" id="result" style="margin-top: 2%;width:100%;">
             <thead>
                 <tr style="text-align:center;">
