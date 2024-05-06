@@ -2,13 +2,13 @@
 //SI POSEE CONSUKTA
 
 if (file_exists("config/accesosystems.php")) {
-    include ("config/accesosystems.php");
+    include("config/accesosystems.php");
 } else {
     if (file_exists("../config/accesosystems.php")) {
-        include ("../config/accesosystems.php");
+        include("../config/accesosystems.php");
     } else {
         if (file_exists("../../config/accesosystems.php")) {
-            include ("../../config/accesosystems.php");
+            include("../../config/accesosystems.php");
         }
     }
 }
@@ -17,7 +17,7 @@ $conetar = new mysqli(hostname, db_login, db_pass, cw3ctrlsrv);
 if ($conetar->connect_errno) {
     $error = "Fallo al conectar a MySQL: (" . $conetar->connect_errno . ") " . $conetar->connect_error;
 } else {
-    ?>
+?>
     <link href="https://cdn.datatables.net/1.13.5/css/dataTables.bootstrap4.min.css" rel="stylesheet" />
     <div class="row" id="dt">
         <div class="col-md-3 col-lg-2">
@@ -67,10 +67,9 @@ if ($conetar->connect_errno) {
     </div>
 
 
+
     <div class="id_tabla">
-        <table class="table table-striped table-hover table-head-fixed table responsive  text-nowrap table-sm table-tb"
-            id="tb" style="width:100%;" data-toggle="tooltip" data-placement="top"
-            title="Los resultados relacionados aparecerán en la tabla.">
+        <table class="table table-striped table-hover table-head-fixed table responsive  text-nowrap table-sm table-tb" id="tb" style="width:100%;" data-toggle="tooltip" data-placement="top" title="Los resultados relacionados aparecerán en la tabla.">
             <thead>
                 <tr>
                     <th style="text-align: center;width:10%;">No. Solicitud</th>
@@ -123,7 +122,7 @@ if ($conetar->connect_errno) {
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script>
-        $(document).ready(function () {
+        $(document).ready(function() {
             miDataTable = $('#tb').DataTable({
                 language: {
                     url: 'https://cdn.datatables.net/plug-ins/1.11.5/i18n/es-ES.json',
@@ -138,11 +137,11 @@ if ($conetar->connect_errno) {
                 "processing": true,
 
                 "ajax": {
-                    url: 'https://conlabweb3.tierramontemariana.org/apps/listasolicitud/search.php', // URL de tu archivo PHP que devuelve los datos
+                    url: '/cw3/conlabweb3.0/apps/listasolicitud/search.php', // URL de tu archivo PHP que devuelve los datos
                     type: 'GET', // Método HTTP utilizado para la solicitud
                     dataType: 'json', // Tipo de datos esperado en la respuesta
                     dataSrc: '', // Indicar que los datos provienen directamente del objeto JSON (sin propiedad adicional)
-                    data: function (d) {
+                    data: function(d) {
                         d.nosolicitud = $('#nosolicitud').val();
                         d.id_producto2 = $('#id_producto2').val();
                         d.id_departamento = $('#id_departamento').val();
@@ -152,8 +151,7 @@ if ($conetar->connect_errno) {
                         d.estado = $('#estado').val();
                     },
                 },
-                "columns": [
-                    {
+                "columns": [{
                         "data": "id"
                     },
                     {
@@ -169,16 +167,16 @@ if ($conetar->connect_errno) {
                         "data": "estados"
                     }, {
                         "data": null,
-                        "render": function (data, type, full, meta) {
+                        "render": function(data, type, full, meta) {
                             return '<a href="#"  data-toggle="modal" data-target="#verord"  id="btnsol"  onclick="formato(' + full.id + ');" > <i class="fa-solid fa-eye" style="font-size:18px;"></i></a>';
                         }
                     }
                 ]
             });
-            $('#button-fil').click(function () {
+            $('#button-fil').click(function() {
                 miDataTable.ajax.reload(); // Recarga los datos de la tabla con los nuevos parámetros
             });
-            $('#id_producto2').keyup(function () {
+            $('#id_producto2').keyup(function() {
                 miDataTable.ajax.reload(); // Recarga los datos de la tabla con los nuevos parámetros
             });
             $('#id_sede').select2({
@@ -212,15 +210,15 @@ if ($conetar->connect_errno) {
 
 
             $.ajax({
-                url: 'https://conlabweb3.tierramontemariana.org/apps/listasolicitud/search.php',
+                url: '/cw3/conlabweb3.0/apps/listasolicitud/search.php',
                 type: 'GET',
                 dataType: 'json',
-                success: function (data) {
+                success: function(data) {
 
                     // Limpiar el DataTable y cargar los nuevos datos
                     miDataTable.clear().rows.add(data).draw();
                 },
-                error: function (xhr, status, error) {
+                error: function(xhr, status, error) {
                     // Manejar errores si es necesario
                     console.error('Error al obtener datos:', status, error);
                 }
@@ -235,7 +233,7 @@ if ($conetar->connect_errno) {
 
 
         function formato(id) {
-            $("#modalshow").load("https://conlabweb3.tierramontemariana.org/apps/listasolicitud/modal.php", {
+            $("#modalshow").load("/cw3/conlabweb3.0/apps/listasolicitud/modal.php", {
                 id: id
             });
 
@@ -264,8 +262,8 @@ if ($conetar->connect_errno) {
         }
 
 
-        $(document).ready(function () {
-            $('#btnprint').click(function () {
+        $(document).ready(function() {
+            $('#btnprint').click(function() {
                 const contentDiv = document.getElementById('modalshow');
                 printAreaDiv2(contentDiv);
             })
@@ -282,7 +280,6 @@ if ($conetar->connect_errno) {
             document.body.removeChild(printContents);
 
         }
-
     </script>
 
 <?php } ?>

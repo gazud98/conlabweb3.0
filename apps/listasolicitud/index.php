@@ -13,7 +13,7 @@ $uppercaseruta = strtoupper($ruta);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
 
-    <link rel="stylesheet" href="https://conlabweb3.tierramontemariana.org/apps/sedes/assets/style.css">
+    <link rel="stylesheet" href="/cw3/conlabweb3.0/apps/sedes/assets/style.css">
 </head>
 <style>
     .content-wrapper {
@@ -24,7 +24,7 @@ $uppercaseruta = strtoupper($ruta);
 </style>
 
 <body>
-    <link rel="stylesheet" href="https://conlabweb3.tierramontemariana.org/apps/listasolicitud/assets/style.css">
+    <link rel="stylesheet" href="/cw3/conlabweb3.0/apps/listasolicitud/assets/style.css">
     <div class="card" style="width:85%;margin:auto;">
 
         <div class="card-header bg-light ">
@@ -47,7 +47,7 @@ $uppercaseruta = strtoupper($ruta);
         <div class="card-body">
             <div class="row mt-3">
                 <div class="col-md-12" id="thetable">
-                 
+
                 </div>
             </div>
         </div>
@@ -59,14 +59,13 @@ $uppercaseruta = strtoupper($ruta);
     <script src="https://kit.fontawesome.com/6dc75479dc.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-    <script src="https://conlabweb3.tierramontemariana.org/apps/listasolicitud/assets/index.js"></script>
+    <script src="/cw3/conlabweb3.0/apps/listasolicitud/assets/index.js"></script>
     <script>
+        $(document).ready(function() {
 
-        $(document).ready(function () {
 
-
-            $(document).ready(function () {
-                $('#thetable').load('https://conlabweb3.tierramontemariana.org/apps/listasolicitud/table_view.php');
+            $(document).ready(function() {
+                $('#thetable').load('/cw3/conlabweb3.0/apps/listasolicitud/table_view.php');
             });
 
 
