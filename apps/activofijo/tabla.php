@@ -228,7 +228,7 @@
     }
 
     function loadHistorial(id) {
-        $('#tableHistorial').load('/cw3/conlabweb3.0/apps/activofijo/historial.php', {
+        $('#tableHistorial').load('https://conlabweb3.tierramontemariana.org/apps/activofijo/historial.php', {
             id: id
         });
     }
