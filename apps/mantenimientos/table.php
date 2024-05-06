@@ -37,6 +37,13 @@ if ($conetar->connect_errno) {
 
 
     <style>
+        .table-bordes-d {
+            border: 1px solid #d2d2d2;
+            border-radius: 10px;
+            font-size: 14px;
+            text-align: center;
+        }
+
         table.table tr td {
             border-top: 1px solid #d2d2d2;
             padding: 2px !important;
