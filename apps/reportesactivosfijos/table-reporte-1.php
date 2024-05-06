@@ -20,11 +20,23 @@ if ($conetar->connect_errno) {
 
 ?>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
     <link href="https://cdn.datatables.net/1.13.5/css/dataTables.bootstrap4.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.5.0/css/responsive.dataTables.min.css">
 
     <style>
+        .table-bordes-d {
+            border: 1px solid #d2d2d2;
+            border-radius: 10px;
+            font-size: 14px;
+            text-align: center;
+            padding: 2px;
+        }
+
+        table.table tr td {
+            border-top: 1px solid #d2d2d2;
+            padding: 2px !important;
+        }
+
         .dt-buttons .dt-button {
             border: none !important;
             background: #17AB00 !important;
@@ -36,10 +48,7 @@ if ($conetar->connect_errno) {
 
     </div>
 
-    <table class="table table-striped table-list-reporte" style="
-                    font-size: 16px;
-                    text-align: center;
-                " id="tableReporte">
+    <table class="table table-borderless table-hover table-list-reporte table-bordes-d" id="tableReporte">
         <thead>
             <tr>
                 <th style="width: 55%;text-align:center;">Nombre</th>
@@ -59,7 +68,7 @@ if ($conetar->connect_errno) {
         </tfoot>
     </table>
 
-   
+
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.dataTables.min.css">
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.min.js"></script>
     <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
@@ -98,13 +107,13 @@ if ($conetar->connect_errno) {
                         title: 'Reporte de de activos fijos',
                         customize: function(doc) {
                             for (var row = 0; row < doc.content[1].table.headerRows; row++) {
-                        var header = doc.content[1].table.body[row];
-                        for (var col = 0; col < header.length; col++) {
-                            header[col].fillColor = 'white';
-                            header[col].color = 'black';
+                                var header = doc.content[1].table.body[row];
+                                for (var col = 0; col < header.length; col++) {
+                                    header[col].fillColor = 'white';
+                                    header[col].color = 'black';
+                                }
                             }
-                        }
-                        doc.content[1].layout = "borders";
+                            doc.content[1].layout = "borders";
                             doc.content.splice(1, 0, {
                                 margin: [0, -38, 0, 15],
                                 alignment: 'left',
@@ -169,8 +178,8 @@ if ($conetar->connect_errno) {
                     {
                         "data": null,
                         "render": function(data, type, full, meta) {
-                           
-                            return '<a href="#" onclick="loadModalView('+full.id+')" data-toggle="modal" data-target="#modalViewActivoFijo"><i class="fa-solid fa-eye" style="font-size:15px !important;"></i></a>';
+
+                            return '<a href="#" onclick="loadModalView(' + full.id + ')" data-toggle="modal" data-target="#modalViewActivoFijo"><i class="fa-solid fa-eye" style="font-size:15px !important;"></i></a>';
 
                         }
                     },
@@ -186,7 +195,6 @@ if ($conetar->connect_errno) {
                 id: id
             });
         }
-
     </script>
 
 <?php

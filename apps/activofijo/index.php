@@ -26,6 +26,14 @@ $moduraiz = $_SESSION['moduraiz'];
         margin-left: -280px;
     }
 
+    .card-title-rezise {
+        width: 100%;
+        color: #164085;
+        text-align: center;
+        position: relative;
+        margin-top: 9px;
+    }
+
     @media only screen and(max-width: 700px) {
         #modalContent {
             width: 100%;
@@ -51,10 +59,10 @@ $moduraiz = $_SESSION['moduraiz'];
                     </nav>
                 </div>
                 <div class="col-md-4 col-lg-4">
-                    <h5 style="text-align: center; color: #0045A5;"><strong>Listado Activos Fijos</strong></h5>
+                    <h5 class="card-title card-title-rezise"><strong>Creación de Mantenimientos</strong></h5>
                 </div>
                 <div class="col-md-4 col-lg-4">
-                    <button title="Al dar click en este botón, se abre un formulario para crear un nuevo activo." id="nuevoActivo" onclick="loadTextFields()" style="float: right;background-color:rgb(0,69,165);font-size:11px;" type="button" class="btn btn-primary btn-sm nuevo-activo" data-toggle="modal" data-target="#modalAddActivoFijo">
+                    <button title="Al dar click en este botón, se abre un formulario para crear un nuevo activo." id="nuevoActivo" onclick="loadTextFields()" style="float: right;background-color:rgb(0,69,165);font-size:14px;" type="button" class="btn btn-primary btn-sm nuevo-activo" data-toggle="modal" data-target="#modalAddActivoFijo">
                         <i class="fas fa-plus"></i>&nbsp;&nbsp;Nuevo Activo Fijo
                     </button>
                 </div>
@@ -66,11 +74,6 @@ $moduraiz = $_SESSION['moduraiz'];
             <div class="content-table">
 
             </div>
-
-        </div>
-
-
-        <div class="card-footer bg-light">
 
         </div>
 
@@ -195,11 +198,7 @@ $moduraiz = $_SESSION['moduraiz'];
             });
         }
 
-        function loadHistorial(id) {
-            $('#tableHistorial').load('https://conlabweb3.tierramontemariana.org/apps/activofijo/historial.php', {
-                id: id
-            });
-        }
+        
     </script>
 </body>
 

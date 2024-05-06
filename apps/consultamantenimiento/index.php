@@ -35,87 +35,26 @@ if ($conetar->connect_errno) {
     //echo ".................".$sctrl4."-----------";
 ?>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/assets/bootstrap-multiselect.css">
     <link rel="stylesheet" href="https://conlabweb3.tierramontemariana.org/apps/consultamantenimiento/assets/style.css">
-    
+
     <style>
-        .breadcrumbs {
-            border: 1px solid #cbd2d9;
-            border-radius: 0.3rem;
-            display: inline-flex;
-            overflow: hidden;
-        }
-
-        .breadcrumbs__item {
-            background: #fff;
-            color: #333;
-            outline: none;
-            padding: 0.55em 0.55em 0.55em 1.15em;
-            position: relative;
-            text-decoration: none;
-            transition: background 0.2s linear;
-            font-size: 13px;
-        }
-
-        .breadcrumbs__item:hover:after,
-        .breadcrumbs__item:hover {
-            background: #edf1f5;
-        }
-
-        .breadcrumbs__item:focus:after,
-        .breadcrumbs__item:focus,
-        .breadcrumbs__item.is-active:focus {
-            background: #0045A5;
-            color: #fff;
-        }
-
-        .breadcrumbs__item:after,
-        .breadcrumbs__item:before {
-            background: white;
-            bottom: 0;
-            clip-path: polygon(50% 50%, -50% -50%, 0 100%);
-            content: "";
-            left: 100%;
-            position: absolute;
-            top: 0;
-            transition: background 0.2s linear;
-            width: 1em;
-            z-index: 1;
-        }
-
-        .breadcrumbs__item:before {
-            background: #cbd2d9;
-            margin-left: 1px;
-        }
-
-        .breadcrumbs__item:last-child {
-            border-right: none;
-        }
-
-        .breadcrumbs__item.is-active {
-            background: #edf1f5;
-        }
-
-        .page-item .page-link {
-            position: relative;
-            display: block;
-            padding: 0.2rem 0.2rem;
-            margin-left: 0;
-            line-height: 1.25;
-            background-color: #fff;
-            border: 1px solid #dee2e6;
+        * {
             font-size: 14px;
         }
 
-        .page-item.active .page-link {
-            z-index: 3;
-            color: #fff;
-            background-color: #0045A5;
-            border-color: #0045A5;
+        .form-control {
+            font-size: 14px;
         }
-        
+
+        .card-title-rezise {
+            width: 100%;
+            color: #164085;
+            text-align: center;
+            position: relative;
+            margin-top: 9px;
+        }
+
     </style>
 
     <div class="card border-light">
@@ -129,7 +68,7 @@ if ($conetar->connect_errno) {
                     </nav>
                 </div>
                 <div class="col-md-4 col-lg-4">
-                    <h5 style="text-align: center; color: #0045A5;"><strong style="font-size:18px !important;">Consultar Mantenimientos</strong></h5>
+                    <h5 class="card-title card-title-rezise"><strong>Creación de Mantenimientos</strong></h5>
                 </div>
                 <div class="col-md-4 col-lg-4">
                 </div>
@@ -255,9 +194,9 @@ if ($conetar->connect_errno) {
             </div>
         </div>
 
-      
+
     </div>
-    
+
     <div class="modal fade" id="event">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -298,7 +237,7 @@ if ($conetar->connect_errno) {
             </div>
         </div>
     </div>
-    
+
     <!-- Modal Reprogramar -->
     <div class="modal fade" id="modalReprogramar" tabindex="-1" aria-labelledby="modalReprogramarLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -309,7 +248,7 @@ if ($conetar->connect_errno) {
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form  action="" id="formEditDatosBasicos" name="formEditDatosBasicos" method="POST" enctype="multipart/form-data">
+                <form action="" id="formEditDatosBasicos" name="formEditDatosBasicos" method="POST" enctype="multipart/form-data">
                     <div class="modal-body" id="contentModalRep">
 
                     </div>
@@ -317,7 +256,7 @@ if ($conetar->connect_errno) {
             </div>
         </div>
     </div>
-    
+
     <!-- Modal add motivo -->
     <div class="modal fade" id="modalAddMotivo" tabindex="-1" aria-labelledby="modalAddMotivoLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -361,7 +300,7 @@ if ($conetar->connect_errno) {
 
     <script>
         $(document).ready(function() {
-            
+
             $('.sel-1').multiselect();
 
             $("#datepicker").datepicker({
@@ -388,11 +327,11 @@ if ($conetar->connect_errno) {
         $('#tipman').change(function() {
             $aux = $('#tipman').val();
             if ($aux == '1') {
-                $("#thetable").load("<?php echo base_url . 'apps/' . $p . '/thedatatable-c.php'; ?>");
+                $("#thetable").load("https://conlabweb3.tierramontemariana.org/apps/consultamantenimiento/thedatatable-c.php");
             } else if ($aux == '2') {
-                $("#thetable").load("<?php echo base_url . 'apps/' . $p . '/thedatatable-p.php'; ?>");
+                $("#thetable").load("https://conlabweb3.tierramontemariana.org/apps/consultamantenimiento/thedatatable-p.php");
             } else if ($aux == '3') {
-                $("#thetable").load("<?php echo base_url . 'apps/' . $p . '/all-1.php'; ?>");
+                $("#thetable").load("https://conlabweb3.tierramontemariana.org/apps/consultamantenimiento/all-1.php");
             }
         })
 
@@ -427,7 +366,7 @@ if ($conetar->connect_errno) {
 
         });
 
-      
+
         function sendResultado() {
             //data = $('#formresultadoc').serialize();
 
@@ -508,7 +447,7 @@ if ($conetar->connect_errno) {
                 }
             });
         }
-        
+
         function setMotivo() {
             $.ajax({
                 type: 'POST',
@@ -526,7 +465,6 @@ if ($conetar->connect_errno) {
                 }
             });
         }
-        
     </script>
 <?php
 }

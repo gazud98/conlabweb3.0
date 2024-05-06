@@ -40,47 +40,36 @@ if ($conetar->connect_errno) {
 ?>
 
     <style>
-        .table-correctivo {
-            border: none;
-        }
-
-        .table-correctivo tr th {
-            color: #0F6495;
+        .table-bordes-d {
+            border: 1px solid #d2d2d2;
+            border-radius: 10px;
+            font-size: 14px;
             text-align: center;
-            margin-bottom: 10px !important;
-            background-color: rgb(0,69,165);
-            color: #C6CFD5;
         }
 
-        .table-correctivo tr td {
-            text-align: left;
-            border: 1px solid #C6CFD5 !important;
+        table.table tr td {
+            border-top: 1px solid #d2d2d2;
+            padding: 5px !important;
         }
         .dt-buttons .buttons-print{
             border: none !important;
             background:#17AB00 !important;
             color:#fff !important;
+            padding: 5px;
+            border-radius: 5px;
         }
+
     </style>
 
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.5/css/jquery.dataTables.min.css">
-    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.4.1/css/buttons.dataTables.min.css">
-    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.4.1/css/responsive.bootstrap.min.css">
-
-    <table class="table-correctivo" style="
-                    font-size: 15px;
-                    text-align: center;
-                    margin-top: 150px;
-                    width:100%;
-                " id="tablecorrectivo">
+    <table class="table table-borderless table-hover table-bordes-d table-correctivo" id="tablecorrectivo">
         <thead>
             <tr>
-                <th>Equipo</th>
-                <th>Daño</th>
-                <th>Fecha del correctivo</th>
-                <th>Sede</th>
-                <th>Estado</th>
-                <th></th>
+                <th style="text-align: center;">Equipo</th>
+                <th style="text-align: center;">Daño</th>
+                <th style="text-align: center;">Fecha del correctivo</th>
+                <th style="text-align: center;">Sede</th>
+                <th style="text-align: center;">Estado</th>
+                <th style="text-align: center;"></th>
                 <!--<th>Acciones</th>-->
             </tr>
         </thead>
@@ -116,7 +105,7 @@ if ($conetar->connect_errno) {
                 ],
                 "paging": true,
                 "lengthChange": true,
-                "searching": true,
+                "searching": false,
                 "ordering": true,
                 "info": true,
                 "autoWidth": false,

@@ -6,29 +6,29 @@
     }
 </style><?php
 
-if (file_exists("config/accesosystems.php")) {
-    include("config/accesosystems.php");
-} else {
-    if (file_exists("../config/accesosystems.php")) {
-        include("../config/accesosystems.php");
-    } else {
-        if (file_exists("../../config/accesosystems.php")) {
-            include("../../config/accesosystems.php");
+        if (file_exists("config/accesosystems.php")) {
+            include("config/accesosystems.php");
+        } else {
+            if (file_exists("../config/accesosystems.php")) {
+                include("../config/accesosystems.php");
+            } else {
+                if (file_exists("../../config/accesosystems.php")) {
+                    include("../../config/accesosystems.php");
+                }
+            }
         }
-    }
-}
 
-$conetar = new mysqli(hostname, db_login, db_pass, cw3ctrlsrv);
-if ($conetar->connect_errno) {
-    $error = "Fallo al conectar a MySQL: (" . $conetar->connect_errno . ") " . $conetar->connect_error;
-    echo $error;
-} else {
-    $nmbapp = "Reportes Activos Fijos";
-    $moduraiz = $_SESSION['moduraiz'];
-    $ruta = "<a href='#'>Home</a> / " . $moduraiz;
-    $uppercaseruta = strtoupper($ruta);
-}
-?>
+        $conetar = new mysqli(hostname, db_login, db_pass, cw3ctrlsrv);
+        if ($conetar->connect_errno) {
+            $error = "Fallo al conectar a MySQL: (" . $conetar->connect_errno . ") " . $conetar->connect_error;
+            echo $error;
+        } else {
+            $nmbapp = "Reportes Activos Fijos";
+            $moduraiz = $_SESSION['moduraiz'];
+            $ruta = "<a href='#'>Home</a> / " . $moduraiz;
+            $uppercaseruta = strtoupper($ruta);
+        }
+        ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -40,12 +40,20 @@ if ($conetar->connect_errno) {
     <link rel="stylesheet" href="https://conlabweb3.tierramontemariana.org/apps/reportesactivosfijos/assets/style.css">
 </head>
 <style>
+    .card-title-rezise {
+        width: 100%;
+        color: #164085;
+        text-align: center;
+        position: relative;
+        margin-top: 9px;
+    }
     .content-wrapper {
         background-image: url('https://conlabweb3.tierramontemariana.org/apps/medicos/assets/backcw3-v1.png');
         background-size: cover;
         background-repeat: no-repeat;
     }
 </style>
+
 <body>
     <div class="card" style="width:85%;margin:auto;">
 
@@ -66,7 +74,7 @@ if ($conetar->connect_errno) {
                 </div>
 
                 <div class="col-md-4 text-center">
-                    <h5 style="text-align: center; color: #0045A5;"><strong>Reportes Activos Fijos</strong></h5>
+                    <h5 class="card-title card-title-rezise"><strong>Creación de Mantenimientos</strong></h5>
                 </div>
 
             </div>

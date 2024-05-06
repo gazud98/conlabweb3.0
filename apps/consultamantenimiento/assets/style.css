@@ -1,6 +1,3 @@
-*{
-    font-size: 13px;
-}
 .content-table {
     width: 100%;
     height: auto;
@@ -15,6 +12,13 @@
     height: 580px;
     border: 1px solid #E3E3E3;
     height: auto;
+}
+
+.table-bordes-d {
+    border: 1px solid #d2d2d2;
+    border-radius: 10px;
+    font-size: 14px;
+    text-align: center;
 }
 
 .table-title .table-sedes {
@@ -64,7 +68,6 @@
 table.table tr th,
 table.table tr td {
     vertical-align: middle;
-    border: 1px solid #DCDCDC;
     word-wrap: break-word;
     padding: 2px;
     text-align: center;
@@ -266,14 +269,26 @@ table.table .avatar {
 .dataTables_info {
     font-size: 14px;
 }
-div.dataTables_wrapper div.dataTables_length label {
-    font-size: 14px;  
-}
-@media screen and(min-width: 500px) {
 
-    .table-proveedor {
+.modal-lg{
+    width: 1200px;
+    margin-left: -275px;
+}
+
+@media only screen and (max-width: 800px){
+
+    .modal-lg{
         width: 100%;
-        font-size: 13px;
+        margin-left: 0px;
+    }
+
+}
+
+@media only screen and (max-width: 700px){
+
+    .modal-lg{
+        width: 100%;
+        margin-left: 0px;
     }
 
 }
