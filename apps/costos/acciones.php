@@ -35,7 +35,8 @@ if ($conetar->connect_errno) {
             $totalcostos = $_REQUEST['totalcostos'];
 
 
-            $cadena = "update u116753122_cw3completa.costo_indirecto set motivo_costo='" . $motivo . "', valor=" . $valor . ", costo_examen=" . $totalcostos . " where id =" . $id;
+            $cadena = "update u116753122_cw3completa.costo_indirecto set motivo_costo='" . $motivo . "', valor=" . $valor . " where id =" . $id;
+            
             $resultado = mysqli_query($conetar, $cadena);
         } else if ($pant == 'MO') {
 

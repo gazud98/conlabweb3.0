@@ -1,12 +1,12 @@
 <?php
 if (file_exists("config/accesosystems.php")) {
-    include ("config/accesosystems.php");
+    include("config/accesosystems.php");
 } else {
     if (file_exists("../config/accesosystems.php")) {
-        include ("../config/accesosystems.php");
+        include("../config/accesosystems.php");
     } else {
         if (file_exists("../../config/accesosystems.php")) {
-            include ("../../config/accesosystems.php");
+            include("../../config/accesosystems.php");
         }
     }
 }
@@ -16,7 +16,7 @@ if ($conetar->connect_errno) {
     echo $error;
 } else {
 
-    if (isset ($_REQUEST['iduser'])) {
+    if (isset($_REQUEST['iduser'])) {
         $iduser = $_REQUEST['iduser'];
 
         if ($iduser == "-1") {
@@ -30,25 +30,24 @@ if ($conetar->connect_errno) {
 
     date_default_timezone_set('America/Bogota');
     $fechaActual = date('d-m-Y');
-    ?>
-
+?>
+  
 
     <form name="formcontrol" id="formcontrol" action="" method="POST" enctype="multipart/form-data">
         <input type="hidden" name="status" id="status" value="X">
         <input type="hidden" id="id_users" name="id_users" value="<?php echo $iduser ?>">
 
         <div class="form-group">
+            <p style="font-size:14px;">Por favor, elige los parámetros para agregar los elementos a la tabla. Después de seleccionar los elementos, haz clic en el botón "Confirmar" para crear la solicitud.</p>
             <div class="row">
                 <div class="col-md-4 col-sm-4">
                     <label>Producto<span style="color: red;">*</span></label>
-
-                    <select class="select2" name="id_producto" id="id_producto" style="width: 100%;font-size:13px;"
-                        onchange="seleccionar(this)">
+                    <select class="select2" name="id_producto" id="id_producto" style="width: 100%;" onchange="seleccionar(this)">
                         <option selected="true" disabled="disabled" required value=""> </option>
                         <?php
                         $cadena = "SELECT a.id_producto, a.nombre,a.cantidad_presentacion
-                                                    FROM u116753122_cw3completa.producto a
-                                                    where a.estado='1' and a.id_categoria_producto in (3,5)  ORDER BY a.nombre ASC";
+                FROM u116753122_cw3completa.producto a
+                where a.estado='1' and a.id_categoria_producto in (3,5)  ORDER BY a.nombre ASC";
                         $resultadP2a = $conetar->query($cadena);
                         $numerfiles2a = mysqli_num_rows($resultadP2a);
                         if ($numerfiles2a >= 1) {
@@ -64,7 +63,7 @@ if ($conetar->connect_errno) {
                 <div class="col-md-4 col-sm-4">
                     <label>Departamento<span style="color: red;">*</span></label>
 
-                    <select class="select2" name="id_departamento" id="id_departamento" style="width: 100%;font-size:13px;">
+                    <select class="select2" name="id_departamento" id="id_departamento" style="width: 100%;font-size:11px;">
                         <option value=""></option>
                         <?php
                         $cadena = "SELECT id, nombre
@@ -131,14 +130,11 @@ if ($conetar->connect_errno) {
                 </div>
                 <div class="col-md-2 col-sm-2">
                     <label style="font-size: 14px;">Fecha Vencimiento</label>
-                    <input type="input" class="form-control" name="fecha" id="fecha" value="" readonly
-                        style="height: 45%!important">
+                    <input type="input" class="form-control" name="fecha" id="fecha" value="" readonly style="height: 45%!important">
                 </div>
                 <div class="col-md-2 col-sm-2 pt-3">
-                    <button type="submit" value="Enviar" class="btn btn-outline-primary" id="envio"><i
-                            class="fa-solid fa-plus"></i>&nbsp;&nbsp;Agregar</button>
-                    <button type="button" class="btn btn-outline-primary" id="limpiar"><i
-                            class="fa-solid fa-eraser"></i>&nbsp;&nbsp;Limpiar</button>
+                    <button type="submit" value="Enviar" class="btn btn-outline-primary" id="envio"><i class="fa-solid fa-plus"></i>&nbsp;&nbsp;Agregar</button>
+                    <button type="button" class="btn btn-outline-primary" id="limpiar"><i class="fa-solid fa-eraser"></i>&nbsp;&nbsp;Limpiar</button>
 
                 </div>
             </div>

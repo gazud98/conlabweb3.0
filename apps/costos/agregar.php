@@ -36,6 +36,7 @@ if ($conetar->connect_errno) {
 
         $cadena = "insert into u116753122_cw3completa.materia_prima(descripcion,valor,id_examen)values('" . $desc .
             "','" . $valore . "','" . $examen . "')";
+           
         $resultado = mysqli_query($conetar, $cadena);
     } else if ($status == 'C') {
         $valorcosto = $_REQUEST['valorcosto'];

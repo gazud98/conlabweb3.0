@@ -34,8 +34,7 @@ if ($conetar->connect_errno) {
 
     $cadena = "SELECT id, descripcion, valor
     FROM  u116753122_cw3completa.materia_prima where 1=1 ". $filtro;
-    //echo $cadena;
-    /* */
+   
     $thefile = 0;
  
     $resultadP2 = $conetar->query($cadena);

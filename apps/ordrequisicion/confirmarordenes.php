@@ -27,9 +27,6 @@ if ($conetar->connect_errno) {
 
 
 
-    include('reglasdenavegacion.php');
- 
-
     $cadena = "SELECT distinct id_persona , id_sede
     FROM u116753122_cw3completa.ordrequisicion_temp";
 

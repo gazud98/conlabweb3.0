@@ -1,7 +1,7 @@
 <?php
 
 $nmbapp = "Costos por prueba";
-$moduraiz = $_SESSION['moduraiz'];
+$moduraiz = "Costos";
 $ruta = "<a href='#'>Home</a> / " . $moduraiz;
 $uppercaseruta = strtoupper($ruta);
 
@@ -117,7 +117,7 @@ $uppercaseruta = strtoupper($ruta);
                                                 <button class="btn btn-primary btn-block" style="width:auto;font-size:14px;" id="agregarColumnaBtn">Agregar
                                                     Materia Prima&nbsp;&nbsp;<i class="fa-solid fa-square-plus"></i></button>
 
-                                                <table id="tab_materia_prima" class="table table-striped table-bordered table-sm">
+                                                <table id="tab_materia_prima" class="table table-striped table-bordered table-sm" style="width:100%;">
                                                     <thead>
                                                         <tr>
                                                             <th class="text-center"><i class="fa-solid fa-user-check"></i>&nbsp;&nbsp;Seleccionar
@@ -167,7 +167,7 @@ $uppercaseruta = strtoupper($ruta);
                                                 <div id="collapseIndirectos" class="collapse show" aria-labelledby="headingIndirectos" data-parent="#accordionIndirectos">
                                                     <div class="card-body">
                                                         <button class="btn btn-primary btn-block" style="width:100px;font-size:14px;" id="agregarColumnaCostosBtn">Agregar&nbsp;&nbsp;<i class="fa-solid fa-square-plus"></i></button>
-                                                        <table id="tab_costos_indirectos" class="table table-striped table-bordered table-sm">
+                                                        <table id="tab_costos_indirectos" class="table table-striped table-bordered table-sm" style="width:100%;">
                                                             <thead>
                                                                 <tr>
                                                                     <th class="text-center"><i class="fa-solid fa-user-check"></i></th>
@@ -214,7 +214,7 @@ $uppercaseruta = strtoupper($ruta);
                                                 <div id="collapseManoObra" class="collapse show" aria-labelledby="headingManoObra" data-parent="#accordionManoObra">
                                                     <div class="card-body">
                                                         <button class="btn btn-primary btn-block" style="width:100px;font-size:14px;" id="agregarColumnaManobraBtn">Agregar&nbsp;&nbsp;<i class="fa-solid fa-square-plus"></i></button>
-                                                        <table id="tab_mano_obra" class="table table-striped table-bordered table-sm">
+                                                        <table id="tab_mano_obra" class="table table-striped table-bordered table-sm" style="width:100%;">
                                                             <thead>
                                                                 <tr>
                                                                     <th class="text-center"><i class="fa-solid fa-user-check"></i></th>
@@ -509,7 +509,7 @@ $uppercaseruta = strtoupper($ruta);
 
                             d.fecha1 = $("#fecha1").val();
                             d.fecha2 = $("#fecha2").val();
-                            
+
                         },
                     },
                     "columns": [{
@@ -574,7 +574,7 @@ $uppercaseruta = strtoupper($ruta);
                             // Agrega parámetros personalizados aquí
 
                             d.examen = $("select[name='search_data_examen']").val();
-
+                            
                         },
                     },
                     "columns": [{
@@ -777,8 +777,8 @@ $uppercaseruta = strtoupper($ruta);
                     type: 'GET', // Método de la petición (GET o POST según corresponda)
                     dataType: 'json', // Tipo de datos esperado en la respuesta
                     success: function(data) {
-                        // Limpiar el DataTable y cargar los nuevos datos
-                        miDataTable.clear().rows.add(data).draw();
+                        miDataTable.ajax.reload()
+             
                     },
                     error: function(xhr, status, error) {
                         // Manejar errores si es necesario
@@ -793,8 +793,8 @@ $uppercaseruta = strtoupper($ruta);
                     type: 'GET', // Método de la petición (GET o POST según corresponda)
                     dataType: 'json', // Tipo de datos esperado en la respuesta
                     success: function(data) {
-                        // Limpiar el DataTable y cargar los nuevos datos
-                        miDataTable2.clear().rows.add(data).draw();
+                        miDataTable2.ajax.reload()
+                    
                     },
                     error: function(xhr, status, error) {
                         // Manejar errores si es necesario
@@ -810,8 +810,8 @@ $uppercaseruta = strtoupper($ruta);
                     type: 'GET', // Método de la petición (GET o POST según corresponda)
                     dataType: 'json', // Tipo de datos esperado en la respuesta
                     success: function(data) {
-                        // Limpiar el DataTable y cargar los nuevos datos
-                        miDataTable3.clear().rows.add(data).draw();
+                        miDataTable3.ajax.reload()
+                        
                     },
                     error: function(xhr, status, error) {
                         // Manejar errores si es necesario
@@ -878,7 +878,7 @@ $uppercaseruta = strtoupper($ruta);
                         Swal.fire({
                             position: 'top',
                             icon: 'success',
-                            title: '¡Registro borrado con exito!',
+                            title: '¡Registro actualizado con exito!',
                             showConfirmButton: false,
                             timer: 1500
                         })
@@ -907,7 +907,7 @@ $uppercaseruta = strtoupper($ruta);
                         Swal.fire({
                             position: 'top',
                             icon: 'success',
-                            title: '¡Registro borrado con exito!',
+                            title: '¡Registro actualizado con exito!',
                             showConfirmButton: false,
                             timer: 1500
                         })
@@ -937,7 +937,7 @@ $uppercaseruta = strtoupper($ruta);
                         Swal.fire({
                             position: 'top',
                             icon: 'success',
-                            title: '¡Registro borrado con exito!',
+                            title: '¡Registro actualizado con exito!',
                             showConfirmButton: false,
                             timer: 1500
                         })
@@ -1473,7 +1473,7 @@ $uppercaseruta = strtoupper($ruta);
                             },
                             dataType: 'json',
                             success: function(data) {
-
+                                miDataTablere.ajax.reload()
                                 $('#btn-excel').removeAttr('disabled');
                                 Swal.fire({
                                     position: 'top',
@@ -1506,7 +1506,7 @@ $uppercaseruta = strtoupper($ruta);
                             },
                             type: 'JSON',
                             success: function(respuesta) {
-
+                                miDataTablere.ajax.reload()
                                 Swal.fire({
                                     position: 'top',
                                     icon: 'success',
@@ -1534,7 +1534,7 @@ $uppercaseruta = strtoupper($ruta);
                             },
                             type: 'JSON',
                             success: function(respuesta) {
-
+                                miDataTablere.ajax.reload()
                                 Swal.fire({
                                     position: 'top',
                                     icon: 'success',
