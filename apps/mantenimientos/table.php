@@ -79,6 +79,8 @@ if ($conetar->connect_errno) {
                         <div class="col-md-12">
                             <label for="">Fecha de realización:</label>
                             <input type="date" name="fechamant" id="fechamant" class="form-control">
+                            <input type="hidden" name="tipomant" id="tipomant" value="">
+                            <input type="hidden" name="idmant" id="idmant" value="">
                         </div>
                     </div>
                 </div>
