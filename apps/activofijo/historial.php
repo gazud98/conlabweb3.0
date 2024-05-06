@@ -19,11 +19,6 @@ if ($conetar->connect_errno) {
 } else {
     if (isset($_REQUEST['id'])) {
         $id = $_REQUEST['id'];
-        if ($id == "-1") {
-            $id = "";
-        }
-    } else {
-        $id = "";
     }
 }
 
@@ -31,7 +26,22 @@ if ($conetar->connect_errno) {
 
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.5/css/dataTables.bootstrap4.min.css">
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.dataTables.min.css">
-<table class="table table-h-m" id="table-historial">
+
+<style>
+    .table-bordes-d {
+        border: 1px solid #d2d2d2;
+        border-radius: 10px;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    table.table tr td {
+        border-top: 1px solid #d2d2d2;
+        padding: 2px !important;
+    }
+</style>
+
+<table class="table table-borderless table-hover table-bordes-d table-h-m" id="table-historial">
     <thead>
         <tr>
             <th>Mantenimiento</th>
@@ -50,7 +60,7 @@ if ($conetar->connect_errno) {
 <script>
     $(document).ready(function() {
 
-        miDataTable = $('table-historial').DataTable({
+        miDataTable = $('#table-historial').DataTable({
             language: {
                 url: 'https://cdn.datatables.net/plug-ins/1.11.5/i18n/es-ES.json',
             },
@@ -59,13 +69,13 @@ if ($conetar->connect_errno) {
             "searching": true,
             "ordering": true,
             "info": true,
-            "autoWidth": true,
+            "autoWidth": false,
             "responsive": true,
             "ajax": {
                 url: 'https://conlabweb3.tierramontemariana.org/apps/activofijo/show-historial.php', // Página PHP que devuelve los datos en formato JSON
                 type: 'GET', // Método de la petición (GET o POST según corresponda)
                 dataType: 'json', // Tipo de datos esperado en la respuesta
-                dataSrc: '', // Indicar que los datos provienen directamente del objeto JSON (sin propiedad adicional)
+                dataSrc: '',
                 data: function(d) {
                     d.id = <?php echo $id ?>
                 },
@@ -80,8 +90,13 @@ if ($conetar->connect_errno) {
                 {
                     "data": "estado_mantenimiento",
                     "render": function(data, type, full, meta) {
-                        var estadoText = data === "P" ? '<span class="badge badge-danger" >Pendiente</span>' : '<span class="badge badge-success" >Realizado</span>';
-                        return estadoText;
+                        if (full.estado_mantenimiento === "P") {
+                            return '<span class="badge badge-warning">Pendiente</span>';
+                        } else if (full.estado_mantenimiento === "F") {
+                            return '<span class="badge badge-primary">Finalizado</span>';
+                        } else if (full.estado_mantenimiento === "V") {
+                            return '<span class="badge badge-danger">Vencido</span>';
+                        }
                     }
                 }
             ]

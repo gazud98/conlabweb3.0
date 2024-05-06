@@ -4,8 +4,21 @@
 
 </button>
 
+<style>
+    .table-bordes-d {
+        border: 1px solid #d2d2d2;
+        border-radius: 10px;
+        font-size: 14px;
+        text-align: center;
+    }
 
-<table class="table table-striped table-hover table responsive  table-head-fixed text-nowrap table-sm table-producto" style="width:100%" id="table-producto">
+    table.table tr td {
+        border-top: 1px solid #d2d2d2;
+        padding: 2px !important;
+    }
+</style>
+
+<table class="table table-borderless table-hover responsive table-producto table-bordes-d" style="width:100%" id="table-producto">
     <thead>
         <tr>
 
@@ -14,6 +27,7 @@
             <th style="text-align:center;">Depreciación</th>
             <th style="text-align:center;">Estado</th>
             <th style="width:15%;text-align:center">Acciones</th>
+
         </tr>
     </thead>
     <tbody>
@@ -211,5 +225,11 @@
                 }
             })
         }
+    }
+
+    function loadHistorial(id) {
+        $('#tableHistorial').load('/cw3/conlabweb3.0/apps/activofijo/historial.php', {
+            id: id
+        });
     }
 </script>
