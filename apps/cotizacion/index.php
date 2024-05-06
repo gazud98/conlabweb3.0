@@ -24,26 +24,20 @@ if ($conetar->connect_errno) {
     echo $error;
 } else {
 
-    include ('reglasdenavegacion.php');
-
-    // echo $sctrl1;
     $nmbapp = "Gestión de Cotizaciones";
     $moduraiz = $_SESSION['moduraiz'];
     $ruta = "<a href='#'>Home</a> / " . $moduraiz;
-    $uppercaseruta = strtoupper($ruta);
-    //echo ".................".$sctrl4."-----------";
-    $cadena = "SELECT count(*) as cantidad
-                    FROM  cotizacion_insumos" .
-        $filterfrom .
-        " where 1=1";
-    $cadena = $cadena . $filterwhere;
-    //              echo $cadena;
-    $resultadP2 = $conetar->query($cadena);
-    $filaP2 = mysqli_fetch_array($resultadP2);
-    $cantrgt = $filaP2['cantidad'];
-    ;
-    ?>
-    <link rel="stylesheet" href="https://conlabweb3.tierramontemariana.org/apps/cotizacion/assets/style.css">
+    $uppercaseruta = strtoupper($ruta);;
+?>
+
+    <style>
+        .content-wrapper {
+            background-image: url('https://conlabweb3.tierramontemariana.org/apps/medicos/assets/backcw3-v1.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    </style>
+    <link rel="stylesheet" href="'https://conlabweb3.tierramontemariana.org/apps/cotizacion/assets/style.css">
     <div class="card border-info" style="width:100%;">
 
         <div class="card-header bg-light ">
