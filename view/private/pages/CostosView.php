@@ -25,12 +25,12 @@ $uppercaseruta = strtoupper($ruta);
     <!-- select serach responsive-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
 
-    <link rel="stylesheet" href="https://conlabweb3.tierramontemariana.org/assets/dist/css/costosstyles.css">
+    <link rel="stylesheet" href="/cw3/conlabweb3.0/assets/dist/css/costosstyles.css">
 
 </head>
 <style>
     body {
-        background-image: url('https://conlabweb3.tierramontemariana.org/apps/medicos/assets/backcw3-v1.png');
+        background-image: url('/cw3/conlabweb3.0/apps/medicos/assets/backcw3-v1.png');
         background-size: cover;
         background-repeat: no-repeat;
     }
