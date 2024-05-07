@@ -51,6 +51,14 @@ if ($conetar->connect_errno) {
             margin-left: -550px;
         }
 
+        .card-title-rezise {
+            width: 100%;
+            color: #164085;
+            text-align: center;
+            position: relative;
+            margin-top: 9px;
+        }
+
         @media only screen and (max-width:700px) {
             #modalContent {
                 width: 100%;
@@ -80,7 +88,7 @@ if ($conetar->connect_errno) {
                     </nav>
                 </div>
                 <div class="col-md-4 col-lg-4">
-                    <h5 style="text-align: center; color: #0045A5;"><strong>Listado de Proveedores</strong></h5>
+                    <h5 class="card-title card-title-rezise"><strong>Listado de Proveedores</strong></h5>
                 </div>
                 <div class="col-md-4 col-lg-4">
                     <button onclick="loadFormAddProvider()"

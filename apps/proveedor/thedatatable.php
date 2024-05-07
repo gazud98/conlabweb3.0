@@ -5,7 +5,23 @@
     <i class="fa-solid fa-file-excel fa-2x" style="color:green;transition: color 0.3s;"></i>&nbsp;&nbsp;Generar Excel
 
 </button>
-<table class="table table-striped table-hover table-head-fixed text-nowrap    table-sm table-proveedor" id="table-proveedor"
+
+<style>
+    .table-bordes-d {
+        border: 1px solid #d2d2d2;
+        border-radius: 10px;
+        font-size: 14px;
+        text-align: center;
+        padding: 2px;
+    }
+
+    table.table tr td {
+        border-top: 1px solid #d2d2d2;
+        padding: 2px !important;
+    }
+</style>
+
+<table class="table table-borderless table-hover table-proveedor table-bordes-d " id="table-proveedor"
     style="width:100% !important;">
     <thead>
         <tr>
