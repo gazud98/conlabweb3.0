@@ -25,12 +25,12 @@ $uppercaseruta = strtoupper($ruta);
     <!-- select serach responsive-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
 
-    <link rel="stylesheet" href="/cw3/conlabweb3.0/assets/dist/css/costosstyles.css">
+    <link rel="stylesheet" href="https://conlabweb3.tierramontemariana.org/assets/dist/css/costosstyles.css">
 
 </head>
 <style>
     body {
-        background-image: url('/cw3/conlabweb3.0/apps/medicos/assets/backcw3-v1.png');
+        background-image: url('https://conlabweb3.tierramontemariana.org/apps/medicos/assets/backcw3-v1.png');
         background-size: cover;
         background-repeat: no-repeat;
     }
@@ -512,7 +512,7 @@ $uppercaseruta = strtoupper($ruta);
                 "autoWidth": false,
                 "responsive": false,
                 "ajax": {
-                    url: '/cw3/conlabweb3.0/apps/costos/mostrarreporte.php', // Página PHP que devuelve los datos en formato JSON
+                    url: 'https://conlabweb3.tierramontemariana.org/apps/costos/mostrarreporte.php', // Página PHP que devuelve los datos en formato JSON
                     type: 'GET', // Método de la petición (GET o POST según corresponda)
                     dataType: 'json', // Tipo de datos esperado en la respuesta
                     dataSrc: '', // Indicar que los datos provienen directamente del objeto JSON (sin propiedad adicional)
@@ -578,7 +578,7 @@ $uppercaseruta = strtoupper($ruta);
                 "autoWidth": false,
                 "responsive": false,
                 "ajax": {
-                    url: '/cw3/conlabweb3.0/apps/costos/mostrar.php', // Página PHP que devuelve los datos en formato JSON
+                    url: 'https://conlabweb3.tierramontemariana.org/apps/costos/mostrar.php', // Página PHP que devuelve los datos en formato JSON
                     type: 'GET', // Método de la petición (GET o POST según corresponda)
                     dataType: 'json', // Tipo de datos esperado en la respuesta
                     dataSrc: '', // Indicar que los datos provienen directamente del objeto JSON (sin propiedad adicional)
@@ -633,7 +633,7 @@ $uppercaseruta = strtoupper($ruta);
                 "autoWidth": false,
                 "responsive": false,
                 "ajax": {
-                    url: '/cw3/conlabweb3.0/apps/costos/mostrarcostos.php', // Página PHP que devuelve los datos en formato JSON
+                    url: 'https://conlabweb3.tierramontemariana.org/apps/costos/mostrarcostos.php', // Página PHP que devuelve los datos en formato JSON
                     type: 'GET', // Método de la petición (GET o POST según corresponda)
                     dataType: 'json', // Tipo de datos esperado en la respuesta
                     dataSrc: '', // Indicar que los datos provienen directamente del objeto JSON (sin propiedad adicional)
@@ -741,7 +741,7 @@ $uppercaseruta = strtoupper($ruta);
                 "autoWidth": false,
                 "responsive": false,
                 "ajax": {
-                    url: '/cw3/conlabweb3.0/apps/costos/mostrarmanobra.php', // Página PHP que devuelve los datos en formato JSON
+                    url: 'https://conlabweb3.tierramontemariana.org/apps/costos/mostrarmanobra.php', // Página PHP que devuelve los datos en formato JSON
                     type: 'GET', // Método de la petición (GET o POST según corresponda)
                     dataType: 'json', // Tipo de datos esperado en la respuesta
                     dataSrc: '', // Indicar que los datos provienen directamente del objeto JSON (sin propiedad adicional)
@@ -785,7 +785,7 @@ $uppercaseruta = strtoupper($ruta);
 
         function cargarDatos() {
             $.ajax({
-                url: '/cw3/conlabweb3.0/apps/costos/mostrar.php', // Página PHP que devuelve los datos en formato JSON
+                url: 'https://conlabweb3.tierramontemariana.org/apps/costos/mostrar.php', // Página PHP que devuelve los datos en formato JSON
                 type: 'GET', // Método de la petición (GET o POST según corresponda)
                 dataType: 'json', // Tipo de datos esperado en la respuesta
                 success: function(data) {
@@ -801,7 +801,7 @@ $uppercaseruta = strtoupper($ruta);
 
         function cargarDatosCostos() {
             $.ajax({
-                url: '/cw3/conlabweb3.0/apps/costos/mostrarcostos.php', // Página PHP que devuelve los datos en formato JSON
+                url: 'https://conlabweb3.tierramontemariana.org/apps/costos/mostrarcostos.php', // Página PHP que devuelve los datos en formato JSON
                 type: 'GET', // Método de la petición (GET o POST según corresponda)
                 dataType: 'json', // Tipo de datos esperado en la respuesta
                 success: function(data) {
@@ -818,7 +818,7 @@ $uppercaseruta = strtoupper($ruta);
 
         function cargarManobra() {
             $.ajax({
-                url: '/cw3/conlabweb3.0/apps/costos/mostrarmanobra.php', // Página PHP que devuelve los datos en formato JSON
+                url: 'https://conlabweb3.tierramontemariana.org/apps/costos/mostrarmanobra.php', // Página PHP que devuelve los datos en formato JSON
                 type: 'GET', // Método de la petición (GET o POST según corresponda)
                 dataType: 'json', // Tipo de datos esperado en la respuesta
                 success: function(data) {
@@ -844,7 +844,7 @@ $uppercaseruta = strtoupper($ruta);
             var rendimiento = (n_examenes_promedio / n_examenes) * 100;
             var totalvalor = n_examenes_promedio * valor_pruebas;
             $.ajax({
-                url: '/cw3/conlabweb3.0/apps/costos/agregar.php', // Página PHP que devuelve los datos en formato JSON
+                url: 'https://conlabweb3.tierramontemariana.org/apps/costos/agregar.php', // Página PHP que devuelve los datos en formato JSON
                 type: 'POST', // Método de la petición (GET o POST según corresponda)
                 data: {
                     valore: valore,
@@ -876,7 +876,7 @@ $uppercaseruta = strtoupper($ruta);
             var totalcostos = n_examenes_promedio * valor;
             $.ajax({
                 type: 'POST',
-                url: '/cw3/conlabweb3.0/apps/costos/acciones.php',
+                url: 'https://conlabweb3.tierramontemariana.org/apps/costos/acciones.php',
                 data: {
                     id: ide,
                     motivo: motivo_costo,
@@ -906,7 +906,7 @@ $uppercaseruta = strtoupper($ruta);
 
             $.ajax({
                 type: 'POST',
-                url: '/cw3/conlabweb3.0/apps/costos/acciones.php',
+                url: 'https://conlabweb3.tierramontemariana.org/apps/costos/acciones.php',
                 data: {
                     idmat: idmat,
                     descripcion: descripcion,
@@ -935,7 +935,7 @@ $uppercaseruta = strtoupper($ruta);
             var salario = $('#salario').val();
             $.ajax({
                 type: 'POST',
-                url: '/cw3/conlabweb3.0/apps/costos/acciones.php',
+                url: 'https://conlabweb3.tierramontemariana.org/apps/costos/acciones.php',
                 data: {
                     idmano: idmano,
                     cargo: cargo,
@@ -973,7 +973,7 @@ $uppercaseruta = strtoupper($ruta);
                     if (result.isConfirmed) {
                         $.ajax({
                             type: 'POST',
-                            url: '/cw3/conlabweb3.0/apps/costos/acciones.php',
+                            url: 'https://conlabweb3.tierramontemariana.org/apps/costos/acciones.php',
                             data: {
                                 id: id,
                                 caso: 'B',
@@ -994,7 +994,7 @@ $uppercaseruta = strtoupper($ruta);
                     }
                 })
             } else if (caso == "E") {
-                $('#modalshow').load('/cw3/conlabweb3.0/apps/costos/modal.php', {
+                $('#modalshow').load('https://conlabweb3.tierramontemariana.org/apps/costos/modal.php', {
                     id: id
                 });
 
@@ -1019,7 +1019,7 @@ $uppercaseruta = strtoupper($ruta);
                     if (result.isConfirmed) {
                         $.ajax({
                             type: 'POST',
-                            url: '/cw3/conlabweb3.0/apps/costos/acciones.php',
+                            url: 'https://conlabweb3.tierramontemariana.org/apps/costos/acciones.php',
                             data: {
                                 idmat: id,
                                 caso: 'B',
@@ -1040,7 +1040,7 @@ $uppercaseruta = strtoupper($ruta);
                     }
                 })
             } else if (caso == "E") {
-                $('#modalshowmateria').load('/cw3/conlabweb3.0/apps/costos/modalmateria.php', {
+                $('#modalshowmateria').load('https://conlabweb3.tierramontemariana.org/apps/costos/modalmateria.php', {
                     id: id
                 });
 
@@ -1062,7 +1062,7 @@ $uppercaseruta = strtoupper($ruta);
                     if (result.isConfirmed) {
                         $.ajax({
                             type: 'POST',
-                            url: '/cw3/conlabweb3.0/apps/costos/acciones.php',
+                            url: 'https://conlabweb3.tierramontemariana.org/apps/costos/acciones.php',
                             data: {
                                 idmano: id,
                                 caso: 'B',
@@ -1083,7 +1083,7 @@ $uppercaseruta = strtoupper($ruta);
                     }
                 })
             } else if (caso == "E") {
-                $('#modalshowmanobra').load('/cw3/conlabweb3.0/apps/costos/modalmanobra.php', {
+                $('#modalshowmanobra').load('https://conlabweb3.tierramontemariana.org/apps/costos/modalmanobra.php', {
                     id: id
                 });
 
@@ -1099,7 +1099,7 @@ $uppercaseruta = strtoupper($ruta);
             var date = $("input[name='search_data_date']").val();
             var totalcostos = n_examenes_promedio * valorcosto;
             $.ajax({
-                url: '/cw3/conlabweb3.0/apps/costos/agregar.php', // Página PHP que devuelve los datos en formato JSON
+                url: 'https://conlabweb3.tierramontemariana.org/apps/costos/agregar.php', // Página PHP que devuelve los datos en formato JSON
                 type: 'POST', // Método de la petición (GET o POST según corresponda)
                 data: {
                     valorcosto: valorcosto,
@@ -1131,7 +1131,7 @@ $uppercaseruta = strtoupper($ruta);
             var date = $("input[name='search_data_date']").val();
             var totalmanobra = n_examenes_promedio * salario;
             $.ajax({
-                url: '/cw3/conlabweb3.0/apps/costos/agregar.php', // Página PHP que devuelve los datos en formato JSON
+                url: 'https://conlabweb3.tierramontemariana.org/apps/costos/agregar.php', // Página PHP que devuelve los datos en formato JSON
                 type: 'POST', // Método de la petición (GET o POST según corresponda)
                 data: {
                     cargo: cargo,
@@ -1476,7 +1476,7 @@ $uppercaseruta = strtoupper($ruta);
 
                     $.ajax({
                         method: 'GET',
-                        url: '/cw3/conlabweb3.0/apps/costos/calculo.php',
+                        url: 'https://conlabweb3.tierramontemariana.org/apps/costos/calculo.php',
                         data: {
                             id_examen: id_examen,
                             codigo: codigo,
@@ -1509,7 +1509,7 @@ $uppercaseruta = strtoupper($ruta);
 
                     $.ajax({
                         method: 'POST',
-                        url: '/cw3/conlabweb3.0/apps/costos/calculo.php',
+                        url: 'https://conlabweb3.tierramontemariana.org/apps/costos/calculo.php',
                         data: {
                             id_examen: id_examen,
                             codigo: codigo,
@@ -1537,7 +1537,7 @@ $uppercaseruta = strtoupper($ruta);
 
                     $.ajax({
                         method: 'POST',
-                        url: '/cw3/conlabweb3.0/apps/costos/calculo.php',
+                        url: 'https://conlabweb3.tierramontemariana.org/apps/costos/calculo.php',
                         data: {
                             id_examen: id_examen,
                             codigo: codigo,
