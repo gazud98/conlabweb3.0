@@ -37,7 +37,7 @@ if ($conetar->connect_errno) {
             background-repeat: no-repeat;
         }
     </style>
-    <link rel="stylesheet" href="'https://conlabweb3.tierramontemariana.org/apps/cotizacion/assets/style.css">
+    <link rel="stylesheet" href="https://conlabweb3.tierramontemariana.org/apps/cotizacion/assets/style.css">
     <div class="card border-info" style="width:100%;">
 
         <div class="card-header bg-light ">
