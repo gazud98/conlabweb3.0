@@ -572,7 +572,7 @@ $uppercaseruta = strtoupper($ruta);
                 },
                 "paging": true,
                 "lengthChange": false,
-                "searching": false,
+                "searching": true,
                 "ordering": false,
                 "info": false,
                 "autoWidth": false,
@@ -585,7 +585,7 @@ $uppercaseruta = strtoupper($ruta);
                     data: function(d) {
                         // Agrega parámetros personalizados aquí
 
-                        d.examen = $("select[name='search_data_examen']").val();
+                        //d.examen = $("select[name='search_data_examen']").val();
 
                     },
                 },
@@ -627,7 +627,7 @@ $uppercaseruta = strtoupper($ruta);
                 },
                 "paging": true,
                 "lengthChange": false,
-                "searching": false,
+                "searching": true,
                 "ordering": false,
                 "info": false,
                 "autoWidth": false,
@@ -639,9 +639,9 @@ $uppercaseruta = strtoupper($ruta);
                     dataSrc: '', // Indicar que los datos provienen directamente del objeto JSON (sin propiedad adicional)
                     data: function(d) {
                         // Agrega parámetros personalizados aquí
-                        d.sede = $("select[name='search_data_sede']").val();
-                        d.examen = $("select[name='search_data_examen']").val();
-                        d.date = $("input[name='search_data_date']").val();
+                       
+                   //     d.examen = $("select[name='search_data_examen']").val();
+                      
                     },
                 },
                 "columns": [{
@@ -735,7 +735,7 @@ $uppercaseruta = strtoupper($ruta);
                 },
                 "paging": true,
                 "lengthChange": false,
-                "searching": false,
+                "searching": true,
                 "ordering": false,
                 "info": false,
                 "autoWidth": false,
@@ -747,9 +747,9 @@ $uppercaseruta = strtoupper($ruta);
                     dataSrc: '', // Indicar que los datos provienen directamente del objeto JSON (sin propiedad adicional)
                     data: function(d) {
                         // Agrega parámetros personalizados aquí
-                        d.sede = $("select[name='search_data_sede']").val();
-                        d.examen = $("select[name='search_data_examen']").val();
-                        d.date = $("input[name='search_data_date']").val();
+                    
+                      //  d.examen = $("select[name='search_data_examen']").val();
+                       
                     },
                 },
                 "columns": [{
