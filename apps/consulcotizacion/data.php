@@ -79,6 +79,7 @@ if ($conetar->connect_errno) {
         <div class="col-md-12 col-lg-12 mt-2" style="background-color:rgb(1,103,183);color:white; text-align:center;">
             <label style="margin-top: 4px;">DETALLE DE COTIZACION</label>
         </div>
+        <p style="font-size: 14px;">Ingresa el precio en el campo de valor y luego haz clic en el botón 'Generar' para crear la orden de compra.</p>
     </div>
     </div>
     <div style="overflow-y: auto;  height:400px; width:100%;">
