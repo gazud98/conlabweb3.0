@@ -292,14 +292,14 @@ if ($conetar->connect_errno) {
             $("#btnsave").prop('disabled', false);
 
 
-            $("#edt1").load("/cw3/conlabweb3.0/apps/csltaordcompra/editar.php", {
+            $("#edt1").load("https://conlabweb3.tierramontemariana.org/apps/csltaordcompra/editar.php", {
                 idpr: idpr,
                 id: id,
                 vtotal: vtotal
 
             });
 
-            $("#dlt1").load("/cw3/conlabweb3.0/apps/csltaordcompra/borrar.php", {
+            $("#dlt1").load("https://conlabweb3.tierramontemariana.org/apps/csltaordcompra/borrar.php", {
                 idpr: idpr,
                 nom: nom,
                 id: id
