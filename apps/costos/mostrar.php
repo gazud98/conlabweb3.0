@@ -33,7 +33,7 @@ if ($conetar->connect_errno) {
 } else {
 
     $cadena = "SELECT id, descripcion, valor
-    FROM  u116753122_cw3completa.materia_prima where 1=1 ". $filtro;
+    FROM  u116753122_cw3completa.materia_prima";
    
     $thefile = 0;
  
