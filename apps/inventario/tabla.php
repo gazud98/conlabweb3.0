@@ -38,20 +38,26 @@
             language: {
                 url: 'https://cdn.datatables.net/plug-ins/1.11.5/i18n/es-ES.json',
             },
+            "paging": true,
+            "lengthChange": true,
+            "ordering": true,
+            "info": true,
+            "autoWidth": true,
+            "responsive": true,
+            "searching": true,
+            // ... Otras opciones ...
+            "ajax": {
+                url: 'https://conlabweb3.tierramontemariana.org/apps/inventario/mostrar.php', // Página PHP que devuelve los datos en formato JSON
+                type: 'GET', // Método de la petición (GET o POST según corresponda)
+                dataType: 'json', // Tipo de datos esperado en la respuesta
+                dataSrc: '' // Indicar que los datos provienen directamente del objeto JSON (sin propiedad adicional)
+            },
+
+            "columns": [{
+                    "data": "referencia"
                 },
-                "paging": true,
-                "lengthChange": true,
-                "ordering": true,
-                "info": true,
-                "autoWidth": true,
-                "responsive": true,
-                "searching": true,
-                // ... Otras opciones ...
-                "ajax": {
-                    url: 'https://conlabweb3.tierramontemariana.org/apps/inventario/mostrar.php', // Página PHP que devuelve los datos en formato JSON
-                    type: 'GET', // Método de la petición (GET o POST según corresponda)
-                    dataType: 'json', // Tipo de datos esperado en la respuesta
-                    dataSrc: '' // Indicar que los datos provienen directamente del objeto JSON (sin propiedad adicional)
+                {
+                    "data": "categoria"
                 },
                 {
                     "data": "nombre"
