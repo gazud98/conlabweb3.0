@@ -4,7 +4,7 @@ $nom = $_REQUEST['nom'];
 $id = $_REQUEST['id'];
 ?>
 
-<button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#delete">
+<button type="button" class="btn btn-primary btn-xs btn-block" data-toggle="modal" data-target="#delete">
     &nbsp;&nbsp;Borrar
 </button>
 

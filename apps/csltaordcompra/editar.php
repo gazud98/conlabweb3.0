@@ -30,7 +30,7 @@ if ($conetar->connect_errno) {
         }
     </style>
 
-    <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#editmodal">
+    <button type="button" class="btn btn-primary btn-xs btn-block" data-toggle="modal" data-target="#editmodal">
         &nbsp;&nbsp;Recibir Producto
     </button>
 
