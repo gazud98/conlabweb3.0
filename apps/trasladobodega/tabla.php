@@ -157,8 +157,8 @@ if ($conetar->connect_errno) {
 
 
 
-            $("#btntrl").load("https://conlabweb3.tierramontemariana.org/apps/trasladobodega/trasladobodega.php", {
         function selectthefile3(id_produ, nom_insumo, cant, fchvence, identrepanio) {
+            $("#btntrl").load("https://conlabweb3.tierramontemariana.org/apps/trasladobodega/trasladobodega.php", {
                 id_produ: id_produ,
                 nom_insumo: nom_insumo,
                 cant: cant,
