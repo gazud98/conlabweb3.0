@@ -25,7 +25,7 @@ if ($conetar->connect_errno) {
 
     <div class="row">
         <div class="col-md-3 border p-3">
-          
+
             <label for="bodega" style="font-size: 14px;">Filtrar por Bodega:</label>
             <div class="input-group">
                 <select name="bodega" id="bodega" class="form-control">
@@ -48,32 +48,34 @@ if ($conetar->connect_errno) {
     </div>
 
 
-
-    <table class="table table-striped table-hover table-head-fixed text-nowrap table-sm table-inventario" id="idinventario">
-        <thead>
-            <tr>
-                <th class="text-center">Referencia</th>
-                <th class="text-center">Nombre</th>
-                <th class="text-center" style="width: 3%;">Cantidad en bodega</th>
-                <th class="text-center">Ubicación</th>
-                <th class="text-center" style="width: 5%;">Fecha Ingreso</th>
-                <th class="text-center" style="width: 5%;">Fecha Vencimiento</th>
-                <th class="text-center">Días de vida</th>
-                <th class="text-center" style="width: 10%;">Cantidades físicas</th>
-                <th class="text-center"></th>
-            </tr>
-        </thead>
-        <tbody>
-
-        </tbody>
-    </table>
-
+    <div class="table-container">
+        <table class="table table-striped table-hover table-head-fixed text-nowrap table-sm table-inventario table-responsive" id="idinventario">
+            <thead>
+                <tr>
+                    <th class="text-center">Referencia</th>
+                    <th class="text-center">Nombre</th>
+                    <th class="text-center" style="width: 3%;">Cantidad en bodega</th>
+                    <th class="text-center">Ubicación</th>
+                    <th class="text-center" style="width: 5%;">Fecha Ingreso</th>
+                    <th class="text-center" style="width: 5%;">Fecha Vencimiento</th>
+                    <th class="text-center">Días de vida</th>
+                    <th class="text-center" style="width: 10%;">Cantidades físicas</th>
+                    <th class="text-center"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Aquí irían tus filas de datos -->
+            </tbody>
+        </table>
+    </div>
     <div class=" mt-2">
         <button type="button" class="btn btn-success btn-sm" onclick="exportarExcel()">
             <i class="fa-solid fa-file-export"></i>&nbsp; Exportar excel
         </button>
     </div>
 
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.dataTables.min.css">
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.4/xlsx.full.min.js"></script>
