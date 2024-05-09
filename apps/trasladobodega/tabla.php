@@ -1,51 +1,3 @@
-<?php
-//SI POSEE CONSUKTA
-
-if (file_exists("config/accesosystems.php")) {
-    include("config/accesosystems.php");
-} else {
-    if (file_exists("../config/accesosystems.php")) {
-        include("../config/accesosystems.php");
-    } else {
-        if (file_exists("../../config/accesosystems.php")) {
-            include("../../config/accesosystems.php");
-        }
-    }
-}
-$conetar = new mysqli(hostname, db_login, db_pass, cw3ctrlsrv);
-if ($conetar->connect_errno) {
-    $error = "Fallo al conectar a MySQL: (" . $conetar->connect_errno . ") " . $conetar->connect_error;
-    echo $error;
-} else {
-    if (isset($_REQUEST['id_prodc'])) {
-        $id_prodc = $_REQUEST['id_prodc'];
-        if ($id_prodc == "-1") {
-            $id_prodc = "";
-        }
-    } else {
-        $id_prodc = 0;
-    }
-
-    $cadena23 = "SELECT count(idbodegaentrapanio) as max 
-    FROM u116753122_cw3completa.bodegaubcproducto where idproducto='" . $id_prodc . "' and identrepanio<>0;";
-
-    $resultadP23 = $conetar->query($cadena23);
-    $numerfiles23 = mysqli_num_rows($resultadP23);
-    if ($numerfiles23 >= 1) {
-        while ($filaP23 = mysqli_fetch_array($resultadP23)) {
-            $max = trim($filaP23['max']);
-        }
-    }
-    $cadena = "SELECT a.idbodegaentrapanio,a.idproducto,a.identrepanio,d.id as idstand,e.id as idbodega,c.nombre as entrepanio,d.nombre as stand,e.nombre as bodega,a.fchvence, SUM(a.cant_recibida) as cant,b.nombre 
-    FROM u116753122_cw3completa.bodegaubcproducto a JOIN u116753122_cw3completa.producto b ON a.idproducto = b.id_producto JOIN u116753122_cw3completa.bodegaentrepanio c 
-    ON a.identrepanio = c.id JOIN u116753122_cw3completa.bodegastand d ON c.idstand = d.id JOIN u116753122_cw3completa.bodegas e ON d.idbodega = e.id 
-    WHERE a.identrepanio <> 0 AND a.cant_recibida <> 0 AND a.idproducto = " . $id_prodc . " GROUP BY a.fchvence,a.identrepanio ORDER BY a.fchvence ASC;";
-
-
-    $resultadP2 = $conetar->query($cadena);
-    $numerfiles2 = mysqli_num_rows($resultadP2);
-
-?>
 
     <link href="https://cdn.datatables.net/1.13.5/css/dataTables.bootstrap4.min.css" rel="stylesheet" />
 
@@ -178,4 +130,3 @@ if ($conetar->connect_errno) {
         }
     </script>
 
-<?php } ?>
