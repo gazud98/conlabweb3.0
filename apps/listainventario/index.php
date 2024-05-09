@@ -1,55 +1,23 @@
 <?php
-//Si bahy consulta
-
-// echo __FILE__.'>dd.....<br>';
-if (file_exists("config/accesosystems.php")) {
-    include("config/accesosystems.php");
-} else {
-    if (file_exists("../config/accesosystems.php")) {
-        include("../config/accesosystems.php");
-    } else {
-        if (file_exists("../../config/accesosystems.php")) {
-            include("../../config/accesosystems.php");
-        }
-    }
-}
 
 
-//echo $p; //viene con el modulo activo
-
-// //echo base_url.'.......<br>'.'...'.hostname.','.db_login.','.db_pass.','.bbserver1.'----<br>';
-$conetar = new mysqli(hostname, db_login, db_pass, cw3ctrlsrv);
-if ($conetar->connect_errno) {
-    $error = "Fallo al conectar a MySQL: (" . $conetar->connect_errno . ") " . $conetar->connect_error;
-    echo $error;
-} else {
-
-    include('reglasdenavegacion.php');
-    $nmbapp = "INVENTARIO";
-    $moduraiz = $_SESSION['moduraiz'];
+   
+    $nmbapp = "Listado para Inventario Físico y Auditoría";
+    $moduraiz = "Compras e Inventario";
     $ruta =  "<a href='#'>Home</a> / " . $moduraiz;
     $uppercaseruta = strtoupper($ruta);
-    // echo $sctrl1;
-
-
-    //echo ".................".$sctrl4."-----------";
-    $cadena = "SELECT count(*) as cantidad
-                    FROM  bodegaubcproducto";
-    //              echo $cadena;
-    $resultadP2 = $conetar->query($cadena);
-    $filaP2 = mysqli_fetch_array($resultadP2);
-    $cantrgt = $filaP2['cantidad'];;
+    
 ?>
 
     <link rel="stylesheet" href="https://conlabweb3.tierramontemariana.org/apps/listainventario/assets/style.css">
 
-    <div class="card border-light" style="width: 100%;">
+    <div class="card border-light" style="width:85%;margin:auto;">
         <div class="card-header">
             <div class="row">
                 <div class="col-md-4">
                     <nav class="breadcrumbs">
                         <a href="#" class="breadcrumbs__item" style="text-decoration: none;"><?php echo $moduraiz; ?></a>
-                        <a href="#" class="breadcrumbs__item is-active" style="text-decoration: none;">Inventario</a>
+                        <a href="#" class="breadcrumbs__item is-active" style="text-decoration: none;">Listado para Inventario Físico y Auditorías</a>
                     </nav>
                     <!--<label class="card-title" style="color: rgb(1,103,183);font-size: 13px;float: right;"><strong><?php echo $uppercaseruta; ?></strong> </label>-->
                 </div>
@@ -77,7 +45,8 @@ if ($conetar->connect_errno) {
 
     include('apps/thedata.php'); //scriops de control
     ?>
-
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script>
         $(document).ready(function() {
 
@@ -88,6 +57,3 @@ if ($conetar->connect_errno) {
 
         })
     </script>
-<?php
-}
-?>
