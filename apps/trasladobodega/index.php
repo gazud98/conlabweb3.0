@@ -76,7 +76,7 @@ $uppercaseruta = strtoupper($ruta);
 
         function obtener() {
 
-            $("#table").load('https://conlabweb3.0.tierramontemariana.org/apps/trasladobodega/tabla.php');
+            $("#table").load('https://conlabweb3.tierramontemariana.org/apps/trasladobodega/tabla.php');
 
         }
     </script>
