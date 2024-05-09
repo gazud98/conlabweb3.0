@@ -27,8 +27,8 @@ if ($conetar->connect_errno) {
 }
 ?>
 
-<label>Solicitante</label>
-<select class="form-control">
+<label style="font-size:13px">Solicitante</label>
+<select class="form-control" style="font-size:13px">
     <option selected="true" disabled="disabled"></option>
     <?php
     $cadena = "SELECT b.id_departamento, a.nombre_1,a.nombre_2,a.apellido_1,a.apellido_2

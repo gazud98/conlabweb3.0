@@ -25,9 +25,9 @@ if (isset($_REQUEST['idstd'])) {
 }
 
 ?>
-<label>Entrepaño</label>
+<label style="font-size:13px">Entrepaño</label>
 
-<select class="form-control" id="entrepan">
+<select class="form-control" id="entrepan" style="font-size:13px;width:100%">
     <option selected="true" disabled="disabled"></option>
     <?php
 
@@ -48,3 +48,10 @@ if (isset($_REQUEST['idstd'])) {
 
 </select>
 <div id="entrepanx"></div>
+<script>
+    $(document).ready(function() {
+        $('#entrepan').select2({
+            language: "es"
+        });
+    });
+</script>

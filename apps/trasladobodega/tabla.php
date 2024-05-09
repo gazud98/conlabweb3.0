@@ -50,26 +50,30 @@ if ($conetar->connect_errno) {
     <link href="https://cdn.datatables.net/1.13.5/css/dataTables.bootstrap4.min.css" rel="stylesheet" />
 
 
-    
+
 
     <table class="table table-striped table responsive  table-hover table-head-fixed text-nowrap table-sm table-bodega" style="margin-top: 2%;width:100%;">
         <thead>
             <tr>
-                <th><i class="fa-solid fa-user-check"></i></th>
-                <th style="text-align:center;">Codigo</th>
-                <th style="text-align:center;">Referencia</th>
-                <th style="text-align:center;">Insumo</th>
-                <th style="text-align:center;">Bodega</th>
-                <th style="text-align:center;">Estante</th>
-                <th style="text-align:center;">Entrepaño</th>
-                <th style="text-align:center;">Cantidad</th>
-                <th style="text-align:center;">Fecha Vencimiento</th>
+
+                <th class="text-center">Codigo</th>
+                <th class="text-center">Referencia</th>
+                <th class="text-center">Insumo</th>
+                <th class="text-center">Bodega</th>
+                <th class="text-center">Estante</th>
+                <th class="text-center">Entrepaño</th>
+                <th class="text-center">Cantidad</th>
+                <th class="text-center">Fecha Vencimiento</th>
+                <th class="text-center">Traslado</th>
             </tr>
         </thead>
         <tbody>
 
         </tbody>
     </table>
+    <div id="btntrl">
+
+    </div>
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.dataTables.min.css">
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
@@ -113,12 +117,6 @@ if ($conetar->connect_errno) {
                 },
 
                 "columns": [{
-                        "data": null,
-                        "render": function(data, type, full, meta) {
-                            return '<input type="radio" onclick="selectthefile3(' + full.thefile + ')"  name="fileselect3" id="fileselect3' + full.thefile + '" value="' + full.idproducto + '"  nom_insumo="' + full.nombre + '"     cant="' + full.cant + '" fchvence="' + full.fchvence + '"  max="' + <?php echo $max ?> + '"  identrepanio="' + full.identrepanio + '"  >';
-                        }
-                    },
-                    {
                         "data": "idproducto"
                     },
                     {
@@ -132,6 +130,7 @@ if ($conetar->connect_errno) {
                     },
                     {
                         "data": "stand"
+
                     },
                     {
                         "data": "entrepanio"
@@ -142,6 +141,13 @@ if ($conetar->connect_errno) {
                     {
                         "data": "fchvence"
                     },
+                    {
+                        "data": null,
+                        "render": function(data, type, full, meta) {
+                            return '<a href="#" data-toggle="tooltip" data-placement="top"  data-toggle="modal" data-target="#myModal" title="Click para realizar el traslado de bodega" onclick="selectthefile3(' + full.idproducto + ', \'' + full.nombre + '\', ' + full.cant + ', \'' + full.fchvence + '\', ' + full.identrepanio + ')"><i class="fa-solid fa-cart-flatbed" style="font-size:14px;"></i></a>';
+
+                        }
+                    },
                 ]
             });
             $('#id_producto2').keyup(function() {
@@ -151,29 +157,24 @@ if ($conetar->connect_errno) {
 
 
 
-        function selectthefile3(thefile) {
-
-            var theobject = "fileselect3" + thefile;
-            var id_produ = $('#' + theobject).val();
-            var nom_insumo = $('#' + theobject).attr('nom_insumo');
-            var cant = $('#' + theobject).attr('cant');
-            var fchvence = $('#' + theobject).attr('fchvence');
-            var max = $('#' + theobject).attr('max');
-            var identrepanio = $('#' + theobject).attr('identrepanio');
-
-            for (let i = 1; i <= thefile; i++) {
-                $('#' + [i]).prop('checked', false);
-            }
-            $('#' + theobject).prop('checked', true);
-
-
             $("#btntrl").load("https://conlabweb3.tierramontemariana.org/apps/trasladobodega/trasladobodega.php", {
+        function selectthefile3(id_produ, nom_insumo, cant, fchvence, identrepanio) {
                 id_produ: id_produ,
                 nom_insumo: nom_insumo,
                 cant: cant,
                 fchvence: fchvence,
                 identrepanio: identrepanio
+            }, function(response, status, xhr) {
+                if (status == "error") {
+                    console.error("Error al cargar el contenido del modal:", xhr.status, xhr.statusText);
+                    // Aquí puedes manejar el error, por ejemplo, mostrando un mensaje al usuario
+                } else {
+                    console.log("El contenido del modal se cargó correctamente.");
+                    // Aquí puedes abrir el modal
+                    $('#myModal').modal('show');
+                }
             });
+
         }
     </script>
 
