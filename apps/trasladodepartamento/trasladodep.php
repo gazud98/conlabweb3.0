@@ -1,12 +1,12 @@
 <?php
 if (file_exists("config/accesosystems.php")) {
-    include ("config/accesosystems.php");
+    include("config/accesosystems.php");
 } else {
     if (file_exists("../config/accesosystems.php")) {
-        include ("../config/accesosystems.php");
+        include("../config/accesosystems.php");
     } else {
         if (file_exists("../../config/accesosystems.php")) {
-            include ("../../config/accesosystems.php");
+            include("../../config/accesosystems.php");
         }
     }
 }
@@ -71,106 +71,91 @@ if ($numerfiles2 >= 1) {
         $nofactura = $filaP2['nofactura'];
         $id_orden = $filaP2['id_orden'];
         $thefile = $thefile + 1;
+    }
+}
+?>
 
 
-        ?>
+<div class="modal fade" id="modalterc">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
 
-        <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#modalterc">
-            Entregar Producto
-        </button>
-        <div class="modal fade" id="modalterc">
-            <div class="modal-dialog ">
-                <div class="modal-content">
-
-                    <!-- Modal Header -->
-                    <div class="modal-header" style="text-align: center;">
-                        <label><strong>Entrega a Departamentos de
-                                <?php echo $nom_insumo ?>
-                            </strong></label>
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    </div>
-
-                    <!-- Modal body -->
-                    <div class="modal-body" id="modalshow" name="modalshow">
-                        <div class="row mb-2">
-                            <div class="col-md-12 col-lg-12">
-                                <label>Departamento</label>
-                                <select class="form-control" id="dep" name="dep">
-                                    <option selected="true" disabled="disabled"></option>
-                                    <?php
-                                    $cadenax = "SELECT id, nombre
-                                                    FROM u116753122_cw3completa.departamentos ";
-                                    $resultadP2ax = $conetar->query($cadenax);
-                                    $numerfiles2ax = mysqli_num_rows($resultadP2ax);
-                                    if ($numerfiles2ax >= 1) {
-                                        while ($filaP2ax = mysqli_fetch_array($resultadP2ax)) {
-
-                                            echo "<option value='" . trim($filaP2ax['id']) . "'";
-                                            echo '>' . $filaP2ax['nombre'] . "</option>";
-                                        }
-                                    }
-                                    ?>
-                                </select>
-                                <div id="depx"></div>
-                            </div>
-                        </div>
-                        <div class="row mb-2">
-                            <?php
-                            $cadenaxy = "SELECT CONCAT(p.nombre_1, ' ', p.nombre_2,' ',p.apellido_1,' ',p.apellido_2) as nombre_persona, b.id_persona FROM cotizacion_insumos a INNER JOIN ordrequisicion b on a.norequisicion = b.id INNER JOIN persona p ON p.id_persona = b.id_persona WHERE numorden = '" . $id_orden . "'";
-                            $resultadcadenaxy = $conetar->query($cadenaxy);
-                            $numerfiles2xy = mysqli_num_rows($resultadcadenaxy);
-                            if ($numerfiles2xy >= 1) {
-                                while ($filaP2xy = mysqli_fetch_array($resultadcadenaxy)) {
-                                    $nombre_persona = $filaP2xy['nombre_persona'];
-                                    $id_persona = $filaP2xy['id_persona'];
-
-
-                                    ?>
-
-                                    <div class="col-md-12 col-lg-12" id="resp">
-                                        <label>Solicitante</label>
-                                        <input type="text" class="form-control" id="sol" name="sol"
-                                            value="<?php echo $nombre_persona ?>" readonly></input>
-                                        <div id="solx"></div>
-
-                                    </div>
-
-                                </div>
-                            <?php }
-                            } ?>
-                        <div class="row mb-2">
-                            <div class="col-md-4 col-lg-4">
-                                <label>Cantidad en Bodega</label>
-                                <input type="number" class="form-control" id="cante" name="cante" value="<?php echo $cante ?>"
-                                    readonly></input>
-                            </div>
-                            <div class="col-md-5 col-lg-5">
-                                <label>Cantidad a Entregar</label>
-                                <input type="number" class="form-control" value="" id="cantt" name="cantt"
-                                    productofecha="<?php echo $productofecha ?>" fchvence="<?php echo $fchvence ?>"
-                                    unidadentrada="<?php echo $unidadentrada ?>" unidaddetalle="<?php echo $unidaddetalle ?>"
-                                    nofactura="<?php echo $nofactura ?>" id_orden="<?php echo $id_orden ?>"
-                                    id_prod="<?php echo $idproducto ?>" identrepanio="<?php echo $identrepanio ?>"
-                                    idpe="<?php echo $id ?>" id_persona="<?php echo $id_persona ?>"></input>
-                                <div id="canttx"></div>
-                            </div>
-                        </div>
-
-                    <?php }
-} ?>
-
-
-                <!-- Modal footer -->
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
-                    <button type="button" class="btn btn-success" id="btnacep">Aceptar</button>
-                </div>
-
-
+            <!-- Modal Header -->
+            <div class="modal-header text-center">
+                <h5 class="modal-title mx-auto">Entrega a Departamentos de <?php echo $nom_insumo ?></h5>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <div class="row mb-2">
+                    <div class="col-md-12">
+                        <label style="font-size:13px">Departamento</label>
+                        <select class="form-control" id="dep" name="dep" style="width:100%;" >
+                            <option selected="true" disabled="disabled"></option>
+                            <?php
+                            $cadenax = "SELECT id, nombre
+                                                    FROM u116753122_cw3completa.departamentos where estado=1 ";
+                            $resultadP2ax = $conetar->query($cadenax);
+                            $numerfiles2ax = mysqli_num_rows($resultadP2ax);
+                            if ($numerfiles2ax >= 1) {
+                                while ($filaP2ax = mysqli_fetch_array($resultadP2ax)) {
+
+                                    echo "<option value='" . trim($filaP2ax['id']) . "'";
+                                    echo '>' . $filaP2ax['nombre'] . "</option>";
+                                }
+                            }
+                            ?>
+                        </select>
+                        <div id="depx"></div>
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <?php
+                    $cadenaxy = "SELECT CONCAT(p.nombre_1, ' ', p.nombre_2,' ',p.apellido_1,' ',p.apellido_2) as nombre_persona, b.id_persona FROM cotizacion_insumos a INNER JOIN ordrequisicion b on a.norequisicion = b.id INNER JOIN persona p ON p.id_persona = b.id_persona WHERE numorden = '" . $id_orden . "'";
+                    $resultadcadenaxy = $conetar->query($cadenaxy);
+                    $numerfiles2xy = mysqli_num_rows($resultadcadenaxy);
+                    if ($numerfiles2xy >= 1) {
+                        while ($filaP2xy = mysqli_fetch_array($resultadcadenaxy)) {
+                            $nombre_persona = $filaP2xy['nombre_persona'];
+                            $id_persona = $filaP2xy['id_persona'];
+
+
+                    ?>
+
+                            <div class="col-md-12 col-lg-12" id="resp">
+                                <label style="font-size:13px">Solicitante</label>
+                                <input style="font-size:13px;height:28px;" type="text" class="form-control" id="sol" name="sol" value="<?php echo $nombre_persona ?>" readonly></input>
+                                <div id="solx"></div>
+
+                            </div>
+
+                </div>
+        <?php }
+                    } ?>
+        <div class="row mb-2">
+            <div class="col-md-6">
+                <label style="font-size:13px">Cantidad en Bodega</label>
+                <input style="font-size:13px;height:28px;" type="number" class="form-control" id="cante" name="cante" value="<?php echo $cante ?>" readonly>
+            </div>
+            <div class="col-md-6">
+                <label style="font-size:13px">Cantidad a Entregar</label>
+                <input style="font-size:13px;height:28px;" type="number" class="form-control" value="" id="cantt" name="cantt">
+                <div id="canttx"></div>
+            </div>
+        </div>
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-success" id="btnacep">Aceptar</button>
+            </div>
+
         </div>
     </div>
 </div>
+
 <script>
     function agregarxy(sel) {
         var idd = $('option:selected', sel).attr('value');
@@ -182,8 +167,11 @@ if ($numerfiles2 >= 1) {
 
     };
 
-    $(document).ready(function () {
-        $('#btnacep').click(function () {
+    $(document).ready(function() {
+        $('#dep').select2({
+            language: "es"
+        });
+        $('#btnacep').click(function() {
             var dep = $("#dep").val();
             var sol = $("#sol").val();
             var cantt = $("#cantt").val();
@@ -282,8 +270,8 @@ if ($numerfiles2 >= 1) {
                             entr: entr,
                             dep: dep
                         },
-                        success: function (response) {
                             $("#table").load("https://conlabweb3.tierramontemariana.org/apps/trasladodepartamento/tabla.php", {
+                        success: function(response) {
                                 id_prod: id_prod
                             });
                             Swal.fire({
