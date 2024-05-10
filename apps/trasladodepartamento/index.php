@@ -6,7 +6,7 @@ $ruta = "<a href='#'>Home</a> / " . $moduraiz;
 $uppercaseruta = strtoupper($ruta);
 
 ?>
-<link rel="stylesheet" href="/cw3/conlabweb3.0/apps/trasladodepartamento/assets/style.css">
+<link rel="stylesheet" href="https://conlabweb3.tierramontemariana.org/apps/trasladodepartamento/assets/style.css">
 <div class="card border-info" style="width:85%;margin:auto;">
 
     <div class="card-header bg-light ">
