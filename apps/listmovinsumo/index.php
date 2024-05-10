@@ -1,31 +1,11 @@
 <?php
 
-
-// echo __FILE__.'>dd.....<br>';
-if (file_exists("config/accesosystems.php")) {
-    include("config/accesosystems.php");
-} else {
-    if (file_exists("../config/accesosystems.php")) {
-        include("../config/accesosystems.php");
-    } else {
-        if (file_exists("../../config/accesosystems.php")) {
-            include("../../config/accesosystems.php");
-        }
-    }
-}
-
-$id_users = $_SESSION['id_users'];
-
-$conetar = new mysqli(hostname, db_login, db_pass, cw3ctrlsrv);
-if ($conetar->connect_errno) {
-    $error = "Fallo al conectar a MySQL: (" . $conetar->connect_errno . ") " . $conetar->connect_error;
-    echo $error;
-} else {
-
-    $moduraiz = $_SESSION['moduraiz'];
-}
-
+$nmbapp = "Listado de Solicitudes";
+$moduraiz = "Compras e Inventario";
+$ruta = "<a href='#'>Home</a> / " . $moduraiz;
+$uppercaseruta = strtoupper($ruta);
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -33,21 +13,18 @@ if ($conetar->connect_errno) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-
+    <link rel="stylesheet" href="https://conlabweb3.tierramontemariana.org/apps/listmovinsumo/assets/style.css">
 </head>
-
+<?php include 'apps/thedata.php'; ?>
 <body>
-    <div class="card border-info" style="width:100%;margin:auto;">
+    <div class="card border-info"  style="width:85%;margin:auto;">
 
-        <div class="card-header bg-light text-bold" style="font-size: 15px !important;">
+        <div class="card-header bg-light " style="font-size: 15px !important;">
             <div class="row">
                 <div class="col-md-4 col-lg-4">
                     <nav class="breadcrumbs">
                         <a href="#" class="breadcrumbs__item" style="text-decoration: none;"><?php echo $moduraiz; ?></a>
-                        <a href="#" class="breadcrumbs__item is-active" style="text-decoration: none;">Lista de Movimientos de Insumos</strong></a>
+                        <a href="#" class="breadcrumbs__item is-active" style="text-decoration: none;">Lista de Movimientos de Insumos</a>
                     </nav>
                 </div>
                 <div class="col-md-4 col-lg-4">
@@ -112,6 +89,7 @@ if ($conetar->connect_errno) {
     function cargarInventario() {
         $("#v-pills-messages").load("https://conlabweb3.tierramontemariana.org/apps/listmovinsumo/thedatatable-3.php");
     }
+
     function cargarTraslados() {
         $("#v-pills-traslados").load("https://conlabweb3.tierramontemariana.org/apps/listmovinsumo/thedatatable-4.php");
     }
