@@ -270,8 +270,8 @@ if ($numerfiles2 >= 1) {
                             entr: entr,
                             dep: dep
                         },
-                            $("#table").load("https://conlabweb3.tierramontemariana.org/apps/trasladodepartamento/tabla.php", {
                         success: function(response) {
+                            $("#table").load("https://conlabweb3.tierramontemariana.org/apps/trasladodepartamento/tabla.php", {
                                 id_prod: id_prod
                             });
                             Swal.fire({

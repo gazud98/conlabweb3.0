@@ -102,8 +102,8 @@
         });
     });
 
-        $("#btndep").load("https://conlabweb3.tierramontemariana.org/apps/trasladodepartamento/trasladodep.php", {
     function selectthefile3(id_produ, nom_insumo, cant, fchvence, identrepanio) {
+        $("#btndep").load("https://conlabweb3.tierramontemariana.org/apps/trasladodepartamento/trasladodep.php", {
             id_produ: id_produ,
             nom_insumo: nom_insumo,
             cant: cant,
