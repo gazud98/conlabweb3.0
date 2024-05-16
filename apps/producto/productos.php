@@ -505,40 +505,4 @@ if ($conetar->connect_errno) {
 
 
 
-    function cancelBTN() {
-        $("#iddatas").css("pointer-events", "none");
-        $("#iddatas").css("background-color", "#ededed");
-        $("#accionejec").css("display", "none");
-        $("#accionejec").html("");
-        $("#btones").css("display", "none");
-    }
-
-    $(document).ready(function() {
-        $('#cancelbtn').click(function() {
-            $("#referencia").css("border", "thin solid rgb(233,236,239)");
-            $("#referenciax").empty();
-            $("#nombre").css("border", "thin solid rgb(233,236,239)");
-            $("#nombrex").empty();
-            $("#id_departamento").css("border", "thin solid rgb(233,236,239)");
-            $("#id_departamentox").empty();
-            $("#cantidad_unidadmedida").css("border", "thin solid rgb(233,236,239)");
-            $("#cantidad_unidadmedidax").empty();
-            $("#id_unidadmedida").css("border", "thin solid rgb(233,236,239)");
-            $("#id_unidadmedidax").empty();
-            $("#cantidad_presentacion").css("border", "thin solid rgb(233,236,239)");
-            $("#cantidad_presentacionx").empty();
-            $("#id_presentacion").css("border", "thin solid rgb(233,236,239)");
-            $("#id_presentacionx").empty();
-            /* $("#stckmin").css("border", "thin solid rgb(233,236,239)");
-             $("#stckminx").empty();
-             $("#stckpntoreorden").css("border", "thin solid rgb(233,236,239)");
-             $("#stckpntoreordenx").empty();
-             $("#stckmax").css("border", "thin solid rgb(233,236,239)");
-             $("#stckmaxx").empty();*/
-            $("#id_clasificacion_riesgo").css("border", "thin solid rgb(233,236,239)");
-            $("#id_clasificacion_riesgox").empty();
-            $("#id_condicion_almacenaje").css("border", "thin solid rgb(233,236,239)");
-            $("#id_condicion_almacenajex").empty();
-        });
-    });
 </script>

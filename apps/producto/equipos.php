@@ -368,11 +368,4 @@ if ($conetar->connect_errno) {
     });
 
 
-    function cancelBTN() {
-        $("#iddatas").css("pointer-events", "none");
-        $("#iddatas").css("background-color", "#ededed");
-        $("#accionejec").css("display", "none");
-        $("#accionejec").html("");
-        $("#btones").css("display", "none");
-    }
 </script>
