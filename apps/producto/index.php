@@ -35,7 +35,7 @@ if ($conetar->connect_errno) {
         }
         
         .content-wrapper {
-            background-image: url('https://conlabweb3.tierramontemariana.org/apps/medicos/assets/backcw3-v1.png');
+            background-image: url('https://conlabweb3.tierramontemariana.org/medicos/assets/backcw3-v1.png');
             background-size: cover;
             background-repeat: no-repeat;
         }
@@ -47,7 +47,7 @@ if ($conetar->connect_errno) {
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title></title>
-        <link rel="stylesheet" href="https://conlabweb3.tierramontemariana.org/apps/producto/assets/style.css">
+        <link rel="stylesheet" href="https://conlabweb3.tierramontemariana.org/producto/assets/style.css">
 
     </head>
 
@@ -176,16 +176,16 @@ if ($conetar->connect_errno) {
         <script>
             $(document).ready(function() {
 
-                $('#contentTableProdcutos').load('https://conlabweb3.tierramontemariana.org/apps/producto/table.php');
+                $('#contentTableProdcutos').load('https://conlabweb3.tierramontemariana.org/producto/table.php');
 
             });
 
             function loadFormProdcut() {
-                $('#contentFormProduct').load('https://conlabweb3.tierramontemariana.org/apps/producto/productos.php');
+                $('#contentFormProduct').load('https://conlabweb3.tierramontemariana.org/producto/productos.php');
             }
 
             function loadFormEquipo() {
-                $('#contentFormEquipo').load('https://conlabweb3.tierramontemariana.org/apps/producto/equipos.php');
+                $('#contentFormEquipo').load('https://conlabweb3.tierramontemariana.org/producto/equipos.php');
             }
 
             function accionesespecificas(caso) {

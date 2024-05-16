@@ -4,10 +4,10 @@
     <table class="table table-striped table-hover table-head-fixed text-nowrap table responsive  table-sm table-producto" style="width:100%">
         <thead>
             <tr>
-                <th>Nombre</th>
-                <th>Referencia</th>
-                <th>Estado</th>
-                <th></th>
+                <th class="text-center">Nombre</th>
+                <th class="text-center">Referencia</th>
+                <th class="text-center">Estado</th>
+                <th class="text-center">Acciones</th>
             </tr>
         </thead>
         <tbody>
@@ -23,54 +23,55 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script>
-        $(document).ready(function() {
-            miDataTable = $('.table-producto').DataTable({
-                language: {
-                    url: 'https://cdn.datatables.net/plug-ins/1.11.5/i18n/es-ES.json',
-                },
-                "paging": true,
-                "lengthChange": true,
-                "searching": true,
-                "ordering": true,
-                "info": true,
-                "autoWidth": false,
-                "responsive": true,
-                // ... Otras opciones ...
-                "ajax": {
-                    url: 'https://conlabweb3.tierramontemariana.org/apps/producto/mostrar.php', // Página PHP que devuelve los datos en formato JSON
-                    type: 'GET', // Método de la petición (GET o POST según corresponda)
-                    dataType: 'json', // Tipo de datos esperado en la respuesta
-                    dataSrc: '' // Indicar que los datos provienen directamente del objeto JSON (sin propiedad adicional)
-                },
-                "columns": [{
-                        "data": "nombre"
-                    },{
-                        "data": "referencia"
-                    },
-                    {
-                        "data": null,
-                        "render": function(data, type, full, meta) {
-                            // Aquí puedes aplicar estilos o clases CSS según el valor de la propiedad "estado"
-                            if (full.estado === "0") {
-                                return '<span class="badge badge-danger">Inhabilitado</span>';
-                            } else if (full.estado === "1") {
-                                return '<span class="badge badge-success">Habilitado</span>';
-                            }
-                        }
-                    },
-                    {
-                        "data": null,
-                        "render": function(data, type, full, meta) {
-
-                            return '<a href="#" style="color:#E8A200;" onclick="cargarForm(' + full.thefile + ',' + full.id_producto + ',\'' + full.tipo_prod + '\')" data-toggle="modal" data-target="#modaEditEquipo"><i class="fa-solid fa-eye" style="font-size:13px;"></i></a>' +
-                                '<a href="#" style="color:#D62121;" onclick="deleteProduct(' + full.id_producto + ')"><i class="fa-solid fa-trash-can" style="font-size:13px;"></i></a>' +
-                                '<a href="#" style="color:#323D66;" onclick="disableProduct(' + full.id_producto + ',' + full.estado + ')"><i class="fa-solid fa-power-off" style="font-size:13px;"></i></a>';
-
-                        }
+      $(document).ready(function() {
+    miDataTable = $('.table-producto').DataTable({
+        language: {
+            url: 'https://cdn.datatables.net/plug-ins/1.11.5/i18n/es-ES.json',
+        },
+        paging: true,
+        lengthChange: true,
+        searching: true,
+        ordering: true,
+        info: true,
+        autoWidth: false,
+        responsive: true,
+        ajax: {
+            url: 'https://conlabweb3.tierramontemariana.org/producto/mostrar.php',
+            type: 'GET',
+            dataType: 'json',
+            dataSrc: '',
+            error: function(xhr, status, error) {
+                console.error("Error en la carga de datos: ", error);
+                console.error("Detalles del error: ", xhr.responseText);
+            }
+        },
+        columns: [
+            { data: 'nombre' },
+            { data: 'referencia' },
+            {
+                data: 'estado',
+                render: function(data, type, full, meta) {
+                    if (data === "0") {
+                        return '<span class="badge badge-danger">Inhabilitado</span>';
+                    } else if (data === "1") {
+                        return '<span class="badge badge-success">Habilitado</span>';
+                    } else {
+                        return '<span class="badge badge-secondary">Desconocido</span>';
                     }
-                ]
-            });
-        });
+                }
+            },
+            {
+                data: null,
+                render: function(data, type, full, meta) {
+                    return '<a href="#" style="color:#E8A200;" onclick="cargarForm(\'' + full.thefile + '\', ' + full.id_producto + ',\'' + full.tipo_prod + '\')" data-toggle="modal" data-target="#modaEditEquipo"><i class="fa-solid fa-eye" style="font-size:13px;"></i></a>' +
+                           '<a href="#" style="color:#D62121;" onclick="deleteProduct(' + full.id_producto + ')"><i class="fa-solid fa-trash-can" style="font-size:13px;"></i></a>' +
+                           '<a href="#" style="color:#323D66;" onclick="disableProduct(' + full.id_producto + ',' + full.estado + ')"><i class="fa-solid fa-power-off" style="font-size:13px;"></i></a>';
+                }
+            }
+        ]
+    });
+});
+
 
         function deleteProduct(id) {
             Swal.fire({
@@ -85,7 +86,7 @@
             }).then((result) => {
                 if (result.isConfirmed) {
                     $.ajax({
-                        url: 'https://conlabweb3.tierramontemariana.org/apps/producto/delete.php?id=' + id,
+                        url: 'https://conlabweb3.tierramontemariana.org/producto/delete.php?id=' + id,
                         success: function() {
                             Swal.fire(
                                 '¡Eliminado!',
@@ -112,7 +113,7 @@
                 }).then((result) => {
                     if (result.isConfirmed) {
                         $.ajax({
-                            url: 'https://conlabweb3.tierramontemariana.org/apps/producto/crud-2.php',
+                            url: 'https://conlabweb3.tierramontemariana.org/producto/crud-2.php',
                             data: {
                                 id: id,
                                 aux: 2
@@ -140,7 +141,7 @@
                 }).then((result) => {
                     if (result.isConfirmed) {
                         $.ajax({
-                            url: 'https://conlabweb3.tierramontemariana.org/apps/producto/crud-2.php',
+                            url: 'https://conlabweb3.tierramontemariana.org/producto/crud-2.php',
                             data: {
                                 id: id,
                                 aux: 2
@@ -161,12 +162,12 @@
 
         function cargarForm(thefile, id, tp) {
             if (tp == 'I') {
-                $("#contentFormEditEquipo").load("https://conlabweb3.tierramontemariana.org/apps/producto/productos.php", {
+                $("#contentFormEditEquipo").load("https://conlabweb3.tierramontemariana.org/producto/productos.php", {
                     id: id
                 });
 
             } else {
-                $("#contentFormEditEquipo").load("https://conlabweb3.tierramontemariana.org/apps/producto/equipos.php", {
+                $("#contentFormEditEquipo").load("https://conlabweb3.tierramontemariana.org/producto/equipos.php", {
                     id: id
                 });
             }

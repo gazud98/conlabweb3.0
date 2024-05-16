@@ -292,7 +292,7 @@ if ($conetar->connect_errno) {
             submitHandler: function() {
                 $.ajax({
                     type: 'POST',
-                    url: 'https://conlabweb3.tierramontemariana.org/apps/producto/crud.php',
+                    url: 'https://conlabweb3.tierramontemariana.org/producto/crud.php',
                     data: $('#formcontrol1').serialize(),
                     success: function(respuesta) {
 
