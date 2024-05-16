@@ -16,7 +16,7 @@ $id = $_GET['id'];
 
 ?>
 
-<form action="https://conlabweb3.tierramontemariana.org/producto/subir_archivo.php?id=<?php echo $id ?>" method="post" enctype="multipart/form-data" style="
+<form action="https://conlabweb3.tierramontemariana.org/apps/producto/subir_archivo.php?id=<?php echo $id ?>" method="post" enctype="multipart/form-data" style="
     width:100%;
      ">
     <div class="row">
@@ -51,7 +51,7 @@ $id = $_GET['id'];
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
     $(document).ready(function() {
-        $('#show').load('https://conlabweb3.tierramontemariana.org/producto/show-files.php?id=<?php echo $id ?>');
-        $('#showname').load('https://conlabweb3.tierramontemariana.org/producto/show-namefile.php?id=<?php echo $id ?>');
+        $('#show').load('https://conlabweb3.tierramontemariana.org/apps/producto/show-files.php?id=<?php echo $id ?>');
+        $('#showname').load('https://conlabweb3.tierramontemariana.org/apps/producto/show-namefile.php?id=<?php echo $id ?>');
     });
 </script>

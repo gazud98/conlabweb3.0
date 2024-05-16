@@ -35,7 +35,7 @@ if ($conetar->connect_errno) {
         }
         
         .content-wrapper {
-            background-image: url('https://conlabweb3.tierramontemariana.org/medicos/assets/backcw3-v1.png');
+            background-image: url('https://conlabweb3.tierramontemariana.org/apps/medicos/assets/backcw3-v1.png');
             background-size: cover;
             background-repeat: no-repeat;
         }
@@ -47,7 +47,7 @@ if ($conetar->connect_errno) {
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title></title>
-        <link rel="stylesheet" href="https://conlabweb3.tierramontemariana.org/producto/assets/style.css">
+        <link rel="stylesheet" href="https://conlabweb3.tierramontemariana.org/apps/producto/assets/style.css">
 
     </head>
 
@@ -176,103 +176,20 @@ if ($conetar->connect_errno) {
         <script>
             $(document).ready(function() {
 
-                $('#contentTableProdcutos').load('https://conlabweb3.tierramontemariana.org/producto/table.php');
+                $('#contentTableProdcutos').load('https://conlabweb3.tierramontemariana.org/apps/producto/table.php');
 
             });
 
             function loadFormProdcut() {
-                $('#contentFormProduct').load('https://conlabweb3.tierramontemariana.org/producto/productos.php');
+                $('#contentFormProduct').load('https://conlabweb3.tierramontemariana.org/apps/producto/productos.php');
             }
 
             function loadFormEquipo() {
-                $('#contentFormEquipo').load('https://conlabweb3.tierramontemariana.org/producto/equipos.php');
+                $('#contentFormEquipo').load('https://conlabweb3.tierramontemariana.org/apps/producto/equipos.php');
             }
 
-            function accionesespecificas(caso) {
-                if (caso == "X") { //cancelar....
-                    $("#divproveedoresproducto").css("display", "block");
-                }
-                if (caso == "A") { //aceptar...
-                    $("#divproveedoresproducto").css("display", "block");
-                }
-                if (caso == "C") { //de crer
-                    //desaparece la creacion de proveedores, solo sale en los demas casos
-                    $("#divproveedoresproducto").css("display", "none");
-                } //De crear
-                if (caso == "E") {
-                    $("#divproveedoresproducto").css("display", "block");
-                } //Editar
-                if (caso == "D") {
-                    $("#divproveedoresproducto").css("display", "block");
-                } //Es de habolita / inhablitar
-            } //funcikjnes que hacen casos epeciales en
+       
 
-
-            function printAreaDiv() {
-
-                var contenidoDiv = document.getElementById('content-table-print').innerHTML;
-                var divTemporal = document.createElement('div');
-                divTemporal.innerHTML = contenidoDiv;
-                var iframe = document.createElement('iframe');
-                iframe.style.display = 'none';
-                document.body.appendChild(iframe);
-                var doc = iframe.contentWindow.document;
-                doc.body.appendChild(divTemporal);
-                iframe.contentWindow.print();
-                document.body.removeChild(iframe);
-            }
-
-            function exportarCVS() {
-                var tabla = document.getElementById('tableproductoprint');
-                var csv = [];
-                var filas = tabla.getElementsByTagName('tr');
-                for (var i = 0; i < filas.length; i++) {
-                    var fila = [];
-                    var celdas = filas[i].getElementsByTagName('td');
-                    for (var j = 0; j < celdas.length; j++) {
-                        fila.push(celdas[j].innerText);
-                    }
-                    csv.push(fila.join(''));
-                }
-                var contenidoCSV = csv.join('\n');
-                var enlace = document.createElement('a');
-                enlace.href = 'data:text/csv;charset=utf-8,' + encodeURIComponent(contenidoCSV);
-                enlace.target = '_blank';
-                enlace.download = 'mi_tabla.csv';
-                enlace.click();
-            }
-
-            function exportarExcel() {
-                var nombreArchivo = 'productos.xlsx';
-                var tabla = document.getElementById('tableproductoprint');
-                var tablaHTML = tabla.outerHTML;
-                var workbook = XLSX.utils.table_to_book(tabla);
-                var excelBuffer = XLSX.write(workbook, {
-                    bookType: 'xlsx',
-                    type: 'array'
-                });
-                var blob = new Blob([excelBuffer], {
-                    type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
-                });
-                var url = URL.createObjectURL(blob);
-                var a = document.createElement('a');
-                a.href = url;
-                a.download = nombreArchivo;
-                a.click();
-                URL.revokeObjectURL(url);
-
-                Swal.fire({
-                    position: 'top',
-                    icon: 'success',
-                    title: 'Archivo exportado con éxito!',
-                    showConfirmButton: false,
-                    timer: 1000
-                })
-
-                $('#modalPrint').hide();
-                $('.modal-backdrop').remove();
-
-            }
         </script>
     </body>
 

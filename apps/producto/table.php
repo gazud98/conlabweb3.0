@@ -36,7 +36,7 @@
         autoWidth: false,
         responsive: true,
         ajax: {
-            url: 'https://conlabweb3.tierramontemariana.org/producto/mostrar.php',
+            url: 'https://conlabweb3.tierramontemariana.org/apps/producto/mostrar.php',
             type: 'GET',
             dataType: 'json',
             dataSrc: '',
@@ -86,7 +86,7 @@
             }).then((result) => {
                 if (result.isConfirmed) {
                     $.ajax({
-                        url: 'https://conlabweb3.tierramontemariana.org/producto/delete.php?id=' + id,
+                        url: 'https://conlabweb3.tierramontemariana.org/apps/producto/delete.php?id=' + id,
                         success: function() {
                             Swal.fire(
                                 '¡Eliminado!',
@@ -113,7 +113,7 @@
                 }).then((result) => {
                     if (result.isConfirmed) {
                         $.ajax({
-                            url: 'https://conlabweb3.tierramontemariana.org/producto/crud-2.php',
+                            url: 'https://conlabweb3.tierramontemariana.org/apps/producto/crud-2.php',
                             data: {
                                 id: id,
                                 aux: 2
@@ -141,7 +141,7 @@
                 }).then((result) => {
                     if (result.isConfirmed) {
                         $.ajax({
-                            url: 'https://conlabweb3.tierramontemariana.org/producto/crud-2.php',
+                            url: 'https://conlabweb3.tierramontemariana.org/apps/producto/crud-2.php',
                             data: {
                                 id: id,
                                 aux: 2
@@ -162,12 +162,12 @@
 
         function cargarForm(thefile, id, tp) {
             if (tp == 'I') {
-                $("#contentFormEditEquipo").load("https://conlabweb3.tierramontemariana.org/producto/productos.php", {
+                $("#contentFormEditEquipo").load("https://conlabweb3.tierramontemariana.org/apps/producto/productos.php", {
                     id: id
                 });
 
             } else {
-                $("#contentFormEditEquipo").load("https://conlabweb3.tierramontemariana.org/producto/equipos.php", {
+                $("#contentFormEditEquipo").load("https://conlabweb3.tierramontemariana.org/apps/producto/equipos.php", {
                     id: id
                 });
             }
