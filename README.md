@@ -1,5 +1,3 @@
-# Framework-JAAR 'Jesús Alberto Ariza Reyes'
-FRAMEWORK PHP 8.1, MVC, PDO, SESSION DB 
 
 ----------------------------------------------------------------------------------------------------------------------
 Estructura de directorios php poo mvc
