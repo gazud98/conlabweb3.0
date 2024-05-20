@@ -26,7 +26,7 @@ if ($conetar->connect_errno) {
 
 ?>
     <label for="responsable" style="font-size: 11px;">Responsable Tenencia</label>
-    <select class="select2" name="responsable" id="responsable" style="width: 100%;">
+    <select class="select33" name="responsable" id="responsable" style="width: 100%;">
         <option selected disabled>Selecciona:</option>
         <?php
         $cadena = "SELECT trim(P.id_persona) as id_persona,trim(CONCAT( P.nombre_1,' ',P.nombre_2,' ',P.apellido_1,' ',P.apellido_2)) as nombre 
@@ -46,7 +46,7 @@ if ($conetar->connect_errno) {
 
     <script>
         $(document).ready(function() {
-            $('.select2').select2({
+            $('.select33').select2({
                 minimumResultsForSearch: 0
             });
         });
