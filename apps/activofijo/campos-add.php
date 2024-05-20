@@ -193,9 +193,9 @@ if ($conetar->connect_errno) {
                 <div class="form-group">
                     <label for="seguro" style="font-size: 11px;">Seguro:</label>
                     <select class="select1" aria-label="Default select example" name="seguro" id="seguro" required style="width: 100%;">
-                        <option selected disabled>Selecciona:</option>
-                        <option value="S">SI</option>
-                        <option value="N">NO</option>
+                       
+                        <option value="S" selected>SI</option>
+                        <option value="N" >NO</option>
                     </select>
                 </div>
             </div>
@@ -233,8 +233,8 @@ if ($conetar->connect_errno) {
                 <div class="form-group">
                     <label for="garantia" style="font-size: 11px;">Garantia:</label>
                     <select class="select1" aria-label="Default select example" name="garantia" id="garantia" required style="width: 100%;">
-                        <option selected disabled>Selecciona:</option>
-                        <option value="S">SI</option>
+           
+                        <option value="S" selected>SI</option>
                         <option value="N">NO</option>
                     </select>
                 </div>
