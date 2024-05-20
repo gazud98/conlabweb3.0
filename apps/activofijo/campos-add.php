@@ -351,9 +351,7 @@ if ($conetar->connect_errno) {
             $('.select1').select2({
                 minimumResultsForSearch: 0
             });
-            $('#responsable').select2({
-                minimumResultsForSearch: 0
-            });
+           
             // Configuración de validación del formulario
             $.validator.setDefaults({
                 submitHandler: function() {
