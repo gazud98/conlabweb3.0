@@ -348,12 +348,10 @@ if ($conetar->connect_errno) {
 
 
             // Inicializar Select2 en los elementos select
-            $('.select1').select2({
+            $('.select1 .select33').select2({
                 minimumResultsForSearch: 0
             });
-            $('.select33').select2({
-                minimumResultsForSearch: 0
-            });
+           
             // Configuración de validación del formulario
             $.validator.setDefaults({
                 submitHandler: function() {
