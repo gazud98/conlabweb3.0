@@ -29,7 +29,7 @@ if ($conetar->connect_errno) {
     <select class="form-control" name="area" id="area" style="width: 100%;">
 
         <?php
-        $cadena = "SELECT id, nombre FROM area_laboratorio where estado='1' and id_departamento=" . $id . "";
+        $cadena = "SELECT id, nombre FROM  u116753122_cw3completa.area_laboratorio where estado='1' and id_departamento=" . $id . "";
         $resultadP2a = $conetar->query($cadena);
         while ($filaP2a = mysqli_fetch_array($resultadP2a)) {
             echo "<option value='" . trim($filaP2a['id']) . "'";

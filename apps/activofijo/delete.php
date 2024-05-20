@@ -26,11 +26,11 @@ if ($conetar->connect_errno) {
 } else {
 
 
-    include('reglasdenavegacion.php');
+   
 
     $id = $_REQUEST['id'];
 
-    $sql =  "DELETE FROM producto WHERE id_producto = '$id'";
+    $sql =  "DELETE FROM  u116753122_cw3completa.producto WHERE id_producto = '$id'";
     $rest = mysqli_query($conetar, $sql);
 
 }

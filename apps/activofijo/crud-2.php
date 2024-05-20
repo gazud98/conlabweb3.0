@@ -67,14 +67,14 @@ if ($conetar->connect_errno) {
         $area = trim($_POST['area']);
         $dpr = $valor / $vidautilmes;
         $responsablemant = trim($_POST['responsablemant']);
-        $cadena = "insert into producto(id_categoria_producto,nombre,id_departamento,
+        $cadena = "insert into  u116753122_cw3completa.producto(id_categoria_producto,nombre,id_departamento,
                 id_sede,id_tipo_activo,op_mantenimiento,dpr,descripcion)values('" .
             $id_categoria_producto . "','" . $nombre . "','" . $id_departamento .
             "','" . $id_sedes . "','" . $id_tipo_activo . "','" . $optmante . "','" . $dpr . "','" . $descp . "')";
         $resultado = mysqli_query($conetar, $cadena);
         //busco el id
         $cadena = "select id_producto
-                                from producto
+                                from  u116753122_cw3completa.producto
                                 where id_categoria_producto='" . $id_categoria_producto . "'
                                         and nombre='" . $nombre . "'
                                         and id_departamento='" . $id_departamento . "'
@@ -86,7 +86,7 @@ if ($conetar->connect_errno) {
         if ($numerfiles2 >= 1) {
             $filaP2a = mysqli_fetch_array($resultadP2);
             $id = $filaP2a['id_producto'];
-            $sql = "insert into producto_activofijo(id_producto,valor,modelo,serie,
+            $sql = "insert into  u116753122_cw3completa.producto_activofijo(id_producto,valor,modelo,serie,
                                        fchinstalacion,seguro,garantia,
                                         fchexpgarantia,vidautilmes,metdepreciacion,id_proveegarantia,
                                         id_responsable,aseguradora,valor_asegurado,op_mantenimiento,dpr,descripcion,fchiniciogarantia,id_area,fchinicioseguro,fchexpseguro,id_respmantemiento)values('" .
@@ -134,11 +134,11 @@ if ($conetar->connect_errno) {
         $fchinicioseguro = trim($_POST['fchinicioseguro']);
         $fchexpseguro = trim($_POST['fchexpseguro']);
         $responsablemant = trim($_POST['responsablemant']);
-        $sqlpr = "UPDATE producto SET 
+        $sqlpr = "UPDATE  u116753122_cw3completa.producto SET 
         nombre='" . $nombre . "', id_sede='$id_sedes',id_departamento='$id_departamento',id_tipo_activo='$id_tipo_activo' WHERE id_producto = '$id'";
         $restpr = mysqli_query($conetar, $sqlpr);
 
-        $sql = "UPDATE producto_activofijo SET 
+        $sql = "UPDATE  u116753122_cw3completa.producto_activofijo SET 
         valor='$valor',
         modelo='$modelo',
         serie='$serie',
@@ -165,16 +165,16 @@ if ($conetar->connect_errno) {
     } else if ($aux == 3) {
         $id = $_REQUEST['id'];
 
-        $sql =  "DELETE FROM producto WHERE id_producto = '$id'";
+        $sql =  "DELETE FROM  u116753122_cw3completa.producto WHERE id_producto = '$id'";
         $rest = mysqli_query($conetar, $sql);
     } else if ($aux == 4) {
         $id = $_REQUEST['id'];
         $estado = $_REQUEST['estado'];
 
         if ($estado == 1) {
-            $cadena = "update producto set estado='2' where id_producto='" . $id . "'";
+            $cadena = "update  u116753122_cw3completa.producto set estado='2' where id_producto='" . $id . "'";
         } else if ($estado == 2) {
-            $cadena = "update producto set estado='1' where id_producto='" . $id . "'";
+            $cadena = "update  u116753122_cw3completa.producto set estado='1' where id_producto='" . $id . "'";
         }
 
         $resultado = mysqli_query($conetar, $cadena);

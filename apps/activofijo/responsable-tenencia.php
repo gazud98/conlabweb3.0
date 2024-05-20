@@ -30,7 +30,7 @@ if ($conetar->connect_errno) {
         <option selected disabled>Selecciona:</option>
         <?php
         $cadena = "SELECT trim(P.id_persona) as id_persona,trim(CONCAT( P.nombre_1,' ',P.nombre_2,' ',P.apellido_1,' ',P.apellido_2)) as nombre 
-                    FROM persona P, persona_empleados PE where P.id_persona=PE.id_persona and p.estado = 1;";
+                    FROM  u116753122_cw3completa.persona P,  u116753122_cw3completa.persona_empleados PE where P.id_persona=PE.id_persona and p.estado = 1;";
         $resultadP2a = $conetar->query($cadena);
         while ($filaP2a = mysqli_fetch_array($resultadP2a)) {
             echo "<option value='" . trim($filaP2a['id_persona']) . "'";

@@ -60,7 +60,7 @@ if ($conetar->connect_errno) {
                     <select class="select1" name="id_tipo_activo" id="id_tipo_activo" style="width: 100%;">
                         <option selected disabled>Selecciona:</option>
                         <?php
-                        $cadena = "SELECT id, nombre FROM tipo_activo_fijos where estado='1'";
+                        $cadena = "SELECT id, nombre FROM  u116753122_cw3completa.tipo_activo_fijos where estado='1'";
                         $resultadP2a = $conetar->query($cadena);
                         while ($filaP2a = mysqli_fetch_array($resultadP2a)) {
                             echo "<option value='" . trim($filaP2a['id']) . "'";
@@ -77,7 +77,7 @@ if ($conetar->connect_errno) {
                     <select class="select1" name="id_sedes" id="id_sedes" required style="width: 100%;">
                         <option selected disabled>Selecciona:</option>
                         <?php
-                        $cadena = "SELECT id_sedes, nombre FROM sedes where estado='1'";
+                        $cadena = "SELECT id_sedes, nombre FROM  u116753122_cw3completa.sedes where estado='1'";
                         $resultadP2a = $conetar->query($cadena);
                         while ($filaP2a = mysqli_fetch_array($resultadP2a)) {
                             echo "<option value='" . trim($filaP2a['id_sedes']) . "'";
@@ -94,7 +94,7 @@ if ($conetar->connect_errno) {
                     <select class="select1" name="id_departamento" id="id_departamento" style="width: 100%;" onchange='areaFunc(this);'>
                         <option selected disabled>Selecciona:</option>
                         <?php
-                        $cadena = "SELECT id, nombre FROM departamentos where estado='1'";
+                        $cadena = "SELECT id, nombre FROM  u116753122_cw3completa.departamentos where estado='1'";
                         $resultadP2a = $conetar->query($cadena);
                         while ($filaP2a = mysqli_fetch_array($resultadP2a)) {
                             echo "<option value='" . trim($filaP2a['id']) . "'";
@@ -114,7 +114,7 @@ if ($conetar->connect_errno) {
                         <select class="select1" name="area" id="area" style="width: 100%;">
 
                             <?php
-                            $cadena = "SELECT id, nombre FROM area_laboratorio where estado='1' ";
+                            $cadena = "SELECT id, nombre FROM  u116753122_cw3completa.area_laboratorio where estado='1' ";
                             $resultadP2a = $conetar->query($cadena);
                             while ($filaP2a = mysqli_fetch_array($resultadP2a)) {
                                 echo "<option value='" . trim($filaP2a['id']) . "'";
@@ -139,7 +139,7 @@ if ($conetar->connect_errno) {
                         <option selected disabled>Selecciona:</option>
                         <?php
                         $cadena = "SELECT trim(P.id_persona) as id_persona,trim(CONCAT( P.nombre_1,' ',P.nombre_2,' ',P.apellido_1,' ',P.apellido_2)) as nombre 
-                    FROM persona P, persona_empleados PE where P.id_persona=PE.id_persona and p.estado = 1;";
+                    FROM  u116753122_cw3completa.persona P,  u116753122_cw3completa.persona_empleados PE where P.id_persona=PE.id_persona and p.estado = 1;";
                         $resultadP2a = $conetar->query($cadena);
                         while ($filaP2a = mysqli_fetch_array($resultadP2a)) {
                             echo "<option value='" . trim($filaP2a['id_persona']) . "'";
@@ -158,7 +158,7 @@ if ($conetar->connect_errno) {
                             <option selected disabled>Selecciona:</option>
                             <?php
                             $cadena = "SELECT trim(P.id_persona) as id_persona,trim(CONCAT( P.nombre_1,' ',P.nombre_2,' ',P.apellido_1,' ',P.apellido_2)) as nombre 
-                    FROM persona P, persona_empleados PE where P.id_persona=PE.id_persona and p.estado = 1;";
+                    FROM  u116753122_cw3completa.persona P,  u116753122_cw3completa.persona_empleados PE where P.id_persona=PE.id_persona and p.estado = 1;";
                             $resultadP2a = $conetar->query($cadena);
                             while ($filaP2a = mysqli_fetch_array($resultadP2a)) {
                                 echo "<option value='" . trim($filaP2a['id_persona']) . "'";
@@ -245,7 +245,7 @@ if ($conetar->connect_errno) {
                     <select class="select1" name="proveegarantia" id="proveegarantia" style="width: 100%;">
                         <option selected disabled required>Selecciona:</option>
                         <?php
-                        $cadena = "SELECT id_proveedores, nombre_comercial FROM proveedores where estado='1'";
+                        $cadena = "SELECT id_proveedores, nombre_comercial FROM  u116753122_cw3completa.proveedores where estado='1'";
                         $resultadP2a = $conetar->query($cadena);
                         while ($filaP2a = mysqli_fetch_array($resultadP2a)) {
                             echo "<option value='" . trim($filaP2a['id_proveedores']) . "'";

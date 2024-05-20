@@ -19,7 +19,7 @@ if ($conetar->connect_errno) {
 } else {
 
     $cadena = "SELECT p.id_producto, pa.valor, p.nombre,estado, p.dpr
-    FROM  producto p, producto_activofijo pa where p.id_producto = pa.id_producto AND
+    FROM   u116753122_cw3completa.producto p,  u116753122_cw3completa.producto_activofijo pa where p.id_producto = pa.id_producto AND
     id_categoria_producto = 1 ORDER BY p.id_producto DESC";
     
     //echo $cadena;
