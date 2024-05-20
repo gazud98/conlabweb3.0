@@ -1,34 +1,12 @@
-<style>
-    .content-wrapper {
-        background-image: url('https://conlabweb3.tierramontemariana.org/apps/medicos/assets/backcw3-v1.png');
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-</style><?php
+<?php
 
-        if (file_exists("config/accesosystems.php")) {
-            include("config/accesosystems.php");
-        } else {
-            if (file_exists("../config/accesosystems.php")) {
-                include("../config/accesosystems.php");
-            } else {
-                if (file_exists("../../config/accesosystems.php")) {
-                    include("../../config/accesosystems.php");
-                }
-            }
-        }
 
-        $conetar = new mysqli(hostname, db_login, db_pass, cw3ctrlsrv);
-        if ($conetar->connect_errno) {
-            $error = "Fallo al conectar a MySQL: (" . $conetar->connect_errno . ") " . $conetar->connect_error;
-            echo $error;
-        } else {
-            $nmbapp = "Reportes Activos Fijos";
-            $moduraiz = $_SESSION['moduraiz'];
-            $ruta = "<a href='#'>Home</a> / " . $moduraiz;
-            $uppercaseruta = strtoupper($ruta);
-        }
-        ?>
+$nmbapp = "Reporte de Activos Fijos";
+$moduraiz = "Activos Fijos";
+$ruta = "<a href='#'>Home</a> / " . $moduraiz;
+$uppercaseruta = strtoupper($ruta);
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -40,18 +18,7 @@
     <link rel="stylesheet" href="https://conlabweb3.tierramontemariana.org/apps/reportesactivosfijos/assets/style.css">
 </head>
 <style>
-    .card-title-rezise {
-        width: 100%;
-        color: #164085;
-        text-align: center;
-        position: relative;
-        margin-top: 9px;
-    }
-    .content-wrapper {
-        background-image: url('https://conlabweb3.tierramontemariana.org/apps/medicos/assets/backcw3-v1.png');
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
+
 </style>
 
 <body>
@@ -74,7 +41,7 @@
                 </div>
 
                 <div class="col-md-4 text-center">
-                    <h5 class="card-title card-title-rezise"><strong>Creación de Mantenimientos</strong></h5>
+                    <h5 style="text-align: center; color: #0045A5;"><strong> <?php echo $nmbapp; ?></strong></h5>
                 </div>
 
             </div>
@@ -100,9 +67,9 @@
     <!-- Modal View Activo Fijo -->
     <div class="modal fade" id="modalViewActivoFijo" tabindex="-1" aria-labelledby="modalViewActivoFijoLabel" aria-hidden="true">
         <div class="modal-dialog">
-            <div class="modal-content" style="width: 700px; margin-left:-228px">
+            <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="modalViewActivoFijoLabel"></h5>
+                    <h5 class="modal-title" id="modalViewActivoFijoLabel">Detalle Activo Fijo</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -135,6 +102,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
     <script src="https://kit.fontawesome.com/6dc75479dc.js" crossorigin="anonymous"></script>
     <script src="https://conlabweb3.tierramontemariana.org/apps/reportesactivosfijos/assets/index.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
     <script>
         $(document).ready(function() {
