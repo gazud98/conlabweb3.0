@@ -1,7 +1,3 @@
-*{
-    font-size: 14px;
-}
-
 .content-table {
     width: 100%;
     height: auto;
@@ -65,6 +61,7 @@
 table.table tr th,
 table.table tr td {
     vertical-align: middle;
+    border: 1px solid #DCDCDC;
     word-wrap: break-word;
     padding: 2px;
     text-align: center;
@@ -130,48 +127,7 @@ table.table .avatar {
 }
 
 
-/* Modal styles */
-.modal .modal-dialog {
-    max-width: 400px;
-}
 
-.modal .modal-header,
-.modal .modal-body,
-.modal .modal-footer {
-    padding: 20px 30px;
-}
-
-.modal .modal-content {
-    border-radius: 3px;
-}
-
-.modal .modal-footer {
-    background: #ecf0f1;
-    border-radius: 0 0 3px 3px;
-}
-
-.modal .modal-title {
-    display: inline-block;
-}
-
-.modal .formcontrol {
-    border-radius: 2px;
-    box-shadow: none;
-    border-color: #dddddd;
-}
-
-.modal textarea.formcontrol {
-    resize: vertical;
-}
-
-.modal .btn {
-    border-radius: 2px;
-    min-width: 100px;
-}
-
-.modal form label {
-    font-weight: normal;
-}
 
 .breadcrumbs {
     border: 1px solid #cbd2d9;
@@ -274,18 +230,39 @@ table.table tr td {
     font-size: 14px;
 
 }
-table.table tr th{
+
+table.table tr th {
     text-align: left;
 }
+
 .table-responsive {
     max-width: 100%;
     overflow-x: auto;
 }
 
 
-@media only screen and (max-width: 720px) {
-    .modal-content {
-        width: 100%;
-        margin-left: 0px;
-    }
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    font-size: 13px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered,
+.select2-results__option {
+    font-size: 13px;
+}
+
+#thetable::-webkit-scrollbar {
+    width: 1px;
+}
+
+
+.content-wrapper {
+    background-image: url('https://conlabweb3.tierramontemariana.org/apps/medicos/assets/backcw3-v1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.form-control {
+    font-size: 13px;
+    height: 28px;
 }

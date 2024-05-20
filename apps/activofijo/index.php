@@ -2,7 +2,7 @@
 
 
 
-$moduraiz = $_SESSION['moduraiz'];
+$moduraiz = "Activos Fijos";
 
 ?>
 
@@ -16,36 +16,7 @@ $moduraiz = $_SESSION['moduraiz'];
     <link rel="stylesheet" href="https://conlabweb3.tierramontemariana.org/apps/activofijo/assets/style.css">
 
 </head>
-<style>
-    #thetable::-webkit-scrollbar {
-        width: 1px;
-    }
 
-    #modalContent {
-        width: 900px;
-        margin-left: -280px;
-    }
-
-    .card-title-rezise {
-        width: 100%;
-        color: #164085;
-        text-align: center;
-        position: relative;
-        margin-top: 9px;
-    }
-
-    @media only screen and(max-width: 700px) {
-        #modalContent {
-            width: 100%;
-        }
-    }
-
-    .content-wrapper {
-        background-image: url('https://conlabweb3.tierramontemariana.org/apps/medicos/assets/backcw3-v1.png');
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-</style>
 
 <body>
     <div class="card col-md-10 container p-0 border-light">
@@ -59,12 +30,10 @@ $moduraiz = $_SESSION['moduraiz'];
                     </nav>
                 </div>
                 <div class="col-md-4 col-lg-4">
-                    <h5 class="card-title card-title-rezise"><strong>Creación de Mantenimientos</strong></h5>
+                    <h5 style="text-align: center; color: #0045A5;"><strong>Listado Activos Fijos</strong></h5>
                 </div>
-                <div class="col-md-4 col-lg-4">
-                    <button title="Al dar click en este botón, se abre un formulario para crear un nuevo activo." id="nuevoActivo" onclick="loadTextFields()" style="float: right;background-color:rgb(0,69,165);font-size:14px;" type="button" class="btn btn-primary btn-sm nuevo-activo" data-toggle="modal" data-target="#modalAddActivoFijo">
-                        <i class="fas fa-plus"></i>&nbsp;&nbsp;Nuevo Activo Fijo
-                    </button>
+                <div class="col-md-4 text-right">
+                    <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modalAddActivoFijo" style="font-size:11px;background-color: rgb(0,69,165);border:none;" onclick="loadTextFields()"><i class="fas fa-plus"></i>&nbsp;&nbsp;Nuevo Activo</button>
                 </div>
             </div>
         </div>
@@ -77,9 +46,8 @@ $moduraiz = $_SESSION['moduraiz'];
 
         </div>
 
-        <!-- Modal Add Activos Fijos -->
         <div class="modal fade" id="modalAddActivoFijo" tabindex="-1" aria-labelledby="modalAddActivoFijoLabel" aria-hidden="true">
-            <div class="modal-dialog">
+            <div class="modal-dialog modal-dialog-centered modal-lg"> <!-- modal-lg para un modal más ancho, modal-dialog-centered para centrarlo verticalmente -->
                 <div class="modal-content" id="modalContent">
                     <div class="modal-header">
                         <h5 class="modal-title" id="modalAddActivoFijoLabel">Crear Activo Fijo</h5>
@@ -104,10 +72,10 @@ $moduraiz = $_SESSION['moduraiz'];
 
         <!-- Modal Edit Activos Fijos -->
         <div class="modal fade" id="modalEditActivoFijo" tabindex="-1" aria-labelledby="modalEditActivoFijoLabel" aria-hidden="true">
-            <div class="modal-dialog">
+            <div class="modal-dialog modal-dialog-centered modal-lg"> <!-- modal-lg para un modal más ancho, modal-dialog-centered para centrarlo verticalmente -->
                 <div class="modal-content" id="modalContent">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="modalEditActivoFijoLabel">Crear Activo Fijo</h5>
+                        <h5 class="modal-title" id="modalEditActivoFijoLabel">Editar Activo Fijo</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -178,7 +146,8 @@ $moduraiz = $_SESSION['moduraiz'];
 
     <?php include("apps/thedata.php") ?>
     <script src="https://kit.fontawesome.com/6dc75479dc.js" crossorigin="anonymous"></script>
-
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
     <script>
         $(document).ready(function() {
@@ -192,13 +161,7 @@ $moduraiz = $_SESSION['moduraiz'];
             $('#campos').load('https://conlabweb3.tierramontemariana.org/apps/activofijo/campos-add.php');
         }
 
-        function loadTextFieldsEdit(id) {
-            $('#camposEdit').load('https://conlabweb3.tierramontemariana.org/apps/activofijo/campos-edit.php', {
-                id: id
-            });
-        }
-
-        
+    
     </script>
 </body>
 

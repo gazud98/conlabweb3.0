@@ -1,3 +1,4 @@
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.5/css/dataTables.bootstrap4.min.css">
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.dataTables.min.css">
 <button type="button" class="btn btn-light" onclick="exportarExcel()" title="Generar Excel">
     <i class="fa-solid fa-file-excel fa-2x" style="color:green;transition: color 0.3s;"></i>&nbsp;&nbsp;Generar Excel
@@ -19,7 +20,7 @@
     }
 </style>
 
-<table class="table table-borderless table-hover responsive table-producto table-bordes-d" style="width:100%" id="table-producto">
+<table class="table table-striped table-hover table-head-fixed text-nowrap table-sm table-producto " style="width:100%" id="table-producto">
     <thead>
         <tr>
 
@@ -38,8 +39,6 @@
 
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.dataTables.min.css">
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.min.js"></script>
-<script src="./assets/plugins/jquery-validation/jquery.validate.min.js"></script>
-<script src="./assets/plugins/jquery-validation/additional-methods.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.4/xlsx.full.min.js"></script>
 <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap4.min.js"></script>
@@ -151,15 +150,18 @@
                             showConfirmButton: false,
                             timer: 1500
                         })
-                        miDataTable.ajax.reload();
-                        $("#iddatas").css("pointer-events", "none");
-                        $("#iddatas").css("background-color", "#ededed");
-                        $("#accionejec").css("display", "none");
-                        $("#accionejec").html("");
+                        cargarDatos();
                     }
                 })
             }
         })
+    }
+
+    function loadTextFieldsEdit(id) {
+        $('#camposEdit').load('https://conlabweb3.tierramontemariana.org/apps/activofijo/campos-edit.php', {
+            id: id
+        });
+
     }
 
     function disableProduct(id, estado) {
@@ -186,11 +188,7 @@
                                 timer: 1500
                             })
 
-                            miDataTable.ajax.reload();
-                            $("#iddatas").css("pointer-events", "none");
-                            $("#iddatas").css("background-color", "#ededed");
-                            $("#accionejec").css("display", "none");
-                            $("#accionejec").html("");
+                            cargarDatos();
                         }
                     })
                 }
@@ -216,11 +214,8 @@
                                 showConfirmButton: false,
                                 timer: 1500
                             })
-                            miDataTable.ajax.reload();
-                            $("#iddatas").css("pointer-events", "none");
-                            $("#iddatas").css("background-color", "#ededed");
-                            $("#accionejec").css("display", "none");
-                            $("#accionejec").html("");
+                            cargarDatos();
+
                         }
                     })
                 }
@@ -231,6 +226,23 @@
     function loadHistorial(id) {
         $('#tableHistorial').load('https://conlabweb3.tierramontemariana.org/apps/activofijo/historial.php', {
             id: id
+        });
+    }
+
+
+    function cargarDatos() {
+        $.ajax({
+            url: 'https://conlabweb3.tierramontemariana.org/apps/activofijo/mostrar.php', // Página PHP que devuelve los datos en formato JSON
+            type: 'GET', // Método de la petición (GET o POST según corresponda)
+            dataType: 'json', // Tipo de datos esperado en la respuesta
+            success: function(data) {
+                // Limpiar el DataTable y cargar los nuevos datos
+                miDataTable.clear().rows.add(data).draw();
+            },
+            error: function(xhr, status, error) {
+                // Manejar errores si es necesario
+                console.error('Error al obtener datos:', status, error);
+            }
         });
     }
 </script>
