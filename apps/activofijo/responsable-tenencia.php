@@ -46,7 +46,7 @@ if ($conetar->connect_errno) {
 
     <script>
         $(document).ready(function() {
-            $('.select33').select2({
+            $('#responsable').select2({
                 minimumResultsForSearch: 0
             });
         });
