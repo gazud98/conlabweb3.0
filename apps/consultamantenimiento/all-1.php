@@ -40,7 +40,7 @@ if ($conetar->connect_errno) {
 ?>
 
     <style>
-       .table-bordes-d {
+        .table-bordes-d {
             border: 1px solid #d2d2d2;
             border-radius: 10px;
             font-size: 14px;
@@ -51,10 +51,11 @@ if ($conetar->connect_errno) {
             border-top: 1px solid #d2d2d2;
             padding: 5px !important;
         }
-        .dt-buttons .buttons-print{
+
+        .dt-buttons .buttons-print {
             border: none !important;
-            background:#17AB00 !important;
-            color:#fff !important;
+            background: #17AB00 !important;
+            color: #fff !important;
             padding: 5px;
             border-radius: 5px;
         }
@@ -124,7 +125,7 @@ if ($conetar->connect_errno) {
         </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/2.4.1/js/dataTables.buttons.min.js"></script>
@@ -151,7 +152,7 @@ if ($conetar->connect_errno) {
                 "responsive": true,
                 // ... Otras opciones ...
                 "ajax": {
-                    url: 'https://conlabweb3.tierramontemariana.org/apps/consultamantenimiento/mostrar-2.php', // Página PHP que devuelve los datos en formato JSON
+                    url: '/cw3/conlabweb3.0/apps/consultamantenimiento/mostrar-2.php', // Página PHP que devuelve los datos en formato JSON
                     type: 'GET', // Método de la petición (GET o POST según corresponda)
                     dataType: 'json', // Tipo de datos esperado en la respuesta
                     dataSrc: '',
@@ -229,10 +230,11 @@ if ($conetar->connect_errno) {
                             }*/
 
                             if (full.estado_c === "P") {
-                                return '&nbsp;&nbsp;<a href="#" onclick="addValueIde(' + full.id + ')" title="Ingresar Resultados" data-toggle="modal"  data-target="#event"><i class="fa-solid fa-upload"></i></a>';
+                                return '&nbsp;&nbsp;<a href="#" onclick="addValueIde(' + full.id + ')" data-toggle="modal" data-target="#modalReportAdd" title="Ingresar Resultados"><i class="fa-solid fa-upload"></i></a>'
+                                +'<a href="#" style="color:red;" onclick="loadModalRepAll(' + full.id + ')" title="Reprogramar" data-toggle="modal" data-target="#modalReprogramar"><i class="fa-solid fa-clock-rotate-left" id="icon" style="font-size:18px;"></i><span></span></a>';
                             } else if (full.estado_c === "F") {
                                 //return '<a href="#" onclick="desactivar1(' + full.id + ');" style="color: #061078;" title="Activar"><i class="fa-solid fa-circle-check" id="icon" style="font-size:18px;"></i><span></span></a>';
-                                return '';
+                                return '&nbsp;&nbsp;<a href="#" onclick="addValueIde(' + full.id + ')" data-toggle="modal" data-target="#modalReportAdd" title="Ingresar Resultados"><i class="fa-solid fa-upload"></i></a>'
                             } else if (full.estado_c === "V") {
                                 return '<a href="#" style="color:red;" onclick="loadModalRepAll(' + full.id + ')" title="Reprogramar" data-toggle="modal" data-target="#modalReprogramar"><i class="fa-solid fa-clock-rotate-left" id="icon" style="font-size:18px;"></i><span></span></a>';
                             }
@@ -247,15 +249,15 @@ if ($conetar->connect_errno) {
 
         function addValueIde(id) {
             $('#ide').val(id);
+            openModalIng(id)
         }
-        
+
         function loadModalRepAll(id, aux) {
-            $('#contentModalRep').load('https://conlabweb3.tierramontemariana.org/apps/consultamantenimiento/modal-rep.php', {
+            $('#contentModalRep').load('/cw3/conlabweb3.0/apps/consultamantenimiento/modal-rep.php', {
                 id: id,
                 aux: 'A'
             });
         }
-        
     </script>
 
 <?php

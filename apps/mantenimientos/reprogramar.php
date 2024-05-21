@@ -31,7 +31,7 @@ if ($conetar->connect_errno) {
     }
 
     if ($aux == 'C') {
-        $sql = "UPDATE correctivo SET comienzo = '$fecha', estado_mantenimiento = 'P'
+        $sql = "UPDATE correctivo SET fecha_final = '$fecha', estado_mantenimiento = 'P'
         WHERE id = '$id'";
 
         $rest = mysqli_query($conetar, $sql);

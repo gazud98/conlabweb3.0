@@ -17,338 +17,198 @@ if ($conetar->connect_errno) {
     $error = "Fallo al conectar a MySQL: (" . $conetar->connect_errno . ")" . $conetar->connect_error;
 } else {
 
-    $tip = $_REQUEST['tip'];
-    $id = $_REQUEST['id'];
-    $daño = "";
+    $id = "";
 
-    if ($tip == 'C') {
-        $cadena = "SELECT p.id,p.fecha_final,p.daño,p.estado_mantenimiento,p.estado,p.aux,p.tecnico,
-        p.valor_servicio,a.nombre,r.resultado_c,e.nombre_comercial FROM 
-            correctivo p, producto a, resultado_correctivo r, 
-            proveedores e
-            WHERE a.id_producto = p.equipo AND p.id = r.idmantenimiento_c AND p.empresa = e.id_proveedores 
-            AND p.id = '$id'";
-
-        $thefile = 0;
-        $resultadP2 = $conetar->query($cadena);
-        $datos = array();
-        $rows = mysqli_num_rows($resultadP2);
-        
-        if($rows == 0){
-                $fecha = "";
-                $aux = "";
-                $resultado_c = "";
-                $empresa = "";
-                $tecnico = "";
-                $equipo = "";
-                $daño = "";
-                $valor_servicio = "";
-        }else{
-            while ($filaP2 = mysqli_fetch_array($resultadP2)) {
-                $fecha = $filaP2['fecha_final'];
-                $aux = $filaP2['aux'];
-                $resultado_c = $filaP2['resultado_c'];
-                $empresa = $filaP2['nombre_comercial'];
-                $tecnico = $filaP2['tecnico'];
-                $equipo = $filaP2['nombre'];
-                $daño = $filaP2['daño'];
-                $valor_servicio = $filaP2['valor_servicio'];
-            }
-        }
-        
-    } else if ($tip == 'P') {
-        $cadena = "SELECT p.id,p.comienzo,p.desc_mantenimiento,p.estado,p.estado_mantenimiento,p.aux, CONCAT(c.nombre_1, ' ', c.apellido_1) AS resp,p.comienzo,p.fecha_final, p.resp_mantenimiento, a.nombre,r.resultado_p,s.nombre AS sede, po.nombre_comercial, pg.id_proveegarantia FROM u116753122_cw3completa.preventiva p, u116753122_cw3completa.persona c, u116753122_cw3completa.producto a, u116753122_cw3completa.resultado_preventivo r, u116753122_cw3completa.sedes s, u116753122_cw3completa.proveedores po, u116753122_cw3completa.producto_activofijo pg WHERE po.id_proveedores = p.responsable AND a.id_producto = p.equipo AND p.id = r.idmantenimiento_p AND p.id_sede = s.id_sedes AND p.id_proveedor = po.id_proveedores";
-        //echo $cadena;
-        /* */
-        $thefile = 0;
-        $resultadP2 = $conetar->query($cadena);
-        $datos = array();
-        $rows = mysqli_num_rows($resultadP2);
-        if($rows == 0){
-                $fecha = "";
-                $aux = "";
-                $resultado_c = "";
-                $nombre_comercial = "";
-                $tecnico = "";
-                $empresa = "";
-                $comienzo = "";
-                $sede = "";
-                $equipo = "";
-        }else{
-            while ($filaP2 = mysqli_fetch_array($resultadP2)) {
-                $fecha = $filaP2['fecha_final'];
-                $aux = $filaP2['aux'];
-                $resultado_c = $filaP2['desc_mantenimiento'];
-                $nombre_comercial = $filaP2['nombre_comercial'];
-                $tecnico = $filaP2['resp'];
-                $empresa = $filaP2['resp_mantenimiento'];
-                $comienzo = $filaP2['comienzo'];
-                $sede = $filaP2['sede'];
-                $equipo = $filaP2['nombre'];
-            }
-        }
+    if (isset($_REQUEST['id'])) {
+        $id = $_REQUEST['id'];
     }
 
+    $equipo = "";
+    $localizacion = "";
+    $fecha_comienzo = "";
+    $id_proveedor = "";
+    $meses_garantia = "";
+    $meses_garantia_ext = "";
+    $tipo_mantenimiento = "";
+    $desc_mantenimiento = "";
+    $period_semanal = "";
+    $resp_mantenimiento = "";
+    $direccion_resp = "";
+    $tef_resp = "";
+    $periodicidad = "";
+    $mesoption = "";
+    $comienzo = "";
+    $comienzo = "";
+    $responsable = "";
+    $departamento = "";
+    $accion = "";
+    $repuestos = "";
+    $danio = "";
+    $email = "";
+    $aux = "";
+    $fecharealizacion = "";
+    $avance = "";
+    if ($id != "") {
+        $cadena = "SELECT p.id, p.equipo, p.id_sede, p.departamento, p.id_proveedor, p.meses_garantia, p.desc_mantenimiento, p.periodicidad, p.period_semanal, 
+        p.resp_mantenimiento, p.responsable, p.comienzo, p.fecha_final, p.fecha_realizacion, p.tef_resp, p.direccion_resp, p.email, p.estado_mantenimiento, 
+        p.aux, p.danio, p.repuestos, p.accion, p.avance, e.nombre, po.nombre_comercial, s.nombre AS sede, de.nombre AS dep FROM preventiva p, producto e, proveedores po, sedes s, departamentos de 
+        WHERE p.equipo = e.id_producto AND p.id_proveedor = po.id_proveedores AND p.id_sede = s.id_sedes AND p.departamento = de.id AND p.id = '$id' UNION SELECT c.id, c.equipo, 
+        c.id_sede, c.departamento, c.id_proveedor, c.meses_garantia, c.desc_mantenimiento, c.periodicidad, c.period_semanal, c.resp_mantenimiento, c.responsable, 
+        c.comienzo, c.fecha_final, c.fecha_realizacion, c.tef_resp, c.direccion_resp, c.email, c.estado_mantenimiento, c.aux, c.danio, c.repuestos, c.accion, c.avance, 
+        pe.nombre, po.nombre_comercial, s.nombre AS sede, de.nombre AS dep FROM correctivo c, producto pe, proveedores po, sedes s, departamentos de WHERE c.equipo = pe.id_producto 
+        AND c.id_proveedor = po.id_proveedores AND c.id_sede = s.id_sedes AND c.departamento = de.id AND c.id = '$id'";
+
+        $resultadP2 = $conetar->query($cadena);
+        $numerfiles2 = mysqli_num_rows($resultadP2);
+        if ($numerfiles2 >= 1) {
+            $filaP2 = mysqli_fetch_array($resultadP2);
+            $id = trim($filaP2['id']);
+            $equipo = trim($filaP2['equipo']);
+            $localizacion = trim($filaP2['id_sede']);
+            $id_proveedor = trim($filaP2['id_proveedor']);
+            $meses_garantia = trim($filaP2['meses_garantia']);
+            $desc_mantenimiento = trim($filaP2['desc_mantenimiento']);
+            $period_semanal = trim($filaP2['period_semanal']);
+            $direccion_resp = trim($filaP2['direccion_resp']);
+            $tef_resp = trim($filaP2['tef_resp']);
+            $periodicidad = trim($filaP2['periodicidad']);
+            $comienzo = trim($filaP2['comienzo']);
+            $responsable = trim($filaP2['responsable']);
+            $fecha_final = trim($filaP2['fecha_final']);
+            $departamento = trim($filaP2['departamento']);
+            $accion = trim($filaP2['accion']);
+            $repuestos = trim($filaP2['repuestos']);
+            $danio = trim($filaP2['danio']);
+            $email = trim($filaP2['email']);
+            $aux = trim($filaP2['aux']);
+            $resp_mantenimiento = trim($filaP2['resp_mantenimiento']);
+            $fecharealizacion = date('Y-d-m');
+            $nombre_equipo = trim($filaP2['nombre']);
+            $proveedor = trim($filaP2['nombre_comercial']);
+            $sede = trim($filaP2['sede']);
+            $dep = trim($filaP2['dep']);
+            $avance = trim($filaP2['avance']);
+        }
+    }
 ?>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
-
     <style>
-        .tr {
-            text-align: center;
-            color: #164085;
-            font-size: 13px;
+        .form-report {
+            border: none;
+            border-bottom: 1px solid gray;
+            padding: 2px;
+            outline: none;
         }
 
-        .table-head {
-            margin-top: 10px;
-            margin-bottom: 10px;
+        .form-text-area {
+            outline: none;
         }
 
-        .table-head tr td {
-            border: 1px dashed #C4C4C4;
-            text-align: left;
-            font-size: 13px;
-            padding: 3px;
-        }
-
-        .title-orden {
-            text-align: center;
-            margin-top: 10px;
-        }
-
-        .content-head {
-            border: 1px solid #96B8CF;
-        }
-
-        .table-contenido {
-            width: 100%;
-            margin-bottom: 10px;
-        }
-
-        .table-contenido tr td {
-            border: 1px solid #C4C4C4;
-            text-align: left;
-            font-size: 13px;
-            padding: 3px;
-        }
-
-        .table-retes tr td {
-            border: 1px solid #C4C4C4;
-            text-align: right;
+        .r-background {
+            background-color: #EEF7FB;
+            border-radius: 5px;
+            padding: 5px;
         }
     </style>
 
-    <div class="content-all container-fluid p-5">
-        <div class="row content-head">
-            <div class="col-md-4 col-lg-4">
-                <div style="text-align: left;">
-                    <img style="width: 250px;" src="../../assets/image/logo.png" alt="">
-                </div>
-            </div>
-            <div class="col-md-4 col-lg-4" style="text-align: center;margin-top:30px;">
+    <form name="formMantReport" id="formMantReport" action="" method="POST" enctype="multipart/form-data">
+        <div class="row mt-4 r-background" style="text-align: center;width:100%;">
+            <strong>Descripción del equipo</strong>
+        </div>
 
-                <h4>
-                    Reporte de mantenimiento
-                </h4>
-
+        <div class="row mt-4">
+            <div class="col-md-12">
+                <!--<label for="">Fecha:</label>
+                <input type="date" class="form-report" name="fechamant" id="fechamant" value="<?= $fecharealizacion ?>">-->
+                &nbsp;&nbsp;&nbsp;&nbsp;<label for="">Tipo de mantenimiento:</label>
+                <?php
+                if ($aux == 'C') {
+                ?>
+                    <input type="text" class="form-report" name="tipomant" id="tipomant" value="Correctivo" style="width: 80px;">
+                <?php
+                } else if ($aux == 'P') {
+                ?>
+                    <input type="text" class="form-report" name="tipomant" id="tipomant" value="Preventivo" style="width: 80px;">
+                <?php
+                }
+                ?>
+                &nbsp;&nbsp;&nbsp;&nbsp;<label for="">Equipo:</label>
+                <input type="text" class="form-report" name="nombreequipo" id="nombreequipo" style="width: 250px;font-size:12px;" value="<?= $nombre_equipo ?>">
+                &nbsp;&nbsp;&nbsp;&nbsp;<label for="">Proveedor:</label>
+                <input type="text" class="form-report" name="proveedor" id="proveedor" style="width: 250px;font-size:12px;" value="<?= $proveedor ?>">
             </div>
-            <div class="col-md-4 col-lg-4" style="text-align: left;">
+        </div>
 
-                <p>
-                    Código: GIN-FOR-003 <br>
-                    Versión: 1 <br>
-                    Fecha: 2023/07/21 <br>
-                    Página:1 de 1 <br>
-                </p>
+        <div class="row mt-4">
+            <div class="col-md-12">
+                <label for="">Sede:</label>
+                <input type="text" class="form-report" name="sede" id="sede" style="width: 150px;" value="<?= $sede ?>">
+                &nbsp;&nbsp;&nbsp;&nbsp;<label for="">Departamento:</label>
+                <input type="text" class="form-report" name="sede" id="sede" style="width: 150px;" value="<?= $dep ?>">
+            </div>
+        </div>
 
-            </div>
-            <!--<div class="col-md-4">
-            <div class="col-md-12 col-lg-12 alert" role="alert" style="text-align:left;font-size: 12px;background:#E1F8FA;">
-                <p>El siguiente número debe aparecer en todas las facturas, conocimientos de embarque y reconocimientos relacionados con esta orden de compra: PO:<br><strong style="color:#500450;">&nbsp;&nbsp;&nbsp; PURCHASE ORDER:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $id ?></strong></p>
-            </div>
+        <!--<div class="row mt-4 r-background" style="text-align: center;width:100%;">
+            <strong>Descripción del mantenimiento</strong>
         </div>-->
+
+        <div class="row mt-4">
+
+            <?php
+            if ($aux == 'C') {
+                echo '<div class="col-md-4"><label for="">Descripción del daño:</label>
+                    <textarea name="descdanio" class="form-text-area" id="descdanio" cols="50" rows="3"><?= $desc_mantenimiento ?></textarea></div>';
+            } else if ($aux == 'P') {
+                echo '';
+            }
+            ?>
+
+            <div class="col-md-4">
+                <label for="">Descripción del mantenimiento:</label>
+                <textarea name="descmant" class="form-text-area" id="descmant" cols="50" rows="3"><?= $danio ?></textarea>
+            </div>
+            <div class="col-md-4">
+                <label for="">Repuestos:</label>
+                <textarea name="repuestos" class="form-text-area" id="repuestos" cols="50" rows="3"><?= $repuestos ?></textarea>
+            </div>
         </div>
 
-        <br>
-        <div class="row">
-
-            <table class="col-md-12 table-info-mant">
-                <thead>
-                    <tr style="text-align: center;border:1px solid #96B8CF;">
-                        <th>Información del Solicitante</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr style="border:1px solid #96B8CF;">
-                        <td class="p-3">
-                            <table>
-                                <tr>
-                                    <?php
-                                    if ($aux == 'P') {
-
-                                    ?>
-
-                                        <td>&nbsp;&nbsp;<strong>Fecha</strong>:</td>
-                                        <td><?php echo $fecha; ?></td>
-                                        <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-                                        <td><strong>Solicitante</strong>:</td>
-                                        <td>Yorcelys Varela</td>
-                                        <td>&nbsp;&nbsp;&nbsp;&nbsp;<strong>Sede</strong>:</td>
-                                        <td><?php echo $sede; ?></td>
-                                        <td>&nbsp;&nbsp;&nbsp;&nbsp;<strong>Equipo</strong>:</td>
-                                        <td><?php echo $equipo; ?></td>
-                                        <td>&nbsp;&nbsp;&nbsp;&nbsp;<strong>Proveedor</strong>:</td>
-                                        <td><?php echo $nombre_comercial; ?></td>
-
-                                    <?php
-                                    } else {
-
-                                    ?>
-
-                                        <td>&nbsp;&nbsp;<strong>Fecha</strong>:</td>
-                                        <td><?php echo $fecha; ?></td>
-                                        <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-                                        <td><strong>Solicitante</strong>:</td>
-                                        <td>Yorcelys Varela</td>
-                                        <td>&nbsp;&nbsp;&nbsp;&nbsp;<strong>Equipo</strong>:</td>
-                                        <td><?php echo $equipo; ?></td>
-                                        <td>&nbsp;&nbsp;&nbsp;&nbsp;<strong>Daño</strong>:</td>
-                                        <td><?php echo $daño; ?></td>
-
-                                        <?php
-                                    }
-                                        ?>
-                        </td>
-
-                    </tr>
-            </table>
-            </td>
-            </tr>
-            </tbody>
-            </table>
-
-            <table class="col-md-12 table-info-mant" style="margin-top: 10px;">
-                <thead>
-                    <tr style="text-align: center;border:1px solid #96B8CF;">
-                        <th>Información y Tipo de Mantenimiento</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr style="border:1px solid #96B8CF;">
-                        <td class="p-3">
-                            <table>
-                                <tr>
-                                    <td>Preventivo</td>
-                                    <td style="border:1px solid #000;"><?php
-                                                                        if ($aux == 'P') {
-                                                                            echo 'X';
-                                                                        } else {
-                                                                            echo '&nbsp;&nbsp;&nbsp;';
-                                                                        }
-                                                                        ?>&nbsp;&nbsp;</td>
-                                    <td>Correctivo</td>
-                                    <td style="border:1px solid #000;"><?php
-                                                                        if ($aux == 'C') {
-                                                                            echo 'X';
-                                                                        } else {
-                                                                            echo '&nbsp;&nbsp;&nbsp;';
-                                                                        }
-                                                                        ?>&nbsp;&nbsp;</td>
-
-                                </tr>
-                            </table>
-                        </td>
-                        <td><strong>Descripción</strong>:</td>
-                        <td>
-                            <textarea name="" id="" cols="50" rows="3" style="text-align: left;">
-                            <?php 
-                            
-                            echo $resultado_c; 
-                            
-                            ?>
-                            </textarea>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <table style="margin-top: 10px;">
-                                <tr>
-                                    <th>Atendido por:</th>
-                                </tr>
-                                <tr>
-                                    <?php
-                                    
-                                        if($tip == 'P'){
-
-                                    ?>
-                                    <td><strong>Nombre</strong>:</td>
-                                    <td><?php echo $tecnico; ?></td>
-                                    <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-                                    <td><strong>Empresa</strong>:</td>
-                                    <td><?php echo $empresa; ?></td>
-                                    <?php
-                                    } else {
-                                    ?>
-                                    <td><strong>Nombre</strong>:</td>
-                                    <td><?php echo $tecnico; ?></td>
-                                    <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-                                    <td><strong>Empresa</strong>:</td>
-                                    <td><?php echo $empresa; ?></td>
-                                    <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-                                    <td><strong>Valor del servicio</strong>:</td>
-                                    <td>$<?php echo $valor_servicio; ?></td>
-                                    <?php } ?>
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+        <div class="row mt-4 r-background">
+            <div class="col-md-12">
+                <label for="">Responsable:</label>
+                <input type="text" class="form-report" name="responsable" id="responsable" style="width: 200px;" value="<?= $responsable ?>">
+                <!--&nbsp;&nbsp;&nbsp;&nbsp;<label for="">Avance del mantenimiento:</label>
+                <input type="number" class="form-report" name="avance" id="avance" style="width: 50px;text-align: center;" value="<?= $avance ?>">%-->
+                &nbsp;&nbsp;&nbsp;&nbsp;<label for="">Fecha de continuación:</label>
+                <input type="date" class="form-report" name="fechacon" id="fechacon" value="<?= $comienzo ?>">
+            </div>
         </div>
 
-        <div class="content-ob" style="margin-top: 20px;">
-            <label for="">Observaciones:</label><br>
-            <textarea name="" id="" cols="100" rows="5"></textarea>
-        </div>
-
-        <div class="content-btn-print mt-5">
-            <button class="btn btn-primary btn-sm" onclick="printReport2()"><i class="fa-solid fa-print"></i>&nbsp;Imprimir</button>
-        </div>
-
-    </div>
-
-    <!-- jQuery -->
-    <script src="./assets/plugins/jquery/jquery.min.js"></script>
-    <!-- jQuery UI 1.11.4 -->
-    <script src="./assets/plugins/jquery-ui/jquery-ui.min.js"></script>
-    <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-    <script src="./assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- overlayScrollbars -->
-    <script src="./assets/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
-    <!-- AdminLTE App -->
-    <script src="./assets/dist/js/adminlte.js"></script>
-    <!-- AdminLTE for demo purposes -->
-    <script src="./assets/dist/js/demo.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <script src="https://kit.fontawesome.com/6dc75479dc.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
-
-    <script>
-        function printReport2() {
-            $('.content-btn-print').css("display", "none");
-            window.print();
-        }
-    </script>
+        <input type="hidden" name="tipmant" value="<?= $aux ?>">
+        <input type="hidden" name="id" value="<?= $id ?>">
+    </form>
 
 <?php
 
 }
 
 ?>
+
+<script>
+    function saveReport() {
+        $.ajax({
+            method: 'POST',
+            url: '/cw3/conlabweb3.0/apps/consultamantenimiento/crud.php?aux=2',
+            data: $('#formMantReport').serialize(),
+            success: function() {
+                Swal.fire({
+                    position: "top-center",
+                    icon: "success",
+                    title: "Registro guardado correctamente!",
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+            }
+        })
+    }
+</script>

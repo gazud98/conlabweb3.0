@@ -269,26 +269,3 @@ table.table .avatar {
 .dataTables_info {
     font-size: 14px;
 }
-
-.modal-lg{
-    width: 1200px;
-    margin-left: -275px;
-}
-
-@media only screen and (max-width: 800px){
-
-    .modal-lg{
-        width: 100%;
-        margin-left: 0px;
-    }
-
-}
-
-@media only screen and (max-width: 700px){
-
-    .modal-lg{
-        width: 100%;
-        margin-left: 0px;
-    }
-
-}

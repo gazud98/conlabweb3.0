@@ -53,8 +53,8 @@ if ($conetar->connect_errno) {
     <table class="table table-borderless table-bordes-d table-hover" id="table-mantenimiento" style="width: 100%;font-size:15px;">
         <thead>
             <tr>
-                <th>Codigo</th>
                 <th>Equipo</th>
+                <th>Tipo de mantenimiento</th>
                 <th>Fecha</th>
                 <th>Estado</th>
                 <th>Acciones</th>
@@ -118,16 +118,17 @@ if ($conetar->connect_errno) {
             },
             // ... Otras opciones ...
             "ajax": {
-                url: 'https://conlabweb3.tierramontemariana.org/apps/mantenimientos/mostrar.php', // Página PHP que devuelve los datos en formato JSON
+                url: '/cw3/conlabweb3.0/apps/mantenimientos/mostrar.php', // Página PHP que devuelve los datos en formato JSON
                 type: 'GET', // Método de la petición (GET o POST según corresponda)
                 dataType: 'json', // Tipo de datos esperado en la respuesta
                 dataSrc: '' // Indicar que los datos provienen directamente del objeto JSON (sin propiedad adicional)
             },
-            "columns": [{
-                    "data": "codigo"
-                },
+            "columns": [
                 {
                     "data": "nombre"
+                },
+                {
+                    "data": "tipmant"
                 },
                 {
                     "data": "fecha"
@@ -148,17 +149,46 @@ if ($conetar->connect_errno) {
                 {
                     "data": null,
                     "render": function(data, type, full, meta) {
-                        return '<a href="#" style="color:#213FD6;" onclick="cargarForm(' + full.thefile + ',' + full.id + ')" title="Editar" data-toggle="modal" data-target="#modalEditar"><i class="fa-solid fa-pen-to-square" style="font-size:13px;"></i></a>' +
-                            '&nbsp;&nbsp;&nbsp;<a href="#" style="color:#D62121;" onclick="deleteProduct(' + full.thefile + ',' + full.id + ')" title="Eliminar"><i class="fa-solid fa-trash-can" style="font-size:13px;"></i></a>' +
-                            '<input type="hidden" name="fileselect' + full.thefile + '" id="fileselect' + full.thefile + '"" value="' + full.tip_m + '" max="' + full.max + '">';
+                        if (full.estado === "P") {
+
+                            if (full.aux == 'C') {
+                                return '<a href="#" style="color:#213FD6;" onclick="cargarForm(' + full.thefile + ',' + full.id + ')" title="Editar" data-toggle="modal" data-target="#modalEditar"><i class="fa-solid fa-eye" style="font-size:13px;"></i></a>' +
+                                    '&nbsp;&nbsp;&nbsp;<a href="#" style="color:#D62121;" onclick="deleteProduct(' + full.thefile + ',' + full.id + ')" title="Eliminar"><i class="fa-solid fa-trash-can" style="font-size:13px;"></i></a>' +
+                                    '&nbsp;&nbsp;&nbsp;<a href="#" style="color:gray;" onclick="loadModalRepAll(' + full.id + ')" title="Reprogramar"><i class="fa-solid fa-clock-rotate-left" style="font-size:13px;"></i></a>' +
+                                    '<input type="hidden" name="fileselect' + full.thefile + '" id="fileselect' + full.thefile + '"" value="' + full.tip_m + '" max="' + full.max + '">';
+                            } else if (full.aux == 'P') {
+                                return '<a href="#" style="color:#213FD6;" onclick="cargarForm(' + full.thefile + ',' + full.id + ')" title="Editar" data-toggle="modal" data-target="#modalEditar"><i class="fa-solid fa-eye" style="font-size:13px;"></i></a>' +
+                                    '&nbsp;&nbsp;&nbsp;<a href="#" style="color:#D62121;" onclick="deleteProduct(' + full.thefile + ',' + full.id + ')" title="Eliminar"><i class="fa-solid fa-trash-can" style="font-size:13px;"></i></a>' +
+                                    '&nbsp;&nbsp;&nbsp;<a href="#" style="color:gray;" onclick="loadModalRepAll(' + full.id + ')" title="Reprogramar" data-toggle="modal" data-target="#modalReprogramar"><i class="fa-solid fa-clock-rotate-left" style="font-size:13px;"></i></a>' +
+                                    '<input type="hidden" name="fileselect' + full.thefile + '" id="fileselect' + full.thefile + '"" value="' + full.tip_m + '" max="' + full.max + '">';
+                            }
+
+                        } else if (full.estado === "F") {
+                            return '';
+                        } else if (full.estado === "V") {
+                            if (full.aux == 'C') {
+                                return '<a href="#" style="color:#213FD6;" onclick="cargarForm(' + full.thefile + ',' + full.id + ')" title="Editar" data-toggle="modal" data-target="#modalEditar"><i class="fa-solid fa-eye" style="font-size:13px;"></i></a>' +
+                                    '&nbsp;&nbsp;&nbsp;<a href="#" style="color:#D62121;" onclick="deleteProduct(' + full.thefile + ',' + full.id + ')" title="Eliminar"><i class="fa-solid fa-trash-can" style="font-size:13px;"></i></a>' +
+                                    '<input type="hidden" name="fileselect' + full.thefile + '" id="fileselect' + full.thefile + '"" value="' + full.tip_m + '" max="' + full.max + '">';
+                            } else if (full.aux == 'P') {
+                                return '<a href="#" style="color:#213FD6;" onclick="cargarForm(' + full.thefile + ',' + full.id + ')" title="Editar" data-toggle="modal" data-target="#modalEditar"><i class="fa-solid fa-eye" style="font-size:13px;"></i></a>' +
+                                    '&nbsp;&nbsp;&nbsp;<a href="#" style="color:#D62121;" onclick="deleteProduct(' + full.thefile + ',' + full.id + ')" title="Eliminar"><i class="fa-solid fa-trash-can" style="font-size:13px;"></i></a>' +
+                                    '<input type="hidden" name="fileselect' + full.thefile + '" id="fileselect' + full.thefile + '"" value="' + full.tip_m + '" max="' + full.max + '">';
+                            }
+                        }
 
                     }
                 },
                 {
                     "data": null,
                     "render": function(data, type, full, meta) {
-                        return '<button class="btn btn-success btn-sm" data-toggle="modal" data-target="#confirmMant"><i class="fa-solid fa-check" style="font-size:13px;"></i> &nbsp; Confirmar</button>'
-                        return '<button class="btn btn-success btn-sm"  onclick="cargarTipoMant(' + full.thefile + ',' + full.id + ')" data-toggle="modal" data-target="#confirmMant"><i class="fa-solid fa-check" style="font-size:13px;"></i> &nbsp; Confirmar</button>'
+                        if (full.estado === "P") {
+                            return '<button class="btn btn-info btn-sm" id="btnConfirm" onclick="cargarTipoMant(' + full.thefile + ',' + full.id + ')" data-toggle="modal" data-target="#confirmMant"><i class="fa-solid fa-check" style="font-size:13px;"></i> &nbsp; Confirmar</button>'
+                        } else if (full.estado === "F") {
+                            return '<button class="btn btn-info btn-sm" id="btnConfirm" disabled onclick="cargarTipoMant(' + full.thefile + ',' + full.id + ')" data-toggle="modal" data-target="#confirmMant"><i class="fa-solid fa-check" style="font-size:13px;"></i> &nbsp; Confirmado</button>'
+                        } else if (full.estado === "V") {
+                            return '<button class="btn btn-secondary btn-sm" onclick="loadModalRepAll(' + full.id + ')" data-toggle="modal" data-target="#modalReprogramar"><i class="fa-solid fa-clock-rotate-left" style="font-size:13px;"></i> &nbsp; Reprogramar</button>';
+                        }
                     }
                 }
             ]
@@ -181,7 +211,7 @@ if ($conetar->connect_errno) {
             }).then((result) => {
                 if (result.isConfirmed) {
                     $.ajax({
-                        url: 'https://conlabweb3.tierramontemariana.org/apps/mantenimientos/delete.php?id=' + id,
+                        url: '/cw3/conlabweb3.0/apps/mantenimientos/delete.php?id=' + id,
                         success: function() {
                             Swal.fire(
                                 'Eliminado!',
@@ -204,7 +234,7 @@ if ($conetar->connect_errno) {
             }).then((result) => {
                 if (result.isConfirmed) {
                     $.ajax({
-                        url: 'https://conlabweb3.tierramontemariana.org/apps/mantenimientos/delete-2.php?id=' + id,
+                        url: '/cw3/conlabweb3.0/apps/mantenimientos/delete-2.php?id=' + id,
                         success: function() {
                             Swal.fire(
                                 'Eliminado!',
@@ -221,7 +251,7 @@ if ($conetar->connect_errno) {
 
     function cargarDatos() {
         $.ajax({
-            url: 'https://conlabweb3.tierramontemariana.org/apps/mantenimientos/mostrar.php', // Página PHP que devuelve los datos en formato JSON
+            url: '/cw3/conlabweb3.0/apps/mantenimientos/mostrar.php', // Página PHP que devuelve los datos en formato JSON
             type: 'GET', // Método de la petición (GET o POST según corresponda)
             dataType: 'json', // Tipo de datos esperado en la respuesta
             success: function(data) {
@@ -236,46 +266,19 @@ if ($conetar->connect_errno) {
     }
 
     function cargarForm(thefile, id) {
+
         var theobject = "fileselect" + thefile;
         var tm = $('input[name="' + theobject + '"]').val();
 
-        var max = $('input[name="' + theobject + '"]').attr('max');
-
-        for (let i = 1; i <= max; i++) {
-            $("input[name=fileselect" + [i] + "]").prop("checked", false);
-
-            //Cargo forma con valaores pa aedita o eliminar
-            //$("#newbtn").css("display", "block");
-            $("#successbtn").css("display", "none");
-            $("#cancelbtn").css("display", "none");
-
-            $("#modbtn").css("display", "block");
-            $("#delbtn").css("display", "block");
-        }
-        $("input[name=fileselect" + thefile + "]").prop("checked", true);
-
-        $("#tp").css("display", "none");
-
-
-
-        if (tm == 'C') {
-            $("#textFieldsEdit").load("https://conlabweb3.tierramontemariana.org/apps/mantenimientos/edit-correctivo.php", {
+        if (tm == 'P') {
+            $("#textFieldsEdit").load("/cw3/conlabweb3.0/apps/mantenimientos/edit-maintenance-p.php", {
                 id: id
             });
-            $('#titleEdit').html('Mantenimiento Correctivo');
-        } else {
-            $("#textFieldsEdit").load("https://conlabweb3.tierramontemariana.org/apps/mantenimientos/edit-preventivo.php", {
+        }else if(tm == 'C'){
+            $("#textFieldsEdit").load("/cw3/conlabweb3.0/apps/mantenimientos/edit-maintenance-c.php", {
                 id: id
             });
-            $('#titleEdit').html('Mantenimiento Preventivo');
         }
-
-        $('#iddatas').css('pointer-events', 'auto');
-        $('#iddatas').css('background-color', 'white');
-        $("#successbtn").css("display", "block");
-        $("#cancelbtn").css("display", "block");
-        $("#modbtn").css("display", "none");
-        $("#delbtn").css("display", "none");
 
     }
 
@@ -305,18 +308,20 @@ if ($conetar->connect_errno) {
         }).then((result) => {
             if (result.isConfirmed) {
                 $.ajax({
-                    url: 'https://conlabweb3.tierramontemariana.org/apps/mantenimientos/confirm.php',
+                    url: '/cw3/conlabweb3.0/apps/mantenimientos/confirm.php',
                     data: {
                         id: idmant,
                         tipomant: tipomant,
                         fechamant: fechamant
                     },
                     success: function() {
-                        Swal.fire(
-                            'Confirmado!',
-                            'El mantenimiento ha sido confirmado.',
-                            'success'
-                        )
+                        Swal.fire({
+                            position: "top-center",
+                            icon: "success",
+                            title: "Mantenimiento confirmado!",
+                            showConfirmButton: false,
+                            timer: 1500
+                        });
                         miDataTable.ajax.reload();
                         $('#confirmMant').modal('hide');
                     }
@@ -324,5 +329,12 @@ if ($conetar->connect_errno) {
             }
         })
 
+    }
+
+    function loadModalRepAll(id, aux) {
+        $('#contentModalRep').load('/cw3/conlabweb3.0/apps/mantenimientos/modal-rep.php', {
+            id: id,
+            aux: 'A'
+        });
     }
 </script>

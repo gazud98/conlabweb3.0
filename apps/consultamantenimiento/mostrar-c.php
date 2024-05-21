@@ -90,7 +90,7 @@ if ($conetar->connect_errno) {
     $error = "Fallo al conectar a MySQL: (" . $conetar->connect_errno . ")" . $conetar->connect_error;
 } else {
 
-    $cadena = "SELECT p.id,p.fecha_final,p.daño,p.estado_mantenimiento,p.estado,a.nombre, s.nombre AS sede_mant FROM 
+    $cadena = "SELECT p.id,p.fecha_final,p.danio,p.estado_mantenimiento,p.estado,a.nombre, s.nombre AS sede_mant FROM 
             correctivo p, producto a, sedes s 
             WHERE p.id_sede = s.id_sedes AND a.id_producto = p.equipo" . $filtro;
     //echo $cadena;
@@ -102,7 +102,7 @@ if ($conetar->connect_errno) {
         $datos[] = array(
             'id' =>  trim($filaP2['id']),
             'nombre' =>  trim($filaP2['nombre']),
-            'dan' => trim($filaP2['daño']),
+            'dan' => trim($filaP2['danio']),
             'estado_c' => trim($filaP2['estado_mantenimiento']),
             'fecha_final' => $filaP2['fecha_final'],
             'sede' => $filaP2['sede_mant'],

@@ -38,11 +38,15 @@ if ($caso == "S") {
             margin-left: -4px;
             font-size: 12px;
         }
+
+        .lefting {
+            margin-left: -10px;
+        }
     </style>
 
     <label>Se repite el</label>
-    <div class="row">
-        <div class="col-md-2 col-lg-2">
+    <div class="row" style="margin-left: 20px;">
+        <div class="col-md-2 col-lg-2 lefting">
             <div class="form-check form-check-inline">
                 <input class="form-check-input" type="checkbox" value="D" id="sunday1" name="sunday1" <?php if ($period_semanal != 0) {
                                                                                                             if ($array[0] == 'D') {
@@ -54,7 +58,7 @@ if ($caso == "S") {
                 </label>
             </div>
         </div>
-        <div class="col-md-2 col-lg-2">
+        <div class="col-md-2 col-lg-2 lefting">
             <div class="form-check form-check-inline">
                 <input class="form-check-input" type="checkbox" value="L" id="monday1" name="monday1" <?php if ($period_semanal != 0) {
                                                                                                             if ($array[1] == 'L') {
@@ -66,7 +70,7 @@ if ($caso == "S") {
                 </label>
             </div>
         </div>
-        <div class="col-md-2 col-lg-2">
+        <div class="col-md-2 col-lg-2 lefting">
             <div class="form-check form-check-inline">
                 <input class="form-check-input" type="checkbox" value="M" id="tuesday1" name="tuesday1" <?php if ($period_semanal != 0) {
                                                                                                             if ($array[2] == 'M') {
@@ -78,7 +82,7 @@ if ($caso == "S") {
                 </label>
             </div>
         </div>
-        <div class="col-md-2 col-lg-2">
+        <div class="col-md-2 col-lg-2 lefting">
             <div class="form-check form-check-inline">
                 <input class="form-check-input " type="checkbox" value="X" id="wednesday1" name="wednesday1" <?php if ($period_semanal != 0) {
                                                                                                                     if ($array[3] == 'X') {
@@ -90,7 +94,7 @@ if ($caso == "S") {
                 </label>
             </div>
         </div>
-        <div class="col-md-2 col-lg-2">
+        <div class="col-md-2 col-lg-2 lefting">
             <div class="form-check form-check-inline">
                 <input class="form-check-input" type="checkbox" value="J" id="thursday1" name="thursday1" <?php if ($period_semanal != 0) {
                                                                                                                 if ($array[4] == 'J') {
@@ -102,7 +106,7 @@ if ($caso == "S") {
                 </label>
             </div>
         </div>
-        <div class="col-md-2 col-lg-2">
+        <div class="col-md-2 col-lg-2 lefting">
             <div class="form-check form-check-inline">
                 <input class="form-check-input" type="checkbox" value="V" id="friday1" name="friday1" <?php if ($period_semanal != 0) {
                                                                                                             if ($array[5] == 'V') {
@@ -114,7 +118,7 @@ if ($caso == "S") {
                 </label>
             </div>
         </div>
-        <div class="col-md-2 col-lg-2">
+        <div class="col-md-2 col-lg-2 lefting">
             <div class="form-check form-check-inline">
                 <input class="form-check-input" type="checkbox" value="S" id="saturday1" name="saturday1" <?php if ($period_semanal != 0) {
                                                                                                                 if ($array[6] == 'S') {
@@ -129,7 +133,7 @@ if ($caso == "S") {
     </div>
 <?php } elseif ($caso == "M") { ?>
     <div class="col-md-12 col-lg-12">
-        <label style="color:white;">.</label>
+        <label>Se repite el</label>
         <select class="form-control" aria-label="Default select example" id="mesoption1">
             <option value="C5D" <?php if ($mesoption == 'C5D') {
                                     echo "checked";
@@ -143,4 +147,8 @@ if ($caso == "S") {
 
         </select>
     </div>
-<?php } ?>
+<?php } else {
+    echo '<Label>Se repite:</Label>
+    <br><span>Según lo elegido.</span>';
+}
+?>

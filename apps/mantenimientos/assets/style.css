@@ -4,6 +4,8 @@
     background-color: #fff;
 }
 
+
+
 .table-wrapper {
     background: #fff;
     padding: 10px;
@@ -291,4 +293,25 @@ table.table .avatar {
         margin-left: 0px;
     }
 
+}
+
+* {
+    font-size: 14px;
+}
+
+#thetable::-webkit-scrollbar {
+    width: 1px;
+}
+
+.card-title-rezise {
+    width: 100%;
+    color: #164085;
+    text-align: center;
+    position: relative;
+    margin-top: 9px;
+}
+
+.form-control {
+    height: 30px;
+    padding: 2px;
 }

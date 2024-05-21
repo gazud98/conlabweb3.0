@@ -152,7 +152,7 @@ if ($conetar->connect_errno) {
                 "responsive": true,
                 // ... Otras opciones ...
                 "ajax": {
-                    url: 'https://conlabweb3.tierramontemariana.org/apps/consultamantenimiento/mostrar-p.php', // Página PHP que devuelve los datos en formato JSON
+                    url: '/cw3/conlabweb3.0/apps/consultamantenimiento/mostrar-p.php', // Página PHP que devuelve los datos en formato JSON
                     type: 'GET', // Método de la petición (GET o POST según corresponda)
                     dataType: 'json', // Tipo de datos esperado en la respuesta
                     dataSrc: '',
@@ -203,10 +203,11 @@ if ($conetar->connect_errno) {
                         "render": function(data, type, full, meta) {
 
                             if (full.estado_mantenimiento === "P") {
-                                return '&nbsp;&nbsp;<a href="#" onclick="addValueIde(' + full.id + ')" title="Ingresar Resultados" data-toggle="modal"  data-target="#event"><i class="fa-solid fa-upload"></i></a>';
+                                return '&nbsp;&nbsp;<a href="#" onclick="addValueIde(' + full.id + ')" title="Ingresar Resultados" data-toggle="modal"  data-target="#event"><i class="fa-solid fa-upload"></i></a>'
+                                +'<a href="#" style="color:red;" onclick="loadModalRepP(' + full.id + ')" title="Reprogramar" data-toggle="modal" data-target="#modalReprogramar"><i class="fa-solid fa-clock-rotate-left" id="icon" style="font-size:18px;"></i><span></span></a>';
                             } else if (full.estado_mantenimiento === "F") {
                                 //return '<a href="#" onclick="desactivar1(' + full.id + ');" style="color: #061078;" title="Activar"><i class="fa-solid fa-circle-check" id="icon" style="font-size:18px;"></i><span></span></a>';
-                                return '';
+                                return '&nbsp;&nbsp;<a href="#" onclick="addValueIde(' + full.id + ')" title="Ingresar Resultados" data-toggle="modal"  data-target="#event"><i class="fa-solid fa-upload"></i></a>'
                             } else if (full.estado_mantenimiento === "V") {
                                 return '<a href="#" style="color:red;" onclick="loadModalRepP(' + full.id + ')" title="Reprogramar" data-toggle="modal" data-target="#modalReprogramar"><i class="fa-solid fa-clock-rotate-left" id="icon" style="font-size:18px;"></i><span></span></a>';
                             }
@@ -226,7 +227,7 @@ if ($conetar->connect_errno) {
         }
         
         function loadModalRepP(id) {
-            $('#contentModalRep').load('https://conlabweb3.tierramontemariana.org/apps/consultamantenimiento/modal-rep.php', {
+            $('#contentModalRep').load('/cw3/conlabweb3.0/apps/consultamantenimiento/modal-rep.php', {
                 id: id,
                 aux: 'P'
             });
