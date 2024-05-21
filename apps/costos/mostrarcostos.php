@@ -38,7 +38,7 @@ if ($conetar->connect_errno) {
 } else {
     $nombre;
     $cadena = "SELECT a.id, a.motivo_costo, a.valor
-    FROM  u116753122_cw3completa.costo_indirecto a where 1=1 ".$filtro ;
+    FROM  u116753122_cw3completa.costo_indirecto a where 1=1 " ;
 
     $thefile = 0;
 

@@ -54,62 +54,58 @@ if ($numerfiles2 >= 1) {
 }
 ?>
 
-<button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal">
-    <i class="fa-solid fa-cart-flatbed"></i> Traslado de Bodega
-</button>
 <div class="modal fade" id="myModal">
-    <div class="modal-dialog ">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
 
             <!-- Modal Header -->
-            <div class="modal-header" style="text-align: center;">
-                <label><strong>Traslado de Bodega de <?php echo $nom_insumo ?></strong></label>
+            <div class="modal-header">
+                <h5 class="modal-title mx-auto">Traslado de Bodega de <?php echo $nom_insumo ?></h5>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
 
             <!-- Modal body -->
-            <div class="modal-body" id="modalshow" name="modalshow">
+            <div class="modal-body">
                 <div class="row">
-                    <div class="col-md-12 col-lg-12">
-                        <label value="" id="val3">Bodega</label>
-                        <input type="input" class="form-control" value="<?php echo  $bodega ?>" readonly></input>
+                    <div class="col-md-12">
+                        <label for="val3" style="font-size:13px">Bodega</label>
+                        <input type="text" style="font-size:13px;height:28px;" class="form-control" value="<?php echo  $bodega ?>" readonly>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-4 col-lg-4">
-                        <label>Estante</label>
-                        <input type="input" class="form-control" value="<?php echo  $stand ?>" readonly></input>
+                    <div class="col-md-4">
+                        <label style="font-size:13px">Estante</label>
+                        <input type="text" class="form-control" style="font-size:13px;height:28px;" value="<?php echo  $stand ?>" readonly>
                     </div>
-                    <div class="col-md-4 col-lg-4">
-                        <label>Entrepaño</label>
-                        <input type="input" class="form-control" identrepanio="<?php echo $identrepanio ?>" id="entr" name="entr" value="<?php echo  $entrepanio ?>" readonly></input>
+                    <div class="col-md-4">
+                        <label style="font-size:13px">Entrepaño</label>
+                        <input type="text" class="form-control" style="font-size:13px;height:28px;" value="<?php echo  $entrepanio ?>" readonly>
                     </div>
-                    <div class="col-md-4 col-lg-4">
-                        <label>Cantidad en Bodega</label>
-                        <input type="number" class="form-control" id="cante" name="cante" value="<?php echo  $cante ?>" readonly></input>
+                    <div class="col-md-4">
+                        <label style="font-size:13px">Cant. en Bodega</label>
+                        <input type="number" class="form-control" style="font-size:13px;height:28px;" value="<?php echo  $cante ?>" readonly>
                     </div>
                 </div>
 
-                <div style="text-align: center; margin-top:3%;">
-                    <h5>Bodega Destino</h5>
-                </div>
+                <hr>
 
                 <div class="row mb-2">
-                    <div class="col-md-12 col-lg-12">
-                        <label>Bodega</label>
-                        <select class="form-control" id="bod" onchange="agregar(this)">
-                            <option selected="true" disabled="disabled"></option>
+                    <div class="col-md-12">
+                        <h5 class="text-center">Bodega Destino</h5>
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-md-12">
+                        <label for="bod" style="font-size:13px">Bodega</label>
+                        <select class="form-control" id="bod" onchange="agregar(this)" style="font-size:13px;width:100%">
+                            <option selected disabled value=""></option>
                             <?php
-                            $cadena = "SELECT id, nombre,id_empleado,predeterminada
-                                                    FROM u116753122_cw3completa.bodegas
-                                                    where estado='1'";
+                            $cadena = "SELECT id, nombre,id_empleado,predeterminada FROM u116753122_cw3completa.bodegas WHERE estado='1'";
                             $resultadP2a = $conetar->query($cadena);
                             $numerfiles2a = mysqli_num_rows($resultadP2a);
                             if ($numerfiles2a >= 1) {
                                 while ($filaP2a = mysqli_fetch_array($resultadP2a)) {
-
-                                    echo "<option value='" . trim($filaP2a['id']) . "'";
-                                    echo '>' . $filaP2a['nombre'] . "</option>";
+                                    echo "<option value='" . trim($filaP2a['id']) . "'>" . $filaP2a['nombre'] . "</option>";
                                 }
                             }
                             ?>
@@ -118,20 +114,18 @@ if ($numerfiles2 >= 1) {
                     </div>
                 </div>
                 <div class="row mb-2">
-                    <div class="col-md-4 col-lg-4" id="stand">
+                    <div class="col-md-4" id="stand">
                         <?php include("stand.php"); ?>
                     </div>
-                    <div class="col-md-4 col-lg-4" id="entrepanio">
+                    <div class="col-md-4" id="entrepanio">
                         <?php include("entrepanio.php"); ?>
                     </div>
-                    <div class="col-md-4 col-lg-4">
-                        <label>Cantidad</label>
-                        <input type="number" class="form-control" value="" id="cantt" name="cantt" fchvence="<?php echo $fchvence ?>" unidadentrada="<?php echo $unidadentrada ?>" unidaddetalle="<?php echo $unidaddetalle ?>" nofactura="<?php echo $nofactura ?>" id_orden="<?php echo $id_orden ?>" id_prod="<?php echo $idproducto ?>" idpe="<?php echo $id ?>"></input>
+                    <div class="col-md-4">
+                        <label style="font-size:13px" for="cantt">Cantidad</label>
+                        <input style="font-size:13px;height:28px;" type="number" class="form-control" id="cantt" name="cantt" fchvence="<?php echo $fchvence ?>" unidadentrada="<?php echo $unidadentrada ?>" unidaddetalle="<?php echo $unidaddetalle ?>" nofactura="<?php echo $nofactura ?>" id_orden="<?php echo $id_orden ?>" id_prod="<?php echo $idproducto ?>" idpe="<?php echo $id ?>">
                         <div id="canttx"></div>
                     </div>
                 </div>
-
-
 
                 <!-- Modal footer -->
                 <div class="modal-footer">
@@ -144,8 +138,21 @@ if ($numerfiles2 >= 1) {
     </div>
 </div>
 
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 <script>
     $(document).ready(function() {
+        $('#bod').select2({
+            language: "es"
+        });
+        $('#std').select2({
+            language: "es"
+        });
+        $('#entrepan').select2({
+            language: "es"
+        });
+   
+
         $('#btnacep').click(function() {
             var bod = $("#bod").val();
             var std = $("#std").val();

@@ -60,7 +60,7 @@ if ($conetar->connect_errno) {
 <script>
     $(document).ready(function() {
 
-        miDataTable = $('#table-historial').DataTable({
+        miDataTablehistorial = $('#table-historial').DataTable({
             language: {
                 url: 'https://cdn.datatables.net/plug-ins/1.11.5/i18n/es-ES.json',
             },

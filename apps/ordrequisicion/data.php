@@ -265,7 +265,7 @@ if ($conetar->connect_errno) {
         var idd = $('option:selected', sel).attr('value');
 
 
-        $("#idprod").load('https://conlabweb3.tierramontemariana.org/apps/ordrequisicion/producto.php', {
+        $("#idprod").load('/cw3/apps/ordrequisicion/producto.php', {
             idd: idd
         })
 

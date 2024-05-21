@@ -1,13 +1,13 @@
 <?php
 
 $nmbapp = "Entrega de Productos";
-$moduraiz = $_SESSION['moduraiz'];
+$moduraiz = "Compras e Inventario";
 $ruta = "<a href='#'>Home</a> / " . $moduraiz;
 $uppercaseruta = strtoupper($ruta);
 
 ?>
-
-<div class="card border-info" style="width:100%;">
+<link rel="stylesheet" href="https://conlabweb3.tierramontemariana.org/apps/trasladodepartamento/assets/style.css">
+<div class="card border-info" style="width:85%;margin:auto;">
 
     <div class="card-header bg-light ">
         <div class="row">
@@ -38,8 +38,7 @@ $uppercaseruta = strtoupper($ruta);
 
         </div>
         <div class="row ">
-            <div class="col-md-12 col-lg-12" style="overflow:hidden; overflow-y:auto;  margin-bottom:5px; border-bottom:thin dotted #d3d3d3;
-                                           height:50vh;width:100%;" name="table" id="table">
+            <div class="col-md-12 col-lg-12" name="table" id="table">
                 <?php ?>
 
                 <div class="text-nowrap" id="thenavigation" name="thenavigation"></div>
@@ -49,24 +48,6 @@ $uppercaseruta = strtoupper($ruta);
         </div>
     </div>
 
-    <div class="card-footer bg-light">
-        <div class="row">
-            <div class="col-md-12 col-lg-12">
-                <table>
-                    <tr>
-                        <td>
-                            <div id="btndep">
-                                <button type="button" class="btn btn-primary btn-xs" disabled>
-                                    <i class="fa-solid fa-cart-flatbed"></i>
-                                    Entregar Producto
-                                </button>
-                            </div>
-                        </td>
-                    </tr>
-                </table>
-            </div>
-        </div>
-    </div>
 </div>
 
 <?php

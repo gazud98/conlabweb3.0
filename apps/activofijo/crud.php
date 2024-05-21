@@ -26,7 +26,6 @@ if ($conetar->connect_errno) {
 } else {
 
 
-    include('reglasdenavegacion.php');
 
 
     //genera elos procesos de crud al formulario del directorio dond eesoy ubicado
@@ -36,7 +35,7 @@ if ($conetar->connect_errno) {
     $id = $_REQUEST['id'];
     if ($modeeditstatus == "D") { //es de desahibilitar/habikitr
         //          si estadio es 1 pasa ra 0 o v iceversa
-        $cadena = "select estado from producto where id_producto='" . $id . "'";
+        $cadena = "select estado from  u116753122_cw3completa.producto where id_producto='" . $id . "'";
         $resultadP2a = $conetar->query($cadena);
         $numerfiles2a = mysqli_num_rows($resultadP2a);
         if ($numerfiles2a >= 1) {
@@ -50,7 +49,7 @@ if ($conetar->connect_errno) {
         } else {
             $estado = '1';
         }
-        $cadena = "update producto set estado='" . $estado . "' where id_producto='" . $id . "'";
+        $cadena = "update  u116753122_cw3completa.producto set estado='" . $estado . "' where id_producto='" . $id . "'";
         $resultado = mysqli_query($conetar, $cadena);
         $result = "ok";
     } else { //es crea o moifica
@@ -97,14 +96,14 @@ if ($conetar->connect_errno) {
             $dpr = $valor / $vidautilmes;
 
             if ($modeeditstatus == "C") { ////CREACION
-                $cadena = "insert into producto(id_categoria_producto,nombre,referencia,id_departamento,
+                $cadena = "insert into  u116753122_cw3completa.producto(id_categoria_producto,nombre,referencia,id_departamento,
                 id_sede,id_tipo_activo,op_mantenimiento,dpr,descripcion)values('" .
                     $id_categoria_producto . "','" . $nombre . "','" . $referencia . "','" . $id_departamento . 
                     "','" . $id_sedes . "','" . $id_tipo_activo . "','" .$optmante. "','" .$dpr. "','" .$descp. "')";
                 $resultado = mysqli_query($conetar, $cadena);
                 //busco el id
                 $cadena = "select id_producto
-                                from producto
+                                from  u116753122_cw3completa.producto
                                 where id_categoria_producto='" . $id_categoria_producto . "'
                                         and nombre='" . $nombre . "'
                                         and referencia='" . $referencia . "'
@@ -118,7 +117,7 @@ if ($conetar->connect_errno) {
                     $filaP2a = mysqli_fetch_array($resultadP2);
                     $id = $filaP2a['id_producto'];
                     //no existe creo
-                    $cadena = "insert into producto_activofijo(id_producto,valor,modelo,serie,
+                    $cadena = "insert into  u116753122_cw3completa.producto_activofijo(id_producto,valor,modelo,serie,
                                        fchinstalacion,seguro,garantia,
                                         fchexpgarantia,vidautilmes,metdepreciacion,id_proveegarantia,
                                         id_responsable,aseguradora,valor_asegurado,op_mantenimiento,dpr,descripcion)values('" .
@@ -133,7 +132,7 @@ if ($conetar->connect_errno) {
             } else {
 
                 if ($modeeditstatus == "E") { //acgualzucsion
-                    $cadena = "update producto set
+                    $cadena = "update  u116753122_cw3completa.producto set
                                 id_categoria_producto='" . $id_categoria_producto . "',
                                 nombre='" . $nombre . "',
                                 referencia='" . $referencia . "',
@@ -147,13 +146,13 @@ if ($conetar->connect_errno) {
 
                     //asegruo que este en la tabla de campso adicoanes pde activos fijos
                     $cadena = "select id_producto
-                                from producto_activofijo
+                                from  u116753122_cw3completa.producto_activofijo
                                 where id_producto='" . $id . "'";
                     $resultadP2 = $conetar->query($cadena);
                     $numerfiles2 = mysqli_num_rows($resultadP2);
                     if ($numerfiles2 >= 1) {
                         //exite actualizao
-                        $cadena = "update producto_activofijo set
+                        $cadena = "update  u116753122_cw3completa.producto_activofijo set
                                     valor='" . $valor . "',
                                     modelo='" . $modelo . "',
                                     serie='" . $serie . "',
@@ -173,7 +172,7 @@ if ($conetar->connect_errno) {
                         $resultado = mysqli_query($conetar, $cadena);
                     } else {
                         //no existe creo
-                        $cadena = "insert into producto_activofijo(id_producto,valor,modelo,serie,
+                        $cadena = "insert into  u116753122_cw3completa.producto_activofijo(id_producto,valor,modelo,serie,
                                        fchinstalacion,seguro,seguroprima,garantia,
                                         fchexpgarantia,vidautilmes,metdepreciacion,id_proveegarantia,id_responsable,aseguradora,valor_asegurado,op_mantenimiento,descripcion)values('" .
                             $id . "','" . $valor . "','" . $modelo . "','" . $serie . "','" .

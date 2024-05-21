@@ -1,7 +1,7 @@
 <?php
 
 $nmbapp = "Traslado de Bodega";
-$moduraiz = $_SESSION['moduraiz'];
+$moduraiz = "Compras e Inventario";
 $ruta = "<a href='#'>Home</a> / " . $moduraiz;
 $uppercaseruta = strtoupper($ruta);
 
@@ -13,13 +13,12 @@ $uppercaseruta = strtoupper($ruta);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
 
     <link rel="stylesheet" href="https://conlabweb3.tierramontemariana.org/apps/trasladobodega/assets/style.css">
 </head>
 
 <body>
-    <div class="card border-info" style="width:100%;">
+    <div class="card border-info" style="width:85%;margin:auto;">
 
         <div class="card-header bg-light ">
             <div class="row">
@@ -42,7 +41,7 @@ $uppercaseruta = strtoupper($ruta);
             <div class="row">
 
                 <div class="col-md-12 col-lg-12" style=" overflow-x:auto; " id="data">
-                    <?php include ('data.php');  //campos de la app 
+                    <?php include('data.php');  //campos de la app 
                     ?>
 
                 </div>
@@ -57,39 +56,20 @@ $uppercaseruta = strtoupper($ruta);
             </div>
         </div>
 
-        <div class="card-footer bg-light">
-            <div class="row">
-                <div class="col-md-12 col-lg-12">
-                    <table>
-                        <tr>
-                            <td>
-                                <div id="btntrl">
-                                    <button type="button" class="btn btn-primary btn-xs" disabled
-                                        style="text-align: center;">
-                                        <i class="fa-solid fa-cart-flatbed"></i>
-                                        Traslado de Bodega
-                                    </button>
-                                </div>
-                            </td>
 
-
-                        </tr>
-                    </table>
-                </div>
-            </div>
-        </div>
     </div>
 
     <?php
 
 
-    include ('apps/thedata.php'); //scriops de control
+    include('apps/thedata.php'); //scriops de control
     ?>
     <script src="https://kit.fontawesome.com/6dc75479dc.js" crossorigin="anonymous"></script>
 
-
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script>
-        $(document).ready(function () {
+        $(document).ready(function() {
             obtener();
 
         });

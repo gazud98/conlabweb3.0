@@ -21,10 +21,10 @@ if ($conetar->connect_errno) {
         $id = $_GET['id'];
     }
 
-    $cadena = "SELECT p.id,p.fecha_final,p.daño,p.estado_mantenimiento,p.respuestos,p.tecnico, a.nombre FROM correctivo p, 
-    producto a WHERE a.id_producto = p.equipo AND a.id_producto = '$id' AND estado_mantenimiento in('V', 'F', 'P')
+    $cadena = "SELECT p.id,p.fecha_final,p.daño,p.estado_mantenimiento,p.respuestos,p.tecnico, a.nombre FROM  u116753122_cw3completa.correctivo p, 
+    u116753122_cw3completa.producto a WHERE a.id_producto = p.equipo AND a.id_producto = '$id' AND estado_mantenimiento in('V', 'F', 'P')
     UNION SELECT p.id,p.fecha_final,p.desc_mantenimiento,p.estado_mantenimiento,p.desc_mantenimiento, p.resp_mantenimiento, a.nombre 
-    FROM preventiva p, producto a WHERE a.id_producto = p.equipo 
+    FROM  u116753122_cw3completa.preventiva p,  u116753122_cw3completa.producto a WHERE a.id_producto = p.equipo 
     AND a.id_producto = '$id' AND estado_mantenimiento in('V', 'F', 'P')";
 
     //echo $cadena;

@@ -207,53 +207,54 @@ $uppercaseruta = strtoupper($ruta);
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="accordion" id="accordionManoObra" style="display:none;">
-                                        <div class="card">
-                                            <div class="card-header d-flex" id="headingManoObra">
-                                                <span class="float-left btn btn-link btn-block text-left">
-                                                    <i class="fa fa-sign-language"></i> &nbsp; Costos Mano De Obra
-                                                    Directa
-                                                </span>
-                                                <a class="float-right" href="#" data-toggle="collapse" data-target="#collapseManoObra" aria-expanded="false" aria-controls="collapseManoObra">
-                                                    <i class="fa fa-chevron-down"></i>
-                                                </a>
-                                            </div>
-                                            <div id="collapseManoObra" class="collapse show" aria-labelledby="headingManoObra" data-parent="#accordionManoObra">
-                                                <div class="card-body">
-                                                    <button class="btn btn-primary btn-block" style="width:100px;font-size:14px;" id="agregarColumnaManobraBtn">Agregar&nbsp;&nbsp;<i class="fa-solid fa-square-plus"></i></button>
-                                                    <div class="table-responsive">
-                                                        <table id="tab_mano_obra" class="table table-striped table-bordered table-sm" style="width:100%;">
-                                                            <thead>
-                                                                <tr>
-                                                                    <th class="text-center"><i class="fa-solid fa-user-check"></i></th>
-                                                                    <th style="width:35%;">Cargo
-                                                                    </th>
-                                                                    <th class="text-center" style="width:15;">Tiempo de
-                                                                        la Prueba</th>
-                                                                    <th class="text-center" style="width:20%;">Salario
-                                                                    </th>
 
-                                                                    <th class="text-center">Acciones</th>
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
+                                    <div class="col-lg-6">
+                                        <div class="accordion" id="accordionManoObra" style="display:none;">
+                                            <div class="card">
+                                                <div class="card-header d-flex" id="headingManoObra">
+                                                    <span class="float-left btn btn-link btn-block text-left">
+                                                        <i class="fa fa-sign-language"></i> &nbsp; Costos Mano De Obra
+                                                        Directa
+                                                    </span>
+                                                    <a class="float-right" href="#" data-toggle="collapse" data-target="#collapseManoObra" aria-expanded="false" aria-controls="collapseManoObra">
+                                                        <i class="fa fa-chevron-down"></i>
+                                                    </a>
+                                                </div>
+                                                <div id="collapseManoObra" class="collapse show" aria-labelledby="headingManoObra" data-parent="#accordionManoObra">
+                                                    <div class="card-body">
+                                                        <button class="btn btn-primary btn-block" style="width:100px;font-size:14px;" id="agregarColumnaManobraBtn">Agregar&nbsp;&nbsp;<i class="fa-solid fa-square-plus"></i></button>
+                                                        <div class="table-responsive">
+                                                            <table id="tab_mano_obra" class="table table-striped table-bordered table-sm" style="width:100%;">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th class="text-center"><i class="fa-solid fa-user-check"></i></th>
+                                                                        <th style="width:35%;">Cargo
+                                                                        </th>
+                                                                        <th class="text-center" style="width:15;">Tiempo de
+                                                                            la Prueba</th>
+                                                                        <th class="text-center" style="width:20%;">Salario
+                                                                        </th>
+
+                                                                        <th class="text-center">Acciones</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
 
 
-                                                            </tbody>
-                                                            <tfoot>
-                                                                <tr>
-                                                                    <td>&nbsp;</td>
-                                                                    <td>&nbsp;</td>
-                                                                    <td>&nbsp;</td>
+                                                                </tbody>
+                                                                <tfoot>
+                                                                    <tr>
+                                                                        <td>&nbsp;</td>
+                                                                        <td>&nbsp;</td>
+                                                                        <td>&nbsp;</td>
 
-                                                                    <td style="font-size:16px; font-weight: bold;text-align: right;">
-                                                                        <input type="input" id="total_mano_obra" style="border:none;text-align:center;" value="0" disabled title="Total de la mano de obra seleccionada">
-                                                                    </td>
-                                                                    <td>&nbsp;</td>
-                                                            </tfoot>
-                                                        </table>
+                                                                        <td style="font-size:16px; font-weight: bold;text-align: right;">
+                                                                            <input type="input" id="total_mano_obra" style="border:none;text-align:center;" value="0" disabled title="Total de la mano de obra seleccionada">
+                                                                        </td>
+                                                                        <td>&nbsp;</td>
+                                                                </tfoot>
+                                                            </table>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -287,7 +288,7 @@ $uppercaseruta = strtoupper($ruta);
 
             </div>
         </div>
-        <div class="row mt-5">
+        <div class="row mt-5 bo">
             <div class="col-lg-12 text-center">
                 <label style="font-size:14px;display:none;" id="costos-resultado">Ultimos costos generados.</label>
                 <div id="tabla-resultados" style="overflow-x: hidden; overflow-y: scroll; max-height: 250px; display: none;">
@@ -373,1200 +374,1201 @@ $uppercaseruta = strtoupper($ruta);
                         </div>
                 </div>
             </div>
+        </div>
 
-            <div id="editmodalmanobra" class="modal fade show" aria-modal="true" role="dialog">
+        <div id="editmodalmanobra" class="modal fade show" aria-modal="true" role="dialog">
 
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <form id="formeditar" action="#" method="POST">
-                            <div class="modal-header">
-                                <h4 class="modal-title">Editar Mano Obra</h4>
-                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                            </div>
-                            <div class="modal-body" id="modalshowmanobra">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <form id="formeditar" action="#" method="POST">
+                        <div class="modal-header">
+                            <h4 class="modal-title">Editar Mano Obra</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        </div>
+                        <div class="modal-body" id="modalshowmanobra">
 
-                            </div>
-                            <input type="hidden" name="modeeditstatus" id="modeeditstatus" value="E">
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-danger" data-dismiss="modal" value="Cancelar">Cancelar</button>
-                                <button type="submit" class="btn btn-success" data-dismiss="modal" onclick="editarmanobra()" value="Aceptar">Aceptar</button>
-                            </div>
-                    </div>
-                </div>
-            </div>
-
-            <div id="modalcostos" class="modal fade show" aria-modal="true" role="dialog">
-
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <form id="formeditar" action="#" method="POST">
-                            <div class="modal-header bg-primary">
-                                <h4 class="card-header bg-primary"><i class="fa fa-info"></i> &nbsp; Resumen de
-                                    costos
-                                </h4>
-                                <button type="button" class="close" style="color:white;" data-dismiss="modal" aria-hidden="true">&times;</button>
-                            </div>
-                            <div class="modal-body">
-                                <div class="card-body">
-                                    <form class="p-2">
-                                        <div class="form-group row" style="display:none;">
-                                            <label class="col-6 col-form-label">Costo del examen</label>
-                                            <div class="col-6">
-                                                <input name="costo_real" id="costo_real" type="number" readonly class="form-control" min="0" value="0">
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <small class="col-12 text-justify form-text text-muted">Si desea
-                                                calcular el
-                                                Costo Incluyendo los gastos Administrativos,
-                                                Digite la Cifra de este rubro aquí</small>
-                                            <div class="col-lg-6">
-                                                <input name="costo_administrativo" id="costo_administrativo" type="number" class="form-control" min="0" value="0">
-                                            </div>
-                                            <div class="col-lg-6">
-                                                <a class="btn btn-primary btn-block" id="btn-calculo" onclick="calcular()">Recalcular</a>
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label class="col-6 col-form-label text-justify">Costo total</label>
-                                            <div class="col-lg-6">
-                                                <input name="costo_examen_final" id="costo_examen_final" type="number" readonly class="form-control" min="0" value="0">
-                                            </div>
-                                        </div>
-
-                                    </form>
-                                </div>
-
-                            </div>
-                            <input type="hidden" name="modeeditstatus" id="modeeditstatus" value="E">
-                            <div class="modal-footer">
-
-                            </div>
-                    </div>
+                        </div>
+                        <input type="hidden" name="modeeditstatus" id="modeeditstatus" value="E">
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal" value="Cancelar">Cancelar</button>
+                            <button type="submit" class="btn btn-success" data-dismiss="modal" onclick="editarmanobra()" value="Aceptar">Aceptar</button>
+                        </div>
                 </div>
             </div>
         </div>
 
+        <div id="modalcostos" class="modal fade show" aria-modal="true" role="dialog">
 
-        <!-- jQuery -->
-        <script src="assets/plugins/jquery/jquery.min.js"></script>
-        <!-- Bootstrap -->
-        <script src="assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-        <!-- jQuery UI -->
-        <script src="assets/plugins/jquery-ui/jquery-ui.min.js"></script>
-        <!-- AdminLTE App -->
-        <script src="assets/dist/js/adminlte.min.js"></script>
-        <!-- AdminLTE for demo purposes -->
-        <script src="assets/dist/js/demo.js"></script>
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <form id="formeditar" action="#" method="POST">
+                        <div class="modal-header bg-primary">
+                            <h4 class="card-header bg-primary"><i class="fa fa-info"></i> &nbsp; Resumen de
+                                costos
+                            </h4>
+                            <button type="button" class="close" style="color:white;" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="card-body">
+                                <form class="p-2">
+                                    <div class="form-group row" style="display:none;">
+                                        <label class="col-6 col-form-label">Costo del examen</label>
+                                        <div class="col-6">
+                                            <input name="costo_real" id="costo_real" type="number" readonly class="form-control" min="0" value="0">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <small class="col-12 text-justify form-text text-muted">Si desea
+                                            calcular el
+                                            Costo Incluyendo los gastos Administrativos,
+                                            Digite la Cifra de este rubro aquí</small>
+                                        <div class="col-lg-6">
+                                            <input name="costo_administrativo" id="costo_administrativo" type="number" class="form-control" min="0" value="0">
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <a class="btn btn-primary btn-block" id="btn-calculo" onclick="calcular()">Recalcular</a>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-6 col-form-label text-justify">Costo total</label>
+                                        <div class="col-lg-6">
+                                            <input name="costo_examen_final" id="costo_examen_final" type="number" readonly class="form-control" min="0" value="0">
+                                        </div>
+                                    </div>
 
-        <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
-        <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap4.min.js"></script>
+                                </form>
+                            </div>
 
-        <script src="assets/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.4/xlsx.full.min.js"></script>
-        <script src="https://kit.fontawesome.com/6dc75479dc.js" crossorigin="anonymous"></script>
-        <script>
-            function exportarExcel() {
-                var nombreArchivo = 'reporte.xlsx';
-                var tabla = document.getElementById('resultados_costos');
-                var tablaHTML = tabla.outerHTML;
-                var workbook = XLSX.utils.table_to_book(tabla);
-                var excelBuffer = XLSX.write(workbook, {
-                    bookType: 'xlsx',
-                    type: 'array'
-                });
-                var blob = new Blob([excelBuffer], {
-                    type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
-                });
-                var url = URL.createObjectURL(blob);
-                var a = document.createElement('a');
-                a.href = url;
-                a.download = nombreArchivo;
-                a.click();
-                URL.revokeObjectURL(url);
+                        </div>
+                        <input type="hidden" name="modeeditstatus" id="modeeditstatus" value="E">
+                        <div class="modal-footer">
 
-                Swal.fire({
-                    position: 'top',
-                    icon: 'success',
-                    title: 'Archivo exportado con éxito!',
-                    showConfirmButton: false,
-                    timer: 1000
-                })
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-            }
-            $(document).ready(function() {
 
-                miDataTablere = $('#resultados_costos').DataTable({
-                    language: {
-                        url: 'https://cdn.datatables.net/plug-ins/1.11.5/i18n/es-ES.json',
+    <!-- jQuery -->
+    <script src="assets/plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery UI -->
+    <script src="assets/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="assets/dist/js/adminlte.min.js"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="assets/dist/js/demo.js"></script>
+
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap4.min.js"></script>
+
+    <script src="assets/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.4/xlsx.full.min.js"></script>
+    <script src="https://kit.fontawesome.com/6dc75479dc.js" crossorigin="anonymous"></script>
+    <script>
+        function exportarExcel() {
+            var nombreArchivo = 'reporte.xlsx';
+            var tabla = document.getElementById('resultados_costos');
+            var tablaHTML = tabla.outerHTML;
+            var workbook = XLSX.utils.table_to_book(tabla);
+            var excelBuffer = XLSX.write(workbook, {
+                bookType: 'xlsx',
+                type: 'array'
+            });
+            var blob = new Blob([excelBuffer], {
+                type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+            });
+            var url = URL.createObjectURL(blob);
+            var a = document.createElement('a');
+            a.href = url;
+            a.download = nombreArchivo;
+            a.click();
+            URL.revokeObjectURL(url);
+
+            Swal.fire({
+                position: 'top',
+                icon: 'success',
+                title: 'Archivo exportado con éxito!',
+                showConfirmButton: false,
+                timer: 1000
+            })
+
+        }
+        $(document).ready(function() {
+
+            miDataTablere = $('#resultados_costos').DataTable({
+                language: {
+                    url: 'https://cdn.datatables.net/plug-ins/1.11.5/i18n/es-ES.json',
+                },
+                "paging": true,
+                "lengthChange": false,
+                "searching": false,
+                "ordering": false,
+                "info": false,
+                "autoWidth": false,
+                "responsive": false,
+                "ajax": {
+                    url: 'https://conlabweb3.tierramontemariana.org/apps/costos/mostrarreporte.php', // Página PHP que devuelve los datos en formato JSON
+                    type: 'GET', // Método de la petición (GET o POST según corresponda)
+                    dataType: 'json', // Tipo de datos esperado en la respuesta
+                    dataSrc: '', // Indicar que los datos provienen directamente del objeto JSON (sin propiedad adicional)
+                    data: function(d) {
+                        // Agrega parámetros personalizados aquí
+
+                        d.fecha1 = $("#fecha1").val();
+                        d.fecha2 = $("#fecha2").val();
+
                     },
-                    "paging": true,
-                    "lengthChange": false,
-                    "searching": false,
-                    "ordering": false,
-                    "info": false,
-                    "autoWidth": false,
-                    "responsive": false,
-                    "ajax": {
-                        url: 'https://conlabweb3.tierramontemariana.org/apps/costos/mostrarreporte.php', // Página PHP que devuelve los datos en formato JSON
-                        type: 'GET', // Método de la petición (GET o POST según corresponda)
-                        dataType: 'json', // Tipo de datos esperado en la respuesta
-                        dataSrc: '', // Indicar que los datos provienen directamente del objeto JSON (sin propiedad adicional)
-                        data: function(d) {
-                            // Agrega parámetros personalizados aquí
-
-                            d.fecha1 = $("#fecha1").val();
-                            d.fecha2 = $("#fecha2").val();
-
-                        },
+                },
+                "columns": [{
+                        "data": "nombre_examen"
                     },
-                    "columns": [{
-                            "data": "nombre_examen"
-                        },
-                        {
-                            "data": "valor"
-                        },
-                        {
-                            "data": "valord_admin"
-                        },
-                        {
-                            "data": "fecha"
-                        }
-                    ]
-                });
-
-                $('#button-fil').click(function() {
-                    miDataTablere.ajax.reload(); // Recarga los datos de la tabla con los nuevos parámetros
-                });
-
+                    {
+                        "data": "valor"
+                    },
+                    {
+                        "data": "valord_admin"
+                    },
+                    {
+                        "data": "fecha"
+                    }
+                ]
             });
 
-            function showTable() {
-                $("#accordionProductos").slideDown();
-                $("#accordion-text").slideDown();
-                $("#costos-text").hide();
-                $("#costos-resultado").hide();
-                $("#accordionIndirectos").hide();
-                $("#accordionManoObra").hide();
-                $("#tabla-resultados").hide();
-                $(".btn-sig").show();
-                $(".btn-confirmacion").hide();
-                $("#btn-excel").hide();
-                $(".btn-ant").hide();
-            }
-
-
-            function sedeCosto(sel) {
-                var id = $('option:selected', sel).attr('value');
-                var nom_sede = $('option:selected', sel).attr('nombre_sede');
-                $('#sedenom').val(nom_sede);
-            }
-            $(document).ready(function() {
-                miDataTable = $('#tab_materia_prima').DataTable({
-                    language: {
-                        url: 'https://cdn.datatables.net/plug-ins/1.11.5/i18n/es-ES.json',
-                    },
-                    "paging": true,
-                    "lengthChange": false,
-                    "searching": false,
-                    "ordering": false,
-                    "info": false,
-                    "autoWidth": false,
-                    "responsive": false,
-                    "ajax": {
-                        url: 'https://conlabweb3.tierramontemariana.org/apps/costos/mostrar.php', // Página PHP que devuelve los datos en formato JSON
-                        type: 'GET', // Método de la petición (GET o POST según corresponda)
-                        dataType: 'json', // Tipo de datos esperado en la respuesta
-                        dataSrc: '', // Indicar que los datos provienen directamente del objeto JSON (sin propiedad adicional)
-                        data: function(d) {
-                            // Agrega parámetros personalizados aquí
-
-                            d.examen = $("select[name='search_data_examen']").val();
-                            
-                        },
-                    },
-                    "columns": [{
-                            "data": null,
-                            "render": function(data, type, full, meta) {
-                                return '<input type="checkbox" onclick="seleccionarmateria(' + full.thefile + ')" name="fileselectmp" id="fileselectmp' + full.thefile + '" costo_materia="' + full.valor + '"  value="' + full.codigo + '">';
-                            }
-
-                        }, {
-                            "data": "descripcion"
-                        },
-                        {
-                            "data": "valor",
-                            "className": "text-right"
-                        },
-                        {
-                            "data": null,
-                            "render": function(data, type, full, meta) {
-                                var editarLink = '<a href="#" onclick="accionesMateria(' + full.codigo + ', \'E\', ' + full.thefile + ');" data-target="#editmodalmateria" data-toggle="modal"  id="edit' + full.thefile + '" style="color: #E8A200;" title="Editar"><i style="font-size:18px;" id="icon" class="fa-solid fa-pen-to-square"></i><span></span></a>';
-
-                                var borrarLink = '<a href="#" onclick="accionesMateria(' + full.codigo + ', \'B\', ' + full.thefile + ');" id="borrar' + full.thefile + '" style="color: #E8A200;" title="Borrar"><i style="font-size:18px;color: #CE2222;"  id="icon" class="fa-solid fa-trash-can"></i><span></span></a>';
-
-
-                                return editarLink + ' ' + borrarLink;
-                            }
-                        }
-                    ]
-                });
-                $('#btn-buscar').click(function() {
-                    miDataTable.ajax.reload(); // Recarga los datos de la tabla con los nuevos parámetros
-                });
+            $('#button-fil').click(function() {
+                miDataTablere.ajax.reload(); // Recarga los datos de la tabla con los nuevos parámetros
             });
 
-            $(document).ready(function() {
-                miDataTable2 = $('#tab_costos_indirectos').DataTable({
-                    language: {
-                        url: 'https://cdn.datatables.net/plug-ins/1.11.5/i18n/es-ES.json',
+        });
+
+        function showTable() {
+            $("#accordionProductos").slideDown();
+            $("#accordion-text").slideDown();
+            $("#costos-text").hide();
+            $("#costos-resultado").hide();
+            $("#accordionIndirectos").hide();
+            $("#accordionManoObra").hide();
+            $("#tabla-resultados").hide();
+            $(".btn-sig").show();
+            $(".btn-confirmacion").hide();
+            $("#btn-excel").hide();
+            $(".btn-ant").hide();
+        }
+
+
+        function sedeCosto(sel) {
+            var id = $('option:selected', sel).attr('value');
+            var nom_sede = $('option:selected', sel).attr('nombre_sede');
+            $('#sedenom').val(nom_sede);
+        }
+        $(document).ready(function() {
+            miDataTable = $('#tab_materia_prima').DataTable({
+                language: {
+                    url: 'https://cdn.datatables.net/plug-ins/1.11.5/i18n/es-ES.json',
+                },
+                "paging": true,
+                "lengthChange": false,
+                "searching": true,
+                "ordering": false,
+                "info": false,
+                "autoWidth": false,
+                "responsive": false,
+                "ajax": {
+                    url: 'https://conlabweb3.tierramontemariana.org/apps/costos/mostrar.php', // Página PHP que devuelve los datos en formato JSON
+                    type: 'GET', // Método de la petición (GET o POST según corresponda)
+                    dataType: 'json', // Tipo de datos esperado en la respuesta
+                    dataSrc: '', // Indicar que los datos provienen directamente del objeto JSON (sin propiedad adicional)
+                    data: function(d) {
+                        // Agrega parámetros personalizados aquí
+
+                        //d.examen = $("select[name='search_data_examen']").val();
+
                     },
-                    "paging": true,
-                    "lengthChange": false,
-                    "searching": false,
-                    "ordering": false,
-                    "info": false,
-                    "autoWidth": false,
-                    "responsive": false,
-                    "ajax": {
-                        url: 'https://conlabweb3.tierramontemariana.org/apps/costos/mostrarcostos.php', // Página PHP que devuelve los datos en formato JSON
-                        type: 'GET', // Método de la petición (GET o POST según corresponda)
-                        dataType: 'json', // Tipo de datos esperado en la respuesta
-                        dataSrc: '', // Indicar que los datos provienen directamente del objeto JSON (sin propiedad adicional)
-                        data: function(d) {
-                            // Agrega parámetros personalizados aquí
-                            d.sede = $("select[name='search_data_sede']").val();
-                            d.examen = $("select[name='search_data_examen']").val();
-                            d.date = $("input[name='search_data_date']").val();
-                        },
-                    },
-                    "columns": [{
-                            "data": null,
-                            "render": function(data, type, full, meta) {
-                                return '<input type="checkbox" onclick="seleccionar(' + full.thefile + ')" name="fileselectc" id="fileselectc' + full.thefile + '" costo_examen="' + full.valor + '"  value="' + full.codigo + '">';
-                            }
-                        },
-                        {
-                            "data": "motivo_costo"
-                        },
-                        {
-                            "data": "valor"
-                        },
-                        {
-                            "data": null,
-                            "render": function(data, type, full, meta) {
-                                var editarLink = '<a href="#" onclick="acciones(' + full.codigo + ', \'E\', ' + full.thefile + ');" data-target="#editmodal" data-toggle="modal"  id="edit' + full.thefile + '" style="color: #E8A200;" title="Editar"><i style="font-size:18px;" id="icon" class="fa-solid fa-pen-to-square"></i><span></span></a>';
-
-                                var borrarLink = '<a href="#" onclick="acciones(' + full.codigo + ', \'B\', ' + full.thefile + ');" id="borrar' + full.thefile + '" style="color: #E8A200;" title="Borrar"><i style="font-size:18px;color: #CE2222;"  id="icon" class="fa-solid fa-trash-can"></i><span></span></a>';
-
-
-                                return editarLink + ' ' + borrarLink;
-                            }
+                },
+                "columns": [{
+                        "data": null,
+                        "render": function(data, type, full, meta) {
+                            return '<input type="checkbox" onclick="seleccionarmateria(' + full.thefile + ')" name="fileselectmp" id="fileselectmp' + full.thefile + '" costo_materia="' + full.valor + '"  value="' + full.codigo + '">';
                         }
-                    ],
-                    /*    "footerCallback": function(row, data, start, end, display) {                             var api = this.api();
+
+                    }, {
+                        "data": "descripcion"
+                    },
+                    {
+                        "data": "valor",
+                        "className": "text-right"
+                    },
+                    {
+                        "data": null,
+                        "render": function(data, type, full, meta) {
+                            var editarLink = '<a href="#" onclick="accionesMateria(' + full.codigo + ', \'E\', ' + full.thefile + ');" data-target="#editmodalmateria" data-toggle="modal"  id="edit' + full.thefile + '" style="color: #E8A200;" title="Editar"><i style="font-size:18px;" id="icon" class="fa-solid fa-pen-to-square"></i><span></span></a>';
+
+                            var borrarLink = '<a href="#" onclick="accionesMateria(' + full.codigo + ', \'B\', ' + full.thefile + ');" id="borrar' + full.thefile + '" style="color: #E8A200;" title="Borrar"><i style="font-size:18px;color: #CE2222;"  id="icon" class="fa-solid fa-trash-can"></i><span></span></a>';
+
+
+                            return editarLink + ' ' + borrarLink;
+                        }
+                    }
+                ]
+            });
+            $('#btn-buscar').click(function() {
+                miDataTable.ajax.reload(); // Recarga los datos de la tabla con los nuevos parámetros
+            });
+        });
+
+        $(document).ready(function() {
+            miDataTable2 = $('#tab_costos_indirectos').DataTable({
+                language: {
+                    url: 'https://cdn.datatables.net/plug-ins/1.11.5/i18n/es-ES.json',
+                },
+                "paging": true,
+                "lengthChange": false,
+                "searching": true,
+                "ordering": false,
+                "info": false,
+                "autoWidth": false,
+                "responsive": false,
+                "ajax": {
+                    url: 'https://conlabweb3.tierramontemariana.org/apps/costos/mostrarcostos.php', // Página PHP que devuelve los datos en formato JSON
+                    type: 'GET', // Método de la petición (GET o POST según corresponda)
+                    dataType: 'json', // Tipo de datos esperado en la respuesta
+                    dataSrc: '', // Indicar que los datos provienen directamente del objeto JSON (sin propiedad adicional)
+                    data: function(d) {
+                        // Agrega parámetros personalizados aquí
+                       
+                   //     d.examen = $("select[name='search_data_examen']").val();
+                      
+                    },
+                },
+                "columns": [{
+                        "data": null,
+                        "render": function(data, type, full, meta) {
+                            return '<input type="checkbox" onclick="seleccionar(' + full.thefile + ')" name="fileselectc" id="fileselectc' + full.thefile + '" costo_examen="' + full.valor + '"  value="' + full.codigo + '">';
+                        }
+                    },
+                    {
+                        "data": "motivo_costo"
+                    },
+                    {
+                        "data": "valor"
+                    },
+                    {
+                        "data": null,
+                        "render": function(data, type, full, meta) {
+                            var editarLink = '<a href="#" onclick="acciones(' + full.codigo + ', \'E\', ' + full.thefile + ');" data-target="#editmodal" data-toggle="modal"  id="edit' + full.thefile + '" style="color: #E8A200;" title="Editar"><i style="font-size:18px;" id="icon" class="fa-solid fa-pen-to-square"></i><span></span></a>';
+
+                            var borrarLink = '<a href="#" onclick="acciones(' + full.codigo + ', \'B\', ' + full.thefile + ');" id="borrar' + full.thefile + '" style="color: #E8A200;" title="Borrar"><i style="font-size:18px;color: #CE2222;"  id="icon" class="fa-solid fa-trash-can"></i><span></span></a>';
+
+
+                            return editarLink + ' ' + borrarLink;
+                        }
+                    }
+                ],
+                /*    "footerCallback": function(row, data, start, end, display) {                             var api = this.api();
  
                               // Calcular el total para la columna "costo_prueba"                             var totalCostoExamen = api.column(3, {                                     page: 'current'                                 }).data()                                 .reduce(function(a, b) {                                     return parseInt(a) + parseInt(b);                                 }, 0);
                               // Agregar los totales al footer
                               $('#total_costos_indirecto').val(totalCostoExamen.toFixed(3));                         }*/
-                });
-                $('#btn-buscar').click(function() {
-                    miDataTable2.ajax.reload(); // Recarga los datos de la tabla con los nuevos parámetros
-                });
+            });
+            $('#btn-buscar').click(function() {
+                miDataTable2.ajax.reload(); // Recarga los datos de la tabla con los nuevos parámetros
+            });
+        });
+
+        function seleccionarmateria() {
+            var sumtotalm = 0;
+
+            $('[id^="fileselectmp"]').each(function() {
+                if ($(this).prop("checked")) {
+                    // verificarSeleccion();
+                    var costo_materia = parseFloat($(this).attr('costo_materia'));
+                    if (!isNaN(costo_materia)) {
+                        sumtotalm += costo_materia;
+                    }
+                }
             });
 
-            function seleccionarmateria() {
-                var sumtotalm = 0;
+            $("#totalmateria").val(sumtotalm);
+        }
 
-                $('[id^="fileselectmp"]').each(function() {
-                    if ($(this).prop("checked")) {
-                        // verificarSeleccion();
-                        var costo_materia = parseFloat($(this).attr('costo_materia'));
-                        if (!isNaN(costo_materia)) {
-                            sumtotalm += costo_materia;
-                        }
+        function seleccionar() {
+            var sumtotalc = 0;
+
+            $('[id^="fileselectc"]').each(function() {
+                if ($(this).prop("checked")) {
+                    var costo_examen = parseFloat($(this).attr('costo_examen'));
+                    if (!isNaN(costo_examen)) {
+                        sumtotalc += costo_examen;
                     }
-                });
-
-                $("#totalmateria").val(sumtotalm);
-            }
-
-            function seleccionar() {
-                var sumtotalc = 0;
-
-                $('[id^="fileselectc"]').each(function() {
-                    if ($(this).prop("checked")) {
-                        var costo_examen = parseFloat($(this).attr('costo_examen'));
-                        if (!isNaN(costo_examen)) {
-                            sumtotalc += costo_examen;
-                        }
-                    }
-                });
-
-                $("#total_costos_indirecto").val(sumtotalc);
-            }
-
-
-
-            function seleccionarmanobra() {
-                var sumtotal = 0;
-
-                $('[id^="fileselectmo"]').each(function() {
-                    if ($(this).prop("checked")) {
-                        var costo_examen = parseFloat($(this).attr('costo_examen'));
-                        sumtotal += costo_examen;
-                    }
-                });
-
-                $("#total_mano_obra").val(sumtotal);
-            }
-
-
-
-
-            $(document).ready(function() {
-                miDataTable3 = $('#tab_mano_obra').DataTable({
-                    language: {
-                        url: 'https://cdn.datatables.net/plug-ins/1.11.5/i18n/es-ES.json',
-                    },
-                    "paging": true,
-                    "lengthChange": false,
-                    "searching": false,
-                    "ordering": false,
-                    "info": false,
-                    "autoWidth": false,
-                    "responsive": false,
-                    "ajax": {
-                        url: 'https://conlabweb3.tierramontemariana.org/apps/costos/mostrarmanobra.php', // Página PHP que devuelve los datos en formato JSON
-                        type: 'GET', // Método de la petición (GET o POST según corresponda)
-                        dataType: 'json', // Tipo de datos esperado en la respuesta
-                        dataSrc: '', // Indicar que los datos provienen directamente del objeto JSON (sin propiedad adicional)
-                        data: function(d) {
-                            // Agrega parámetros personalizados aquí
-                            d.sede = $("select[name='search_data_sede']").val();
-                            d.examen = $("select[name='search_data_examen']").val();
-                            d.date = $("input[name='search_data_date']").val();
-                        },
-                    },
-                    "columns": [{
-                            "data": null,
-                            "render": function(data, type, full, meta) {
-                                return '<input type="checkbox" onclick="seleccionarmanobra(' + full.thefile + ')" name="fileselectmo" id="fileselectmo' + full.thefile + '" costo_examen="' + full.salario + '"  value="' + full.codigo + '">';
-                            }
-                        }, {
-                            "data": "cargo"
-                        }, {
-                            "data": "tiempo"
-                        },
-                        {
-                            "data": "salario"
-                        },
-                        {
-                            "data": null,
-                            "render": function(data, type, full, meta) {
-                                var editarLink = '<a href="#" onclick="accionesManobra(' + full.codigo + ', \'E\', ' + full.thefile + ');" data-target="#editmodalmanobra" data-toggle="modal"  id="edit' + full.thefile + '" style="color: #E8A200;" title="Editar"><i style="font-size:18px;" id="icon" class="fa-solid fa-pen-to-square"></i><span></span></a>';
-
-                                var borrarLink = '<a href="#" onclick="accionesManobra(' + full.codigo + ', \'B\', ' + full.thefile + ');" id="borrar' + full.thefile + '" style="color: #E8A200;" title="Borrar"><i style="font-size:18px;color: #CE2222;"  id="icon" class="fa-solid fa-trash-can"></i><span></span></a>';
-
-
-                                return editarLink + ' ' + borrarLink;
-                            }
-                        }
-                    ]
-                });
-                $('#btn-buscar').click(function() {
-                    miDataTable3.ajax.reload(); // Recarga los datos de la tabla con los nuevos parámetros
-                });
+                }
             });
 
-            function cargarDatos() {
-                $.ajax({
-                    url: 'https://conlabweb3.tierramontemariana.org/apps/costos/mostrar.php', // Página PHP que devuelve los datos en formato JSON
-                    type: 'GET', // Método de la petición (GET o POST según corresponda)
-                    dataType: 'json', // Tipo de datos esperado en la respuesta
-                    success: function(data) {
-                        miDataTable.ajax.reload()
-             
-                    },
-                    error: function(xhr, status, error) {
-                        // Manejar errores si es necesario
-                        console.error('Error al obtener datos:', status, error);
-                    }
-                });
-            }
-
-            function cargarDatosCostos() {
-                $.ajax({
-                    url: 'https://conlabweb3.tierramontemariana.org/apps/costos/mostrarcostos.php', // Página PHP que devuelve los datos en formato JSON
-                    type: 'GET', // Método de la petición (GET o POST según corresponda)
-                    dataType: 'json', // Tipo de datos esperado en la respuesta
-                    success: function(data) {
-                        miDataTable2.ajax.reload()
-                    
-                    },
-                    error: function(xhr, status, error) {
-                        // Manejar errores si es necesario
-                        console.error('Error al obtener datos:', status, error);
-                    }
-                });
-            }
+            $("#total_costos_indirecto").val(sumtotalc);
+        }
 
 
-            function cargarManobra() {
-                $.ajax({
+
+        function seleccionarmanobra() {
+            var sumtotal = 0;
+
+            $('[id^="fileselectmo"]').each(function() {
+                if ($(this).prop("checked")) {
+                    var costo_examen = parseFloat($(this).attr('costo_examen'));
+                    sumtotal += costo_examen;
+                }
+            });
+
+            $("#total_mano_obra").val(sumtotal);
+        }
+
+
+
+
+        $(document).ready(function() {
+            miDataTable3 = $('#tab_mano_obra').DataTable({
+                language: {
+                    url: 'https://cdn.datatables.net/plug-ins/1.11.5/i18n/es-ES.json',
+                },
+                "paging": true,
+                "lengthChange": false,
+                "searching": true,
+                "ordering": false,
+                "info": false,
+                "autoWidth": false,
+                "responsive": false,
+                "ajax": {
                     url: 'https://conlabweb3.tierramontemariana.org/apps/costos/mostrarmanobra.php', // Página PHP que devuelve los datos en formato JSON
                     type: 'GET', // Método de la petición (GET o POST según corresponda)
                     dataType: 'json', // Tipo de datos esperado en la respuesta
-                    success: function(data) {
-                        miDataTable3.ajax.reload()
-                        
+                    dataSrc: '', // Indicar que los datos provienen directamente del objeto JSON (sin propiedad adicional)
+                    data: function(d) {
+                        // Agrega parámetros personalizados aquí
+                    
+                      //  d.examen = $("select[name='search_data_examen']").val();
+                       
                     },
-                    error: function(xhr, status, error) {
-                        // Manejar errores si es necesario
-                        console.error('Error al obtener datos:', status, error);
-                    }
-                });
-            }
-
-            function calculaRendimiento() {
-                valore = $('#valor').val();
-                desc = $('#desc').val();
-                var valor_pruebas = $('[name="valor_pruebas"]').val();
-                var n_examenes = $('[name="n_examenes"]').val();
-                var n_examenes_promedio = $('[name="n_examenes_promedio"]').val();
-                var sede = $("select[name='search_data_sede']").val();
-                var examen = $("select[name='search_data_examen']").val();
-                var date = $("input[name='search_data_date']").val();
-                var rendimiento = (n_examenes_promedio / n_examenes) * 100;
-                var totalvalor = n_examenes_promedio * valor_pruebas;
-                $.ajax({
-                    url: 'https://conlabweb3.tierramontemariana.org/apps/costos/agregar.php', // Página PHP que devuelve los datos en formato JSON
-                    type: 'POST', // Método de la petición (GET o POST según corresponda)
-                    data: {
-                        valore: valore,
-                        desc: desc,
-                        valor_pruebas: totalvalor,
-                        n_examenes: n_examenes,
-                        n_examenes_totales: n_examenes_promedio,
-                        sede: sede,
-                        examen: examen,
-                        date: date,
-                        rendimiento: rendimiento,
-                        status: 'MP'
-                    },
-                    success: function(data) {
-                        cargarDatos();
-                    },
-                    error: function(xhr, status, error) {
-                        // Manejar errores si es necesario
-                        console.error('Error al obtener datos:', status, error);
-                    }
-                });
-            }
-
-            function editar() {
-                var ide = $('#idcod').val();
-                var motivo_costo = $('#motivo_costo').val();
-                var valor = $('#valor').val();
-                var n_examenes_promedio = $('[name="n_examenes_promedio"]').val();
-                var totalcostos = n_examenes_promedio * valor;
-                $.ajax({
-                    type: 'POST',
-                    url: 'https://conlabweb3.tierramontemariana.org/apps/costos/acciones.php',
-                    data: {
-                        id: ide,
-                        motivo: motivo_costo,
-                        valor: valor,
-                        totalcostos: totalcostos,
-                        caso: 'E',
-                        pant: 'C'
-                    },
-                    success: function(respuesta) {
-                        cargarDatosCostos();
-                        Swal.fire({
-                            position: 'top',
-                            icon: 'success',
-                            title: '¡Registro actualizado con exito!',
-                            showConfirmButton: false,
-                            timer: 1500
-                        })
-
-                    }
-                });
-            }
-
-            function editarmateria() {
-                var idmat = $('#idmat').val();
-                var descripcion = $('#descripcion').val();
-                var valormat = $('#valormat').val();
-
-                $.ajax({
-                    type: 'POST',
-                    url: 'https://conlabweb3.tierramontemariana.org/apps/costos/acciones.php',
-                    data: {
-                        idmat: idmat,
-                        descripcion: descripcion,
-                        valormat: valormat,
-                        caso: 'E',
-                        pant: 'MP'
-                    },
-                    success: function(respuesta) {
-                        cargarDatos();
-                        Swal.fire({
-                            position: 'top',
-                            icon: 'success',
-                            title: '¡Registro actualizado con exito!',
-                            showConfirmButton: false,
-                            timer: 1500
-                        })
-
-                    }
-                });
-            }
-
-            function editarmanobra() {
-                var idmano = $('#idmano').val();
-                var cargo = $('#cargo').val();
-                var tiempo = $('#tiempo').val();
-                var salario = $('#salario').val();
-                $.ajax({
-                    type: 'POST',
-                    url: 'https://conlabweb3.tierramontemariana.org/apps/costos/acciones.php',
-                    data: {
-                        idmano: idmano,
-                        cargo: cargo,
-                        tiempo: tiempo,
-                        salario: salario,
-                        caso: 'E',
-                        pant: 'MO'
-                    },
-                    success: function(respuesta) {
-                        cargarManobra();
-                        Swal.fire({
-                            position: 'top',
-                            icon: 'success',
-                            title: '¡Registro actualizado con exito!',
-                            showConfirmButton: false,
-                            timer: 1500
-                        })
-
-                    }
-                });
-            }
-
-            function acciones(id, caso, thefile) {
-
-                if (caso == "B") {
-                    Swal.fire({
-                        text: "¿Desea borrar el registro?",
-                        icon: 'warning',
-                        showCancelButton: true,
-                        confirmButtonColor: '#3085d6',
-                        cancelButtonColor: '#d33',
-                        confirmButtonText: 'Si, eliminar!',
-                        cancelButtonText: 'Cancelar'
-                    }).then((result) => {
-                        if (result.isConfirmed) {
-                            $.ajax({
-                                type: 'POST',
-                                url: 'https://conlabweb3.tierramontemariana.org/apps/costos/acciones.php',
-                                data: {
-                                    id: id,
-                                    caso: 'B',
-                                    pant: 'C'
-                                },
-                                success: function(respuesta) {
-                                    cargarDatosCostos();
-                                    Swal.fire({
-                                        position: 'top',
-                                        icon: 'success',
-                                        title: '¡Registro borrado con exito!',
-                                        showConfirmButton: false,
-                                        timer: 1500
-                                    })
-
-                                }
-                            });
+                },
+                "columns": [{
+                        "data": null,
+                        "render": function(data, type, full, meta) {
+                            return '<input type="checkbox" onclick="seleccionarmanobra(' + full.thefile + ')" name="fileselectmo" id="fileselectmo' + full.thefile + '" costo_examen="' + full.salario + '"  value="' + full.codigo + '">';
                         }
-                    })
-                } else if (caso == "E") {
-                    $('#modalshow').load('https://conlabweb3.tierramontemariana.org/apps/costos/modal.php', {
-                        id: id
-                    });
+                    }, {
+                        "data": "cargo"
+                    }, {
+                        "data": "tiempo"
+                    },
+                    {
+                        "data": "salario"
+                    },
+                    {
+                        "data": null,
+                        "render": function(data, type, full, meta) {
+                            var editarLink = '<a href="#" onclick="accionesManobra(' + full.codigo + ', \'E\', ' + full.thefile + ');" data-target="#editmodalmanobra" data-toggle="modal"  id="edit' + full.thefile + '" style="color: #E8A200;" title="Editar"><i style="font-size:18px;" id="icon" class="fa-solid fa-pen-to-square"></i><span></span></a>';
+
+                            var borrarLink = '<a href="#" onclick="accionesManobra(' + full.codigo + ', \'B\', ' + full.thefile + ');" id="borrar' + full.thefile + '" style="color: #E8A200;" title="Borrar"><i style="font-size:18px;color: #CE2222;"  id="icon" class="fa-solid fa-trash-can"></i><span></span></a>';
 
 
-
-
-                }
-            }
-
-            function accionesMateria(id, caso, thefile) {
-
-                if (caso == "B") {
-                    Swal.fire({
-                        text: "¿Desea borrar el registro?",
-                        icon: 'warning',
-                        showCancelButton: true,
-                        confirmButtonColor: '#3085d6',
-                        cancelButtonColor: '#d33',
-                        confirmButtonText: 'Si, eliminar!',
-                        cancelButtonText: 'Cancelar'
-                    }).then((result) => {
-                        if (result.isConfirmed) {
-                            $.ajax({
-                                type: 'POST',
-                                url: 'https://conlabweb3.tierramontemariana.org/apps/costos/acciones.php',
-                                data: {
-                                    idmat: id,
-                                    caso: 'B',
-                                    pant: 'MP'
-                                },
-                                success: function(respuesta) {
-                                    cargarDatos();
-                                    Swal.fire({
-                                        position: 'top',
-                                        icon: 'success',
-                                        title: '¡Registro borrado con exito!',
-                                        showConfirmButton: false,
-                                        timer: 1500
-                                    })
-
-                                }
-                            });
+                            return editarLink + ' ' + borrarLink;
                         }
-                    })
-                } else if (caso == "E") {
-                    $('#modalshowmateria').load('https://conlabweb3.tierramontemariana.org/apps/costos/modalmateria.php', {
-                        id: id
-                    });
-
-                }
-            }
-
-            function accionesManobra(id, caso, thefile) {
-
-                if (caso == "B") {
-                    Swal.fire({
-                        text: "¿Desea borrar el registro?",
-                        icon: 'warning',
-                        showCancelButton: true,
-                        confirmButtonColor: '#3085d6',
-                        cancelButtonColor: '#d33',
-                        confirmButtonText: 'Si, eliminar!',
-                        cancelButtonText: 'Cancelar'
-                    }).then((result) => {
-                        if (result.isConfirmed) {
-                            $.ajax({
-                                type: 'POST',
-                                url: 'https://conlabweb3.tierramontemariana.org/apps/costos/acciones.php',
-                                data: {
-                                    idmano: id,
-                                    caso: 'B',
-                                    pant: 'MO'
-                                },
-                                success: function(respuesta) {
-                                    cargarManobra();
-                                    Swal.fire({
-                                        position: 'top',
-                                        icon: 'success',
-                                        title: '¡Registro borrado con exito!',
-                                        showConfirmButton: false,
-                                        timer: 1500
-                                    })
-
-                                }
-                            });
-                        }
-                    })
-                } else if (caso == "E") {
-                    $('#modalshowmanobra').load('https://conlabweb3.tierramontemariana.org/apps/costos/modalmanobra.php', {
-                        id: id
-                    });
-
-                }
-            }
-
-            function calcularCostos() {
-                var motivo = $('#motivo').val();
-                var valorcosto = $('#valorcosto').val();
-                var n_examenes_promedio = $('[name="n_examenes_promedio"]').val();
-                var sede = $("select[name='search_data_sede']").val();
-                var examen = $("select[name='search_data_examen']").val();
-                var date = $("input[name='search_data_date']").val();
-                var totalcostos = n_examenes_promedio * valorcosto;
-                $.ajax({
-                    url: 'https://conlabweb3.tierramontemariana.org/apps/costos/agregar.php', // Página PHP que devuelve los datos en formato JSON
-                    type: 'POST', // Método de la petición (GET o POST según corresponda)
-                    data: {
-                        valorcosto: valorcosto,
-                        n_examenes_totales: n_examenes_promedio,
-                        sede: sede,
-                        examen: examen,
-                        date: date,
-                        totalcostos: totalcostos,
-                        motivo: motivo,
-                        status: 'C'
-                    },
-                    success: function(data) {
-                        cargarDatosCostos();
-                    },
-                    error: function(xhr, status, error) {
-                        // Manejar errores si es necesario
-                        console.error('Error al obtener datos:', status, error);
                     }
-                });
-            }
-
-            function calcularManoObra() {
-                var cargo = $('#cargo').val();
-                var tiempo = $('#tiempo').val();
-                var salario = $('#salario').val();
-                var n_examenes_promedio = $('[name="n_examenes_promedio"]').val();
-                var sede = $("select[name='search_data_sede']").val();
-                var examen = $("select[name='search_data_examen']").val();
-                var date = $("input[name='search_data_date']").val();
-                var totalmanobra = n_examenes_promedio * salario;
-                $.ajax({
-                    url: 'https://conlabweb3.tierramontemariana.org/apps/costos/agregar.php', // Página PHP que devuelve los datos en formato JSON
-                    type: 'POST', // Método de la petición (GET o POST según corresponda)
-                    data: {
-                        cargo: cargo,
-                        tiempo: tiempo,
-                        salario: salario,
-                        sede: sede,
-                        examen: examen,
-                        date: date,
-                        totalmanobra: totalmanobra,
-                        status: 'MO'
-                    },
-                    success: function(data) {
-                        cargarManobra();
-                    },
-                    error: function(xhr, status, error) {
-                        // Manejar errores si es necesario
-                        console.error('Error al obtener datos:', status, error);
-                    }
-                });
-            }
-
-            function verificarSeleccion() {
-                var checkboxes = $("input[type='checkbox']:checked");
-                if (checkboxes.length === 0) {
-                    Swal.fire({
-                        title: "",
-                        icon: "info",
-                        html: `
-      Agrega o Selecciona una Materia Prima para continuar con el costeo.
-  `,
-                        showCloseButton: true,
-                        showCancelButton: false,
-                        focusConfirm: false,
-                        confirmButtonText: `
-    <i class="fa fa-thumbs-up"></i> ¡Entendido!
-  `,
-                        confirmButtonAriaLabel: "Thumbs up, great!",
-                        cancelButtonText: `
-     Cancelar!
-  `,
-                    });
-                } else {
-                    $("#accordionProductos").hide();
-                    $("#accordion-text").hide();
-                    $("#accordionIndirectos").slideDown();
-                    $("#costos-text").slideDown();
-                    $("#costos-resultado").slideDown();
-                    $(".btn-ant").show();
-                    $("#accordionManoObra").show();
-                    $("#tabla-resultados").show();
-                    $(".btn-confirmacion").show();
-                    $("#btn-excel").show();
-                    $(".btn-sig").hide();
-
-                }
-            }
-
-            function anterior() {
-                $("#accordionProductos").slideDown();
-                $("#accordion-text").slideDown();
-                $("#costos-text").hide();
-                $("#costos-resultado").hide();
-                $("#accordionIndirectos").hide();
-                $("#accordionManoObra").hide();
-                $("#tabla-resultados").hide();
-                $(".btn-ant").hide();
-                $(".btn-sig").show();
-                $(".btn-confirmacion").hide();
-                $("#btn-excel").hide();
-            }
-            $(document).ready(function() {
-                // Función para agregar una columna a la tabla
-                function agregarColumna() {
-                    // Obtén la tabla por su ID
-                    var tabla = $("#tab_materia_prima");
-
-                    // Agrega una nueva fila al cuerpo de la tabla
-                    var nuevaFila = '<tr>';
-                    nuevaFila += '<td>&nbsp;</td>';
-                    nuevaFila += '<td><input type="text" id="desc" value="" placeholder="Aqui va el nombre de la Materia Prima" style="width:100%"></td>';
-                    nuevaFila += '<td class="text-left""><input type="number" id="valor" style="width:100%" value=""  placeholder="Valor de la Materia Prima" style="text-align:right" onchange="calculaRendimiento()"></td>';
-                    nuevaFila += '<td>&nbsp;</td>';
-                    nuevaFila += '</tr>';
-
-                    tabla.find("tbody").append(nuevaFila);
-                    tabla.find('input[type="text"]').last().focus();
-
-                }
-
-                // Maneja el clic en el botón "Agregar Columna"
-                $("#agregarColumnaBtn").click(function() {
-                    agregarColumna();
-                });
-
-                function agregarColumnaCostos() {
-                    // Obtén la tabla por su ID
-                    var tabla = $("#tab_costos_indirectos");
-
-                    // Agrega una nueva fila al cuerpo de la tabla
-                    var nuevaFila = '<tr>';
-                    nuevaFila += '<td>&nbsp;</td>';
-                    nuevaFila += '<td class="text-left""><input type="input" id="motivo" style="width:100%" value="" style="text-align:right" ></td>';
-                    nuevaFila += '<td><input type="number" id="valorcosto" value="" style="width:100%" onchange="calcularCostos()"></td>';
-
-                    nuevaFila += '<td>&nbsp;</td>';
-                    nuevaFila += '</tr>';
-
-                    tabla.find("tbody").append(nuevaFila);
-
-                }
-
-                $("#agregarColumnaCostosBtn").click(function() {
-                    agregarColumnaCostos();
-                });
-
-                function agregarColumnaManobra() {
-                    // Obtén la tabla por su ID
-                    var tabla = $("#tab_mano_obra");
-
-                    // Agrega una nueva fila al cuerpo de la tabla
-                    var nuevaFila = '<tr>';
-                    nuevaFila += '<td>&nbsp;</td>';
-                    nuevaFila += '<td class="text-left""><input type="input" id="cargo" style="width:100%" value="" style="text-align:right" ></td>';
-                    nuevaFila += '<td><input type="input" id="tiempo" value="" style="width:100%" </td>';
-                    nuevaFila += '<td><input type="number" id="salario" value="" style="width:100%" onchange="calcularManoObra()"></td>';
-                    nuevaFila += '</tr>';
-
-                    tabla.find("tbody").append(nuevaFila);
-                }
-
-                $("#agregarColumnaManobraBtn").click(function() {
-                    agregarColumnaManobra();
-                });
-
-
+                ]
             });
+            $('#btn-buscar').click(function() {
+                miDataTable3.ajax.reload(); // Recarga los datos de la tabla con los nuevos parámetros
+            });
+        });
 
-            function buscar() {
-                var sede = $("select[name='search_data_sede']").val();
-                var examen = $("select[name='search_data_examen']").val();
-                var date = $("input[name='search_data_date']").val();
+        function cargarDatos() {
+            $.ajax({
+                url: 'https://conlabweb3.tierramontemariana.org/apps/costos/mostrar.php', // Página PHP que devuelve los datos en formato JSON
+                type: 'GET', // Método de la petición (GET o POST según corresponda)
+                dataType: 'json', // Tipo de datos esperado en la respuesta
+                success: function(data) {
+                    miDataTable.ajax.reload()
 
-                $("select[name='search_data_sede'] option:selected").each(function() {
-                    if ($("select[name='search_data_examen']").val() != '' & $("input[name='search_data_date']").val() != '') {
-                        get_consumos_by_data(examen, date, sede)
-                    }
-                });
+                },
+                error: function(xhr, status, error) {
+                    // Manejar errores si es necesario
+                    console.error('Error al obtener datos:', status, error);
+                }
+            });
+        }
 
+        function cargarDatosCostos() {
+            $.ajax({
+                url: 'https://conlabweb3.tierramontemariana.org/apps/costos/mostrarcostos.php', // Página PHP que devuelve los datos en formato JSON
+                type: 'GET', // Método de la petición (GET o POST según corresponda)
+                dataType: 'json', // Tipo de datos esperado en la respuesta
+                success: function(data) {
+                    miDataTable2.ajax.reload()
 
-                var sede = $("select[name='search_data_sede']").val();
-                var examen = $("select[name='search_data_examen']").val();
-                var date = $("input[name='search_data_date']").val();
-                $("select[name='search_data_examen'] option:selected").each(function() {
-                    if ($("select[name='search_data_examen']").val() != '' & $("input[name='search_data_date']").val() != '') {
-                        get_consumos_by_data(examen, date, sede)
-                    }
-                });
-
-
-
-                var sede = $("select[name='search_data_sede']").val();
-                var examen = $("select[name='search_data_examen']").val();
-                var date = $("input[name='search_data_date']").val();
-                $("input[name='search_data_date']").each(function() {
-                    if ($("select[name='search_data_examen']").val() != '' & $("input[name='search_data_date']").val() != '') {
-                        get_consumos_by_data(examen, date, sede)
-                    }
-                });
-
-
-            }
-
-
-
-            function get_consumos_by_data(examen, periodo, sedes = null) {
+                },
+                error: function(xhr, status, error) {
+                    // Manejar errores si es necesario
+                    console.error('Error al obtener datos:', status, error);
+                }
+            });
+        }
 
 
-                $.post("?c=costos&a=get_consumos_by_data", {
-                        sedes: sedes,
-                        id: examen,
-                        date: periodo
-                    },
-                    function(data) {
-                        if (data.status == true) {
-                            $('input[name="valor_pruebas"]').val(data.examen_valor)
-                            $('input[name="n_examenes"]').val(data.examen_facturados)
-                            $('input[name="n_examenes_promedio"]').val(data.totalpruebas)
-                        }
-                    }, "json");
-            }
+        function cargarManobra() {
+            $.ajax({
+                url: 'https://conlabweb3.tierramontemariana.org/apps/costos/mostrarmanobra.php', // Página PHP que devuelve los datos en formato JSON
+                type: 'GET', // Método de la petición (GET o POST según corresponda)
+                dataType: 'json', // Tipo de datos esperado en la respuesta
+                success: function(data) {
+                    miDataTable3.ajax.reload()
 
-            function ajaxSearches() {
+                },
+                error: function(xhr, status, error) {
+                    // Manejar errores si es necesario
+                    console.error('Error al obtener datos:', status, error);
+                }
+            });
+        }
 
-                var input_data_examen = $('[name="search_data_examen"]').val();
-                var input_data_date = $('[name="search_data_date"]').val();
-                var input_data_sede = $('[name="search_data_sede"]').val();
-                var table = $('#table_materia_prima tbody');
-                var table2 = $('#table_costos_indirectos tbody');
-                var table3 = $('#table_mano_obra tbody');
+        function calculaRendimiento() {
+            valore = $('#valor').val();
+            desc = $('#desc').val();
+            var valor_pruebas = $('[name="valor_pruebas"]').val();
+            var n_examenes = $('[name="n_examenes"]').val();
+            var n_examenes_promedio = $('[name="n_examenes_promedio"]').val();
+            var sede = $("select[name='search_data_sede']").val();
+            var examen = $("select[name='search_data_examen']").val();
+            var date = $("input[name='search_data_date']").val();
+            var rendimiento = (n_examenes_promedio / n_examenes) * 100;
+            var totalvalor = n_examenes_promedio * valor_pruebas;
+            $.ajax({
+                url: 'https://conlabweb3.tierramontemariana.org/apps/costos/agregar.php', // Página PHP que devuelve los datos en formato JSON
+                type: 'POST', // Método de la petición (GET o POST según corresponda)
+                data: {
+                    valore: valore,
+                    desc: desc,
+                    valor_pruebas: totalvalor,
+                    n_examenes: n_examenes,
+                    n_examenes_totales: n_examenes_promedio,
+                    sede: sede,
+                    examen: examen,
+                    date: date,
+                    rendimiento: rendimiento,
+                    status: 'MP'
+                },
+                success: function(data) {
+                    cargarDatos();
+                },
+                error: function(xhr, status, error) {
+                    // Manejar errores si es necesario
+                    console.error('Error al obtener datos:', status, error);
+                }
+            });
+        }
 
-                var valor_pruebas = $('[name="valor_pruebas"]');
-                var n_examenes = $('[name="n_examenes"]');
-                var n_examenes_totales = $('[name="n_examenes_totales"]');
+        function editar() {
+            var ide = $('#idcod').val();
+            var motivo_costo = $('#motivo_costo').val();
+            var valor = $('#valor').val();
+            var n_examenes_promedio = $('[name="n_examenes_promedio"]').val();
+            var totalcostos = n_examenes_promedio * valor;
+            $.ajax({
+                type: 'POST',
+                url: 'https://conlabweb3.tierramontemariana.org/apps/costos/acciones.php',
+                data: {
+                    id: ide,
+                    motivo: motivo_costo,
+                    valor: valor,
+                    totalcostos: totalcostos,
+                    caso: 'E',
+                    pant: 'C'
+                },
+                success: function(respuesta) {
+                    cargarDatosCostos();
+                    Swal.fire({
+                        position: 'top',
+                        icon: 'success',
+                        title: '¡Registro actualizado con exito!',
+                        showConfirmButton: false,
+                        timer: 1500
+                    })
 
+                }
+            });
+        }
 
-                var costos_productos = $('[name="costos_productos"]');
-                var costos_indirecto = $('[name="costos_indirecto"]');
-                var costo_mano_obra = $('[name="costo_mano_obra"]');
+        function editarmateria() {
+            var idmat = $('#idmat').val();
+            var descripcion = $('#descripcion').val();
+            var valormat = $('#valormat').val();
 
-                var costo_real = $('[name="costo_real"]');
-                var costo_administrativo = $('[name="costo_administrativo"]');
-                var costo_examen_final = $('[name="costo_examen_final"]');
+            $.ajax({
+                type: 'POST',
+                url: 'https://conlabweb3.tierramontemariana.org/apps/costos/acciones.php',
+                data: {
+                    idmat: idmat,
+                    descripcion: descripcion,
+                    valormat: valormat,
+                    caso: 'E',
+                    pant: 'MP'
+                },
+                success: function(respuesta) {
+                    cargarDatos();
+                    Swal.fire({
+                        position: 'top',
+                        icon: 'success',
+                        title: '¡Registro actualizado con exito!',
+                        showConfirmButton: false,
+                        timer: 1500
+                    })
 
-                $('#suggestions').removeClass('is-invalid');
+                }
+            });
+        }
 
-                if (input_data_examen < 1 || input_data_date == '') {
+        function editarmanobra() {
+            var idmano = $('#idmano').val();
+            var cargo = $('#cargo').val();
+            var tiempo = $('#tiempo').val();
+            var salario = $('#salario').val();
+            $.ajax({
+                type: 'POST',
+                url: 'https://conlabweb3.tierramontemariana.org/apps/costos/acciones.php',
+                data: {
+                    idmano: idmano,
+                    cargo: cargo,
+                    tiempo: tiempo,
+                    salario: salario,
+                    caso: 'E',
+                    pant: 'MO'
+                },
+                success: function(respuesta) {
+                    cargarManobra();
+                    Swal.fire({
+                        position: 'top',
+                        icon: 'success',
+                        title: '¡Registro actualizado con exito!',
+                        showConfirmButton: false,
+                        timer: 1500
+                    })
 
-                    $('#suggestions').hide();
+                }
+            });
+        }
 
-                } else {
-                    if (valor_pruebas.val() == '' || n_examenes.val() == '' || n_examenes_totales.val() == '') {
+        function acciones(id, caso, thefile) {
 
-                        if (valor_pruebas.val() == '') {
-                            $('#detalle-general input').addClass('is-invalid');
-                        } else {
-                            $('#detalle-general input').addClass('is-valid');
-                        }
-                        if (n_examenes.val() == '') {
-                            $('#detalle-general input').addClass('is-invalid');
-                        } else {
-                            $('#detalle-general input').addClass('is-valid');
-                        }
-                        if (n_examenes_totales.val() == '') {
-                            $('#detalle-general input').addClass('is-invalid');
-                        } else {
-                            $('#detalle-general input').addClass('is-valid');
-                        }
-
-                    } else {
-                        var post_data = {
-                            'examen': input_data_examen,
-                            'date': input_data_date,
-                            'sede': input_data_sede
-                        };
-
+            if (caso == "B") {
+                Swal.fire({
+                    text: "¿Desea borrar el registro?",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Si, eliminar!',
+                    cancelButtonText: 'Cancelar'
+                }).then((result) => {
+                    if (result.isConfirmed) {
                         $.ajax({
-                            type: "POST",
-                            url: "?c=costos&a=search_costos",
-                            data: post_data,
-                            dataType: 'JSON',
-                            success: function(data) {
+                            type: 'POST',
+                            url: 'https://conlabweb3.tierramontemariana.org/apps/costos/acciones.php',
+                            data: {
+                                id: id,
+                                caso: 'B',
+                                pant: 'C'
+                            },
+                            success: function(respuesta) {
+                                cargarDatosCostos();
+                                Swal.fire({
+                                    position: 'top',
+                                    icon: 'success',
+                                    title: '¡Registro borrado con exito!',
+                                    showConfirmButton: false,
+                                    timer: 1500
+                                })
 
-                                if (data.length > 0) {
-                                    table.empty();
-                                    table2.empty();
-                                    table3.empty();
-                                    if (data[0].length > 0) {
-                                        for (var i = 0; i < data[0].length; i++) {
-                                            row = $('<tr></tr>');
-                                            var tddescripcion = $('<td></td>').text(data[0][i]['descripcion']);
-                                            var tdvalor = $('<td class="text-right"></td>').text('$ ' + data[0][i]['valor']);
-                                            var tdrendimiento = $('<td class="text-right"></td>').text(data[0][i]['rendimiento']);
-                                            var tdvalexamen = $('<td class="text-right"></td>').text('$ ' + parseInt(data[0][i]['valor'] / n_examenes.val()));
-                                            row.append(tddescripcion, tdvalor, tdrendimiento, tdvalexamen);
-                                            table.append(row);
-                                        }
-                                        $('#collapseProductos').collapse('show');
-                                    } else {
-                                        table.append($('<tr><td colspan ="3">No se encontraron resultados.</td></tr>'));
-                                    }
-                                    if (data[1].length > 0) {
-                                        for (var a = 0; a < data[1].length; a++) {
-                                            row2 = $('<tr></tr>');
-                                            var tdsede = $('<td></td>').text(data[1][a]['sede'] === undefined ? ' GENERAL ' : data[1][a]['sede']);
-                                            var tdcostos = $('<td></td>').text(data[1][a]['descripcion']);
-                                            var tdvalor = $('<td class="text-right"></td>').text('$ ' + data[1][a]['valor']);
-                                            var tdvalexamen = $('<td class="text-right"></td>').text('$ ' + parseInt(data[1][a]['valor'] / n_examenes_totales.val()));
-                                            row2.append(tdsede, tdcostos, tdvalor, tdvalexamen);
-                                            table2.append(row2);
-                                        }
-                                        $('#collapseIndirectos').collapse('show');
-                                    } else {
-                                        table2.append($('<tr><td colspan ="4">No se encontraron resultados.</td></tr>'));
-                                    }
-                                    if (data[2].length > 0) {
-                                        for (var c = 0; c < data[2].length; c++) {
-                                            row3 = $('<tr></tr>');
-                                            var tdsede = $('<td></td>').text(data[2][c]['sede'] === undefined ? ' GENERAL ' : data[2][c]['sede']);
-                                            var tdcargo = $('<td></td>').text(data[2][c]['cargo']);
-                                            var tdsalario = $('<td class="text-right"></td>').text('$ ' + data[2][c]['salario']);
-                                            var tdtiempo = $('<td class="text-right"></td>').text(data[2][c]['tiempo_prueba'] + ' MIN');
-                                            //Costo por {[( examen salario / Dias laborados ) / horas laborales ] / 60 } * duración de la prueba 
-                                            var tdvalexamen = $('<td class="text-right"></td>').text('$ ' + data[2][c]['costo_examen']);
-                                            row3.append(tdsede, tdcargo, tdtiempo, tdsalario, tdvalexamen);
-                                            table3.append(row3);
-                                        }
-                                        $('#collapseManoObra').collapse('show');
-                                    } else {
-                                        table3.append($('<tr><td colspan ="5">No se encontraron resultados.</td></tr>'));
-                                    }
-
-                                    sum1 = parseInt(data[3]['valor'] / n_examenes.val());
-                                    sum2 = parseInt(data[4]['valor'] / n_examenes_totales.val());
-                                    sum3 = parseInt(data[5]['valor']),
-                                        sumf1 = parseInt(valor_pruebas.val()) + sum1 + sum2 + sum3;
-                                    sumf2 = sumf1 + (parseInt(costo_administrativo.val() / n_examenes_totales.val()));
-
-                                    costos_productos.val(sum1);
-                                    $('#total_materia_prima').text(' $ ' + sum1);
-                                    costos_indirecto.val(sum2);
-                                    $('#total_costos_indirecto').text(' $ ' + sum2);
-                                    costo_mano_obra.val(sum3);
-                                    $('#total_mano_obra').text(' $ ' + sum3);
-                                    $('#total_mano_obra').text(' $ ' + sum3);
-                                    costo_real.val(sumf1)
-                                    costo_examen_final.val(sumf2)
-
-                                }
                             }
                         });
                     }
+                })
+            } else if (caso == "E") {
+                $('#modalshow').load('https://conlabweb3.tierramontemariana.org/apps/costos/modal.php', {
+                    id: id
+                });
+
+
+
+
+            }
+        }
+
+        function accionesMateria(id, caso, thefile) {
+
+            if (caso == "B") {
+                Swal.fire({
+                    text: "¿Desea borrar el registro?",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Si, eliminar!',
+                    cancelButtonText: 'Cancelar'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        $.ajax({
+                            type: 'POST',
+                            url: 'https://conlabweb3.tierramontemariana.org/apps/costos/acciones.php',
+                            data: {
+                                idmat: id,
+                                caso: 'B',
+                                pant: 'MP'
+                            },
+                            success: function(respuesta) {
+                                cargarDatos();
+                                Swal.fire({
+                                    position: 'top',
+                                    icon: 'success',
+                                    title: '¡Registro borrado con exito!',
+                                    showConfirmButton: false,
+                                    timer: 1500
+                                })
+
+                            }
+                        });
+                    }
+                })
+            } else if (caso == "E") {
+                $('#modalshowmateria').load('https://conlabweb3.tierramontemariana.org/apps/costos/modalmateria.php', {
+                    id: id
+                });
+
+            }
+        }
+
+        function accionesManobra(id, caso, thefile) {
+
+            if (caso == "B") {
+                Swal.fire({
+                    text: "¿Desea borrar el registro?",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Si, eliminar!',
+                    cancelButtonText: 'Cancelar'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        $.ajax({
+                            type: 'POST',
+                            url: 'https://conlabweb3.tierramontemariana.org/apps/costos/acciones.php',
+                            data: {
+                                idmano: id,
+                                caso: 'B',
+                                pant: 'MO'
+                            },
+                            success: function(respuesta) {
+                                cargarManobra();
+                                Swal.fire({
+                                    position: 'top',
+                                    icon: 'success',
+                                    title: '¡Registro borrado con exito!',
+                                    showConfirmButton: false,
+                                    timer: 1500
+                                })
+
+                            }
+                        });
+                    }
+                })
+            } else if (caso == "E") {
+                $('#modalshowmanobra').load('https://conlabweb3.tierramontemariana.org/apps/costos/modalmanobra.php', {
+                    id: id
+                });
+
+            }
+        }
+
+        function calcularCostos() {
+            var motivo = $('#motivo').val();
+            var valorcosto = $('#valorcosto').val();
+            var n_examenes_promedio = $('[name="n_examenes_promedio"]').val();
+            var sede = $("select[name='search_data_sede']").val();
+            var examen = $("select[name='search_data_examen']").val();
+            var date = $("input[name='search_data_date']").val();
+            var totalcostos = n_examenes_promedio * valorcosto;
+            $.ajax({
+                url: 'https://conlabweb3.tierramontemariana.org/apps/costos/agregar.php', // Página PHP que devuelve los datos en formato JSON
+                type: 'POST', // Método de la petición (GET o POST según corresponda)
+                data: {
+                    valorcosto: valorcosto,
+                    n_examenes_totales: n_examenes_promedio,
+                    sede: sede,
+                    examen: examen,
+                    date: date,
+                    totalcostos: totalcostos,
+                    motivo: motivo,
+                    status: 'C'
+                },
+                success: function(data) {
+                    cargarDatosCostos();
+                },
+                error: function(xhr, status, error) {
+                    // Manejar errores si es necesario
+                    console.error('Error al obtener datos:', status, error);
+                }
+            });
+        }
+
+        function calcularManoObra() {
+            var cargo = $('#cargo').val();
+            var tiempo = $('#tiempo').val();
+            var salario = $('#salario').val();
+            var n_examenes_promedio = $('[name="n_examenes_promedio"]').val();
+            var sede = $("select[name='search_data_sede']").val();
+            var examen = $("select[name='search_data_examen']").val();
+            var date = $("input[name='search_data_date']").val();
+            var totalmanobra = n_examenes_promedio * salario;
+            $.ajax({
+                url: 'https://conlabweb3.tierramontemariana.org/apps/costos/agregar.php', // Página PHP que devuelve los datos en formato JSON
+                type: 'POST', // Método de la petición (GET o POST según corresponda)
+                data: {
+                    cargo: cargo,
+                    tiempo: tiempo,
+                    salario: salario,
+                    sede: sede,
+                    examen: examen,
+                    date: date,
+                    totalmanobra: totalmanobra,
+                    status: 'MO'
+                },
+                success: function(data) {
+                    cargarManobra();
+                },
+                error: function(xhr, status, error) {
+                    // Manejar errores si es necesario
+                    console.error('Error al obtener datos:', status, error);
+                }
+            });
+        }
+
+        function verificarSeleccion() {
+            var checkboxes = $("input[type='checkbox']:checked");
+            if (checkboxes.length === 0) {
+                Swal.fire({
+                    title: "",
+                    icon: "info",
+                    html: `
+      Agrega o Selecciona una Materia Prima para continuar con el costeo.
+  `,
+                    showCloseButton: true,
+                    showCancelButton: false,
+                    focusConfirm: false,
+                    confirmButtonText: `
+    <i class="fa fa-thumbs-up"></i> ¡Entendido!
+  `,
+                    confirmButtonAriaLabel: "Thumbs up, great!",
+                    cancelButtonText: `
+     Cancelar!
+  `,
+                });
+            } else {
+                $("#accordionProductos").hide();
+                $("#accordion-text").hide();
+                $("#accordionIndirectos").slideDown();
+                $("#costos-text").slideDown();
+                $("#costos-resultado").slideDown();
+                $(".btn-ant").show();
+                $("#accordionManoObra").show();
+                $("#tabla-resultados").show();
+                $(".btn-confirmacion").show();
+                $("#btn-excel").show();
+                $(".btn-sig").hide();
+
+            }
+        }
+
+        function anterior() {
+            $("#accordionProductos").slideDown();
+            $("#accordion-text").slideDown();
+            $("#costos-text").hide();
+            $("#costos-resultado").hide();
+            $("#accordionIndirectos").hide();
+            $("#accordionManoObra").hide();
+            $("#tabla-resultados").hide();
+            $(".btn-ant").hide();
+            $(".btn-sig").show();
+            $(".btn-confirmacion").hide();
+            $("#btn-excel").hide();
+        }
+        $(document).ready(function() {
+            // Función para agregar una columna a la tabla
+            function agregarColumna() {
+                // Obtén la tabla por su ID
+                var tabla = $("#tab_materia_prima");
+
+                // Agrega una nueva fila al cuerpo de la tabla
+                var nuevaFila = '<tr>';
+                nuevaFila += '<td>&nbsp;</td>';
+                nuevaFila += '<td><input type="text" id="desc" value="" placeholder="Aqui va el nombre de la Materia Prima" style="width:100%"></td>';
+                nuevaFila += '<td class="text-left""><input type="number" id="valor" style="width:100%" value=""  placeholder="Valor de la Materia Prima" style="text-align:right" onchange="calculaRendimiento()"></td>';
+                nuevaFila += '<td>&nbsp;</td>';
+                nuevaFila += '</tr>';
+
+                tabla.find("tbody").append(nuevaFila);
+                tabla.find('input[type="text"]').last().focus();
+
+            }
+
+            // Maneja el clic en el botón "Agregar Columna"
+            $("#agregarColumnaBtn").click(function() {
+                agregarColumna();
+            });
+
+            function agregarColumnaCostos() {
+                // Obtén la tabla por su ID
+                var tabla = $("#tab_costos_indirectos");
+
+                // Agrega una nueva fila al cuerpo de la tabla
+                var nuevaFila = '<tr>';
+                nuevaFila += '<td>&nbsp;</td>';
+                nuevaFila += '<td class="text-left""><input type="input" id="motivo" style="width:100%" value="" style="text-align:right" ></td>';
+                nuevaFila += '<td><input type="number" id="valorcosto" value="" style="width:100%" onchange="calcularCostos()"></td>';
+
+                nuevaFila += '<td>&nbsp;</td>';
+                nuevaFila += '</tr>';
+
+                tabla.find("tbody").append(nuevaFila);
+
+            }
+
+            $("#agregarColumnaCostosBtn").click(function() {
+                agregarColumnaCostos();
+            });
+
+            function agregarColumnaManobra() {
+                // Obtén la tabla por su ID
+                var tabla = $("#tab_mano_obra");
+
+                // Agrega una nueva fila al cuerpo de la tabla
+                var nuevaFila = '<tr>';
+                nuevaFila += '<td>&nbsp;</td>';
+                nuevaFila += '<td class="text-left""><input type="input" id="cargo" style="width:100%" value="" style="text-align:right" ></td>';
+                nuevaFila += '<td><input type="input" id="tiempo" value="" style="width:100%" </td>';
+                nuevaFila += '<td><input type="number" id="salario" value="" style="width:100%" onchange="calcularManoObra()"></td>';
+                nuevaFila += '</tr>';
+
+                tabla.find("tbody").append(nuevaFila);
+            }
+
+            $("#agregarColumnaManobraBtn").click(function() {
+                agregarColumnaManobra();
+            });
+
+
+        });
+
+        function buscar() {
+            var sede = $("select[name='search_data_sede']").val();
+            var examen = $("select[name='search_data_examen']").val();
+            var date = $("input[name='search_data_date']").val();
+
+            $("select[name='search_data_sede'] option:selected").each(function() {
+                if ($("select[name='search_data_examen']").val() != '' & $("input[name='search_data_date']").val() != '') {
+                    get_consumos_by_data(examen, date, sede)
+                }
+            });
+
+
+            var sede = $("select[name='search_data_sede']").val();
+            var examen = $("select[name='search_data_examen']").val();
+            var date = $("input[name='search_data_date']").val();
+            $("select[name='search_data_examen'] option:selected").each(function() {
+                if ($("select[name='search_data_examen']").val() != '' & $("input[name='search_data_date']").val() != '') {
+                    get_consumos_by_data(examen, date, sede)
+                }
+            });
+
+
+
+            var sede = $("select[name='search_data_sede']").val();
+            var examen = $("select[name='search_data_examen']").val();
+            var date = $("input[name='search_data_date']").val();
+            $("input[name='search_data_date']").each(function() {
+                if ($("select[name='search_data_examen']").val() != '' & $("input[name='search_data_date']").val() != '') {
+                    get_consumos_by_data(examen, date, sede)
+                }
+            });
+
+
+        }
+
+
+
+        function get_consumos_by_data(examen, periodo, sedes = null) {
+
+
+            $.post("?c=costos&a=get_consumos_by_data", {
+                    sedes: sedes,
+                    id: examen,
+                    date: periodo
+                },
+                function(data) {
+                    if (data.status == true) {
+                        $('input[name="valor_pruebas"]').val(data.examen_valor)
+                        $('input[name="n_examenes"]').val(data.examen_facturados)
+                        $('input[name="n_examenes_promedio"]').val(data.totalpruebas)
+                    }
+                }, "json");
+        }
+
+        function ajaxSearches() {
+
+            var input_data_examen = $('[name="search_data_examen"]').val();
+            var input_data_date = $('[name="search_data_date"]').val();
+            var input_data_sede = $('[name="search_data_sede"]').val();
+            var table = $('#table_materia_prima tbody');
+            var table2 = $('#table_costos_indirectos tbody');
+            var table3 = $('#table_mano_obra tbody');
+
+            var valor_pruebas = $('[name="valor_pruebas"]');
+            var n_examenes = $('[name="n_examenes"]');
+            var n_examenes_totales = $('[name="n_examenes_totales"]');
+
+
+            var costos_productos = $('[name="costos_productos"]');
+            var costos_indirecto = $('[name="costos_indirecto"]');
+            var costo_mano_obra = $('[name="costo_mano_obra"]');
+
+            var costo_real = $('[name="costo_real"]');
+            var costo_administrativo = $('[name="costo_administrativo"]');
+            var costo_examen_final = $('[name="costo_examen_final"]');
+
+            $('#suggestions').removeClass('is-invalid');
+
+            if (input_data_examen < 1 || input_data_date == '') {
+
+                $('#suggestions').hide();
+
+            } else {
+                if (valor_pruebas.val() == '' || n_examenes.val() == '' || n_examenes_totales.val() == '') {
+
+                    if (valor_pruebas.val() == '') {
+                        $('#detalle-general input').addClass('is-invalid');
+                    } else {
+                        $('#detalle-general input').addClass('is-valid');
+                    }
+                    if (n_examenes.val() == '') {
+                        $('#detalle-general input').addClass('is-invalid');
+                    } else {
+                        $('#detalle-general input').addClass('is-valid');
+                    }
+                    if (n_examenes_totales.val() == '') {
+                        $('#detalle-general input').addClass('is-invalid');
+                    } else {
+                        $('#detalle-general input').addClass('is-valid');
+                    }
+
+                } else {
+                    var post_data = {
+                        'examen': input_data_examen,
+                        'date': input_data_date,
+                        'sede': input_data_sede
+                    };
+
+                    $.ajax({
+                        type: "POST",
+                        url: "?c=costos&a=search_costos",
+                        data: post_data,
+                        dataType: 'JSON',
+                        success: function(data) {
+
+                            if (data.length > 0) {
+                                table.empty();
+                                table2.empty();
+                                table3.empty();
+                                if (data[0].length > 0) {
+                                    for (var i = 0; i < data[0].length; i++) {
+                                        row = $('<tr></tr>');
+                                        var tddescripcion = $('<td></td>').text(data[0][i]['descripcion']);
+                                        var tdvalor = $('<td class="text-right"></td>').text('$ ' + data[0][i]['valor']);
+                                        var tdrendimiento = $('<td class="text-right"></td>').text(data[0][i]['rendimiento']);
+                                        var tdvalexamen = $('<td class="text-right"></td>').text('$ ' + parseInt(data[0][i]['valor'] / n_examenes.val()));
+                                        row.append(tddescripcion, tdvalor, tdrendimiento, tdvalexamen);
+                                        table.append(row);
+                                    }
+                                    $('#collapseProductos').collapse('show');
+                                } else {
+                                    table.append($('<tr><td colspan ="3">No se encontraron resultados.</td></tr>'));
+                                }
+                                if (data[1].length > 0) {
+                                    for (var a = 0; a < data[1].length; a++) {
+                                        row2 = $('<tr></tr>');
+                                        var tdsede = $('<td></td>').text(data[1][a]['sede'] === undefined ? ' GENERAL ' : data[1][a]['sede']);
+                                        var tdcostos = $('<td></td>').text(data[1][a]['descripcion']);
+                                        var tdvalor = $('<td class="text-right"></td>').text('$ ' + data[1][a]['valor']);
+                                        var tdvalexamen = $('<td class="text-right"></td>').text('$ ' + parseInt(data[1][a]['valor'] / n_examenes_totales.val()));
+                                        row2.append(tdsede, tdcostos, tdvalor, tdvalexamen);
+                                        table2.append(row2);
+                                    }
+                                    $('#collapseIndirectos').collapse('show');
+                                } else {
+                                    table2.append($('<tr><td colspan ="4">No se encontraron resultados.</td></tr>'));
+                                }
+                                if (data[2].length > 0) {
+                                    for (var c = 0; c < data[2].length; c++) {
+                                        row3 = $('<tr></tr>');
+                                        var tdsede = $('<td></td>').text(data[2][c]['sede'] === undefined ? ' GENERAL ' : data[2][c]['sede']);
+                                        var tdcargo = $('<td></td>').text(data[2][c]['cargo']);
+                                        var tdsalario = $('<td class="text-right"></td>').text('$ ' + data[2][c]['salario']);
+                                        var tdtiempo = $('<td class="text-right"></td>').text(data[2][c]['tiempo_prueba'] + ' MIN');
+                                        //Costo por {[( examen salario / Dias laborados ) / horas laborales ] / 60 } * duración de la prueba 
+                                        var tdvalexamen = $('<td class="text-right"></td>').text('$ ' + data[2][c]['costo_examen']);
+                                        row3.append(tdsede, tdcargo, tdtiempo, tdsalario, tdvalexamen);
+                                        table3.append(row3);
+                                    }
+                                    $('#collapseManoObra').collapse('show');
+                                } else {
+                                    table3.append($('<tr><td colspan ="5">No se encontraron resultados.</td></tr>'));
+                                }
+
+                                sum1 = parseInt(data[3]['valor'] / n_examenes.val());
+                                sum2 = parseInt(data[4]['valor'] / n_examenes_totales.val());
+                                sum3 = parseInt(data[5]['valor']),
+                                    sumf1 = parseInt(valor_pruebas.val()) + sum1 + sum2 + sum3;
+                                sumf2 = sumf1 + (parseInt(costo_administrativo.val() / n_examenes_totales.val()));
+
+                                costos_productos.val(sum1);
+                                $('#total_materia_prima').text(' $ ' + sum1);
+                                costos_indirecto.val(sum2);
+                                $('#total_costos_indirecto').text(' $ ' + sum2);
+                                costo_mano_obra.val(sum3);
+                                $('#total_mano_obra').text(' $ ' + sum3);
+                                $('#total_mano_obra').text(' $ ' + sum3);
+                                costo_real.val(sumf1)
+                                costo_examen_final.val(sumf2)
+
+                            }
+                        }
+                    });
                 }
             }
+        }
 
-            function calcular() {
-                var id_examen = $('#search_data_examen').val();
-                var totalmateria = $('#totalmateria').val();
-                var total_costos_indirecto = $('#total_costos_indirecto').val();
-                var costo_administrativo = $('#costo_administrativo').val();
-                var total_mano_obra = $('#total_mano_obra').val();
+        function calcular() {
+            var id_examen = $('#search_data_examen').val();
+            var totalmateria = $('#totalmateria').val();
+            var total_costos_indirecto = $('#total_costos_indirecto').val();
+            var costo_administrativo = $('#costo_administrativo').val();
+            var total_mano_obra = $('#total_mano_obra').val();
 
-                var resultado = parseInt(total_mano_obra) + parseInt(totalmateria) + parseInt(total_costos_indirecto) + parseInt(costo_administrativo);
+            var resultado = parseInt(total_mano_obra) + parseInt(totalmateria) + parseInt(total_costos_indirecto) + parseInt(costo_administrativo);
 
-                $('#costo_examen_final').val(resultado);
-
-
-
-                $('[id^="fileselectmp"]').each(function() {
-                    if ($(this).prop("checked")) {
-                        // Obtener el código de la fila correspondiente en DataTable
-                        var codigo = $(this).val();
-
-                        $.ajax({
-                            method: 'GET',
-                            url: 'https://conlabweb3.tierramontemariana.org/apps/costos/calculo.php',
-                            data: {
-                                id_examen: id_examen,
-                                codigo: codigo,
-                                costo_administrativo: costo_administrativo,
-                                tipo: 'MT'
-                            },
-                            dataType: 'json',
-                            success: function(data) {
-                                miDataTablere.ajax.reload()
-                                $('#btn-excel').removeAttr('disabled');
-                                Swal.fire({
-                                    position: 'top',
-                                    icon: 'success',
-                                    title: 'Calculo Generado.',
-                                    showConfirmButton: false,
-                                    timer: 1500
-                                })
-                            },
-                            error: function(jqXHR, textStatus, errorThrown) {
-                                // Manejar cualquier error de la solicitud AJAX aquí
-                                console.error("Error en la solicitud AJAX:", textStatus, errorThrown);
-                            }
-                        })
-                    }
-                });
-                $('[id^="fileselectc"]').each(function() {
-                    if ($(this).prop("checked")) {
-                        // Obtener el código de la fila correspondiente en DataTable
-                        var codigo = $(this).val();
-
-                        $.ajax({
-                            method: 'POST',
-                            url: 'https://conlabweb3.tierramontemariana.org/apps/costos/calculo.php',
-                            data: {
-                                id_examen: id_examen,
-                                codigo: codigo,
-                                costo_administrativo: costo_administrativo,
-                                tipo: 'CI'
-                            },
-                            type: 'JSON',
-                            success: function(respuesta) {
-                                miDataTablere.ajax.reload()
-                                Swal.fire({
-                                    position: 'top',
-                                    icon: 'success',
-                                    title: 'Calculo Generado.',
-                                    showConfirmButton: false,
-                                    timer: 1500
-                                })
-                            }
-                        })
-                    }
-                });
-                $('[id^="fileselectmo"]').each(function() {
-                    if ($(this).prop("checked")) {
-                        // Obtener el código de la fila correspondiente en DataTable
-                        var codigo = $(this).val();
-
-                        $.ajax({
-                            method: 'POST',
-                            url: 'https://conlabweb3.tierramontemariana.org/apps/costos/calculo.php',
-                            data: {
-                                id_examen: id_examen,
-                                codigo: codigo,
-                                costo_administrativo: costo_administrativo,
-                                tipo: 'MO'
-                            },
-                            type: 'JSON',
-                            success: function(respuesta) {
-                                miDataTablere.ajax.reload()
-                                Swal.fire({
-                                    position: 'top',
-                                    icon: 'success',
-                                    title: 'Calculo Generado.',
-                                    showConfirmButton: false,
-                                    timer: 1500
-                                })
-                            }
-                        })
-                    }
-                });
+            $('#costo_examen_final').val(resultado);
 
 
 
+            $('[id^="fileselectmp"]').each(function() {
+                if ($(this).prop("checked")) {
+                    // Obtener el código de la fila correspondiente en DataTable
+                    var codigo = $(this).val();
 
-            }
+                    $.ajax({
+                        method: 'GET',
+                        url: 'https://conlabweb3.tierramontemariana.org/apps/costos/calculo.php',
+                        data: {
+                            id_examen: id_examen,
+                            codigo: codigo,
+                            costo_administrativo: costo_administrativo,
+                            tipo: 'MT'
+                        },
+                        dataType: 'json',
+                        success: function(data) {
+                            miDataTablere.ajax.reload()
+                            $('#btn-excel').removeAttr('disabled');
+                            Swal.fire({
+                                position: 'top',
+                                icon: 'success',
+                                title: 'Calculo Generado.',
+                                showConfirmButton: false,
+                                timer: 1500
+                            })
+                        },
+                        error: function(jqXHR, textStatus, errorThrown) {
+                            // Manejar cualquier error de la solicitud AJAX aquí
+                            console.error("Error en la solicitud AJAX:", textStatus, errorThrown);
+                        }
+                    })
+                }
+            });
+            $('[id^="fileselectc"]').each(function() {
+                if ($(this).prop("checked")) {
+                    // Obtener el código de la fila correspondiente en DataTable
+                    var codigo = $(this).val();
+
+                    $.ajax({
+                        method: 'POST',
+                        url: 'https://conlabweb3.tierramontemariana.org/apps/costos/calculo.php',
+                        data: {
+                            id_examen: id_examen,
+                            codigo: codigo,
+                            costo_administrativo: costo_administrativo,
+                            tipo: 'CI'
+                        },
+                        type: 'JSON',
+                        success: function(respuesta) {
+                            miDataTablere.ajax.reload()
+                            Swal.fire({
+                                position: 'top',
+                                icon: 'success',
+                                title: 'Calculo Generado.',
+                                showConfirmButton: false,
+                                timer: 1500
+                            })
+                        }
+                    })
+                }
+            });
+            $('[id^="fileselectmo"]').each(function() {
+                if ($(this).prop("checked")) {
+                    // Obtener el código de la fila correspondiente en DataTable
+                    var codigo = $(this).val();
+
+                    $.ajax({
+                        method: 'POST',
+                        url: 'https://conlabweb3.tierramontemariana.org/apps/costos/calculo.php',
+                        data: {
+                            id_examen: id_examen,
+                            codigo: codigo,
+                            costo_administrativo: costo_administrativo,
+                            tipo: 'MO'
+                        },
+                        type: 'JSON',
+                        success: function(respuesta) {
+                            miDataTablere.ajax.reload()
+                            Swal.fire({
+                                position: 'top',
+                                icon: 'success',
+                                title: 'Calculo Generado.',
+                                showConfirmButton: false,
+                                timer: 1500
+                            })
+                        }
+                    })
+                }
+            });
 
 
-            function recalculate() {
-                ajaxSearches();
-            }
-        </script>
+
+
+        }
+
+
+        function recalculate() {
+            ajaxSearches();
+        }
+    </script>
 </body>
 
 </html>

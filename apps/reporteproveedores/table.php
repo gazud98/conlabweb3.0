@@ -5,27 +5,29 @@
         color: #fff !important;
     }
 </style>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.5/css/dataTables.bootstrap4.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.dataTables.min.css">
+<div style="overflow: scroll; overflow-x: auto; height:auto; width:100%;" class="table-container">
+    <table class="table table-striped table-hover table-head-fixed text-nowrap table-sm" id="tableListaProveedores">
+        <thead>
+            <tr>
+                <th class="text-center">Departamento</th>
+                <th class="text-center">Nombre Comercial</th>
+                <th class="text-center">Dirección</th>
+                <th class="text-center">Teléfono</th>
+                <th class="text-center">Email</th>
+                <th class="text-center">Persona de contacto</th>
+                <th class="text-center">Teléfono de contacto</th>
+                <th class="text-center">Email de contacto</th>
+                <th class="text-center">Categoría</th>
+                <th class="text-center">Estado</th>
+            </tr>
+        </thead>
+        <tbody>
 
-<table class="table table-bordered" id="tableListaProveedores">
-    <thead>
-        <tr>
-            <th>Departamento</th>
-            <th>Nombre Comercial</th>
-            <th>Dirección</th>
-            <th>Teléfono</th>
-            <th>Email</th>
-            <th>Persona de contacto</th>
-            <th>Teléfono de contacto</th>
-            <th>Email de contacto</th>
-            <th>Categoría</th>
-            <th>Estado</th>
-        </tr>
-    </thead>
-    <tbody>
-
-    </tbody>
-</table>
-
+        </tbody>
+    </table>
+</div>
 <!-- DataTables Buttons JS -->
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/2.0.1/css/buttons.dataTables.min.css">
 <script src="https://cdn.datatables.net/buttons/2.0.1/js/dataTables.buttons.min.js"></script>
@@ -60,10 +62,10 @@
                     pageSize: 'LEGAL',
                     customize: function(doc) {
                         for (var row = 0; row < doc.content[1].table.headerRows; row++) {
-                        var header = doc.content[1].table.body[row];
-                        for (var col = 0; col < header.length; col++) {
-                            header[col].fillColor = 'white';
-                            header[col].color = 'black';
+                            var header = doc.content[1].table.body[row];
+                            for (var col = 0; col < header.length; col++) {
+                                header[col].fillColor = 'white';
+                                header[col].color = 'black';
                             }
                         }
                         doc.content[1].layout = "borders";
@@ -106,7 +108,7 @@
                     d.dep = $('#dep').val();
                     d.cat = $('#cat').val();
 
-                } 
+                }
             },
             "columns": [{
                     "data": "nombre_dep"
@@ -150,7 +152,7 @@
         });
 
         $('#btnSearh').click(function() {
-            miDataTableReporte1.ajax.reload(); 
+            miDataTableReporte1.ajax.reload();
         });
 
     })

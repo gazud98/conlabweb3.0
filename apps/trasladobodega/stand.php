@@ -23,8 +23,8 @@ if (isset($_REQUEST['id'])) {
     $id = 0;
 }
 ?>
-<label>Estante</label>
-<select class="form-control" id="std" onchange="agregar2(this)">
+<label style="font-size:13px">Estante</label>
+<select class="form-control" id="std" onchange="agregar2(this)" style="font-size:13px;width:100%">
     <option selected="true" disabled="disabled"></option>
     <?php
 
@@ -44,3 +44,10 @@ if (isset($_REQUEST['id'])) {
     ?>
 </select>
 <div id="stdx"></div>
+<script>
+    $(document).ready(function() {
+        $('#std').select2({
+            language: "es"
+        });
+    });
+</script>

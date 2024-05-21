@@ -37,7 +37,7 @@ if ($conetar->connect_errno) {
 } else {
     $nombre;
     $cadena = "SELECT id, cargo, tiempo, salario
-    FROM  u116753122_cw3completa.mano_obra  where 1=1 ".$filtro ;
+    FROM  u116753122_cw3completa.mano_obra  where 1=1 " ;
 
     $thefile = 0;
 

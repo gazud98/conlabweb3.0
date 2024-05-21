@@ -4,7 +4,7 @@
                 ">
     <thead>
         <tr>
-            <th style="text-align:center;"><i class="fa-solid fa-user-check"></i></th>
+            <th style="text-align:center;">Ver</th>
             <th style="text-align:center;">No. Solicitud</th>
             <th style="text-align:center;width:60%;">Proveedor</th>
             <th style="text-align:center;">Fecha</th>

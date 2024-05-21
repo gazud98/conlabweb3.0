@@ -1,3 +1,4 @@
+
 .content-table {
     width: 100%;
     height: auto;
@@ -65,6 +66,7 @@ table.table tr td {
     word-wrap: break-word;
     padding: 2px;
     text-align: center;
+    width: 100px;
 }
 
 table.table tr th:first-child {
@@ -75,13 +77,7 @@ table.table tr th:last-child {
     width: 100px;
 }
 
-table.table-striped tbody tr:nth-of-type(odd) {
-    background-color: #fcfcfc;
-}
 
-table.table-striped.table-hover tbody tr:hover {
-    background: #f5f5f5;
-}
 
 table.table th i {
     font-size: 13px;
@@ -132,7 +128,48 @@ table.table .avatar {
 }
 
 
+/* Modal styles */
+.modal .modal-dialog {
+    max-width: 400px;
+}
 
+.modal .modal-header,
+.modal .modal-body,
+.modal .modal-footer {
+    padding: 20px 30px;
+}
+
+.modal .modal-content {
+    border-radius: 3px;
+}
+
+.modal .modal-footer {
+    background: #ecf0f1;
+    border-radius: 0 0 3px 3px;
+}
+
+.modal .modal-title {
+    display: inline-block;
+}
+
+.modal .formcontrol {
+    border-radius: 2px;
+    box-shadow: none;
+    border-color: #dddddd;
+}
+
+.modal textarea.formcontrol {
+    resize: vertical;
+}
+
+.modal .btn {
+    border-radius: 2px;
+    min-width: 100px;
+}
+
+.modal form label {
+    font-weight: normal;
+}
 
 .breadcrumbs {
     border: 1px solid #cbd2d9;
@@ -218,6 +255,74 @@ table.table .avatar {
     padding: 0.8em;
 }
 
+div.dataTables_wrapper div.dataTables_length label {
+    font-size: 14px;
+}
+
+div.dataTables_wrapper div.dataTables_filter label {
+    font-size: 14px;
+}
+
 .dataTables_info {
     font-size: 14px;
+}
+
+table.table tr th,
+table.table tr td {
+    font-size: 14px;
+
+}
+table.table tr th{
+    text-align: left;
+}
+.table-responsive {
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+
+@media only screen and (max-width: 720px) {
+    .modal-content {
+        width: 100%;
+        margin-left: 0px;
+    }
+}
+
+.content-wrapper {
+    background-image: url('https://conlabweb3.tierramontemariana.org/apps/medicos/assets/backcw3-v1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    font-size: 14px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered,
+.select2-results__option {
+    font-size: 14px;
+}
+
+.border {
+    border: 5px solid rgb(1, 103, 183);
+    border-radius: 10px;
+    /* Opcional: añade bordes redondeados */
+    margin-top: 10px;
+    /* Opcional: ajusta el margen superior según tu diseño */
+    padding: 10px;
+    /* Opcional: añade un poco de espacio interno */
+}
+
+/* Estilos generales */
+.table-container {
+ 
+    height: auto;
+    width: 100%;
+}
+
+/* Estilos específicos para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    .table-container {
+        overflow-x: scroll;
+    }
 }
