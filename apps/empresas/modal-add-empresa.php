@@ -30,9 +30,8 @@ if ($conetar->connect_errno) {
 
     <div class="row mt-4">
 
-        <div class="col-md-4">
-            <label for="">Tipo Identificación:</label>
-            <?php include('tp-iden.php'); ?>
+        <div class="col-md-4" id="contentTpId">
+            
         </div>
         <div class="col-md-2">
             <label for="">N° Identificación:</label>
@@ -83,26 +82,11 @@ if ($conetar->connect_errno) {
     </div>
 
     <div class="row mt-4">
-        <div class="col-md-4">
-            <label for="">Departamento:</label>
-            <select class="form-control" name="dep" id="dep" required>
-                <option value="" selected disabled></option>
-                <?php
-                $sql = "SELECT id, nombre FROM departamento";
-                $rest = mysqli_query($conetar, $sql);
-                while ($data = mysqli_fetch_array($rest)) {
-                ?>
-                    <option value="<?php echo $data['id']; ?>"><?php echo $data['nombre']; ?></option>
-                <?php
-                }
-                ?>
-            </select>
+        <div class="col-md-4" id="contentDep">
+            
         </div>
-        <div class="col-md-4">
-            <label for="">Ciudad:</label>
-            <select class="form-control" name="ciudad" id="ciudad" required>
+        <div class="col-md-4" id="contentCiudad">
 
-            </select>
         </div>
         <div class="col-md-2">
             <label for="">Tipo de Vía:</label>
@@ -138,12 +122,12 @@ if ($conetar->connect_errno) {
             <label for="">No. Documento:</label>
             <input type="text" class="form-control" name="numiderep" id="numiderep" required>
         </div>
-        <div class="col-md-4">
+        <!--<div class="col-md-4">
             <label for="">Ejecutivo Comercial:</label>
             <select class="form-control" name="tipoide" id="tipoide">
                 <option value="" selected disabled></option>
             </select>
-        </div>
+        </div>-->
 
     </div>
 
@@ -174,7 +158,7 @@ if ($conetar->connect_errno) {
                 } else {
                     $.ajax({
                         type: 'POST',
-                        url: '/cw3/apps/empresas/crud.php?aux=1',
+                        url: '/cw3/conlabweb3.0/apps/empresas/crud.php?aux=1',
                         data: $('#formDatosBasicos').serialize(),
                         success: function(respuesta) {
                             if (respuesta == 'ok') {
@@ -188,6 +172,8 @@ if ($conetar->connect_errno) {
                                 timer: 1500
                             });
                             //alert("¡Registro Exitoso!");
+                            $('#modalAddEmpresa').modal('hide');
+                            $('.content-table-empresa').load('/cw3/conlabweb3.0/apps/empresas/table-empresas.php');
                         }
                     });
                 }
@@ -235,6 +221,11 @@ if ($conetar->connect_errno) {
         $('#dep').change(function() {
             loadCities();
         })
+
+        $('#contentDep').load('/cw3/conlabweb3.0/apps/empresas/dep.php')
+        $('#contentCiudad').load('/cw3/conlabweb3.0/apps/empresas/ciudad.php')
+        $('#contentTpId').load('/cw3/conlabweb3.0/apps/empresas/tp-iden.php')
+
     })
 
     function loadCities() {
@@ -242,7 +233,7 @@ if ($conetar->connect_errno) {
         id = $('#dep').val();
 
         $.ajax({
-            url: 'https://conlabweb3.tierramontemariana.org/apps/empresas/ciudades.php',
+            url: '/cw3/conlabweb3.0/apps/empresas/ciudades.php',
             data: {
                 id: id
             },

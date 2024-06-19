@@ -93,7 +93,7 @@ if ($conetar->connect_errno) {
                 "autoWidth": false,
                 "responsive": true,
                 "ajax": {
-                    url: '/conlabweb3.0/apps/empresas/mostrar.php?aux=5&id=<?php echo $id; ?>', // Página PHP que devuelve los datos en formato JSON
+                    url: '/cw3/conlabweb3.0/apps/empresas/mostrar.php?aux=5&id=<?php echo $id; ?>', // Página PHP que devuelve los datos en formato JSON
                     type: 'GET', // Método de la petición (GET o POST según corresponda)
                     dataType: 'json', // Tipo de datos esperado en la respuesta
                     dataSrc: '',
@@ -125,7 +125,7 @@ if ($conetar->connect_errno) {
                     {
                         "data": null,
                         "render": function(data, type, full, meta) {
-                            return '<a href="#" title="Editar y Ver Info" onclick="loadModalEditPlan(' + full.id + ')" data-toggle="modal" data-target="#modalEditPlan"><i class="fa-solid fa-pen-to-square" style="color:#0853E0;font-size:15px;"></i></a>';
+                            return '<a href="#" title="Editar y Ver Info" onclick="loadModalPlanes(' + full.id + ')" data-toggle="modal" data-target="#modalEditPlan"><i class="fa-solid fa-pen-to-square" style="color:#0853E0;font-size:15px;"></i></a>';
                         }
                     }
                 ],

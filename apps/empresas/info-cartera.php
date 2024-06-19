@@ -65,90 +65,85 @@ if ($conetar->connect_errno) {
         </strong>
       </div>';
     }
+}
 
 ?>
 
 
-    <form action="" id="formDatosEconomicos" method="POST" enctype="multipart/form-data">
+<form action="" id="formInfoCartera" method="POST" enctype="multipart/form-data">
 
-        <div class="text-center" style="width: 100%;background:#F0F8F4;padding:5px;border-radius:5px;font-weight: 800;">
-            Empresa: <?= $nombre_empresa['nombre_comercial'] ?></h5>
+    <div class="text-center" style="width: 100%;background:#F0F8F4;padding:5px;border-radius:5px;font-weight: 800;">
+        Empresa: <?= $nombre_empresa['nombre_comercial'] ?></h5>
+    </div>
+
+    <input type="hidden" name="empresa" id="empresa" value="<?= $id ?>">
+
+    <div class="row mt-4">
+        <div class="col-md-2">
+            <label for="">Cupo Crédito:</label>
+            <input type="number" class="form-control" name="cupocredito" id="cupocredito" value="<?= $cupo ?>" required>
         </div>
+        <div class="col-md-3">
+            <label for="">Cupo Consumido Crédito:</label>
+            <input type="number" class="form-control" name="cupocredito2" id="cupocredito2" value="<?= $cupo_consumido ?>" required>
+        </div>
+        <div class="col-md-2">
+            <label for="">Días de Pago:</label>
+            <input type="number" class="form-control" name="diaspago" id="diaspago" value="<?= $dias_pago ?>" required>
+        </div>
+        <div class="col-md-2">
+            <label for="">Estado Cartera:</label>
+            <select class="form-control" name="estadocartera" id="estadocartera" required>
+                <option value="" disabled></option>
+                <?php
 
-        <input type="hidden" name="empresa" value="<?= $id ?>">
+                $sql = "SELECT id, descripcion, estado FROM estados_cartera";
 
-        <div class="row mt-4">
-            <div class="col-md-2">
-                <label for="">Cupo Crédito:</label>
-                <input type="number" class="form-control" name="cupocredito" id="cupocredito" value="<?= $cupo ?>" required>
-            </div>
-            <div class="col-md-3">
-                <label for="">Cupo Consumido Crédito:</label>
-                <input type="number" class="form-control" name="cupocredito2" id="cupocredito2" value="<?= $cupo_consumido ?>" required>
-            </div>
-            <div class="col-md-2">
-                <label for="">Días de Pago:</label>
-                <input type="number" class="form-control" name="diaspago" id="diaspago" value="<?= $dias_pago ?>" required>
-            </div>
-            <div class="col-md-2">
-                <label for="">Estado Cartera:</label>
-                <select class="form-control" name="estadocartera" id="estadocartera" required>
-                    <option value="" disabled></option>
-                    <?php
+                $rest = mysqli_query($conetar, $sql);
 
-                    $sql = "SELECT id, descripcion, estado FROM estados_cartera";
+                while ($element = mysqli_fetch_array($rest)) {
 
-                    $rest = mysqli_query($conetar, $sql);
+                    if ($estado == $element['id']) {
 
-                    while ($element = mysqli_fetch_array($rest)) {
+                ?>
 
-                        if ($estado == $element['id']) {
+                        <option value="<?php echo $element['id']; ?>" selected><?php echo $element['descripcion']; ?></option>
+
+                    <?php } else {
 
                     ?>
+                        <option value="<?php echo $element['id']; ?>"><?php echo $element['descripcion']; ?></option>
+                <?php
 
-                            <option value="<?php echo $element['id']; ?>" selected><?php echo $element['descripcion']; ?></option>
-
-                        <?php } else {
-
-                        ?>
-                            <option value="<?php echo $element['id']; ?>"><?php echo $element['descripcion']; ?></option>
-                    <?php
-
-                        }
-                    } ?>
-                </select>
-            </div>
-            <div class="col-md-3">
-                <label for="">Fecha del Cobro Jurídico:</label>
-                <input type="date" class="form-control" name="fechacobro" id="fechacobro" value="<?= $fecha ?>" required>
-            </div>
+                    }
+                } ?>
+            </select>
         </div>
-        <div class="row mt-2">
-            <div class="col-md-3">
-                <label for="">Motivo Cobro Jurídico:</label>
-                <input type="text" class="form-control" name="motivo" id="motivo" value="<?= $motivo_cobro ?>" required>
-            </div>
+        <div class="col-md-3">
+            <label for="">Fecha del Cobro Jurídico:</label>
+            <input type="date" class="form-control" name="fechacobro" id="fechacobro" value="<?= $fecha ?>" required>
         </div>
-
-        <div class="col-md-12 text-right mt-4">
-            <div class="btn-group" role="group" aria-label="Basic example">
-                <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal"><i class="fa-solid fa-xmark"></i> Cancelar</button>
-                <button type="submit" class="btn btn-primary btn-sm" onclick=""><i class="fa-solid fa-floppy-disk"></i> Guardar</button>
-            </div>
+    </div>
+    <div class="row mt-2">
+        <div class="col-md-3">
+            <label for="">Motivo Cobro Jurídico:</label>
+            <input type="text" class="form-control" name="motivo" id="motivo" value="<?= $motivo_cobro ?>" required>
         </div>
-    </form>
+    </div>
 
-<?php
-}
-?>
+    <div class="col-md-12 text-right mt-4">
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal"><i class="fa-solid fa-xmark"></i> Cancelar</button>
+            <button type="submit" class="btn btn-primary btn-sm"><i class="fa-solid fa-floppy-disk"></i> Guardar</button>
+        </div>
+    </div>
+</form>
 
 <!-- jquery-validation -->
 <script src="./assets/plugins/jquery-validation/jquery.validate.min.js"></script>
 <script src="./assets/plugins/jquery-validation/additional-methods.min.js"></script>
 <!--<script src="assets/plugins/jquery/jquery.min.js"></script>-->
 
-<script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap4.min.js"></script>
 <script src="https://kit.fontawesome.com/6dc75479dc.js" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
@@ -158,28 +153,11 @@ if ($conetar->connect_errno) {
         $.validator.setDefaults({
             submitHandler: function() {
 
-                $.ajax({
-                    type: 'POST',
-                    url: '/cw3/apps/empresas/crud.php?aux=3',
-                    data: $('#formDatosEconomicos').serialize(),
-                    success: function(respuesta) {
-                        Swal.fire({
-                            position: "top-center",
-                            icon: "success",
-                            title: "¡Registro Exitoso!",
-                            showConfirmButton: false,
-                            timer: 1500
-                        });
-                        $('.content-info-cartera').load('https://conlabweb3.tierramontemariana.org/apps/empresas/info-cartera.php', {
-                            id: <?= $empresa ?>
-                        })
-                        //alert("¡Registro Exitoso!");
-                    }
-                });
+                setInfoEconomic()
 
             }
         });
-        $('#formDatosEconomicos').validate({
+        $('#formInfoCartera').validate({
             rules: {
                 nombre: {
                     required: true
@@ -220,6 +198,34 @@ if ($conetar->connect_errno) {
 
     function setInfoEconomic() {
 
+        ide = $('#empresa').val();
+
+        if (ide == 0 || ide == '') {
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "No has seleccionado una empresa!",
+            });
+        } else {
+            $.ajax({
+                type: 'POST',
+                url: '/cw3/conlabweb3.0/apps/empresas/crud.php?aux=3',
+                data: $('#formInfoCartera').serialize(),
+                success: function(respuesta) {
+                    Swal.fire({
+                        position: "top-center",
+                        icon: "success",
+                        title: "¡Registro Exitoso!",
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                    $('.content-info-cartera').load('/cw3/conlabweb3.0/apps/empresas/info-cartera.php', {
+                        id: <?= $id ?>
+                    })
+                    //alert("¡Registro Exitoso!");
+                }
+            });
+        }
 
 
     }

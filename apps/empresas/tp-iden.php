@@ -1,5 +1,30 @@
-<select class="form-control" name="id_tipo_identificacion" id="id_tipo_identificacion" required>
-    <option selected="true" disabled="disabled"></option>
+<?php
+
+// echo __FILE__.'>dd.....<br>';
+if (file_exists("config/accesosystems.php")) {
+    include("config/accesosystems.php");
+} else {
+    if (file_exists("../config/accesosystems.php")) {
+        include("../config/accesosystems.php");
+    } else {
+        if (file_exists("../../config/accesosystems.php")) {
+            include("../../config/accesosystems.php");
+        }
+    }
+}
+
+
+$conetar = new mysqli(hostname, db_login, db_pass, cw3ctrlsrv);
+if ($conetar->connect_errno) {
+    $error = "Fallo al conectar a MySQL: (" . $conetar->connect_errno . ") " . $conetar->connect_error;
+    echo $error;
+} else {
+}
+
+?>
+<label for="">Tipo Identificación:</label>
+<select class="form-control" name="id_tipo_identificacion" id="id_tipo_identificacion" style="width: 100%;" required>
+    <option selected= disabled>SELECCIONA:</option>
     <?php
 
     $sql = "SELECT id, nombre, abreviatura FROM tipo_identificacion";
@@ -21,8 +46,8 @@
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 <script>
     $(document).ready(function(){
-        /*$('#id_tipo_identificacion').select2({
+        $('#id_tipo_identificacion').select2({
             language: "es"
-        });*/
+        });
     })
 </script>

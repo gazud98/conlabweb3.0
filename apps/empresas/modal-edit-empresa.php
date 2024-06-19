@@ -160,7 +160,7 @@ if ($conetar->connect_errno) {
                 $rest = mysqli_query($conetar, $sql);
                 while ($data = mysqli_fetch_array($rest)) {
                     echo "<option value='" . trim($data['id']) . "'";
-                    if (trim($data['id']) == $departamento) {
+                    if (trim($data['id']) == $ciudad) {
                         echo ' selected';
                     }
                     echo '>' . $data['nombre'] . "</option>";
@@ -216,7 +216,7 @@ if ($conetar->connect_errno) {
                 } else {
                     $.ajax({
                         type: 'POST',
-                        url: 'https://conlabweb3.tierramontemariana.org/apps/empresas/crud.php?aux=2',
+                        url: '/cw3/conlabweb3.0/apps/empresas/crud.php?aux=2',
                         data: $('#formEditEmpresa').serialize(),
                         success: function(respuesta) {
                             if (respuesta == 'ok') {
@@ -230,6 +230,8 @@ if ($conetar->connect_errno) {
                                 timer: 1500
                             });
                             //alert("¡Registro Exitoso!");
+                            $('#modalEditEmpresa').modal('hide');
+                            $('.content-table-empresa').load('/cw3/conlabweb3.0/apps/empresas/table-empresas.php');
                         }
                     });
                 }
@@ -282,7 +284,7 @@ if ($conetar->connect_errno) {
         id = $('#dep').val();
 
         $.ajax({
-            url: 'https://conlabweb3.tierramontemariana.org/apps/empresas/ciudades.php',
+            url: '/cw3/conlabweb3.0/apps/empresas/ciudades.php',
             data: {
                 id: id
             },

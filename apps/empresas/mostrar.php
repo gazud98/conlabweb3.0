@@ -137,9 +137,9 @@ if ($conetar->connect_errno) {
             $id = $_REQUEST['id'];
         }
 
-        $sql = "SELECT p.id, e.nombre_comercial, p.nombre_plan, d.nombre, p.estado, p.descripcion_plan, p.frecuencia_plan, p.porcentaje_plan 
-        FROM planes_empresa p, empresas e, detalle_listas d WHERE p.id_empresa = e.id_empresas AND p.id_lista_base = d.id 
-        AND e.id_empresas = '$id'";
+        $sql = "SELECT p.id, e.nombre_comercial, p.nombre_plan, d.nombre, p.estado, p.descripcion_plan, p.frecuencia_plan, 
+        p.porcentaje_plan FROM planes_empresa p, empresas e, detalle_listas d WHERE p.id_empresa = e.id_empresas 
+        AND p.id_lista_base = d.id AND e.id_empresas = '$id'";
 
         $rest = mysqli_query($conetar, $sql);
 

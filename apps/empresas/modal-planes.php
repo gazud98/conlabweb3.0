@@ -189,11 +189,11 @@ if ($conetar->connect_errno) {
                 } else {
                     $.ajax({
                         type: 'POST',
-                        url: '/cw3/apps/empresas/crud.php?aux=7',
+                        url: '/cw3/conlabweb3.0/apps/empresas/crud.php?aux=7',
                         data: $('#formCrearPlan').serialize(),
                         success: function(respuesta) {
                             if (respuesta == 'ok') {
-                                //                     alert('Termiando');
+                                
                             }
                             Swal.fire({
                                 position: "top-center",
@@ -202,6 +202,7 @@ if ($conetar->connect_errno) {
                                 showConfirmButton: false,
                                 timer: 1500
                             });
+                            $('#modalPlan').modal('hide');
                             //alert("¡Registro Exitoso!");
                         }
                     });

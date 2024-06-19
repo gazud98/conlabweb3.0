@@ -93,26 +93,48 @@ if ($conetar->connect_errno) {
         $rest = mysqli_query($conetar, $sql);
     } else if ($aux == 3) {
 
-        $cupocredito = trim($_POST['cupocredito']);
-        $cupocredito2 = trim($_POST['cupocredito2']);
-        $diaspago = trim($_POST['diaspago']);
-        $estadocartera = trim($_POST['estadocartera']);
-        $fechacobro = trim($_POST['fechacobro']);
-        $motivo = trim($_POST['motivo']);
         $empresa = trim($_POST['empresa']);
 
-        $sql = "INSERT INTO info_economica(cupo, cupo_consumido, dias_pago, estado, fecha, motivo_cobro, empresa) 
-        VALUES (
-        '$cupocredito',
-        '$cupocredito2',
-        '$diaspago',
-        '$estadocartera',
-        '$fechacobro',
-        '$motivo',
-        '$empresa'
-        )";
+        $sql = "SELECT id FROM info_economica WHERE empresa = '$empresa'";
 
         $rest = mysqli_query($conetar, $sql);
+
+        $row = mysqli_num_rows($rest);
+
+        if ($row != 0) {
+            $cupocredito = trim($_POST['cupocredito']);
+            $cupocredito2 = trim($_POST['cupocredito2']);
+            $diaspago = trim($_POST['diaspago']);
+            $fechacobro = trim($_POST['fechacobro']);
+            $motivo = trim($_POST['motivo']);
+            $empresa = trim($_POST['empresa']);
+
+            $sql = "UPDATE info_economica SET 
+            cupo = '$cupocredito', 
+            cupo_consumido = '$cupocredito2', 
+            dias_pago = '$diaspago', 
+            estado = '$estadocartera', 
+            fecha = '$fechacobro', 
+            motivo_cobro = '$motivo'
+            WHERE empresa = '$empresa'";
+
+            $rest = mysqli_query($conetar, $sql);
+        } else {
+
+
+            $sql = "INSERT INTO info_economica(cupo, cupo_consumido, dias_pago, estado, fecha, motivo_cobro, empresa) 
+            VALUES (
+            '$cupocredito',
+            '$cupocredito2',
+            '$diaspago',
+            '$estadocartera',
+            '$fechacobro',
+            '$motivo',
+            '$empresa'
+            )";
+
+            $rest = mysqli_query($conetar, $sql);
+        }
     } else if ($aux == 4) {
 
         $descglosa = trim($_POST['descglosa']);
@@ -250,20 +272,20 @@ if ($conetar->connect_errno) {
         $frecuenciaplan = trim($_POST['frecuenciaplan']);
         $descuentoplan = trim($_POST['descuentoplan']);
         $porcentajeplan = trim($_POST['porcentajeplan']);
-        $idEmpresaReq = trim($_POST['idEmpresaReq']);
+        //$idEmpresaReq = trim($_POST['idEmpresaReq']);
         $tipoplan = trim($_POST['tipoplan']);
 
-        $sql = "UPDATE `planes_empresa` SET 
-        `nombre_plan`='$nombreplan',
-        `id_lista_base`='$listabaseplan',
-        `estado`='$estadoplan',
-        `tipo_plan`='$tipoplan',
-        `descripcion_plan`='$descripcionplan',
-        `concepto_pagar`='$conectopagar',
-        `requisito_facturacion`='$reqfacturacion',
-        `frecuencia_plan`='$frecuenciaplan',
-        `descuento_plan`='$descuentoplan',
-        `porcentaje_plan`='$porcentajeplan' WHERE id = '$id'";
+        $sql = "UPDATE planes_empresa SET 
+        nombre_plan='$nombreplan',
+        id_lista_base='$listabaseplan',
+        estado='$estadoplan',
+        tipo_plan='$tipoplan',
+        descripcion_plan='$descripcionplan',
+        concepto_pagar='$conectopagar',
+        requisito_facturacion='$reqfacturacion',
+        frecuencia_plan='$frecuenciaplan',
+        descuento_plan='$descuentoplan',
+        porcentaje_plan='$porcentajeplan' WHERE id = '$id'";
 
         $rest = mysqli_query($conetar, $sql);
     } else if ($aux == 9) {

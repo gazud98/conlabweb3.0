@@ -33,13 +33,13 @@ if ($conetar->connect_errno) {
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title></title>
-        <link rel="stylesheet" href="https://conlabweb3.tierramontemariana.org/apps/empresas/assets/style.css">
+        <link rel="stylesheet" href="/cw3/conlabweb3.0/apps/empresas/assets/style.css">
 
     </head>
 
     <style>
         .content-wrapper {
-            background-image: url('https://conlabweb3.tierramontemariana.org/apps/medicos/assets/backcw3-v1.png');
+            background-image: url('/cw3/conlabweb3.0/apps/medicos/assets/backcw3-v1.png');
             background-size: cover;
             background-repeat: no-repeat;
         }
@@ -202,6 +202,28 @@ if ($conetar->connect_errno) {
 
                         </div>
                     </div>
+                    <div class="card-footer text-right">
+                        <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Edit planes -->
+        <div class="modal fade" id="modalEditPlan" tabindex="-1" aria-labelledby="modalEditPlanesLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content modal-content-lg">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalEditPlanesLabel">Editar Plan</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="content-modal-planes">
+
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -211,6 +233,7 @@ if ($conetar->connect_errno) {
             <div class="modal-dialog">
                 <div class="modal-content modal-content-lg">
                     <div class="modal-header">
+                        <h5 class="modal-title" id="modalViewPlanesLabel">Editar empresa</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -267,11 +290,9 @@ if ($conetar->connect_errno) {
         </div>
 
         <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script src="https://kit.fontawesome.com/6dc75479dc.js" crossorigin="anonymous"></script>
-        <script src="https://conlabweb3.tierramontemariana.org/apps/empresas/assets/index.js"></script>
+        <script src="/cw3/conlabweb3.0/apps/empresas/assets/index.js"></script>
 
         <script>
             function loadInfoFactAdd() {
@@ -286,7 +307,7 @@ if ($conetar->connect_errno) {
                     }
                 }
 
-                $('.content-modal-info-fact').load('https://conlabweb3.tierramontemariana.org/apps/empresas/info-facturacion.php', {
+                $('.content-modal-info-fact').load('/cw3/conlabweb3.0/apps/empresas/info-facturacion.php', {
                     id: valor_seleccionado2
                 })
 
@@ -297,12 +318,12 @@ if ($conetar->connect_errno) {
                 confirmRadioSelected()
                 $('#idEmpresaReq').val($('#idempresa').val());
                 $('#title-empresa').html($('#nombreEmpresa').val());
-                $('.content-add-plan').load('https://conlabweb3.tierramontemariana.org/apps/empresas/modal-planes.php')
+                $('.content-add-plan').load('/cw3/conlabweb3.0/apps/empresas/modal-planes.php')
                 console.log($('#nombreEmpresa').val())
             }
 
             function loadAddEmpresa() {
-                $('.content-add-empresa').load('https://conlabweb3.tierramontemariana.org/apps/empresas/modal-add-empresa.php')
+                $('.content-add-empresa').load('/cw3/conlabweb3.0/apps/empresas/modal-add-empresa.php')
             }
 
             function loadAddInfoCartera() {
@@ -317,7 +338,7 @@ if ($conetar->connect_errno) {
                     }
                 }
 
-                $('.content-info-cartera').load('https://conlabweb3.tierramontemariana.org/apps/empresas/info-cartera.php', {
+                $('.content-info-cartera').load('/cw3/conlabweb3.0/apps/empresas/info-cartera.php', {
                     id: valor_seleccionado2
                 })
 
@@ -336,7 +357,7 @@ if ($conetar->connect_errno) {
                     }
                 }
 
-                $('.content-info-tributaria').load('https://conlabweb3.tierramontemariana.org/apps/empresas/info-tributaria.php', {
+                $('.content-info-tributaria').load('/cw3/conlabweb3.0/apps/empresas/info-tributaria.php', {
                     id: valor_seleccionado2
                 })
 
@@ -349,6 +370,12 @@ if ($conetar->connect_errno) {
                 $('#btnLoadModals-3').prop('disabled', false);
                 $('#btnLoadModals-4').prop('disabled', false);
                 $('#titleInfo').css('display', 'none');
+            }
+
+            function loadModalPlanes(id) {
+                $('.content-modal-planes').load('/cw3/conlabweb3.0/apps/empresas/modal-edit-planes.php', {
+                    id: id
+                })
             }
         </script>
 
