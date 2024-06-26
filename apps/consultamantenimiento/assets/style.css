@@ -265,7 +265,35 @@ table.table .avatar {
 .dataTables_wrapper .dataTables_paginate .paginate_button a {
     padding: 0.8em;
 }
+div.dataTables_wrapper div.dataTables_length label {
+    font-size: 14px;
+}
 
 .dataTables_info {
     font-size: 14px;
+}
+
+.content-wrapper {
+    background-image: url('https://conlabweb3.tierramontemariana.org/apps/medicos/assets/backcw3-v1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    font-size: 14px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered,
+.select2-results__option {
+    font-size: 14px;
+}
+
+.border {
+    border: 5px solid rgb(1, 103, 183);
+    border-radius: 10px;
+    /* Opcional: añade bordes redondeados */
+    margin-top: 10px;
+    /* Opcional: ajusta el margen superior según tu diseño */
+    padding: 10px;
+    /* Opcional: añade un poco de espacio interno */
 }

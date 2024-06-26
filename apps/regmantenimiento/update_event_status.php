@@ -19,17 +19,16 @@ if ($conetar->connect_errno) {
     echo $error;
 } else {
 
-    $sql = "SELECT id, descripcion FROM motivos_reprogramar";
-
-    $rest = mysqli_query($conetar, $sql);
-}
-?>
-<label for="">Motivo:</label>
-<select class="form-control" name="motivo" id="motivo">
-    <option value="" disabled selected>SELECCIONA:</option>
-    <?php
-    while($data = mysqli_fetch_array($rest)){
-        echo '<option value="'.$data['id'].'">'.$data['descripcion'].'</option>';
+    $query = "UPDATE mantenimientos SET estado = 4 WHERE fecha_final < CURDATE() AND estado != 2";
+    $result = $conetar->query($query);
+   
+    // Verifica si la consulta se ejecutó correctamente
+    if ($result) {
+        echo "Estado actualizado correctamente.";
+    } else {
+        // Imprime el error de MySQL
+        echo "Error al ejecutar la consulta: " . $conetar->error;
+        // Imprime la consulta SQL generada
+        echo "Consulta SQL: " . $query;
     }
-    ?>
-</select>
+}
